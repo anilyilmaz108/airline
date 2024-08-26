@@ -1,0 +1,51 @@
+<!-- Old (nz-statistic) -->
+<div nz-row [nzGutter]="[16,16]">
+    <div nz-col class="gutter-row "  nzXs="24" nzSm="24" nzMd="24" nzLg="24" nzXl="8">
+      <nz-card class="stat-card">
+        <div>
+          <nz-statistic nzValue="10.987" [nzTitle]="'Title1'" [nzSuffix]="suffix"></nz-statistic>
+          <span class="text-gray" style="font-size: 11px;">1920 Hzr 5069 Kd</span>
+          <ng-template #suffix><span class="text-gray" style="font-size:14px;">&nbsp;<i nz-icon nzType="info-circle"></i></span></ng-template>
+        </div>
+        <ng-template #loading><nz-skeleton [nzActive]="true" [nzParagraph]="{ rows: 1 }"></nz-skeleton></ng-template>
+      </nz-card>
+    </div>
+    <div nz-col class="gutter-row" nzXs="24" nzSm="24" nzMd="12" nzLg="6" nzXl="4">
+      <nz-card class="stat-card">
+        <div>
+          <nz-statistic nzValue="9999" [nzTitle]="'Title2'"></nz-statistic>
+          <span class="text-gray" style="font-size: 11px;">1920 Hzr 5069 Kd</span>
+        </div>
+        <ng-template #loading><nz-skeleton [nzActive]="true"  [nzParagraph]="{ rows: 1 }"></nz-skeleton></ng-template>
+      </nz-card>
+    </div>
+    <div nz-col class="gutter-row" nzXs="24" nzSm="24" nzMd="12" nzLg="6" nzXl="4">
+      <nz-card class="stat-card">
+        <div>
+          <nz-statistic nzValue="94321" [nzTitle]="'Title3'"></nz-statistic>
+          <span class="text-gray" style="font-size: 11px;">1920 Hzr 5069 Kd</span>
+        </div>
+        <ng-template #loading><nz-skeleton [nzActive]="true"  [nzParagraph]="{ rows: 1 }"></nz-skeleton></ng-template>
+      </nz-card>
+    </div>
+    <div nz-col class="gutter-row" nzXs="24" nzSm="24" nzMd="12" nzLg="6" nzXl="4">
+      <nz-card class="stat-card">
+        <div>
+          <nz-statistic nzValue="4995" [nzTitle]="'Title4'"></nz-statistic>
+          <span class="text-gray" style="font-size: 11px;">1920 Hzr 5069 Kd</span>
+        </div>
+        <ng-template #loading><nz-skeleton [nzActive]="true"  [nzParagraph]="{ rows: 1 }"></nz-skeleton></ng-template>
+      </nz-card>
+    </div>
+    <div nz-col class="gutter-row" nzXs="24" nzSm="24" nzMd="12" nzLg="6" nzXl="4">
+      <nz-card class="stat-card">
+        <div>
+          <nz-statistic nzValue="121221" [nzTitle]="'Title5'"></nz-statistic>
+          <span class="text-gray" style="font-size: 11px;">1920 Hzr 5069 Kd</span>
+        </div>
+        <ng-template #loading><nz-skeleton [nzActive]="true"  [nzParagraph]="{ rows: 1 }"></nz-skeleton></ng-template>
+      </nz-card>
+    </div>
+  </div>
+  
+  
