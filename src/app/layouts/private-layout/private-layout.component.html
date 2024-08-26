@@ -1,0 +1,175 @@
+<nz-layout class="app-layout">
+  <nz-sider
+    class="menu-sidebar"
+    nzCollapsible
+    nzWidth="256px"
+    nzBreakpoint="md"
+    [(nzCollapsed)]="isCollapsed"
+    [nzTrigger]="null"
+  >
+    <div class="sidebar-logo">
+      <a href="https://ng.ant.design/" target="_blank">
+        <img src="https://ng.ant.design/assets/img/logo.svg" alt="logo" />
+        <h1>Ant Design Of Angular</h1>
+      </a>
+    </div>
+    <ul
+      nz-menu
+      nzTheme="dark"
+      nzMode="inline"
+      [nzInlineCollapsed]="isCollapsed"
+    >
+      <li
+        nz-menu-item
+        nzMatchRouter
+        nz-tooltip
+        nzTooltipPlacement="right"
+        [nzTooltipTitle]="isCollapsed ? 'Anasayfa' : ''"
+      >
+        <span nz-icon nzType="home" nzTheme="outline"></span>
+        <span><a style="color: white" routerLink="/">Anasayfa</a></span>
+      </li>
+
+      <li nz-submenu nzOpen nzTitle="Seyehat İşlemleri" nzIcon="dashboard">
+        <ul>
+          <li nz-menu-item nzMatchRouter>
+            <a>Check-in</a>
+          </li>
+          <li nz-menu-item nzMatchRouter>
+            <a>Bilet işlemleri</a>
+          </li>
+          <li nz-menu-item nzMatchRouter>
+            <a>Fırsat Uçuşlar</a>
+          </li>
+        </ul>
+      </li>
+      <li nz-submenu nzTitle="Ek Hizmetler" nzIcon="form">
+        <ul>
+          <li nz-menu-item nzMatchRouter>
+            <a>Koltuk Seçimi</a>
+          </li>
+          <li nz-menu-item nzMatchRouter>
+            <a>Bagaj Hakkı</a>
+          </li>
+          <li nz-menu-item nzMatchRouter>
+            <a>VIP Hizmetler</a>
+          </li>
+          <li nz-menu-item nzMatchRouter>
+            <a>Esnek Rezervasyon</a>
+          </li>
+          <li nz-menu-item nzMatchRouter>
+            <a>Uçak İçi Hizmetler</a>
+          </li>
+          <li nz-menu-item nzMatchRouter>
+            <a>Spor Ekipmanları</a>
+          </li>
+          <li nz-menu-item nzMatchRouter>
+            <a>Tüm Ek Hizmetler</a>
+          </li>
+        </ul>
+      </li>
+      <li nz-submenu nzTitle="Keşfet" nzIcon="form">
+        <ul>
+          <li nz-menu-item nzMatchRouter>
+            <a>İstanbul</a>
+          </li>
+          <li nz-menu-item nzMatchRouter>
+            <a>Ankara</a>
+          </li>
+          <li nz-menu-item nzMatchRouter>
+            <a>İzmir</a>
+          </li>
+          <li nz-menu-item nzMatchRouter>
+            <a>Antalya</a>
+          </li>
+          <li nz-menu-item nzMatchRouter>
+            <a>Tüm Şehirler</a>
+          </li>
+        </ul>
+      </li>
+      <li nz-submenu nzTitle="Yardım" nzIcon="form">
+        <ul>
+          <li nz-menu-item nzMatchRouter>
+            <a>Air Puan Nedir</a>
+          </li>
+          <li nz-menu-item nzMatchRouter>
+            <a>Havaalanı Bilgileri</a>
+          </li>
+          <li nz-menu-item nzMatchRouter>
+            <a>Yolcu Hakları</a>
+          </li>
+          <li nz-menu-item nzMatchRouter>
+            <a>Yardım & İletişim</a>
+          </li>
+          <li nz-menu-item nzMatchRouter>
+            <a>Genel Kurallar</a>
+          </li>
+          <li nz-menu-item nzMatchRouter>
+            <a>Sıkça Sorulan Sorular</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </nz-sider>
+  <nz-layout>
+    <nz-header>
+      <div class="app-header">
+        <span class="header-trigger" (click)="isCollapsed = !isCollapsed">
+          <span
+            class="trigger"
+            nz-icon
+            [nzType]="isCollapsed ? 'menu-unfold' : 'menu-fold'"
+          ></span>
+        </span>
+        <div>
+          <!-- End Simulation -->
+          <!--<span *ngIf="
+              (user$?.mainRole === 'admin' || user$?.mainRole === 'ik_suser') &&
+              user$?.simulation === true
+            " class="header-trigger" style="color: red">
+            <i class="trigger" nz-icon [nzType]="'stop'" (click)="endSimulation()"></i>
+          </span>-->
+          <!-- Theme -->
+          <span
+            *ngIf="isDarkMode"
+            class="header-icons"
+            nz-icon
+            (click)="toggleTheme()"
+            nz-tooltip
+            nzTooltipTitle="Açık Mod"
+            nzTooltipPlacement="bottomRight"
+          >
+            <span nz-icon nzType="sun" nzTheme="outline"></span>
+          </span>
+          <span
+            *ngIf="!isDarkMode"
+            class="header-icons"
+            nz-icon
+            (click)="toggleTheme()"
+            nz-tooltip
+            nzTooltipTitle="Koyu Mod"
+            nzTooltipPlacement="bottomRight"
+          >
+            <span
+              class="navbar-icon"
+              nz-icon
+              nzType="moon"
+              nzTheme="outline"
+            ></span>
+          </span>
+          <!-- Logout -->
+          <span class="header-icons">
+            <i class="trigger" nz-icon [nzType]="'logout'"></i>
+          </span>
+        </div>
+      </div>
+    </nz-header>
+    <nz-content>
+      <div class="inner-content">
+        <router-outlet></router-outlet>
+      </div>
+      <!-- Footer -->
+      <app-footer></app-footer>
+    </nz-content>
+  </nz-layout>
+</nz-layout>
