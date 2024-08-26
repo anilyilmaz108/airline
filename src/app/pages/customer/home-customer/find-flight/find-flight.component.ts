@@ -16,6 +16,7 @@ import { NzButtonModule } from 'ng-zorro-antd/button';
 import { NzFormModule } from 'ng-zorro-antd/form';
 import { NzInputNumberModule } from 'ng-zorro-antd/input-number';
 import { NzCheckboxModule } from 'ng-zorro-antd/checkbox';
+import { NzToolTipModule } from 'ng-zorro-antd/tooltip';
 
 // Ülke & Şehir Bilgileri
 const options = [
@@ -69,10 +70,12 @@ var tempBaby = "";
     NzOptionComponent,
     NzModalModule,
     NzButtonModule,
-    NzCheckboxModule
+    NzCheckboxModule,
+    NzToolTipModule,
   ],
   templateUrl: './find-flight.component.html',
   styleUrl: './find-flight.component.less',
+  host: {ngSkipHydration: 'true'},
 })
 export class FindFlightComponent {
   nzOptions = options;

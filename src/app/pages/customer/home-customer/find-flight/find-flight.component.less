@@ -1,8 +1,21 @@
 nz-card {
     border-radius: 10px;
+    background-color: var(--card-color);
 }
 
 .flight-operations-item {
     display: flex; 
     flex-direction: column;
+}
+
+span {
+    color: var(--subtitle-text-color);
+}
+
+button.ant-btn.ant-btn-primary {
+    background: var(--primary-color);
+}
+
+::ng-deep button#nz-tabs-0-tab-0 {
+    display: none;
 }
