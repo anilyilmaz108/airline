@@ -1,0 +1,116 @@
+<!-- Find Flight-->
+<div style="display: flex">
+  <!-- Info Part -->
+  <div class="flight-operations-item">
+    <h3 nzType="secondary">
+      <span style="color: var(--title-text-color)">Bagaj Seçimini Yap</span>
+    </h3>
+    <h5 nzType="secondary">
+      <span style="color: var(--subtitle-text-color)"
+        >Online bagaj seçimini yap, indirimli fiyatlardan yararlan.</span
+      >
+    </h5>
+  </div>
+  <div style="padding-left: 16px"></div>
+  <!-- Soyadı Input-->
+  <div style="padding-top: 16px">
+    <nz-input-group
+      [nzSuffix]="suffixTemplateInfo"
+      [nzPrefix]="prefixTemplateUser"
+    >
+      <input type="text" nz-input placeholder="Yolcunun Soyadı" />
+    </nz-input-group>
+    <ng-template #prefixTemplateUser
+      ><span nz-icon nzType="user"></span
+    ></ng-template>
+    <ng-template #suffixTemplateInfo>
+      <span
+        nz-icon
+        nz-tooltip
+        nzTooltipTitle="Ör: YILMAZ"
+        nzType="info-circle"
+      ></span>
+    </ng-template>
+  </div>
+  <div style="padding-left: 16px"></div>
+  <!-- PNR Input-->
+  <div style="padding-top: 16px">
+    <nz-input-group
+      [nzSuffix]="suffixTemplateInfo2"
+      [nzPrefix]="prefixTemplateUser"
+    >
+      <input type="text" nz-input placeholder="Rezervasyon Kodu (PNR)" />
+    </nz-input-group>
+    <ng-template #prefixTemplateUser
+      ><span nz-icon nzType="user"></span
+    ></ng-template>
+    <ng-template #suffixTemplateInfo2>
+      <span
+        nz-icon
+        nz-tooltip
+        nzTooltipTitle="Ör: A1N2L3"
+        nzType="info-circle"
+      ></span>
+    </ng-template>
+  </div>
+  <div style="padding-left: 16px"></div>
+  <!-- Uçuş Ara -->
+  <div style="padding-top: 16px">
+    <button (click)="findFlight()" nz-button nzType="primary">
+      <span
+        style="color: white"
+        nz-icon
+        nzType="arrow-right"
+        nzTheme="outline"
+      ></span>
+      Onayla
+    </button>
+  </div>
+</div>
+<br />
+<!-- Baggage Options -->
+<!-- İç Hatlar -->
+<nz-descriptions
+  nzTitle="Bagaj Tercihleri - İç Hatlar"
+  nzBordered
+  [nzColumn]="{ xxl: 2, xl: 2, lg: 2, md: 2, sm: 2, xs: 1 }"
+>
+  <nz-descriptions-item nzTitle="LIGHT PAKET">0 KG - 229,99 ₺’den başlayan fiyatlarla</nz-descriptions-item>
+  <nz-descriptions-item nzTitle="SÜPER EKO PAKET">20 KG - 229,99 ₺’den başlayan fiyatlarla</nz-descriptions-item>
+  <nz-descriptions-item nzTitle="AVANTAJ PAKET">20 KG - 229,99 ₺’den başlayan fiyatlarla</nz-descriptions-item>
+  <nz-descriptions-item nzTitle="COMFORT FLEX PAKET">20 KG - 229,99 ₺’den başlayan fiyatlarla</nz-descriptions-item>
+</nz-descriptions>
+<br>
+<!-- Dış Hatlar -->
+<nz-descriptions
+  nzTitle="Bagaj Tercihleri - Dış Hatlar"
+  nzBordered
+  [nzColumn]="{ xxl: 2, xl: 2, lg: 2, md: 2, sm: 2, xs: 1 }"
+>
+  <nz-descriptions-item nzTitle="LIGHT PAKET">0 KG - 229,99 ₺’den başlayan fiyatlarla</nz-descriptions-item>
+  <nz-descriptions-item nzTitle="SÜPER EKO PAKET">20 KG - 229,99 ₺’den başlayan fiyatlarla</nz-descriptions-item>
+  <nz-descriptions-item nzTitle="AVANTAJ PAKET">20 KG - 229,99 ₺’den başlayan fiyatlarla</nz-descriptions-item>
+  <nz-descriptions-item nzTitle="COMFORT FLEX PAKET">20 KG - 229,99 ₺’den başlayan fiyatlarla</nz-descriptions-item>
+</nz-descriptions>
+<!-- Baggage Descriptions -->
+<br />
+<h3 style="color: var(--title-text-color)" nz-typography>
+  Bagaj Hakları & Kuralları
+</h3>
+<p style="color: var(--subtitle-text-color)" nz-typography>
+  Ant Design, a design language for background applications, is refined by Ant
+  UED Team. Ant Design, a design language for background applications, is
+  refined by Ant UED Team. Ant Design, a design language for background
+  applications, is refined by Ant UED Team. Ant Design, a design language for
+  background applications, is refined by Ant UED Team. Ant Design, a design
+  language for background applications, is refined by Ant UED Team. Ant Design,
+  a design language for background applications, is refined by Ant UED Team.
+</p>
+<nz-divider></nz-divider>
+<br />
+<h3 style="color: var(--title-text-color)" nz-typography>
+  Önemli Bilgilendirme
+</h3>
+<ul *ngFor="let item of data">
+  <li style="color: var(--subtitle-text-color)" nz-typography>{{ item }}</li>
+</ul>

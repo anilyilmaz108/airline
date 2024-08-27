@@ -2,10 +2,10 @@
   <!-- Info Part -->
   <div class="flight-operations-item">
     <h3 nz-typography nzType="secondary">
-      <span>Koltuk Seçimini Yap</span>
+      <span style="color: var(--title-text-color);">Koltuk Seçimini Yap</span>
     </h3>
     <h5 nz-typography nzType="secondary">
-      <span
+      <span style="color: var(--subtitle-text-color);"
         >Sana en uygun koltuğu seç, daha rahat bir uçuş deneyimi yakala.</span
       >
     </h5>
@@ -75,7 +75,7 @@
           <nz-card
             [ngStyle]="{
               'background-color': selectedCardId === item.id
-                ? 'var(--secondary-color)'
+                ? 'var(--light-color)'
                 : 'var(--card-color)'
             }"
             [nzTitle]="item.title"
