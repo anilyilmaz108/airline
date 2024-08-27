@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { SeatIconComponent } from '../../../shared/seat-icon/seat-icon.component';
+import { SeatIconComponent } from '../../../../shared/seat-icon/seat-icon.component';
 import { NzListModule } from 'ng-zorro-antd/list';
 import { NzCardModule } from 'ng-zorro-antd/card';
 import { CommonModule } from '@angular/common';
