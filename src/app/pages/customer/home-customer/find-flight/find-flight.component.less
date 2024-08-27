@@ -1,14 +1,68 @@
-nz-card {
-    border-radius: 10px;
-    background-color: var(--card-color);
-}
-
 .flight-operations-item {
-    display: flex; 
-    flex-direction: column;
-}
+    flex: 1;
+    margin-right: 16px;
+  }
+  
+  @media only screen and (max-width: 768px) {
+    .flight-operations-item {
+      margin-right: 0;
+      margin-bottom: 16px;
+      width: 100%;
+    }
+  
+    nz-tabset {
+      display: block;
+      width: 100%;
+    }
+  
+    .nz-card {
+      margin: 0 auto;
+      width: 100%;
+      border-radius: 10px;
+    }
 
-span {
+    .nz-tab {
+      padding: 0 16px;
+    }
+  
+    .nz-cascader, .nz-range-picker, .nz-date-picker, nz-checkbox, nz-input-group, button {
+      width: 100%;
+      max-width: none;
+    }
+  
+    button {
+      display: block;
+      margin: 0 auto;
+    }
+  
+    .nz-icon {
+      display: block;
+      margin: 0 auto;
+    }
+  
+    .flight-operations-item h4 {
+      text-align: center;
+    }
+  
+    span[nz-icon] {
+      padding: 0;
+    }
+    
+    div[style*="display: flex"] {
+      flex-direction: column;
+      align-items: stretch;
+    }
+  
+    div[style*="padding-left"] {
+      padding-left: 0 !important;
+    }
+  
+    div[style*="padding-top"] {
+      padding-top: 16px !important;
+    }
+  }
+  
+  span {
     color: var(--subtitle-text-color);
 }
 

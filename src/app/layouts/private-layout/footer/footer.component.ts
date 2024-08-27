@@ -6,7 +6,7 @@ import { NzFooterComponent } from 'ng-zorro-antd/layout';
   standalone: true,
   imports: [NzFooterComponent],
   templateUrl: './footer.component.html',
-  styleUrl: './footer.component.css'
+  styleUrl: './footer.component.less'
 })
 export class FooterComponent {
 

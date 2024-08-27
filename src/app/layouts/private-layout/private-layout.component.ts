@@ -24,7 +24,7 @@ import { FooterComponent } from './footer/footer.component';
     FooterComponent
   ],
   templateUrl: './private-layout.component.html',
-  styleUrl: './private-layout.component.css',
+  styleUrl: './private-layout.component.less',
 })
 export class PrivateLayoutComponent {
   themeService = inject(ThemeService);
