@@ -1,0 +1,93 @@
+// Define breakpoints
+@screen-xs: 576px;
+@screen-sm: 768px;
+@screen-md: 992px;
+@screen-lg: 1200px;
+@screen-xl: 1400px;
+
+// General styles
+.flex-container {
+  display: flex;
+  // flex-wrap: wrap;
+  width: 90%;
+}
+
+// List container styles
+.nz-list-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 16px; // Gap between items
+}
+
+// Adjust column widths based on breakpoints
+.nz-col {
+  flex: 1;
+  margin: 8px; // Margin around columns
+
+  // Default to full width on extra-small screens
+  @media (max-width: @screen-xs) {
+    flex: 0 0 100%;
+  }
+  
+  // Adjust column width on small screens
+  @media (min-width: @screen-xs) and (max-width: @screen-sm) {
+    flex: 0 0 100%;
+  }
+  
+  // Adjust column width on medium screens
+  @media (min-width: @screen-sm) and (max-width: @screen-md) {
+    flex: 0 0 50%; // Two columns
+  }
+  
+  // Adjust column width on large screens
+  @media (min-width: @screen-md) and (max-width: @screen-lg) {
+    flex: 0 0 33.33%; // Three columns
+  }
+  
+  // Adjust column width on extra-large screens
+  @media (min-width: @screen-lg) {
+    flex: 0 0 25%; // Four columns
+  }
+}
+
+// Seat icon container styles
+.seat-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px; // Gap between rows
+}
+
+// Seat icon row styles
+.seat-row {
+  display: flex;
+  justify-content: space-between;
+  
+  // Adjust for smaller screens
+  @media (max-width: @screen-xs) {
+    flex-direction: column;
+  }
+}
+
+// Button styles
+.button-container {
+  margin-top: 16px;
+  margin-left: 32px;
+  
+  button {
+    margin-right: 8px; // Space between buttons
+    padding: 8px 16px; // Button padding
+  }
+}
+
+button.ant-btn.ant-btn-primary {
+    background: var(--primary-color);
+}
+
+::ng-deep .ant-card-head-title {
+    color: var(--title-text-color);
+}
+
+nz-card {
+    border-radius: 10px;
+}

@@ -1,0 +1,77 @@
+/* Genel stil - 16x16 boyutlarıyla */
+.seat-icon {
+    position: relative;
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    margin: 2px;
+  }
+  
+  /* Koltuğun sırt kısmı */
+  .seat-back {
+    width: 80%;
+    height: 40%;
+    background-color: grey;
+    border-radius: 2px 2px 0 0;
+    position: absolute;
+    top: 0;
+    left: 10%;
+  }
+  
+  /* Oturma alanı */
+  .seat-cushion {
+    width: 80%;
+    height: 30%;
+    background-color: grey;
+    border-radius: 0 0 2px 2px;
+    position: absolute;
+    bottom: 25%;
+    left: 10%;
+  }
+  
+  /* Kol dayamaları */
+  .seat-armrest-left,
+  .seat-armrest-right {
+    width: 2px;
+    height: 30%;
+    background-color: grey;
+    position: absolute;
+    top: 40%;
+  }
+  
+  .seat-armrest-left {
+    left: 0;
+  }
+  
+  .seat-armrest-right {
+    right: 0;
+  }
+  
+  /* Koltuğun bacakları */
+  .seat-legs {
+    width: 2px;
+    height: 10%;
+    background-color: grey;
+    position: absolute;
+    bottom: 0;
+    left: 25%;
+  
+    &:after {
+      content: '';
+      width: 2px;
+      height: 10%;
+      background-color: grey;
+      position: absolute;
+      left: 100%;
+    }
+  }
+  
+  /* activeIcon true olduğunda koltuk kırmızı olacak */
+  .active .seat-back,
+  .active .seat-cushion,
+  .active .seat-armrest-left,
+  .active .seat-armrest-right,
+  .active .seat-legs {
+    background-color: var(--primary-color);
+  }
+  

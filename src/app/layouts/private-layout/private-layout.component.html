@@ -46,7 +46,7 @@
       <li nz-submenu nzTitle="Ek Hizmetler" nzIcon="form">
         <ul>
           <li nz-menu-item nzMatchRouter>
-            <a>Koltuk Seçimi</a>
+            <a routerLink="/seat-selection">Koltuk Seçimi</a>
           </li>
           <li nz-menu-item nzMatchRouter>
             <a>Bagaj Hakkı</a>
@@ -167,9 +167,12 @@
     <nz-content>
       <div class="inner-content">
         <router-outlet></router-outlet>
+        <!-- Footer -->
+     <app-footer></app-footer>
       </div>
-      <!-- Footer -->
-      <app-footer></app-footer>
+ 
     </nz-content>
+      
   </nz-layout>
+     
 </nz-layout>
