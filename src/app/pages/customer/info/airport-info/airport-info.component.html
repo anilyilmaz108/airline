@@ -1,0 +1,105 @@
+<!-- Title -->
+<h3
+  style="color: var(--title-text-color); display: flex; justify-content: center"
+  nz-typography
+>
+  Havalimanı bilgileri
+</h3>
+<br />
+<h5
+  style="
+    color: var(--subtitle-text-color);
+    display: flex;
+    justify-content: center;
+  "
+  nz-typography
+>
+  *En güncel bilgiye ulaşmak için her zaman ilgili havalimanının internet
+  sitesini kontrol etmenizi öneririz.
+</h5>
+<br />
+<!-- Table -->
+<nz-table #nzTable [nzData]="listOfDisplayData" nzTableLayout="fixed">
+  <thead>
+    <tr>
+      <th style="background-color: var(--card-color)" nzCustomFilter>
+        <span style="color: var(--title-text-color)">HAVAALANI ADI</span>
+        <nz-filter-trigger
+          [(nzVisible)]="visible"
+          [nzActive]="searchValue.length > 0"
+          [nzDropdownMenu]="menu"
+        >
+          <span nz-icon nzType="search"></span>
+        </nz-filter-trigger>
+      </th>
+      <th style="background-color: var(--card-color)">
+        <span style="color: var(--title-text-color)">HAVAALANI KODU</span>
+      </th>
+      <th style="background-color: var(--card-color)">
+        <span style="color: var(--title-text-color)">ŞEHİR</span>
+      </th>
+      <th style="background-color: var(--card-color)">
+        <span style="color: var(--title-text-color)">TERMİNAL</span>
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    @for (data of nzTable.data; track data) {
+    <tr>
+      <td>
+        <span style="color: var(--subtitle-text-color)">{{
+          data.airportName
+        }}</span>
+      </td>
+      <td>
+        <span style="color: var(--subtitle-text-color)">{{
+          data.airportCode
+        }}</span>
+      </td>
+      <td>
+        <span style="color: var(--subtitle-text-color)">{{ data.city }}</span>
+      </td>
+      <td>
+        <span style="color: var(--subtitle-text-color)">{{
+          data.terminal
+        }}</span>
+      </td>
+    </tr>
+    }
+  </tbody>
+</nz-table>
+<nz-dropdown-menu #menu="nzDropdownMenu">
+  <div class="ant-table-filter-dropdown">
+    <div class="search-box">
+      <input
+        type="text"
+        nz-input
+        placeholder="Search name"
+        [(ngModel)]="searchValue"
+      />
+      <button
+        nz-button
+        nzSize="small"
+        nzType="primary"
+        (click)="search()"
+        class="search-button"
+      >
+        Search
+      </button>
+      <button nz-button nzSize="small" (click)="reset()">Reset</button>
+    </div>
+  </div>
+</nz-dropdown-menu>
+
+<div style="display: flex; flex-direction: column">
+  <span nz-typography nzType="secondary"
+    >* Temsili sayıda veri girilmiştir.</span
+  >
+  <span nz-typography nzType="secondary"
+    >* Terminal bilgileri gerçek bilgileri göstermeyebilir.</span
+  >
+  <span nz-typography nzType="secondary"
+    >* Test amaçlı bir uygulama olduğu için gerçek verileri ilgili havalimanının
+    internet sitesinden kontrol edebilirsiniz.</span
+  >
+</div>
