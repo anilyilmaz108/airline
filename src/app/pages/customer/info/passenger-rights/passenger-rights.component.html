@@ -1,12 +1,12 @@
 <h3 style="color: var(--title-text-color); display: flex; justify-content: center;" nz-typography>
-    Esnek Rezervasyon
+    Yolcu Hakları Bilgilendirmesi
   </h3>
 <!-- Image -->
     <img style="display: flex; justify-content: center; border-radius: 10px;"
     nz-image
     width="100%"
     height="400px"
-    nzSrc="https://www.flextickets.nl/wp-content/uploads/2023/10/aanmelden-2.jpg"
+    nzSrc="https://www.skycop.com/wp-content/uploads/2022/08/how-to-claim-compensation-for-a-delayed-flight.jpg"
     alt=""
   />
 
@@ -26,8 +26,21 @@
 <nz-divider></nz-divider>
 <br />
 <h3 style="color: var(--title-text-color)" nz-typography>
-    Uçak Biletinde Esnek Değişiklik ve İptal Hakkı
+    Spesifik Durumlarda Değişebilecek Kurallar
 </h3>
 <ul *ngFor="let item of data">
   <li style="color: var(--subtitle-text-color)" nz-typography>{{ item }}</li>
 </ul>
+<br>
+<!-- Tips -->
+<div style="display: flex; flex-direction: column">
+    <span nz-typography nzType="secondary"
+      >* Telefon Numarası: 444 4 444</span
+    >
+    <span nz-typography nzType="secondary"
+      >* Fax Numarası: +90 (555) 555 55 55</span
+    >
+    <span nz-typography nzType="secondary"
+      >* Detaylı bilgi almak için <a routerLink="/info/help-contact">Yardım & İletişim</a> sayfasına gidiniz</span
+    >
+  </div>

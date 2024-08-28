@@ -27,7 +27,7 @@ export class GeneralInfoComponent {
       name: 'This is panel header 3'
     },
     {
-      active: true,
+      active: false,
       name: 'This is panel header 4',
       disabled: false
     },
