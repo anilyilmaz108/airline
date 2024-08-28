@@ -8,6 +8,7 @@ import { NzToolTipModule } from 'ng-zorro-antd/tooltip';
 import { SvgIconComponent } from 'angular-svg-icon';
 import { ThemeService } from '../../services/theme.service';
 import { FooterComponent } from './footer/footer.component';
+import { NzBackTopModule } from 'ng-zorro-antd/back-top';
 
 @Component({
   selector: 'app-private-layout',
@@ -20,8 +21,9 @@ import { FooterComponent } from './footer/footer.component';
     NzLayoutModule,
     NzMenuModule,
     NzToolTipModule,
-    SvgIconComponent,
-    FooterComponent
+    FooterComponent,
+    NzBackTopModule,
+    NzIconModule,
   ],
   templateUrl: './private-layout.component.html',
   styleUrl: './private-layout.component.less',
