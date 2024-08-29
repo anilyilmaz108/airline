@@ -8,12 +8,32 @@
     [(nzCollapsed)]="isCollapsed"
     [nzTrigger]="null"
   >
-    <div class="sidebar-logo">
+  <div class="sidebar-header">
+    <img class="m-auto" src="https://www.pngkey.com/png/full/152-1525248_airplane-clipart-logo-flight-logo-clipart.png" [width]="isCollapsed ? '55' : '66'" alt="logo"
+      style="cursor: pointer" routerLink="/" />
+    <h1>{{appName}}</h1>
+    <h4 style="color: var(--tips-text-color);" *ngIf="!isCollapsed">
+      {{ user ? user.email : 'Havayolu Test Uygulaması'}}
+    </h4>
+    <div *ngIf="user"
+      [ngClass]="isCollapsed ? 'profile-small' : 'profile'" routerLink="/"> <!--profile-->
+      <!--<img *ngIf="userService.userPictureSubject.value" [src]="userService.userPictureSubject.value" alt="foto" />-->
+      <img src="https://cdn-icons-png.freepik.com/512/6997/6997519.png" /> <!--Man-->
+      <!--<img src="https://cdn-icons-png.flaticon.com/512/219/219984.png" /> --><!--Woman-->
+      <!--<img *ngIf="this.user?.gender !== 'K'" src="assets/images/blank-man.png" />
+      <img *ngIf="this.user?.gender === 'K'" src="assets/images/blank-woman.png" />-->
+    </div>
+    <div *ngIf="!user" [ngClass]="isCollapsed ? 'profile-small' : 'profile'" routerLink="/">
+      <img src="https://cdn-icons-png.flaticon.com/512/5158/5158652.png" />
+    </div>
+  </div>
+  <br>
+   <!-- <div class="sidebar-logo">
       <a href="https://ng.ant.design/" target="_blank">
         <img src="https://ng.ant.design/assets/img/logo.svg" alt="logo" />
         <h1>Ant Design Of Angular</h1>
       </a>
-    </div>
+    </div>-->
     <ul
       nz-menu
       nzTheme="dark"
@@ -191,13 +211,14 @@
             ></span>
           </span>
           <!-- Logout -->
-          <span *ngIf="isUser" (click)="isLoginUser()" class="header-icons">
-            Anıl Yılmaz - 1000 Air&nbsp;
+          <span *ngIf="user" class="header-icons">{{airScore}}</span>
+          <span *ngIf="user" class="header-icons">{{user.email.split("@", 1)}}</span>
+          <span *ngIf="user" (click)="logout()" class="header-icons">
             <i class="trigger" nz-tooltip
             nzTooltipTitle="Çıkış Yap"
             nzTooltipPlacement="bottomRight" nz-icon [nzType]="'logout'"></i>
           </span>
-          <span routerLink="/user/login" *ngIf="!isUser" (click)="isLoginUser()" class="header-icons" nz-icon  nz-tooltip
+          <span routerLink="/user/login" *ngIf="!user" class="header-icons" nz-icon  nz-tooltip
           nzTooltipTitle="Giriş Yap"
           nzTooltipPlacement="bottomRight" nzType="login" nzTheme="outline"></span>
         </div>

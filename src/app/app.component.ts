@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { AuthService } from './services/auth.service';
 
 
 @Component({
@@ -10,4 +11,8 @@ import { RouterOutlet } from '@angular/router';
   styleUrls: ['./app.component.less']
 })
 export class AppComponent {
+  authService = inject(AuthService);
+  constructor() {
+    this.authService.fbOnStatusChange();
+  }
 }
