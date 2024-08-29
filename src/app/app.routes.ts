@@ -11,6 +11,7 @@ export const routes: Routes = [
       { path: 'additional-services', loadChildren: () => import('./pages/customer/additional-services/additional-services.routes').then(m => m.ADDITIONAL_SERVICES_ROUTES) },
       { path: 'discover', loadChildren: () => import('./pages/customer/discover/discover.routes').then(m => m.DISCOVER_ROUTES) },
       { path: 'info', loadChildren: () => import('./pages/customer/info/info.routes').then(m => m.INFO_ROUTES) },
+      { path: 'user', loadChildren: () => import('./pages/user/user.routes').then(m => m.USER_ROUTES) },
     ]
   }
 

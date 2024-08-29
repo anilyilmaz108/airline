@@ -32,12 +32,22 @@ export class PrivateLayoutComponent {
   themeService = inject(ThemeService);
   isCollapsed = false;
   isDarkMode: boolean;
+  isEnglish = false;
+  isUser = false;
 
   constructor() {
     this.isDarkMode = this.themeService.isDarkMode();
   }
-    toggleTheme() {
-      this.isDarkMode = !this.isDarkMode;
-      this.themeService.setDarkMode(this.isDarkMode);
+  toggleTheme() {
+    this.isDarkMode = !this.isDarkMode;
+    this.themeService.setDarkMode(this.isDarkMode);
+  }
+
+  toggleLanguage() {
+    this.isEnglish = !this.isEnglish;
+  }
+
+  isLoginUser() {
+    this.isUser = !this.isUser;
   }
 }

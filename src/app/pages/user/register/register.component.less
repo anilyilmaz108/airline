@@ -1,0 +1,55 @@
+.login-form {
+    min-width: 300px;
+  }
+  
+  .login-form-margin {
+    margin-bottom: 16px;
+  }
+  
+  .login-form-forgot {
+    float: right;
+  }
+  
+  .login-form-button {
+    width: 100%;
+  }
+  
+  .title {
+    margin-bottom: 40px;
+    text-align: center;
+    font-size: x-large;
+    color: var(--tips-text-color);
+    font-weight: 300;
+  }
+  
+
+
+::ng-deep nz-card.ant-card.ant-card-bordered {
+    width: min-content;
+}
+
+nz-card {
+    border-radius: 10px;
+    background-color: var(--card-color);
+}
+
+::ng-deep span {
+  width: max-content;
+}
+
+@media only screen and (max-width: 768px) {
+  .login-form {
+    width: 100%;
+    padding: 10px;
+  }
+  .login-form-margin {
+    margin-top: 10px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .login-form {
+    padding: 5px;
+  }
+}
+

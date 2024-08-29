@@ -1,0 +1,74 @@
+<div style="display: flex; justify-content: center;">
+    <nz-card [nzCover]="coverTemplate">
+      <div class="title">{{appName}}</div>
+      <form
+        nz-form
+        [formGroup]="form"
+        class="login-form"
+        (ngSubmit)="submitForm()"
+      >
+        <nz-form-item>
+          <nz-form-control>
+            <nz-input-group nzPrefixIcon="mail">
+              <input
+                type="email"
+                nz-input
+                formControlName="email"
+                placeholder="Email"
+              />
+            </nz-input-group>
+          </nz-form-control>
+        </nz-form-item>
+        <nz-form-item>
+          <nz-form-control>
+            <nz-input-group nzPrefixIcon="lock">
+              <input
+                type="password"
+                nz-input
+                formControlName="pass"
+                placeholder="Parola"
+              />
+            </nz-input-group>
+          </nz-form-control>
+        </nz-form-item>
+        <nz-form-item>
+            <nz-form-control>
+              <nz-input-group nzPrefixIcon="lock">
+                <input
+                  type="password"
+                  nz-input
+                  formControlName="rePass"
+                  placeholder="Parola Tekrarı"
+                />
+              </nz-input-group>
+            </nz-form-control>
+          </nz-form-item>
+        <div nz-row class="login-form-margin">
+          <div nz-col [nzSpan]="14">
+            <label nz-checkbox formControlName="confirmPrivacy">
+              <span style="color: var(--tips-text-color);">Kvkk aydınlatma metnini okudum, anladım.</span>
+            </label>
+          </div>
+          <!-- <div nz-col [nzSpan]="10">
+                <a class="login-form-forgot">Parolamı Unuttum</a>
+              </div> -->
+        </div>
+        <button
+          nz-button
+          class="login-form-button login-form-margin"
+          [nzType]="'primary'"
+          [disabled]="!form.valid"
+        >
+          Oturum Aç
+        </button>
+        <p style="color: var(--subtitle-text-color); display: flex; justify-content: center;" nz-typography>
+          Zaten bir hesabınız var mı?&nbsp; <a routerLink="/user/login">Giriş Yap</a> 
+        </p>
+      </form>
+    </nz-card>
+    <ng-template #coverTemplate>
+      <img style="padding: 10px;" alt="{{appName}}" src="https://www.pngkey.com/png/full/152-1525248_airplane-clipart-logo-flight-logo-clipart.png" />
+    </ng-template>
+  </div>
+  <br>
+  

@@ -1,0 +1,76 @@
+import { CommonModule } from '@angular/common';
+import { Component, inject } from '@angular/core';
+import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
+import { NzButtonModule } from 'ng-zorro-antd/button';
+import { NzCardModule } from 'ng-zorro-antd/card';
+import { NzCheckboxModule } from 'ng-zorro-antd/checkbox';
+import { NzFormModule } from 'ng-zorro-antd/form';
+import { NzInputModule } from 'ng-zorro-antd/input';
+import { RegisterComponent } from '../register/register.component';
+import { appName } from '../../../core/constants';
+import { AuthService } from '../../../services/auth.service';
+import { environment } from '../../../../environments/environment';
+import { NzTypographyModule } from 'ng-zorro-antd/typography';
+import { RouterLink } from '@angular/router';
+
+@Component({
+  selector: 'app-login',
+  standalone: true,
+  imports: [
+    CommonModule,
+    ReactiveFormsModule,
+    NzCardModule,
+    NzFormModule,
+    NzInputModule,
+    NzButtonModule,
+    NzCheckboxModule,
+    RegisterComponent,
+    NzTypographyModule,
+    RouterLink,
+    FormsModule
+  ],
+  templateUrl: './login.component.html',
+  styleUrl: './login.component.less',
+  host: {ngSkipHydration: 'true'},
+})
+export class LoginComponent {
+    appName = appName;
+    formBuilder = inject(FormBuilder);
+    authService = inject(AuthService);
+
+    form!: FormGroup;
+
+    ngOnInit(): void {
+      this.buildForm();
+    }
+ 
+    buildForm() {
+      this.form = this.formBuilder.group({
+        email: [
+          environment.testEmail,
+          [Validators.required, Validators.minLength(2), Validators.email],
+        ],
+        pass: [
+          environment.testPass,
+          [Validators.required, Validators.minLength(6)],
+        ],
+        rememberMe: false,
+      });
+    }
+
+ 
+
+ 
+  submitForm() {
+    this.authService.fbLogin(this.form.controls['email'].value,this.form.controls['pass'].value);
+    console.log('FB login işlemi yapıldı');
+    this.resetForm();
+  }
+
+  resetForm() {
+    this.form.reset();
+  }
+
+
+}
+
