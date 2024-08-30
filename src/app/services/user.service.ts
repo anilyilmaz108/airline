@@ -1,5 +1,5 @@
 import { Injectable, inject } from '@angular/core';
-import { User } from '../models/user';
+import { UserModel } from '../models/user';
 import { orderBy, where } from 'firebase/firestore';
 import { FirestoreService } from './firestore.service';
 
@@ -12,7 +12,7 @@ export class UserService {
   now = new Date();
 
   getAll() {
-    return this.fsService.listen<User>('User',
+    return this.fsService.listen<UserModel>('User',
     //where('endDate', '>=', this.now),
     orderBy('created_at')
     );
@@ -22,19 +22,19 @@ export class UserService {
     return (await this.fsService.get(`User/${id}`));
   }
 
-  async add(data: User) {
+  async add(data: UserModel) {
     return await this.fsService.add('User', data); 
   }
 
-  async addDataWithCustomDocId(data: User, customId: string) {
+  async addDataWithCustomDocId(data: any, customId: string) {
     return await this.fsService.addDataWithCustomRef('User', data, customId); 
   }
 
-  async set(path: string, data: User) {
+  async set(path: string, data: UserModel) {
     return await this.fsService.set(path, data);
   }
 
-  update(id: string, data: User) {
+  update(id: string, data: UserModel) {
     return this.fsService.update(`User/${id}`, data);
   }
 

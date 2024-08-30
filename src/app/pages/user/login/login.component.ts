@@ -12,6 +12,7 @@ import { AuthService } from '../../../services/auth.service';
 import { environment } from '../../../../environments/environment';
 import { NzTypographyModule } from 'ng-zorro-antd/typography';
 import { RouterLink } from '@angular/router';
+import { UserService } from '../../../services/user.service';
 
 @Component({
   selector: 'app-login',
@@ -37,6 +38,7 @@ export class LoginComponent {
     appName = appName;
     formBuilder = inject(FormBuilder);
     authService = inject(AuthService);
+    userService = inject(UserService);
 
     form!: FormGroup;
 
@@ -61,8 +63,10 @@ export class LoginComponent {
  
 
  
-  submitForm() {
-    this.authService.fbLogin(this.form.controls['email'].value,this.form.controls['pass'].value);
+  async submitForm() {
+    await this.authService.fbLogin(this.form.controls['email'].value,this.form.controls['pass'].value);
+    await this.getUserData("DyArMBHFFSVtMKuOlL6IBIeYA1U2");
+    // console.log('Get User:', this.authService.userSignal());
     console.log('FB login işlemi yapıldı');
     this.resetForm();
   }
@@ -70,6 +74,23 @@ export class LoginComponent {
   resetForm() {
     this.form.reset();
   }
+
+    // Kullanıcı ID'sine göre User Çekme
+    async getUserData(userId: string) {
+      // Kullanıcı ID'si ile path oluşturuyoruz
+       try {
+         const userDoc = await this.userService.get(userId);  // UserService'den çağırıyoruz
+         if (userDoc.exists()) {
+           // console.log('User Data:', userDoc.data());  // Veriyi konsola yazdırıyoruz
+           this.authService.userSignal.set(userDoc.data());
+           
+         } else {
+           console.log('No such document!');
+         }
+       } catch (error) {
+         console.error('Error fetching user:', error);
+       }
+     }
 
 
 }

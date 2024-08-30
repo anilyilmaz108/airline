@@ -13,7 +13,8 @@ import { AuthService } from '../../services/auth.service';
 import { environment } from '../../../environments/environment';
 import { Auth, user } from '@angular/fire/auth';
 import { appName } from '../../core/constants';
-
+import { UserModel } from '../../models/user';
+import { UserService } from '../../services/user.service';
 
 @Component({
   selector: 'app-private-layout',
@@ -32,31 +33,51 @@ import { appName } from '../../core/constants';
   ],
   templateUrl: './private-layout.component.html',
   styleUrl: './private-layout.component.less',
-  host: {ngSkipHydration: 'true'},
-
+  host: { ngSkipHydration: 'true' },
 })
 export class PrivateLayoutComponent {
   themeService = inject(ThemeService);
   private fbAuth = inject(Auth);
   authService = inject(AuthService);
+  userService = inject(UserService);
+
   router = inject(Router);
   airScore = '1000 Air';
   appName = appName;
   isCollapsed = false;
   isDarkMode: boolean;
   isEnglish = false;
-  user: any;
+  user!: UserModel;
 
   constructor() {
     this.isDarkMode = this.themeService.isDarkMode();
     user(this.fbAuth).subscribe((fbuser: any) => {
+      this.getUserData('DyArMBHFFSVtMKuOlL6IBIeYA1U2');
       // console.log('FbUser@PrivateLayout: ', fbuser);
-      this.user = this.authService.userSignal();
-
+      // console.log('Get User:', this.authService.userSignal());
+      this.user = this.authService.userSignal()!;
     });
     // console.log('FbUserSignal: ', this.user);
+    // this.user = this.authService.userSignal()!;
+    // console.log(user);
   }
-  
+
+  // Kullanıcı ID'sine göre User Çekme
+  async getUserData(userId: string) {
+    // Kullanıcı ID'si ile path oluşturuyoruz
+    try {
+      const userDoc = await this.userService.get(userId); // UserService'den çağırıyoruz
+      if (userDoc.exists()) {
+        // console.log('User Data:', userDoc.data());  // Veriyi konsola yazdırıyoruz
+        this.authService.userSignal.set(userDoc.data());
+      } else {
+        console.log('No such document!');
+      }
+    } catch (error) {
+      console.error('Error fetching user:', error);
+    }
+  }
+
   toggleTheme() {
     this.isDarkMode = !this.isDarkMode;
     this.themeService.setDarkMode(this.isDarkMode);

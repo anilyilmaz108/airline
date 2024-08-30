@@ -16,14 +16,14 @@
       {{ user ? user.email : 'Havayolu Test Uygulaması'}}
     </h4>
     <div *ngIf="user"
-      [ngClass]="isCollapsed ? 'profile-small' : 'profile'" routerLink="/"> <!--profile-->
+      [ngClass]="isCollapsed ? 'profile-small' : 'profile'" routerLink="/user/profile"> <!--profile-->
       <!--<img *ngIf="userService.userPictureSubject.value" [src]="userService.userPictureSubject.value" alt="foto" />-->
       <img src="https://cdn-icons-png.freepik.com/512/6997/6997519.png" /> <!--Man-->
       <!--<img src="https://cdn-icons-png.flaticon.com/512/219/219984.png" /> --><!--Woman-->
       <!--<img *ngIf="this.user?.gender !== 'K'" src="assets/images/blank-man.png" />
       <img *ngIf="this.user?.gender === 'K'" src="assets/images/blank-woman.png" />-->
     </div>
-    <div *ngIf="!user" [ngClass]="isCollapsed ? 'profile-small' : 'profile'" routerLink="/user/profile">
+    <div *ngIf="!user" [ngClass]="isCollapsed ? 'profile-small' : 'profile'" routerLink="//user/profile">
       <img src="https://cdn-icons-png.flaticon.com/512/5158/5158652.png" />
     </div>
   </div>
@@ -212,7 +212,6 @@
           </span>
           <!-- Logout -->
           <span *ngIf="user" class="header-icons">{{airScore}}</span>
-          <span *ngIf="user" class="header-icons">{{user.email.split("@", 1)}}</span>
           <span *ngIf="user" (click)="logout()" class="header-icons">
             <i class="trigger" nz-tooltip
             nzTooltipTitle="Çıkış Yap"

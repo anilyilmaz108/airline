@@ -1,7 +1,7 @@
 import { Injectable, inject, signal } from '@angular/core';
 import { Auth, User, createUserWithEmailAndPassword, onAuthStateChanged, sendPasswordResetEmail, signInAnonymously, signInWithEmailAndPassword, signOut, user } from '@angular/fire/auth';
 import { Router } from '@angular/router';
-
+import { UserModel } from '../models/user';
 @Injectable({
   providedIn: 'root'
 })
@@ -9,16 +9,16 @@ export class AuthService {
   private fbAuth = inject(Auth);
   private router = inject(Router);
 
-  userSignal = signal<any | null>(null);
+  userSignal = signal<UserModel | null>(null);
   
   constructor() { }
 
-  fbLogin(email: string, password: string) {
-    signInWithEmailAndPassword(this.fbAuth, email, password)
+  async fbLogin(email: string, password: string) : Promise<void> {
+    await signInWithEmailAndPassword(this.fbAuth, email, password)
       .then((data) => {
         console.info('😎', data.user?.uid);
-        this.userSignal.set(data.user);
-        //this.router.navigateByUrl('/');
+        // this.userSignal.set(null);
+        this.router.navigateByUrl('/');
         // console.log(this.userSignal());
       })
       .catch(() => {
@@ -38,7 +38,7 @@ export class AuthService {
   async fbRegister(email: string, password: string) : Promise<void>{
     const userCredential = await createUserWithEmailAndPassword(this.fbAuth, email, password)
     const user = userCredential.user;
-    this.userSignal.set(user);
+    // this.userSignal.set(user);
   }
 
   fbResetPassword(email: string) {

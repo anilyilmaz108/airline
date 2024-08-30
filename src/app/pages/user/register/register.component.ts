@@ -59,7 +59,6 @@ export class RegisterComponent {
   appName = appName;
 
   ngOnInit(): void {
-    // this.getUserData(this.authService.userSignal().uid);  
   }
 
   confirmValidator: ValidatorFn = (control: AbstractControl) => {
@@ -96,7 +95,7 @@ export class RegisterComponent {
     const userPath = this.authService.userSignal();
     console.log(userPath);
     const body = {
-      id: userPath.uid,
+      id: userPath?.id,
       role: "user",
       firstName: "",
       lastName: "",
@@ -105,14 +104,14 @@ export class RegisterComponent {
       birth: undefined,
       nationality: "",
       TCID: "",
-      created_at: userPath.metadata.createdAt,
+      created_at: Date.now(),
       active: true,
       email: this.form.controls['email'].value!,
       pass: this.form.controls['pass'].value!,
     };
     
     await this.userService
-      .addDataWithCustomDocId(body, userPath.uid)
+      .addDataWithCustomDocId(body, userPath!.id!)
       .then(() => {
         console.log('FS içine eklendi');
       });
@@ -123,21 +122,6 @@ export class RegisterComponent {
 
   resetForm() {
     this.form.reset();
-  }
-
-  // Kullanıcı ID'sine göre User Çekme
-  async getUserData(userId: string) {
-   // Kullanıcı ID'si ile path oluşturuyoruz
-    try {
-      const userDoc = await this.userService.get(userId);  // UserService'den çağırıyoruz
-      if (userDoc.exists()) {
-        console.log('User Data:', userDoc.data());  // Veriyi konsola yazdırıyoruz
-      } else {
-        console.log('No such document!');
-      }
-    } catch (error) {
-      console.error('Error fetching user:', error);
-    }
   }
 
 }
