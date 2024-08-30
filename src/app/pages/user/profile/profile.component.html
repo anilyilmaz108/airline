@@ -1,0 +1,36 @@
+<h3 style="color: var(--title-text-color); display: flex; justify-content: center;" nz-typography>
+    Profilim
+  </h3>
+  <div style="display: flex; justify-content: center;" *ngIf="userPhotos"> <!--profile-->
+  <!--<img *ngIf="userService.userPictureSubject.value" [src]="userService.userPictureSubject.value" alt="foto" />-->
+  <img src="https://cdn-icons-png.freepik.com/512/6997/6997519.png" /> <!--Man-->
+  <!--<img src="https://cdn-icons-png.flaticon.com/512/219/219984.png" /> --><!--Woman-->
+  <!--<img *ngIf="this.user?.gender !== 'K'" src="assets/images/blank-man.png" />
+  <img *ngIf="this.user?.gender === 'K'" src="assets/images/blank-woman.png" />-->
+</div>
+<div style="display: flex; justify-content: center; padding: 8px;" *ngIf="!userPhotos">
+  <img src="https://cdn-icons-png.flaticon.com/512/5158/5158652.png" />
+</div>
+<br>
+<div style="background-color: var(--primary-color); padding: 16px; border-radius: 10px; ">
+    <p *ngIf="profileRate != 100" style="color: white; display: flex; justify-content: center;" nz-typography>
+        Bilet alırken hızlı işlem yapabilmeniz için profilinizdeki bilgileri doldurmanızı öneririz.
+      </p>
+      <nz-progress nzStrokeColor="var(--announcement-color)" [nzPercent]="profileRate"></nz-progress>
+    </div>
+
+
+  <br>
+  <br>
+  <nz-content style="display: flex; justify-content: center;">
+    <nz-card>
+            <nz-descriptions nzTitle="Kullanıcı Profili" nzBordered nzLayout="vertical">
+                <nz-descriptions-item>Email</nz-descriptions-item>
+                <nz-descriptions-item>testgmail.com</nz-descriptions-item>
+                <nz-descriptions-item>
+                    <span (click)="edit()" nz-icon nzType="edit" nzTheme="outline"></span>
+                </nz-descriptions-item>
+              </nz-descriptions>
+    </nz-card>
+  </nz-content>
+  <br>

@@ -1,5 +1,5 @@
 import { Injectable, inject, signal } from '@angular/core';
-import { Auth, createUserWithEmailAndPassword, onAuthStateChanged, sendPasswordResetEmail, signInAnonymously, signInWithEmailAndPassword, signOut, user } from '@angular/fire/auth';
+import { Auth, User, createUserWithEmailAndPassword, onAuthStateChanged, sendPasswordResetEmail, signInAnonymously, signInWithEmailAndPassword, signOut, user } from '@angular/fire/auth';
 import { Router } from '@angular/router';
 
 @Injectable({
@@ -8,6 +8,7 @@ import { Router } from '@angular/router';
 export class AuthService {
   private fbAuth = inject(Auth);
   private router = inject(Router);
+
   userSignal = signal<any | null>(null);
   
   constructor() { }
@@ -17,7 +18,7 @@ export class AuthService {
       .then((data) => {
         console.info('😎', data.user?.uid);
         this.userSignal.set(data.user);
-        this.router.navigateByUrl('/');
+        //this.router.navigateByUrl('/');
         // console.log(this.userSignal());
       })
       .catch(() => {
@@ -34,18 +35,10 @@ export class AuthService {
       .catch((err) => console.log('FB Anonymous Error!', err));
   }
 
-  fbRegister(email: string, password: string) {
-    createUserWithEmailAndPassword(this.fbAuth, email, password)
-  .then((userCredential) => {
-    // Signed up 
+  async fbRegister(email: string, password: string) : Promise<void>{
+    const userCredential = await createUserWithEmailAndPassword(this.fbAuth, email, password)
     const user = userCredential.user;
-    // ...
-  })
-  .catch((error) => {
-    const errorCode = error.code;
-    const errorMessage = error.message;
-    // ..
-  });
+    this.userSignal.set(user);
   }
 
   fbResetPassword(email: string) {
@@ -73,8 +66,8 @@ export class AuthService {
         // User is signed in, see docs for a list of available properties
         // https://firebase.google.com/docs/reference/js/auth.user
         const uid = user.uid;
-        console.log('User Status ID:', uid);
-        console.log('User:', user);
+        // console.log('User Status ID:', uid);
+        // console.log('User:', user);
         // ...
       } else {
         this.logout();

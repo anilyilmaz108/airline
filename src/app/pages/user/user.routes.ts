@@ -5,6 +5,7 @@ import { setLayout } from '../../core/layout-resolver';
 import { UserComponent } from './user.component';
 import { RegisterComponent } from './register/register.component';
 import { ResetPassComponent } from './reset-pass/reset-pass.component';
+import { ProfileComponent } from './profile/profile.component';
 
 
 export const USER_ROUTES: Routes = [
@@ -12,4 +13,5 @@ export const USER_ROUTES: Routes = [
   { path: 'login', resolve: { layout: setLayout(PageLayout.Private) }, component: LoginComponent },
   { path: 'register', resolve: { layout: setLayout(PageLayout.Private) }, component: RegisterComponent },
   { path: 'reset-pass', resolve: { layout: setLayout(PageLayout.Private) }, component: ResetPassComponent },
+  { path: 'profile', resolve: { layout: setLayout(PageLayout.Private) }, component: ProfileComponent },
 ];

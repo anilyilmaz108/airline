@@ -9,7 +9,7 @@
     "test": "ng test",
     "serve:ssr:airline": "node dist/airline/server/server.mjs"
   },
-  "overrides" : {
+  "overrides": {
     "undici": "6.19.2",
     "undici-types": "6.19.2"
   },
