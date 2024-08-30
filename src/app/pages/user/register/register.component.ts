@@ -94,12 +94,21 @@ export class RegisterComponent {
       this.form.controls['pass'].value!
     )
     const userPath = this.authService.userSignal();
-    console.log(userPath.uid);
+    console.log(userPath);
     const body = {
       id: userPath.uid,
+      role: "user",
+      firstName: "",
+      lastName: "",
+      gender: "",
+      phone: "",
+      birth: undefined,
+      nationality: "",
+      TCID: "",
+      created_at: userPath.metadata.createdAt,
+      active: true,
       email: this.form.controls['email'].value!,
       pass: this.form.controls['pass'].value!,
-      crated_at: Date.now(),
     };
     
     await this.userService

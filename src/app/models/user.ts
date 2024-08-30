@@ -4,7 +4,7 @@ export interface User {
     firstName?: string;
     lastName?: string;
     gender?: string;
-    simulation?: boolean;
+    simulation?: boolean; //FS içine kaydetme
     email?: string;
     pass?: string;
     phone?: string;
