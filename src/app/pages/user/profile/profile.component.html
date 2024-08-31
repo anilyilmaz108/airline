@@ -1,18 +1,17 @@
 <h3 style="color: var(--title-text-color); display: flex; justify-content: center;" nz-typography>
     Profilim
   </h3>
-  <div style="display: flex; justify-content: center;" *ngIf="userPhotos"> <!--profile-->
-  <!--<img *ngIf="userService.userPictureSubject.value" [src]="userService.userPictureSubject.value" alt="foto" />-->
-  <img src="https://cdn-icons-png.freepik.com/512/6997/6997519.png" /> <!--Man-->
-  <!--<img src="https://cdn-icons-png.flaticon.com/512/219/219984.png" /> --><!--Woman-->
-  <!--<img *ngIf="this.user?.gender !== 'K'" src="assets/images/blank-man.png" />
-  <img *ngIf="this.user?.gender === 'K'" src="assets/images/blank-woman.png" />-->
-</div>
-<div style="display: flex; justify-content: center; padding: 8px;" *ngIf="!userPhotos">
-  <img src="https://cdn-icons-png.flaticon.com/512/5158/5158652.png" />
+<!--Profile Photo-->
+<div  *ngIf="user" class="pp-container">
+  <div style="display: flex; flex-direction: column; justify-content: center; padding: 8px; width: 25%;">
+    <img src="{{profilePhoto}}" /> 
+    <br>
+      <input type="file" id="fileInput" #fileInput>
+      <button nz-button style="background-color: var(--primary-color); color: #fff; padding-top: 4px;" (click)="uploadPhoto(fileInput)">Yükle</button>
+  </div>
 </div>
 <br>
-<div *ngIf="profileRate != 100" style="background-color: var(--primary-color); padding: 16px; border-radius: 10px; ">
+<div *ngIf="profileRate != 100 && user" style="background-color: var(--primary-color); padding: 16px; border-radius: 10px; ">
     <p style="color: white; display: flex; justify-content: center;" nz-typography>
         Bilet alırken hızlı işlem yapabilmeniz için profilinizdeki bilgileri doldurmanızı öneririz.
       </p>
@@ -20,9 +19,23 @@
     </div>
   <br>
   <br>
+  <nz-empty *ngIf="!user"
+  nzNotFoundImage="https://gw.alipayobjects.com/zos/antfincdn/ZHrcdLPrvN/empty.svg"
+  [nzNotFoundContent]="contentTpl"
+  [nzNotFoundFooter]="footerTpl"
+>
+  <ng-template #contentTpl>
+    <span style="color: var(--title-text-color);">
+      Profilinizi oluşturmak için lütfen giriş yapınız.
+    </span>
+  </ng-template>
+  <ng-template #footerTpl>
+    <button style="background-color: var(--primary-color);" nz-button nzType="primary" routerLink="/user/login">Giriş Yap</button>
+  </ng-template>
+</nz-empty>
   <nz-content style="display: flex; justify-content: center;">
 <!-- Table -->
-<nz-table #nzTable nzShowPagination="false" [nzData]="data">
+<nz-table *ngIf="user" #nzTable nzShowPagination="false" [nzData]="data">
   <thead style="display: none;">
     <tr>
       <th style="background-color: var(--card-color)" >

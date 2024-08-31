@@ -18,6 +18,12 @@ export class SuccessService {
       case 202:
         this.swal.callToast('Hesabınıza giriş yapıldı', 'success');
         break;
+      case 203:
+        this.swal.callToast(
+          'Profil fotoğrafınız başarıyla güncellendi',
+          'success'
+        );
+        break;
     }
   }
 }

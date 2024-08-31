@@ -21,6 +21,12 @@ export class ErrorService {
       case 2:
         this.swal.callToast('Giriş işlemi sırasında bir hata oluştu', 'error');
         break;
+      case 3:
+        this.swal.callToast(
+          'Profil fotoğrafı güncelleme sırasında bir hata oluştu',
+          'error'
+        );
+        break;
       case 404:
         this.swal.callToast('API adresi bulunamadı', 'error');
         break;

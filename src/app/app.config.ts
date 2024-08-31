@@ -51,5 +51,7 @@ export const appConfig: ApplicationConfig = {
     ScreenTrackingService,
     UserTrackingService,
     provideFirestore(() => getFirestore()),
+    provideStorage(() => getStorage()),
+
   ],
 };

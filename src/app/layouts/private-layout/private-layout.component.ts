@@ -48,14 +48,22 @@ export class PrivateLayoutComponent {
   isDarkMode: boolean;
   isEnglish = false;
   user!: UserModel;
+  profilePhoto = "";
 
   constructor() {
     this.isDarkMode = this.themeService.isDarkMode();
     user(this.fbAuth).subscribe((fbuser: any) => {
       this.getUserData(this.fbAuth.currentUser?.uid!);
-      // console.log('FbUser@PrivateLayout: ', fbuser);
-      // console.log('Get User:', this.authService.userSignal());
-      this.user = this.authService.userSignal()!;
+    
+      // currentUser bilgisini yeniden yükleyip photoURL'yi güncelle
+      this.fbAuth.currentUser?.reload().then(() => {
+        this.profilePhoto = this.fbAuth.currentUser?.photoURL
+          ? this.fbAuth.currentUser?.photoURL
+          : "https://cdn-icons-png.freepik.com/512/6915/6915987.png";
+        
+        console.log(this.profilePhoto);
+        this.user = this.authService.userSignal()!;
+      });
     });
     // console.log('FbUserSignal: ', this.user);
     // this.user = this.authService.userSignal()!;

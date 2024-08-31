@@ -5,4 +5,5 @@ export * from './theme.service';
 export * from './user.service';
 export * from './swal.service';
 export * from './success.service';
-export * from './error.service'
+export * from './error.service';
+export * from './storage.service';

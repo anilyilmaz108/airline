@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { ChangeDetectionStrategy, ChangeDetectorRef, Component, inject } from '@angular/core';
+import { ChangeDetectionStrategy, ChangeDetectorRef, Component, ElementRef, ViewChild, inject } from '@angular/core';
 import { NzCardModule } from 'ng-zorro-antd/card';
 import { NzIconModule } from 'ng-zorro-antd/icon';
 import { NzContentComponent } from 'ng-zorro-antd/layout';
@@ -10,8 +10,14 @@ import { NzDescriptionsModule } from 'ng-zorro-antd/descriptions';
 import { NzProgressModule } from 'ng-zorro-antd/progress';
 import { UserModel } from '../../../models/user';
 import { NzTableModule } from 'ng-zorro-antd/table';
-import { UserService } from '../../../services';
+import { ErrorService, StorageService, SuccessService, UserService } from '../../../services';
 import { EditProfileComponent } from './edit-profile/edit-profile.component';
+import { NzUploadChangeParam, NzUploadModule } from 'ng-zorro-antd/upload';
+import { NzButtonModule } from 'ng-zorro-antd/button';
+import { NzEmptyModule } from 'ng-zorro-antd/empty';
+import { RouterLink } from '@angular/router';
+import { Auth, user } from '@angular/fire/auth';
+import { updateProfile } from 'firebase/auth';
 
 @Component({
   selector: 'app-profile',
@@ -26,9 +32,14 @@ import { EditProfileComponent } from './edit-profile/edit-profile.component';
     NzDescriptionsModule,
     NzProgressModule,
     NzTableModule,
+    NzUploadModule,
+    NzButtonModule,
+    NzEmptyModule,
+    RouterLink
   ],
   templateUrl: './profile.component.html',
   styleUrl: './profile.component.less',
+  host: {ngSkipHydration: 'true'},
 
 })
 export class ProfileComponent {
@@ -37,13 +48,20 @@ export class ProfileComponent {
   profileRate = 100;
 
   authService = inject(AuthService);
+  private auth = inject(Auth);
   modalService = inject(NzModalService);
   userService = inject(UserService);
+  storageService = inject(StorageService);
+  errorService = inject(ErrorService);
+  successService = inject(SuccessService);
   user!: UserModel;
+  profilePhoto = "";
 
   data: any;
 
-  constructor(private cdr: ChangeDetectorRef) {}
+  constructor(private cdr: ChangeDetectorRef) {
+    this.profilePhoto = this.auth.currentUser?.photoURL ? this.auth.currentUser.photoURL : "https://cdn-icons-png.freepik.com/512/6915/6915987.png";
+  }
 
   ngOnInit(): void {
     // console.log(this.authService.userSignal());
@@ -186,7 +204,7 @@ export class ProfileComponent {
           "role": data[0].role
         }
         this.authService.userSignal.set(this.user);
-        console.log('signalle', this.authService.userSignal());
+        // console.log('signalle', this.authService.userSignal());
         this.cdr.detectChanges();
         this.data = [
           {
@@ -350,4 +368,26 @@ export class ProfileComponent {
       console.error('Error fetching user:', error);
     }
   }
+
+  async uploadPhoto(inputElement: HTMLInputElement){
+    const getUrl = await this.storageService.uploadToStorage(this.user.id!, inputElement, {contentType:  'image/png'});
+    // console.log(getUrl); -> URL'yi aldım.
+    const user = this.auth.currentUser;
+
+    await updateProfile(user!, {
+      photoURL: getUrl
+    }).then(async() => {
+      // Profil güncellemesi başarılı
+      await user!.reload();
+      console.log('Kullanıcı fotoğraf URL\'si başarıyla güncellendi.');
+      this.successService.successHandler(203);
+      this.profilePhoto = this.auth.currentUser?.photoURL ? this.auth.currentUser.photoURL : "https://cdn-icons-png.freepik.com/512/6915/6915987.png";
+      this.userPhotos = true;
+    }).catch((error) => {
+      // Bir hata meydana geldi
+      console.error('Fotoğraf güncelleme hatası: ', error);
+      this.errorService.errorHandler(3);
+    });
+  }
+
 }
