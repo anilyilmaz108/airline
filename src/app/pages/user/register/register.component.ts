@@ -27,7 +27,7 @@ import { environment } from '../../../../environments/environment';
 import { NzTypographyModule } from 'ng-zorro-antd/typography';
 import { Router, RouterLink } from '@angular/router';
 import { LoginComponent } from '../login/login.component';
-import { UserService } from '../../../services';
+import { ErrorService, SuccessService, UserService } from '../../../services';
 
 @Component({
   selector: 'app-register',
@@ -54,6 +54,8 @@ export class RegisterComponent {
   private formBuilder = inject(FormBuilder);
   private authService = inject(AuthService);
   private userService = inject(UserService);
+  successService = inject(SuccessService);
+  errorService = inject(ErrorService);
   private router = inject(Router);
   error = '';
   appName = appName;
@@ -113,7 +115,9 @@ export class RegisterComponent {
     await this.userService
       .addDataWithCustomDocId(body, userPath!.id!)
       .then(() => {
-        console.log('FS içine eklendi');
+        this.successService.successHandler(201);
+      }).catch(() => {
+        this.errorService.errorHandler(1);
       });
 
     console.log('FB register işlemi yapıldı');

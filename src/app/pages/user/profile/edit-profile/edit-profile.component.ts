@@ -5,7 +5,7 @@ import { NzButtonModule } from 'ng-zorro-antd/button';
 import { NzFormModule } from 'ng-zorro-antd/form';
 import { NzInputModule } from 'ng-zorro-antd/input';
 import { NZ_MODAL_DATA, NzModalModule, NzModalRef } from 'ng-zorro-antd/modal';
-import { AuthService, UserService } from '../../../../services';
+import { AuthService, ErrorService, SuccessService, UserService } from '../../../../services';
 import { UserModel } from '../../../../models/user';
 
 @Component({
@@ -22,6 +22,8 @@ export class EditProfileComponent {
   nzModalRef = inject(NzModalRef);
   authService = inject(AuthService);
   userService = inject(UserService);
+  successService = inject(SuccessService);
+  errorService = inject(ErrorService);
   user! : UserModel;
 
   title = this.nzModalData.title;
@@ -82,6 +84,9 @@ export class EditProfileComponent {
       await this.getUserData(this.id);
       this.nzModalRef.destroy();
       //this.cdr.detectChanges();
+      this.successService.successHandler(200);
+    }).catch(() => {
+      this.errorService.errorHandler(0);
     });
     
   }
