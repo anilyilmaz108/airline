@@ -111,11 +111,12 @@ export class FindFlightComponent {
       nzContent: PassengerSelectComponent,
       nzData: {adultNumber: this.adultNumberGlobal, childNumber: this.childNumberGlobal, babyNumber: this.babyNumberGlobal},
     });
-    this.nzModalService.afterAllClose.subscribe(result => {
-      this.adultNumberGlobal = "2";
-      this.childNumberGlobal = "0";
-      this.babyNumberGlobal = "0";
-    });
+   this.nzModalService.afterAllClose.subscribe(result => {
+      this.adultNumberGlobal = adultNumberGlobal();
+      this.childNumberGlobal = childNumberGlobal();
+      this.babyNumberGlobal = babyNumberGlobal();
+      //console.log(babyNumberGlobal());
+    }); 
   }
  
 }
@@ -130,10 +131,12 @@ export class FindFlightComponent {
     ReactiveFormsModule,
     NzFormModule,
     CommonModule,
-    NzInputNumberModule
+    NzInputNumberModule,
+    NzModalModule,
+    NzButtonModule
   ],
   template: `
-  <form [formGroup]="form">
+  <form [formGroup]="form" (ngSubmit)="save()">
   <!-- Yetişkin -->
   <nz-input-group nzCompact style="padding-bottom: 8px">
     <input
@@ -173,15 +176,17 @@ export class FindFlightComponent {
 
   <div *nzModalFooter>
     <button nz-button nzType="default" (click)="destroyModal()">
-      Custom Callback
+      İptal
     </button>
     <button nz-button nzType="primary" (click)="save()" [disabled]="(adultNumber === '0' && childNumber === '0' && babyNumber === '0')">
-      Custom Submit
+      Onayla
     </button>
   </div>
 </form>
 `,
   styles: ``,
+  host: {ngSkipHydration: 'true'},
+
 })
 export class PassengerSelectComponent {
   nzModalData = inject(NZ_MODAL_DATA);
@@ -213,12 +218,12 @@ export class PassengerSelectComponent {
     this.nzModalRef.destroy();
   }
 
-  save(): void {
+  save(){
     // console.log('Tıklandı..');
     adultNumberGlobal.set(this.form.controls['adult'].value);
     childNumberGlobal.set(this.form.controls['child'].value);
     babyNumberGlobal.set(this.form.controls['baby'].value);
-    // console.log(tempAdult, tempChild, tempBaby);
+    console.log('Değerler', adultNumberGlobal(), childNumberGlobal(), babyNumberGlobal());
     this.nzModalRef.destroy();
   }
 }

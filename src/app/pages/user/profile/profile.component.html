@@ -12,25 +12,49 @@
   <img src="https://cdn-icons-png.flaticon.com/512/5158/5158652.png" />
 </div>
 <br>
-<div style="background-color: var(--primary-color); padding: 16px; border-radius: 10px; ">
-    <p *ngIf="profileRate != 100" style="color: white; display: flex; justify-content: center;" nz-typography>
+<div *ngIf="profileRate != 100" style="background-color: var(--primary-color); padding: 16px; border-radius: 10px; ">
+    <p style="color: white; display: flex; justify-content: center;" nz-typography>
         Bilet alırken hızlı işlem yapabilmeniz için profilinizdeki bilgileri doldurmanızı öneririz.
       </p>
       <nz-progress nzStrokeColor="var(--announcement-color)" [nzPercent]="profileRate"></nz-progress>
     </div>
-
-
   <br>
   <br>
   <nz-content style="display: flex; justify-content: center;">
-    <nz-card>
-            <nz-descriptions nzTitle="Kullanıcı Profili" nzBordered nzLayout="vertical">
-                <nz-descriptions-item>Email</nz-descriptions-item>
-                <nz-descriptions-item>testgmail.com</nz-descriptions-item>
-                <nz-descriptions-item>
-                    <span (click)="edit()" nz-icon nzType="edit" nzTheme="outline"></span>
-                </nz-descriptions-item>
-              </nz-descriptions>
-    </nz-card>
+<!-- Table -->
+<nz-table #nzTable nzShowPagination="false" [nzData]="data">
+  <thead style="display: none;">
+    <tr>
+      <th style="background-color: var(--card-color)" >
+        <span style="color: var(--title-text-color)"></span>
+      </th>
+      <th style="background-color: var(--card-color)">
+        <span style="color: var(--title-text-color)"></span>
+      </th>
+      <th style="background-color: var(--card-color)">
+        <span style="color: var(--title-text-color)"></span>
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    @for (data of nzTable.data; track data) {
+    <tr>
+      <td>
+        <span style="color: var(--subtitle-text-color)">{{
+          data.title
+        }}</span>
+      </td>
+      <td>
+        <span style="color: var(--subtitle-text-color)">{{
+          data.desc
+        }}</span>
+      </td>
+      <td>
+        <span (click)="edit(data.title, data.desc)" nz-icon nzType="edit" nzTheme="outline"></span>
+      </td>
+    </tr>
+    }
+  </tbody>
+</nz-table>
   </nz-content>
   <br>

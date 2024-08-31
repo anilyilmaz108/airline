@@ -18,6 +18,12 @@ export class UserService {
     );
   }
 
+  getUser(id: string) {
+    return this.fsService.listen<UserModel>('User',
+    where('id', '>=', id),
+    );
+  }
+
   async get(id: string) {
     return (await this.fsService.get(`User/${id}`));
   }
@@ -34,8 +40,12 @@ export class UserService {
     return await this.fsService.set(path, data);
   }
 
-  update(id: string, data: UserModel) {
-    return this.fsService.update(`User/${id}`, data);
+  async update(id: string, data: any) {
+    return await this.fsService.update(`User/${id}`, data);
+  }
+
+  async getDocumentData(id: string){
+    return await this.fsService.listenToDocument(`User/${id}`);
   }
 
   delete(id: string) {

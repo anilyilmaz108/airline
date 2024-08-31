@@ -13,6 +13,7 @@ import { environment } from '../../../../environments/environment';
 import { NzTypographyModule } from 'ng-zorro-antd/typography';
 import { RouterLink } from '@angular/router';
 import { UserService } from '../../../services/user.service';
+import { Auth } from '@angular/fire/auth';
 
 @Component({
   selector: 'app-login',
@@ -39,6 +40,7 @@ export class LoginComponent {
     formBuilder = inject(FormBuilder);
     authService = inject(AuthService);
     userService = inject(UserService);
+    private fbAuth = inject(Auth);
 
     form!: FormGroup;
 
@@ -65,7 +67,7 @@ export class LoginComponent {
  
   async submitForm() {
     await this.authService.fbLogin(this.form.controls['email'].value,this.form.controls['pass'].value);
-    await this.getUserData("DyArMBHFFSVtMKuOlL6IBIeYA1U2");
+    await this.getUserData(this.fbAuth.currentUser?.uid!);
     // console.log('Get User:', this.authService.userSignal());
     console.log('FB login işlemi yapıldı');
     this.resetForm();

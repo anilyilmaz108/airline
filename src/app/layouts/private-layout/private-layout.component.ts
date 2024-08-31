@@ -52,7 +52,7 @@ export class PrivateLayoutComponent {
   constructor() {
     this.isDarkMode = this.themeService.isDarkMode();
     user(this.fbAuth).subscribe((fbuser: any) => {
-      this.getUserData('DyArMBHFFSVtMKuOlL6IBIeYA1U2');
+      this.getUserData(this.fbAuth.currentUser?.uid!);
       // console.log('FbUser@PrivateLayout: ', fbuser);
       // console.log('Get User:', this.authService.userSignal());
       this.user = this.authService.userSignal()!;
@@ -66,13 +66,10 @@ export class PrivateLayoutComponent {
   async getUserData(userId: string) {
     // Kullanıcı ID'si ile path oluşturuyoruz
     try {
-      const userDoc = await this.userService.get(userId); // UserService'den çağırıyoruz
-      if (userDoc.exists()) {
-        // console.log('User Data:', userDoc.data());  // Veriyi konsola yazdırıyoruz
-        this.authService.userSignal.set(userDoc.data());
-      } else {
-        console.log('No such document!');
-      }
+      const userDoc = await this.userService.getUser(userId); // UserService'den çağırıyoruz
+      userDoc.subscribe((data) => {
+        this.authService.userSignal.set(data[0]);
+      });
     } catch (error) {
       console.error('Error fetching user:', error);
     }
@@ -89,5 +86,6 @@ export class PrivateLayoutComponent {
 
   logout() {
     this.authService.logout();
+    this.authService.userSignal.set(null);
   }
 }

@@ -1,5 +1,5 @@
 import { Injectable, inject } from '@angular/core';
-import { Firestore, QueryConstraint, collection, getDocs, onSnapshot } from '@angular/fire/firestore';
+import { Firestore, QueryConstraint, collection, docData, getDocs, onSnapshot } from '@angular/fire/firestore';
 import { CollectionReference, addDoc, deleteDoc, doc, getDoc, query, setDoc, updateDoc } from '@firebase/firestore';
 import { BehaviorSubject, Observable, from, map } from 'rxjs';
 
@@ -64,6 +64,13 @@ export class FirestoreService {
   update(path: string, data: any) {
     const ref = doc(this.firestore, path);
     return updateDoc(ref, this.setUndefinedValuesToNull(data));
+  }
+
+  // Gerçek zamanlı olarak bir dökümanı dinleme
+  // Veriyi real-time olarak almak
+  listenToDocument(path: string): Observable<any> {
+    const docRef = doc(this.firestore, path); // Dinlemek istediğiniz döküman referansı
+    return docData(docRef, { idField: 'id' }); // Anlık veri değişikliklerini almak için docData kullanılıyor
   }
 
   delete(path: string) {

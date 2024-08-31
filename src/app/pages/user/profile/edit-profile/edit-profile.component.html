@@ -1,0 +1,21 @@
+<form nz-form [nzLayout]="'inline'" [formGroup]="validateForm" (ngSubmit)="submitForm()">
+    <nz-form-item>
+      <nz-form-control>
+        <nz-input-group>
+          <input formControlName="title" nz-input readonly/>
+        </nz-input-group>
+      </nz-form-control>
+    </nz-form-item>
+    <nz-form-item>
+      <nz-form-control nzErrorTip="Lütfen doğru bir değer giriniz">
+        <nz-input-group>
+          <input formControlName="desc" nz-input type="text" placeholder="Veri giriniz" />
+        </nz-input-group>
+      </nz-form-control>
+    </nz-form-item>
+    <nz-form-item>
+      <nz-form-control *nzModalFooter>
+        <button nz-button nzType="primary" (click)="submitForm()" [disabled]="!validateForm.valid">Güncelle</button>
+      </nz-form-control>
+    </nz-form-item>
+  </form>
