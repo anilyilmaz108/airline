@@ -11,6 +11,7 @@ export interface UserModel {
     birth?: Date;
     nationality?: string;
     TCID?: string;
-    created_at?: Date;
+    created_at?: Date | number;
     active?: boolean;
+    airScore?: number;
 }

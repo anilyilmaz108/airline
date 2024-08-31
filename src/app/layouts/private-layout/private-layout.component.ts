@@ -42,7 +42,7 @@ export class PrivateLayoutComponent {
   userService = inject(UserService);
 
   router = inject(Router);
-  airScore = '1000 Air';
+  airScore = 0;
   appName = appName;
   isCollapsed = false;
   isDarkMode: boolean;
@@ -63,6 +63,7 @@ export class PrivateLayoutComponent {
         
         console.log(this.profilePhoto);
         this.user = this.authService.userSignal()!;
+
       });
     });
     // console.log('FbUserSignal: ', this.user);
@@ -77,6 +78,7 @@ export class PrivateLayoutComponent {
       const userDoc = await this.userService.getUser(userId); // UserService'den çağırıyoruz
       userDoc.subscribe((data) => {
         this.authService.userSignal.set(data[0]);
+        this.airScore = this.authService.userSignal()?.airScore!;
       });
     } catch (error) {
       console.error('Error fetching user:', error);

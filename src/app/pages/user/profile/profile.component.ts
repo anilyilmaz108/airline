@@ -61,6 +61,7 @@ export class ProfileComponent {
 
   constructor(private cdr: ChangeDetectorRef) {
     this.profilePhoto = this.auth.currentUser?.photoURL ? this.auth.currentUser.photoURL : "https://cdn-icons-png.freepik.com/512/6915/6915987.png";
+    this.userPhotos = this.auth.currentUser?.photoURL ? true : false;
   }
 
   ngOnInit(): void {
@@ -201,7 +202,8 @@ export class ProfileComponent {
           "nationality": data[0].nationality,
           "pass": data[0].pass,
           "phone": data[0].phone,
-          "role": data[0].role
+          "role": data[0].role,
+          "airScore": data[0].airScore
         }
         this.authService.userSignal.set(this.user);
         // console.log('signalle', this.authService.userSignal());
@@ -306,31 +308,37 @@ export class ProfileComponent {
     var rate = 0;
     if (this.user) {
       this.user.email === '' ||
+      this.user.email === '-' ||
       this.user.email === undefined ||
       this.user.email === null
         ? (rate += 0)
         : (rate += 10);
       this.user.pass === '' ||
+      this.user.pass === '-' ||
       this.user.pass === undefined ||
       this.user.pass === null
         ? (rate += 0)
         : (rate += 10);
       this.user.firstName === '' ||
+      this.user.firstName === '-' ||
       this.user.firstName === undefined ||
       this.user.firstName === null
         ? (rate += 0)
         : (rate += 10);
       this.user.lastName === '' ||
+      this.user.lastName === '-' ||
       this.user.lastName === undefined ||
       this.user.lastName === null
         ? (rate += 0)
         : (rate += 10);
       this.user.phone === '' ||
+      this.user.phone === '-' ||
       this.user.phone === undefined ||
       this.user.phone === null
         ? (rate += 0)
         : (rate += 10);
       this.user.gender === '' ||
+      this.user.gender === '-' ||
       this.user.gender === undefined ||
       this.user.gender === null
         ? (rate += 0)
@@ -339,11 +347,13 @@ export class ProfileComponent {
         ? (rate += 0)
         : (rate += 10);
       this.user.TCID === '' ||
+      this.user.TCID === '-' ||
       this.user.TCID === undefined ||
       this.user.TCID === null
         ? (rate += 0)
         : (rate += 10);
       this.user.nationality === '' ||
+      this.user.nationality === '-' ||
       this.user.nationality === undefined ||
       this.user.nationality === null
         ? (rate += 0)

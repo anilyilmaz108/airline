@@ -28,6 +28,7 @@ import { NzTypographyModule } from 'ng-zorro-antd/typography';
 import { Router, RouterLink } from '@angular/router';
 import { LoginComponent } from '../login/login.component';
 import { ErrorService, SuccessService, UserService } from '../../../services';
+import { Auth } from '@angular/fire/auth';
 
 @Component({
   selector: 'app-register',
@@ -54,6 +55,7 @@ export class RegisterComponent {
   private formBuilder = inject(FormBuilder);
   private authService = inject(AuthService);
   private userService = inject(UserService);
+  private auth = inject(Auth);
   successService = inject(SuccessService);
   errorService = inject(ErrorService);
   private router = inject(Router);
@@ -94,10 +96,10 @@ export class RegisterComponent {
       this.form.controls['email'].value!,
       this.form.controls['pass'].value!
     )
-    const userPath = this.authService.userSignal();
+    const userPath = this.auth.currentUser?.uid;
     console.log(userPath);
     const body = {
-      id: userPath?.id,
+      id: userPath,
       role: "user",
       firstName: "",
       lastName: "",
@@ -110,11 +112,14 @@ export class RegisterComponent {
       active: true,
       email: this.form.controls['email'].value!,
       pass: this.form.controls['pass'].value!,
+      airScore: 0
     };
+    console.log(body);
     
     await this.userService
-      .addDataWithCustomDocId(body, userPath!.id!)
+      .addDataWithCustomDocId(body, userPath!)
       .then(() => {
+        this.authService.userSignal.set(body);
         this.successService.successHandler(201);
       }).catch(() => {
         this.errorService.errorHandler(1);

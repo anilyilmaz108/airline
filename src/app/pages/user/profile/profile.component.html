@@ -3,11 +3,11 @@
   </h3>
 <!--Profile Photo-->
 <div  *ngIf="user" class="pp-container">
-  <div style="display: flex; flex-direction: column; justify-content: center; padding: 8px; width: 25%;">
-    <img src="{{profilePhoto}}" /> 
+  <div class="pp-content">
+    <img src="{{profilePhoto}}" class="pp-image"/> 
     <br>
-      <input type="file" id="fileInput" #fileInput>
-      <button nz-button style="background-color: var(--primary-color); color: #fff; padding-top: 4px;" (click)="uploadPhoto(fileInput)">Yükle</button>
+      <input type="file" id="fileInput" #fileInput class="file-input">
+      <button nz-button class="upload-button" (click)="uploadPhoto(fileInput)">Yükle</button>
   </div>
 </div>
 <br>
