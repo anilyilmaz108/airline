@@ -13,3 +13,18 @@
   steps6="wait"
 >
 </app-flight-steps>
+<br>
+<h5
+  style="color: var(--title-text-color); display: flex;"
+  nz-typography
+>
+  Kalkış
+</h5>
+<h4
+  style="color: var(--tips-text-color); display: flex;"
+  nz-typography
+>
+  {{title}}
+</h4>
+<br>
+<app-date-scroll (dateSelected)="onDateSelected($event)"></app-date-scroll>

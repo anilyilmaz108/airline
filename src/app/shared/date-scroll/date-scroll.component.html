@@ -1,0 +1,11 @@
+<div class="scroll-container">
+    <div
+      class="date-card"
+      *ngFor="let date of dates"
+      [class.selected]="selectedDate === date"
+      (click)="selectDate(date)"
+    >
+      {{ date | date: 'dd/MM/yyyy' }}
+    </div>
+  </div>
+  
