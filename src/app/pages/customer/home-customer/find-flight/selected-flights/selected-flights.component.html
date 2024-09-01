@@ -28,3 +28,35 @@
 </h4>
 <br>
 <app-date-scroll (dateSelected)="onDateSelected($event)"></app-date-scroll>
+<br>
+
+
+<!------------------>
+
+<div class="flight-card" *ngFor="let card of flightList" (click)="selectCard(card.id)">
+  <div class="flight-card-content">
+    <!-- Sol kısım: Kalkış Saati, Şehir Kodu -->
+    <div class="flight-time">
+      <h2>{{card.departureTime}}</h2>
+      <p>{{card.origin}} <span>{{card.originCode}}</span></p>
+    </div>
+
+    <!-- Orta kısım: Uçuş bilgileri -->
+    <div class="flight-details">
+      <p style="color: var(--title-text-color);">Direkt</p>
+      <p>{{card.duration}}</p>
+      <p>{{card.destination}}</p>
+    </div>
+
+    <!-- Sağ kısım: Fiyat ve buton -->
+    <div class="flight-price">
+      <p style="color: #888;">İtibaren <strong>€{{card.price}}</strong></p>
+      <button class="price-button">En İyi Fiyat</button>
+    </div>
+  </div>
+
+  <!-- Seçilen Card Detayı -->
+  <div *ngIf="selectedCardId === card.id" class="detail-container">
+    <app-card-detail [card]="card" (selectedDetail)="onCardDetailSelected($event)"></app-card-detail>
+  </div>
+</div>
