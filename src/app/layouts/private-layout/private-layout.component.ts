@@ -56,15 +56,12 @@ export class PrivateLayoutComponent {
       this.getUserData(this.fbAuth.currentUser?.uid!);
     
       // currentUser bilgisini yeniden yükleyip photoURL'yi güncelle
-      this.fbAuth.currentUser?.reload().then(() => {
-        this.profilePhoto = this.fbAuth.currentUser?.photoURL
-          ? this.fbAuth.currentUser?.photoURL
-          : "https://cdn-icons-png.freepik.com/512/6915/6915987.png";
-        
-        console.log(this.profilePhoto);
-        this.user = this.authService.userSignal()!;
-
-      });
+      this.profilePhoto = this.fbAuth.currentUser?.photoURL
+      ? this.fbAuth.currentUser?.photoURL
+      : "https://cdn-icons-png.freepik.com/512/6915/6915987.png";
+    
+    console.log(this.profilePhoto);
+    this.user = this.authService.userSignal()!;
     });
     // console.log('FbUserSignal: ', this.user);
     // this.user = this.authService.userSignal()!;
@@ -97,5 +94,6 @@ export class PrivateLayoutComponent {
   logout() {
     this.authService.logout();
     this.authService.userSignal.set(null);
+    this.profilePhoto = "https://cdn-icons-png.freepik.com/512/6915/6915987.png";
   }
 }

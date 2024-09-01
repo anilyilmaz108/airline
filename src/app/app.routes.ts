@@ -12,6 +12,7 @@ export const routes: Routes = [
       { path: 'discover', loadChildren: () => import('./pages/customer/discover/discover.routes').then(m => m.DISCOVER_ROUTES) },
       { path: 'info', loadChildren: () => import('./pages/customer/info/info.routes').then(m => m.INFO_ROUTES) },
       { path: 'user', loadChildren: () => import('./pages/user/user.routes').then(m => m.USER_ROUTES) },
+      { path: 'find-flight', loadChildren: () => import('./pages/customer/home-customer/find-flight/find-flight.routes').then(m => m.FIND_FLIGHT_ROUTES) },
     ]
   }
 

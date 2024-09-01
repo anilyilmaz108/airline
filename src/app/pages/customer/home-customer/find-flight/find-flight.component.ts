@@ -17,27 +17,245 @@ import { NzFormModule } from 'ng-zorro-antd/form';
 import { NzInputNumberModule } from 'ng-zorro-antd/input-number';
 import { NzCheckboxModule } from 'ng-zorro-antd/checkbox';
 import { NzToolTipModule } from 'ng-zorro-antd/tooltip';
+import { Auth } from '@angular/fire/auth';
+import { FlightService } from '../../../../services/flight.service';
+import { ErrorService } from '../../../../services';
+import { generateId } from '../../../../helpers/generate-id';
+import { flightSignal } from '../../../../core/data-values';
+import { FlightModel } from '../../../../models/flight';
+import { Router } from '@angular/router';
 
 // Ülke & Şehir Bilgileri
 const options = [
   {
-    label: 'Ant Design',
-    value: 'antd',
+    label: 'Adana',
+    value: 'Adana',
     children: [
       {
-        label: 'ng-zorro-antd',
-        value: 'ng-zorro-antd',
+        label: 'Adana-Şakirpaşa Havalimanı',
+        value: 'Adana-Şakirpaşa Havalimanı - ADA',
         isLeaf: true,
       },
     ],
   },
   {
-    label: 'Angular',
-    value: 'angular',
+    label: 'Adıyaman',
+    value: 'Adıyaman',
     children: [
       {
-        label: 'CDK',
-        value: 'cdk',
+        label: 'Adıyaman Havalimanı',
+        value: 'Adıyaman Havalimanı - ADF',
+        isLeaf: true,
+      },
+    ],
+  },
+  {
+    label: 'Ağrı',
+    value: 'Ağrı',
+    children: [
+      {
+        label: 'Ağrı Ahmed-i Hani Havalimanı',
+        value: 'Ağrı Ahmed-i Hani Havalimanı - AJI',
+        isLeaf: true,
+      },
+    ],
+  },
+  {
+    label: 'Amasya',
+    value: 'Amasya',
+    children: [
+      {
+        label: 'Amasya Merzifon Havalimanı',
+        value: 'Amasya Merzifon Havalimanı - MZH',
+        isLeaf: true,
+      },
+    ],
+  },
+  {
+    label: 'Ankara',
+    value: 'Ankara',
+    children: [
+      {
+        label: 'Ankara Esenboğa Havalimanı',
+        value: 'Ankara Esenboğa Havalimanı - ESB',
+        isLeaf: true,
+      },
+    ],
+  },
+  {
+    label: 'Antalya',
+    value: 'Antalya',
+    children: [
+      {
+        label: 'Antalya Havaalanı',
+        value: 'Antalya Havaalanı- AYT',
+        isLeaf: true,
+      },
+    ],
+  },
+  {
+    label: 'Balıkesir',
+    value: 'Balıkesir',
+    children: [
+      {
+        label: 'Balıkesir Koca Seyit Havalimanı',
+        value: 'Balıkesir Koca Seyit Havalimanıı- EDO',
+        isLeaf: true,
+      },
+    ],
+  },
+  {
+    label: 'İstanbul',
+    value: 'İstanbul',
+    children: [
+      {
+        label: 'Sabiha Gökçen Havaalanı',
+        value: 'Sabiha Gökçen Havaalanı - SAW',
+        isLeaf: true,
+      },
+      {
+        label: 'İstanbul Yeni Havalimanı',
+        value: 'İstanbul Yeni Havalimanı - IST',
+        isLeaf: true,
+      },
+    ],
+  },
+  {
+    label: 'İzmir',
+    value: 'İzmir',
+    children: [
+      {
+        label: 'İzmir Adnan Menderes Havalimanı',
+        value: 'İzmir Adnan Menderes Havalimanı - ADB',
+        isLeaf: true,
+      },
+    ],
+  },
+  {
+    label: 'Konya',
+    value: 'Konya',
+    children: [
+      {
+        label: 'Konya Havalimanı',
+        value: 'Konya Havalimanı - KYA',
+        isLeaf: true,
+      },
+    ],
+  },
+];
+
+const options2 = [
+  {
+    label: 'Adana',
+    value: 'Adana',
+    children: [
+      {
+        label: 'Adana-Şakirpaşa Havalimanı',
+        value: 'Adana-Şakirpaşa Havalimanı - ADA',
+        isLeaf: true,
+      },
+    ],
+  },
+  {
+    label: 'Adıyaman',
+    value: 'Adıyaman',
+    children: [
+      {
+        label: 'Adıyaman Havalimanı',
+        value: 'Adıyaman Havalimanı - ADF',
+        isLeaf: true,
+      },
+    ],
+  },
+  {
+    label: 'Ağrı',
+    value: 'Ağrı',
+    children: [
+      {
+        label: 'Ağrı Ahmed-i Hani Havalimanı',
+        value: 'Ağrı Ahmed-i Hani Havalimanı - AJI',
+        isLeaf: true,
+      },
+    ],
+  },
+  {
+    label: 'Amasya',
+    value: 'Amasya',
+    children: [
+      {
+        label: 'Amasya Merzifon Havalimanı',
+        value: 'Amasya Merzifon Havalimanı - MZH',
+        isLeaf: true,
+      },
+    ],
+  },
+  {
+    label: 'Ankara',
+    value: 'Ankara',
+    children: [
+      {
+        label: 'Ankara Esenboğa Havalimanı',
+        value: 'Ankara Esenboğa Havalimanı - ESB',
+        isLeaf: true,
+      },
+    ],
+  },
+  {
+    label: 'Antalya',
+    value: 'Antalya',
+    children: [
+      {
+        label: 'Antalya Havaalanı',
+        value: 'Antalya Havaalanı- AYT',
+        isLeaf: true,
+      },
+    ],
+  },
+  {
+    label: 'Balıkesir',
+    value: 'Balıkesir',
+    children: [
+      {
+        label: 'Balıkesir Koca Seyit Havalimanı',
+        value: 'Balıkesir Koca Seyit Havalimanıı- EDO',
+        isLeaf: true,
+      },
+    ],
+  },
+  {
+    label: 'İstanbul',
+    value: 'İstanbul',
+    children: [
+      {
+        label: 'Sabiha Gökçen Havaalanı',
+        value: 'Sabiha Gökçen Havaalanı - SAW',
+        isLeaf: true,
+      },
+      {
+        label: 'İstanbul Yeni Havalimanı',
+        value: 'İstanbul Yeni Havalimanı - IST',
+        isLeaf: true,
+      },
+    ],
+  },
+  {
+    label: 'İzmir',
+    value: 'İzmir',
+    children: [
+      {
+        label: 'İzmir Adnan Menderes Havalimanı',
+        value: 'İzmir Adnan Menderes Havalimanı - ADB',
+        isLeaf: true,
+      },
+    ],
+  },
+  {
+    label: 'Konya',
+    value: 'Konya',
+    children: [
+      {
+        label: 'Konya Havalimanı',
+        value: 'Konya Havalimanı - KYA',
         isLeaf: true,
       },
     ],
@@ -48,9 +266,6 @@ var adultNumberGlobal = signal("1");
 var childNumberGlobal = signal("0");
 var babyNumberGlobal = signal("0");
 
-var tempAdult = "";
-var tempChild = "";
-var tempBaby = "";
 
 @Component({
   selector: 'app-find-flight',
@@ -78,14 +293,32 @@ var tempBaby = "";
   host: {ngSkipHydration: 'true'},
 })
 export class FindFlightComponent {
+  auth = inject(Auth);
+  flightService = inject(FlightService);
+  errorService = inject(ErrorService);
+  private router = inject(Router);
+  
   nzOptions = options;
-  values: any[] | null = null;
+  nzOptions2 = options2;
+  values: any = null;
+  values2: any = null;
 
   onChanges(values: any): void {
-    console.log(values, this.values);
+    // console.log(values, this.values);
   }
 
-  date = null;
+  onChanges2(values: any): void {
+    // console.log(values, this.values2);
+  }
+
+  swapValues(){
+    const tempVal1 = this.values;
+    const tempVal2 = this.values2;
+    this.values = tempVal2;
+    this.values2 = tempVal1;
+  }
+
+  date: any = null;
   twoWays = true;
   inputValue: string | null = null;
 
@@ -95,8 +328,50 @@ export class FindFlightComponent {
   babyNumberGlobal = babyNumberGlobal();
   
 
-  findFlight(){
-    console.log('Uçuş aranıyor..');
+  async findFlight(){
+    try{
+      const userPath = this.auth.currentUser ? this.auth.currentUser?.uid : generateId.generateUniqueId(10);
+      // console.log('Uçuş aranıyor..');
+      // console.log('FindFlight: ', this.values, this.values2, this.date, this.twoWays, adultNumberGlobal(), childNumberGlobal(), babyNumberGlobal());
+      const data: FlightModel = {
+        "id": userPath,
+        "userId": userPath,
+        "PNRNO": "",
+        "earningAirScore": 0,
+        "fromCity": this.values,
+        "toCity": this.values2,
+        "dateFirst": this.date!.length == 2 ? this.date![0] : this.date,
+        "dateLast": this.date!.length == 2 ? this.date![1] : null,
+        "hourFirst": 0,
+        "hourLast": 0,
+        "priceFirst": 0,
+        "priceLast": 0,
+        "adultNumber": adultNumberGlobal(),
+        "childNumber": childNumberGlobal(),
+        "babyNumber": babyNumberGlobal(),
+        "flightTimeFirst": "",
+        "flightTimeLast": "",
+        "package": "",
+        "flexFirst": false,
+        "flexLast": false,
+        "seatFirst": "",
+        "seatLast": "",
+        "totalPrice": 0,
+        "operationDate": Date.now()
+      }  
+      flightSignal.set(data);
+      console.log('find flight', flightSignal());
+      this.router.navigateByUrl('/find-flight/selected-flights');
+    } catch(err){
+      console.log(err);
+      this.errorService.errorHandler(4);
+    }
+    // Geçmiş Uçuş Bilgileri DB Alanı
+    /**
+     * id
+     * userId
+     * flightId
+     */
   }
  
 

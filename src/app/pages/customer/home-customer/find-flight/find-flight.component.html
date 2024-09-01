@@ -15,7 +15,7 @@
                 ></nz-cascader>
               </div>
               <!-- Swap İcon -->
-              <span
+              <span (click)="swapValues()"
                 style="padding: 32px 24px 0 0px"
                 nz-icon
                 nzType="swap"
@@ -26,9 +26,9 @@
               <div class="flight-operations-item">
                 <h4 nz-typography nzType="secondary"><span>Nereye</span></h4>
                 <nz-cascader
-                  [nzOptions]="nzOptions"
-                  [(ngModel)]="values"
-                  (ngModelChange)="onChanges($event)"
+                  [nzOptions]="nzOptions2"
+                  [(ngModel)]="values2"
+                  (ngModelChange)="onChanges2($event)"
                 ></nz-cascader>
               </div>
   
