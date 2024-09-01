@@ -24,6 +24,7 @@ import { generateId } from '../../../../helpers/generate-id';
 import { flightSignal } from '../../../../core/data-values';
 import { FlightModel } from '../../../../models/flight';
 import { Router } from '@angular/router';
+import { environment } from '../../../../../environments/environment';
 
 // Ülke & Şehir Bilgileri
 const options = [
@@ -333,7 +334,7 @@ export class FindFlightComponent {
       const userPath = this.auth.currentUser ? this.auth.currentUser?.uid : generateId.generateUniqueId(10);
       // console.log('Uçuş aranıyor..');
       // console.log('FindFlight: ', this.values, this.values2, this.date, this.twoWays, adultNumberGlobal(), childNumberGlobal(), babyNumberGlobal());
-      const data: FlightModel = {
+      const data: FlightModel = !environment.production ? {
         "id": userPath,
         "userId": userPath,
         "PNRNO": "",
@@ -358,7 +359,33 @@ export class FindFlightComponent {
         "seatLast": "",
         "totalPrice": 0,
         "operationDate": Date.now()
-      }  
+      }  : {
+        "id": userPath,
+        "userId": userPath,
+        "PNRNO": "",
+        "earningAirScore": 0,
+        "fromCity": "Adana-Şakirpaşa Havalimanı",
+        "toCity": "Adıyaman Havalimanı",
+        "dateFirst": Date.now(),
+        "dateLast": Date.now(),
+        "hourFirst": 0,
+        "hourLast": 0,
+        "priceFirst": 0,
+        "priceLast": 0,
+        "adultNumber": "1",
+        "childNumber": "0",
+        "babyNumber": "0",
+        "flightTimeFirst": "",
+        "flightTimeLast": "",
+        "package": "",
+        "flexFirst": false,
+        "flexLast": false,
+        "seatFirst": "",
+        "seatLast": "",
+        "totalPrice": 0,
+        "operationDate": Date.now()
+      }
+
       flightSignal.set(data);
       console.log('find flight', flightSignal());
       this.router.navigateByUrl('/find-flight/selected-flights');
