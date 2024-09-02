@@ -2,7 +2,8 @@
     <h2 style="color: var(--title-text-color);">{{card.departureTime}} - {{card.arrivalTime}}</h2>
     <p style="color: var(--subtitle-text-color);">{{card.origin}} - {{card.destination}}</p>
     <div class="price-options">
-      <div class="price-option" *ngFor="let option of priceOptions" (click)="selectPriceOption(option)">
+      <div class="price-option" [ngClass]="{'selected': selectedCard === option}" 
+      *ngFor="let option of priceOptions" (click)="selectPriceOption(option)">
         <h3 style="color: white;">{{option.name}}</h3>
         <p style="color: white;">{{option.details}}</p>
         <p style="color: white">{{option.price}} €</p>

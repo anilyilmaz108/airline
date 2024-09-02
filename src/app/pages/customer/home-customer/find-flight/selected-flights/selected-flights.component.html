@@ -13,50 +13,110 @@
   steps6="wait"
 >
 </app-flight-steps>
-<br>
-<h5
-  style="color: var(--title-text-color); display: flex;"
-  nz-typography
->
+<br />
+<!-- Kalkış için bilgiler-->
+<h5 style="color: var(--title-text-color); display: flex" nz-typography>
   Kalkış
 </h5>
-<h4
-  style="color: var(--tips-text-color); display: flex;"
-  nz-typography
->
-  {{title}}
+<h4 style="color: var(--tips-text-color); display: flex" nz-typography>
+  {{ title }}
 </h4>
-<br>
+<br />
 <app-date-scroll (dateSelected)="onDateSelected($event)"></app-date-scroll>
-<br>
+<br />
 
-
-<!------------------>
-
-<div class="flight-card" *ngFor="let card of flightList" (click)="selectCard(card.id)">
+<div
+  class="flight-card"
+  *ngFor="let card of flightList"
+  (click)="selectCard(card.id, card)"
+>
   <div class="flight-card-content">
     <!-- Sol kısım: Kalkış Saati, Şehir Kodu -->
     <div class="flight-time">
-      <h2>{{card.departureTime}}</h2>
-      <p>{{card.origin}} <span>{{card.originCode}}</span></p>
+      <h2>{{ card.departureTime }}</h2>
+      <p>
+        <span>{{ card.origin }}</span>
+      </p>
     </div>
 
     <!-- Orta kısım: Uçuş bilgileri -->
     <div class="flight-details">
-      <p style="color: var(--title-text-color);">Direkt</p>
-      <p>{{card.duration}}</p>
-      <p>{{card.destination}}</p>
+      <p style="color: var(--title-text-color)">Direkt</p>
+      <p>{{ card.duration }}</p>
+      <p>{{ card.destination }}</p>
     </div>
 
     <!-- Sağ kısım: Fiyat ve buton -->
     <div class="flight-price">
-      <p style="color: #888;">İtibaren <strong>€{{card.price}}</strong></p>
+      <p style="color: #888">
+        İtibaren <strong>€{{ card.price }}</strong>
+      </p>
       <button class="price-button">En İyi Fiyat</button>
     </div>
   </div>
 
   <!-- Seçilen Card Detayı -->
   <div *ngIf="selectedCardId === card.id" class="detail-container">
-    <app-card-detail [card]="card" (selectedDetail)="onCardDetailSelected($event)"></app-card-detail>
+    <app-card-detail
+      [card]="card"
+      (selectedDetail)="onCardDetailSelected($event)"
+    ></app-card-detail>
   </div>
 </div>
+
+<!-- Dönüş için bilgiler -->
+<div *ngIf="flightSignalVal?.dateLast">
+  <h5 style="color: var(--title-text-color); display: flex" nz-typography>
+    Dönüş
+  </h5>
+  <h4 style="color: var(--tips-text-color); display: flex" nz-typography>
+    {{ titleReverse }}
+  </h4>
+  <br />
+  <app-date-scroll (dateSelected)="onDateSelectedBack($event)"></app-date-scroll>
+  <br />
+  <div
+  class="flight-card"
+  *ngFor="let card of flightListBack"
+  (click)="selectCardBack(card.id, card)"
+>
+  <div class="flight-card-content">
+    <!-- Sol kısım: Kalkış Saati, Şehir Kodu -->
+    <div class="flight-time">
+      <h2>{{ card.departureTime }}</h2>
+      <p>
+        <span>{{ card.origin }}</span>
+      </p>
+    </div>
+
+    <!-- Orta kısım: Uçuş bilgileri -->
+    <div class="flight-details">
+      <p style="color: var(--title-text-color)">Direkt</p>
+      <p>{{ card.duration }}</p>
+      <p>{{ card.destination }}</p>
+    </div>
+
+    <!-- Sağ kısım: Fiyat ve buton -->
+    <div class="flight-price">
+      <p style="color: #888">
+        İtibaren <strong>€{{ card.price }}</strong>
+      </p>
+      <button class="price-button">En İyi Fiyat</button>
+    </div>
+  </div>
+
+  <!-- Seçilen Card Detayı -->
+  <div *ngIf="selectedCardIdBack === card.id" class="detail-container">
+    <app-card-detail
+      [card]="card"
+      (selectedDetail)="onCardDetailSelectedBack($event)"
+    ></app-card-detail>
+  </div>
+</div>
+</div>
+
+<!-- Devam Butonu -->
+<div class="continue-button">
+  <button nz-button (click)="onContinue()">Devam</button>
+</div>
+<br />

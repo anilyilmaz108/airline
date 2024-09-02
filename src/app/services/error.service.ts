@@ -30,6 +30,9 @@ export class ErrorService {
       case 4:
         this.swal.callToast('İstenilen bir uçuş bulunamadı', 'error');
         break;
+      case 5:
+        this.swal.callToast('Bilgiler eksik veya yanlış', 'error');
+        break;
       case 404:
         this.swal.callToast('API adresi bulunamadı', 'error');
         break;

@@ -36,8 +36,8 @@ export interface FlightModel {
     toCity?: string;
     dateFirst?: Date | number;
     dateLast?: Date | number;
-    hourFirst?: Date | number;
-    hourLast?: Date | number;
+    hourFirst?: string;
+    hourLast?: string;
     priceFirst?: number;
     priceLast?: number;
     adultNumber?: string;
@@ -45,7 +45,8 @@ export interface FlightModel {
     babyNumber?: string;
     flightTimeFirst?: string;
     flightTimeLast?: string;
-    package?: string;
+    packageFirst?: string;
+    packageLast?: string;
     flexFirst?: boolean;
     flexLast?: boolean;
     seatFirst?: string;

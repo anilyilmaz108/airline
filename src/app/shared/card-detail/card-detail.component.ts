@@ -13,17 +13,19 @@ import { NzCardModule } from 'ng-zorro-antd/card';
 
 })
 export class CardDetailComponent {
+  selectedCard: any;
   @Input() card: any;
   @Output() selectedDetail = new EventEmitter<any>();
 
   priceOptions = [
-    { name: 'SunEco', details: '15 kg bagaj, online check-in', price: 56.88 },
-    { name: 'SunClassic', details: '20 kg bagaj, koltuk seçimi', price: 66.94 },
-    { name: 'SunPremium', details: '25 kg bagaj, yemek servisi', price: 71.44 }
+    { name: 'Eco', details: '15 kg bagaj, online check-in', price: 56.88 },
+    { name: 'Classic', details: '20 kg bagaj, koltuk seçimi', price: 66.94 },
+    { name: 'Premium', details: '25 kg bagaj, yemek servisi', price: 71.44 }
   ];
 
 
   selectPriceOption(option: any) {
+    this.selectedCard = option; // Sadece renk değişmesine yarıyor.
     this.selectedDetail.emit(option); // Seçilen detayı parent bileşene ilet
   }
 }
