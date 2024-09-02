@@ -17,6 +17,16 @@
   background: var(--secondary-color);
 }
 
+@media (max-width: 768px) {
+  ::ng-deep nz-sider.ant-layout-sider.menu-sidebar.ant-layout-sider-dark.ant-layout-sider-collapsed {
+    display: none !important;
+  }
+
+  ::ng-deep .mobile-menu-button {
+    display: block !important; /* Mobilde buton görünsün */
+  }
+}
+
 .header-trigger {
   display: flex;
   justify-content: center;
