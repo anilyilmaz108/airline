@@ -31,7 +31,8 @@ import {
   ScreenTrackingService,
   UserTrackingService,
 } from '@angular/fire/analytics';
-import { firebaseConfig } from './core/config';
+import { firebaseConfig, recaptchaKey } from './core/config';
+import { RecaptchaModule, RECAPTCHA_SETTINGS, RecaptchaSettings } from 'ng-recaptcha';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -52,6 +53,6 @@ export const appConfig: ApplicationConfig = {
     UserTrackingService,
     provideFirestore(() => getFirestore()),
     provideStorage(() => getStorage()),
-
+    
   ],
 };

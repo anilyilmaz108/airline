@@ -197,6 +197,7 @@ export class SelectedFlightsComponent {
     // console.log('duration', this.cardSelect.duration);
     if(this.selectedDetail){
       this.selectedCardId = cardId;
+      this.price += card.price;
     } else {
       this.selectedCardId = this.selectedCardId === cardId ? null : cardId;  // Seçilen card ID'si toggle yapar
     }
@@ -206,6 +207,7 @@ export class SelectedFlightsComponent {
     this.cardSelectBack = card;
     if(this.selectedDetailBack){
       this.selectedCardIdBack = cardId;
+      this.price += card.price;
     } else {
       this.selectedCardIdBack = this.selectedCardIdBack === cardId ? null : cardId;  // Seçilen card ID'si toggle yapar
     }
@@ -258,7 +260,7 @@ export class SelectedFlightsComponent {
     }
     flightSignal.set(body);
     console.log('new Flight Signal:', flightSignal());
-    // this.router.navigateByUrl('/');
+    this.router.navigateByUrl('/find-flight/passenger-informations');
    } catch (e) {
     this.errorService.errorHandler(5);
    }

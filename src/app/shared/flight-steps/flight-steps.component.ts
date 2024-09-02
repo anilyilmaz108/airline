@@ -13,7 +13,6 @@ import { NzStepsModule } from 'ng-zorro-antd/steps';
 export class FlightStepsComponent {
   @Input() steps1: string = "";
   @Input() steps2: string = "";
-  @Input() steps3: string = "";
   @Input() steps4: string = "";
   @Input() steps5: string = "";
   @Input() steps6: string = "";

@@ -1,0 +1,146 @@
+<app-flight-header
+  [title]="title"
+  [subtitle]="subtitle"
+  [price]="price"
+></app-flight-header>
+<br />
+<app-flight-steps
+  steps1="wait"
+  steps2="process"
+  steps4="wait"
+  steps5="wait"
+  steps6="wait"
+>
+</app-flight-steps>
+<br>
+<nz-empty *ngIf="!cUser"
+nzNotFoundImage="https://gw.alipayobjects.com/zos/antfincdn/ZHrcdLPrvN/empty.svg"
+[nzNotFoundContent]="contentTpl"
+[nzNotFoundFooter]="footerTpl"
+>
+<ng-template #contentTpl>
+  <span style="color: var(--title-text-color);">
+    Giriş yaparak işlemlerinizi hızlandırabilirsiniz.
+  </span>
+</ng-template>
+<ng-template #footerTpl>
+  <button style="background-color: var(--primary-color);" nz-button nzType="primary" routerLink="/user/login">Giriş Yap</button>
+</ng-template>
+</nz-empty>
+<br>
+<nz-card>
+    <h4 style="color: var(--title-text-color); display: flex; justify-content: center;" nz-typography>
+        Kişisel Bilgiler
+      </h4>
+      <br>
+    <form nz-form [formGroup]="validateForm" (ngSubmit)="submitForm()">
+        <!--firstname-->
+        <nz-form-item>
+            <nz-form-label
+              [nzSm]="6"
+              [nzXs]="24"
+              nzFor="firstname"
+              nzRequired
+            >
+              <span>İsim</span>
+            </nz-form-label>
+            <nz-form-control [nzSm]="14" [nzXs]="24" nzErrorTip="İsim alanı zorunlu!">
+              <input nz-input id="firstname" formControlName="firstname" />
+            </nz-form-control>
+          </nz-form-item>
+          <!--lastname-->
+        <nz-form-item>
+            <nz-form-label
+              [nzSm]="6"
+              [nzXs]="24"
+              nzFor="lastname"
+              nzRequired
+            >
+              <span>Soyisim</span>
+            </nz-form-label>
+            <nz-form-control [nzSm]="14" [nzXs]="24" nzErrorTip="Soyisim alanı zorunlu!">
+              <input nz-input id="lastname" formControlName="lastname" />
+            </nz-form-control>
+          </nz-form-item>
+          <!--gender-->
+          <nz-form-item>
+            <nz-form-label [nzSm]="6" [nzXs]="24" nzFor="gender" nzRequired>Cinsiyet</nz-form-label>
+            <nz-form-control [nzSm]="14" [nzXs]="24" nzErrorTip="Cinsiyet alanı zorunlu!">
+              <nz-select
+                id="gender"
+                formControlName="gender"
+                nzPlaceHolder="Cinsiyetinizi seçiniz"
+              >
+                <nz-option nzValue="Erkek" nzLabel="Erkek"></nz-option>
+                <nz-option nzValue="Kadın" nzLabel="Kadın"></nz-option>
+              </nz-select>
+            </nz-form-control>
+          </nz-form-item>
+        <!--email-->
+        <nz-form-item>
+          <nz-form-label [nzSm]="6" [nzXs]="24" nzRequired nzFor="email">E-mail</nz-form-label>
+          <nz-form-control [nzSm]="14" [nzXs]="24" nzErrorTip="The input is not valid E-mail!">
+            <input nz-input formControlName="email" id="email" />
+          </nz-form-control>
+        </nz-form-item>
+           <!--phone-->
+           <nz-form-item>
+            <nz-form-label [nzSm]="6" [nzXs]="24" nzFor="phoneNumber" nzRequired>Phone Number</nz-form-label>
+            <nz-form-control
+              [nzSm]="14"
+              [nzXs]="24"
+              [nzValidateStatus]="validateForm.controls['phoneNumber']"
+              nzErrorTip="Please input your phone number!"
+            >
+              <nz-input-group [nzAddOnBefore]="addOnBeforeTemplate">
+                <ng-template #addOnBeforeTemplate>
+                  <nz-select formControlName="phoneNumberPrefix" class="phone-select">
+                    <nz-option nzLabel="+90" nzValue="+90"></nz-option>
+                    <nz-option nzLabel="+87" nzValue="+87"></nz-option>
+                  </nz-select>
+                </ng-template>
+                <input formControlName="phoneNumber" id="'phoneNumber'" nz-input />
+              </nz-input-group>
+            </nz-form-control>
+          </nz-form-item>
+          <!--birth-->
+          <nz-form-item>
+            <nz-form-label [nzSm]="6" [nzXs]="24" nzRequired nzFor="birth">Doğum Tarihi</nz-form-label>
+            <nz-form-control [nzSm]="14" [nzXs]="24" nzErrorTip="Doğum tarihi alanı zorunlu!">
+              <nz-date-picker formControlName="birth"></nz-date-picker>
+            </nz-form-control>
+          </nz-form-item>
+        <!--nationality-->
+        <nz-form-item>
+          <nz-form-label [nzSm]="6" [nzXs]="24" nzFor="nationality" nzRequired>Uyruk</nz-form-label>
+          <nz-form-control [nzSm]="14" [nzXs]="24" nzErrorTip="Uyruk alanı zorunlu!">
+            <input nz-input id="nationality" formControlName="nationality" placeholder="ör: Türkiye" />
+          </nz-form-control>
+        </nz-form-item>
+        <!--tc-->
+        <nz-form-item>
+            <nz-form-label [nzSm]="6" [nzXs]="24" nzFor="tc">TC Kimlik No</nz-form-label>
+            <nz-form-control [nzSm]="14" [nzXs]="24" nzErrorTip="TC Kimlik No 11 haneli olmalı!">
+              <input maxlength="11" minlength="11" nz-input id="tc" formControlName="tc" placeholder="Türk vatandaşı değilseniz boş bırakınız" />
+            </nz-form-control>
+          </nz-form-item>
+        <!--agreement-->
+        <nz-form-item nz-row class="register-area">
+          <nz-form-control [nzSpan]="14" [nzOffset]="6">
+            <label nz-checkbox formControlName="agree">
+              <span>
+                Uçuş kurallarını okudum,
+                <a>onaylıyorum</a>
+              </span>
+            </label>
+          </nz-form-control>
+        </nz-form-item>
+        <!--button-->
+        <nz-form-item nz-row class="register-area">
+          <nz-form-control [nzSpan]="14" [nzOffset]="6">
+            <button [disabled]="validateForm.invalid" nz-button nzType="primary">Devam</button>
+          </nz-form-control>
+        </nz-form-item>
+      </form>
+</nz-card>
+<br>
