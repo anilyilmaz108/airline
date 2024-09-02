@@ -18,9 +18,9 @@ export class CardDetailComponent {
   @Output() selectedDetail = new EventEmitter<any>();
 
   priceOptions = [
-    { name: 'Eco', details: '15 kg bagaj, online check-in', price: 56.88 },
-    { name: 'Classic', details: '20 kg bagaj, koltuk seçimi', price: 66.94 },
-    { name: 'Premium', details: '25 kg bagaj, yemek servisi', price: 71.44 }
+    { name: 'Eco', details: '15 kg bagaj, online check-in', price: 499.99 },
+    { name: 'Classic', details: '20 kg bagaj, esnek değişiklik', price: 999.99 },
+    { name: 'Premium', details: '25 kg bagaj, esnek değişiklik', price: 1499.99 }
   ];
 
 

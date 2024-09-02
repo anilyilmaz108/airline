@@ -94,7 +94,7 @@ export class SelectedFlightsComponent {
       arrivalTime: '08:30', 
       origin: flightSignal()?.fromCity, 
       destination: flightSignal()?.toCity, 
-      price: 56.88, 
+      price: 1499.99, 
       duration: '1S 5DK' 
     },
     { 
@@ -103,7 +103,7 @@ export class SelectedFlightsComponent {
       arrivalTime: '10:50', 
       origin: flightSignal()?.fromCity, 
       destination: flightSignal()?.toCity, 
-      price: 56.88, 
+      price: 1499.99, 
       duration: '1S 5DK' 
     },
     { 
@@ -112,7 +112,7 @@ export class SelectedFlightsComponent {
       arrivalTime: '12:25', 
       origin: flightSignal()?.fromCity, 
       destination: flightSignal()?.toCity, 
-      price: 56.88, 
+      price: 1699.99, 
       duration: '1S 5DK' 
     },
     { 
@@ -121,7 +121,7 @@ export class SelectedFlightsComponent {
       arrivalTime: '15:35', 
       origin: flightSignal()?.fromCity, 
       destination: flightSignal()?.toCity, 
-      price: 56.88, 
+      price: 1999.99, 
       duration: '1S 5DK' 
     },
     { 
@@ -130,7 +130,7 @@ export class SelectedFlightsComponent {
       arrivalTime: '21:00', 
       origin: flightSignal()?.fromCity, 
       destination: flightSignal()?.toCity, 
-      price: 56.88, 
+      price: 1699.99, 
       duration: '1S 5DK' 
     },
   ];
@@ -142,7 +142,7 @@ export class SelectedFlightsComponent {
       arrivalTime: '08:30', 
       origin: flightSignal()?.toCity, 
       destination: flightSignal()?.fromCity, 
-      price: 56.88, 
+      price: 1499.99, 
       duration: '1S 5DK' 
     },
     { 
@@ -151,7 +151,7 @@ export class SelectedFlightsComponent {
       arrivalTime: '10:50', 
       origin: flightSignal()?.toCity, 
       destination: flightSignal()?.fromCity, 
-      price: 56.88, 
+      price: 1899.99, 
       duration: '1S 5DK' 
     },
     { 
@@ -160,7 +160,7 @@ export class SelectedFlightsComponent {
       arrivalTime: '12:25', 
       origin: flightSignal()?.toCity, 
       destination: flightSignal()?.fromCity, 
-      price: 56.88, 
+      price: 1999.99, 
       duration: '1S 5DK' 
     },
     { 
@@ -169,7 +169,7 @@ export class SelectedFlightsComponent {
       arrivalTime: '15:35', 
       origin: flightSignal()?.toCity, 
       destination: flightSignal()?.fromCity, 
-      price: 56.88, 
+      price: 2499.99, 
       duration: '1S 5DK' 
     },
     { 
@@ -178,7 +178,7 @@ export class SelectedFlightsComponent {
       arrivalTime: '21:00', 
       origin: flightSignal()?.toCity, 
       destination: flightSignal()?.fromCity, 
-      price: 56.88, 
+      price: 2499.99, 
       duration: '1S 5DK' 
     },
   ];
@@ -196,8 +196,8 @@ export class SelectedFlightsComponent {
     // console.log('cardSelect', this.cardSelect);
     // console.log('duration', this.cardSelect.duration);
     if(this.selectedDetail){
-      this.selectedCardId = cardId;
-      this.price += card.price;
+      this.selectedCardId = cardId;      
+      this.price = this.price + card.price + this.selectedDetail.price;
     } else {
       this.selectedCardId = this.selectedCardId === cardId ? null : cardId;  // Seçilen card ID'si toggle yapar
     }
@@ -207,7 +207,7 @@ export class SelectedFlightsComponent {
     this.cardSelectBack = card;
     if(this.selectedDetailBack){
       this.selectedCardIdBack = cardId;
-      this.price += card.price;
+      this.price = this.price + card.price + this.selectedDetailBack.price;
     } else {
       this.selectedCardIdBack = this.selectedCardIdBack === cardId ? null : cardId;  // Seçilen card ID'si toggle yapar
     }
@@ -251,8 +251,8 @@ export class SelectedFlightsComponent {
       "flightTimeLast": this.flightSignalVal?.dateLast === null || this.flightSignalVal?.dateLast === undefined  ? "" : `${this.cardSelectBack.duration}`,
       "packageFirst": `${this.selectedDetail.name}`,
       "packageLast": this.flightSignalVal?.dateLast === null || this.flightSignalVal?.dateLast === undefined  ? "" : `${this.selectedDetailBack.name}`,
-      "flexFirst": false,
-      "flexLast": false,
+      "flexFirst": this.selectedDetail.name !== 'Eco' ? true : false,
+      "flexLast": this.selectedDetailBack.name !== 'Eco' ? true : false,
       "seatFirst": "",
       "seatLast": "",
       "totalPrice": this.flightSignalVal?.dateLast === null || this.flightSignalVal?.dateLast === undefined ? this.cardSelect.price : this.cardSelect.price + this.cardSelectBack.price,

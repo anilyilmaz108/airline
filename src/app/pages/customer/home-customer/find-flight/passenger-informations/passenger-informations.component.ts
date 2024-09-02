@@ -86,15 +86,15 @@ export class PassengerInformationsComponent {
     this.price = flightSignal()?.totalPrice!;
 
     this.validateForm = this.fb.group({
-      firstname: ['', [Validators.required]],
-      lastname: ['', [Validators.required]],
+      firstname: [this.auth.currentUser?.uid ? this.authService.userSignal()?.firstName! : '', [Validators.required]],
+      lastname: [this.auth.currentUser?.uid ? this.authService.userSignal()?.lastName! : '', [Validators.required]],
       gender: 'Erkek' as 'Erkek' | 'Kadın',
-      email: ['', [Validators.email, Validators.required]],
+      email: [this.auth.currentUser?.uid ? this.authService.userSignal()?.email! : '', [Validators.email, Validators.required]],
       phoneNumberPrefix: '+90' as '+90' | '+87',
-      phoneNumber: ['', [Validators.required]],
+      phoneNumber: [this.auth.currentUser?.uid ? this.authService.userSignal()?.phone! : '', [Validators.required]],
       birth: [date, [Validators.required]],
-      nationality: ['', [Validators.required]],
-      tc: ['', [Validators.maxLength(11), Validators.minLength(11)]],
+      nationality: [this.auth.currentUser?.uid ? this.authService.userSignal()?.nationality! : '', [Validators.required]],
+      tc: [this.auth.currentUser?.uid ? this.authService.userSignal()?.TCID! : '', [Validators.maxLength(11), Validators.minLength(11)]],
       agree: [false, [Validators.requiredTrue]],
     });
   }
