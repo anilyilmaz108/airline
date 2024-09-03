@@ -374,7 +374,7 @@ export class FlightSeatComponent {
      // Burada gerekli yönlendirme ya da işlem yapılabilir
     
      console.log('Flight Seat Signal:', flightSignal());
-     // this.router.navigateByUrl('/find-flight/flight-payment');
+     this.router.navigateByUrl('/find-flight/flight-payment');
     } catch (e) {
      this.errorService.errorHandler(5);
     }

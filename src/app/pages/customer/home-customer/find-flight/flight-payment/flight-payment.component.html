@@ -1,0 +1,68 @@
+<app-flight-header
+  [title]="title"
+  [subtitle]="subtitle"
+  [price]="price"
+></app-flight-header>
+<br />
+<app-flight-steps
+  steps1="wait"
+  steps2="wait"
+  steps4="wait"
+  steps5="process"
+  steps6="wait"
+>
+</app-flight-steps>
+<br>
+<!-- Payment Kısmı -->
+<nz-card>
+  <div class="credit-card-container">
+    <div [class.flip]="isFlipped" class="credit-card">
+      <!-- Ön Yüz -->
+      <div class="credit-card-front">
+        <div class="card-number">{{ cardNumber || 'Kart Numarası' }}</div> <!--cardNumber | creditCardNumber -->
+        <div class="card-holder">
+          
+          <div>{{ cardHolder || 'Kart Sahibi' }}</div>
+        </div>
+        <div class="expiration-date">
+          <label>Son Kullanma Tarihi</label>
+          <div>{{ expirationMonth || 'MM' }}/{{ expirationYear || 'YY' }}</div>
+        </div>
+      </div>
+  
+      <!-- Arka Yüz -->
+      <div class="credit-card-back">
+        <div class="cvv">{{ cvv || 'CVV' }}</div>
+      </div>
+    </div>
+  </div>
+  <br>
+  <form nz-form [formGroup]="form" (ngSubmit)="submitPayment()">
+    <label for="cardNumber" style="color: var(--title-text-color);">Kart Numarası</label>
+    <input id="cardNumber" nz-input formControlName="cardNumber" type="text" [(ngModel)]="cardNumber" maxlength="16" minlength="16" />
+  
+    <label for="cardHolder" style="color: var(--title-text-color);">Kart Sahibi</label>
+    <input id="cardHolder" nz-input (input)="cardHolder = cardHolder.toUpperCase()" formControlName="cardHolder" type="text" [(ngModel)]="cardHolder" />
+  
+    <label style="color: var(--title-text-color);">Son Kullanma Tarihi</label>
+    <input id="expirationMonth" nz-input formControlName="expirationMonth" type="text" placeholder="MM" [(ngModel)]="expirationMonth" maxlength="2" minlength="2" />
+    <input id="expirationYear" nz-input formControlName="expirationYear" type="text" placeholder="YY" [(ngModel)]="expirationYear" maxlength="2" minlength="2"/>
+  
+    <label for="cvv" style="color: var(--title-text-color);">CVV</label>
+    <input
+      id="cvv"
+      nz-input 
+      type="text"
+      [(ngModel)]="cvv"
+      formControlName="cvv"
+      maxlength="3"
+      minlength="3"
+      (focus)="flipCard(true)"
+      (blur)="flipCard(false)"
+    />
+    <button [disabled]="!form.valid" (click)="submitPayment()" type="submit">Ödeme Yap</button>
+  
+  </form>
+</nz-card>
+
+<br>
