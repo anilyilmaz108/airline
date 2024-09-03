@@ -335,7 +335,7 @@ export class FindFlightComponent {
       // console.log('Uçuş aranıyor..');
       // console.log('FindFlight: ', this.values, this.values2, this.date, this.twoWays, adultNumberGlobal(), childNumberGlobal(), babyNumberGlobal());
       const data: FlightModel = !environment.production ? {
-        "id": userPath,
+        "id": generateId.generateUniqueId(8),
         "userId": userPath,
         "PNRNO": "",
         "earningAirScore": 0,
@@ -361,7 +361,7 @@ export class FindFlightComponent {
         "totalPrice": 0,
         "operationDate": Date.now()
       }  : {
-        "id": userPath,
+        "id": generateId.generateUniqueId(8),
         "userId": userPath,
         "PNRNO": "",
         "earningAirScore": 0,

@@ -6,6 +6,7 @@ import { SelectedFlightsComponent } from './selected-flights/selected-flights.co
 import { PassengerInformationsComponent } from './passenger-informations/passenger-informations.component';
 import { FlightSeatComponent } from './flight-seat/flight-seat.component';
 import { FlightPaymentComponent } from './flight-payment/flight-payment.component';
+import { FlightDoneComponent } from './flight-done/flight-done.component';
 
 
 export const FIND_FLIGHT_ROUTES: Routes = [
@@ -14,4 +15,5 @@ export const FIND_FLIGHT_ROUTES: Routes = [
   { path: 'passenger-informations', resolve: { layout: setLayout(PageLayout.Private) }, component: PassengerInformationsComponent },
   { path: 'flight-seat', resolve: { layout: setLayout(PageLayout.Private) }, component: FlightSeatComponent },
   { path: 'flight-payment', resolve: { layout: setLayout(PageLayout.Private) }, component: FlightPaymentComponent },
+  { path: 'flight-done', resolve: { layout: setLayout(PageLayout.Private) }, component: FlightDoneComponent },
 ];

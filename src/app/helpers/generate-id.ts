@@ -36,6 +36,16 @@ export const generateId =  {
       getRandomNumber(min: number, max: number): string {
         const randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
         return randomNumber.toString();
+      },
+
+      // Bilet No için
+      generateRandom13DigitNumber(): string {
+        let randomNumber = '';
+        for (let i = 0; i < 13; i++) {
+          const digit = Math.floor(Math.random() * 10);
+          randomNumber += digit.toString();
+        }
+        return randomNumber;
       }
 }
   

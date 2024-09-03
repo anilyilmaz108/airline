@@ -1,0 +1,142 @@
+<app-flight-steps
+  steps1="wait"
+  steps2="wait"
+  steps4="wait"
+  steps5="wait"
+  steps6="finish"
+>
+</app-flight-steps>
+<br>
+<!-- Success Mesajı -->
+<nz-card class="payment-success-card">
+    <div class="payment-success-container">
+        <nz-avatar [nzSize]="64" nzIcon="check-circle"></nz-avatar>
+        <div class="text-container">
+            <span nz-typography class="payment-message">Ödeme başarılı. İyi seyahatler dileriz.</span>
+            <span nz-typography class="pnr-message">
+                Rezervasyon (PNR) No: <span class="pnr-code">{{flight?.PNRNO}}</span>
+            </span>
+        </div>
+    </div>
+</nz-card>
+<br>
+<!-- Uçuş Bilgileri -->
+<div class="flight-info-card">
+    <div class="flight-info-container">
+      <!-- Kalkış Bilgisi -->
+      <div class="flight-detail">
+        <div class="icon">✈️</div>
+        <div class="time-location">
+          <div class="time">
+            <span class="time-highlight">{{flightHour}}</span>
+          </div>
+          <div class="location">
+            {{flight?.fromCity}}, {{firstCity}}
+          </div>
+          <div class="date">
+            {{formattedDate}}
+          </div>
+        </div>
+      </div>
+  
+      <!-- Yönlendirme Oku -->
+      <div class="arrow-container">
+        <div class="custom-arrow"></div>
+      </div>
+  
+      <!-- Varış Bilgisi -->
+      <div class="flight-detail">
+        <div class="icon">✈️</div>
+        <div class="time-location">
+          <div class="time">
+            <span class="time-highlight">{{flightHourTime}}</span>
+          </div>
+          <div class="location">
+            {{ flight?.toCity}}, {{lastCity}}
+          </div>
+          <div class="date">
+            {{formattedDate}}
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+<br>
+<!-- Yolcu Bilgileri -->
+<nz-card class="payment-success-card">
+    <div class="payment-success-container">
+        <div class="text-container">
+            <span nz-typography class="payment-message">Yolcu Bilgileri</span>
+            <span nz-typography class="pnr-message">
+                {{user?.firstName}}&nbsp; {{user?.lastName}}
+            </span>
+            <span nz-typography class="pnr-message">
+                {{formattedPhone}}
+            </span>
+            <span nz-typography class="pnr-message">
+                {{user?.email}}
+            </span>
+        </div>
+    </div>
+</nz-card>
+<br>
+<!-- Uçuş Bilgileri Genel -->
+    <div class="flight-card">
+        <span nz-typography class="info-title-label">
+                    Seyahat Detayları
+                </span>
+                <br>
+        <div class="flight-info">
+          <div class="flight-row">
+            <div class="info-label">Nereden</div>
+            <div class="info-value">{{flight?.fromCity}}</div>
+          </div>
+          <div class="flight-row">
+            <div class="info-label">Kalkış Zamanı</div>
+            <div class="info-value">{{flightFullTime}}</div>
+          </div>
+          <div class="flight-row">
+            <div class="info-label">Nereye</div>
+            <div class="info-value">{{flight?.toCity}}</div>
+          </div>
+          <div class="flight-row">
+            <div class="info-label">Varış Zamanı</div>
+            <div class="info-value">{{flightFullTimeArrive}}</div>
+          </div>
+          <div class="flight-row">
+            <div class="info-label">Uçuş No</div>
+            <div class="info-value">PC2024</div>
+          </div>
+          <div class="flight-row">
+            <div class="info-label">Bilet No</div>
+            <div class="info-value">{{ticketNo}}</div>
+          </div>
+          <div class="flight-row">
+            <div class="info-label">Geçerlilik Tarihi</div>
+            <div class="info-value">05/04/2025</div>
+          </div>
+        </div>
+      
+        <div class="extra-services">
+          <h3 class="info-value">Paket Türü</h3>
+          <p class="info-value">{{flight?.packageFirst}} model uçuş paketi seçilmiştir.</p>
+          <div class="baggage-info">
+            <div *ngIf="flight?.packageFirst === 'Eco'">Toplam Bagaj Hakkı: 15 Kg</div>
+            <div *ngIf="flight?.packageFirst === 'Classic'">Toplam Bagaj Hakkı: 20 Kg</div>
+            <div *ngIf="flight?.packageFirst === 'Premium'">Toplam Bagaj Hakkı: 25 Kg</div>
+            <div>Kabin Bagaj Hakkı: 55x40x20 cm</div>
+          </div>
+        </div>
+      
+        <div *ngIf="flight?.flexFirst" class="warning">
+          HOW - REF/RES CHG RESTRICTED - UÇUŞUNUZDAN 24 SAAT ÖNCESİNE KADAR İADE/DEĞİŞİKLİK YAPABİLİRSİNİZ.
+        </div>
+        <div *ngIf="!flight?.flexFirst" class="warning">
+            HOW - REF/RES CHG RESTRICTED - İADE/DEĞİŞİKLİK ÜCRETLİDİR.
+          </div>
+      </div>
+<br>
+  
+
+
+  

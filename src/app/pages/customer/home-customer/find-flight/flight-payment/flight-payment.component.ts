@@ -2,7 +2,10 @@ import { CommonModule } from '@angular/common';
 import { Component, inject } from '@angular/core';
 import { FlightStepsComponent } from '../../../../../shared/flight-steps/flight-steps.component';
 import { FlightHeaderComponent } from '../../../../../shared/flight-header/flight-header.component';
-import { flightSignal } from '../../../../../core/data-values';
+import {
+  flightSignal,
+  flightUserSignal,
+} from '../../../../../core/data-values';
 import {
   FormBuilder,
   FormGroup,
@@ -16,6 +19,16 @@ import { NzInputModule } from 'ng-zorro-antd/input';
 import { NzCardModule } from 'ng-zorro-antd/card';
 import { CreditCardNumberPipe } from '../../../../../helpers/credit-card-number.pipe';
 import { Router } from '@angular/router';
+import {
+  AuthService,
+  ErrorService,
+  FlightService,
+  UserService,
+} from '../../../../../services';
+import { UserModel } from '../../../../../models/user';
+import { generateId } from '../../../../../helpers/generate-id';
+import { FlightModel } from '../../../../../models/flight';
+import { Auth } from '@angular/fire/auth';
 
 @Component({
   selector: 'app-flight-payment',
@@ -29,7 +42,7 @@ import { Router } from '@angular/router';
     NzFormModule,
     NzInputModule,
     NzCardModule,
-    CreditCardNumberPipe
+    CreditCardNumberPipe,
   ],
   templateUrl: './flight-payment.component.html',
   styleUrl: './flight-payment.component.less',
@@ -43,7 +56,12 @@ export class FlightPaymentComponent {
   form!: FormGroup;
   private formBuilder = inject(NonNullableFormBuilder);
   private router = inject(Router);
-  
+  userService = inject(UserService);
+  flightService = inject(FlightService);
+  authService = inject(AuthService);
+  errorService = inject(ErrorService);
+  auth = inject(Auth);
+
   buildForm() {
     this.form = this.formBuilder.group({
       cardNumber: ['', Validators.required],
@@ -84,12 +102,84 @@ export class FlightPaymentComponent {
     this.isFlipped = isFlipped;
   }
 
-  submitPayment() {
+  async submitPayment() {
+    // Bilet aldıktan sonra Check-in ve Uçuş sorgulama için gerekli
+    if(this.auth.currentUser?.uid === undefined || this.auth.currentUser?.uid === null) {
+      await this.authService.fbRegister(
+        flightUserSignal()?.email!,
+        flightUserSignal()?.pass!
+      );
+      const userData = {
+        id: flightUserSignal()?.id,
+        role: 'user',
+        firstName: flightUserSignal()?.firstName,
+        lastName: flightUserSignal()?.lastName,
+        gender: flightUserSignal()?.gender,
+        phone: flightUserSignal()?.phone,
+        birth: flightUserSignal()?.birth,
+        nationality: flightUserSignal()?.nationality,
+        TCID: flightUserSignal()?.TCID,
+        created_at: Date.now(),
+        active: true,
+        email: flightUserSignal()?.email,
+        pass: flightUserSignal()?.pass,
+        airScore:
+          flightUserSignal()?.airScore! + flightSignal()?.earningAirScore!,
+      };
+  
+      await this.userService
+        .addDataWithCustomDocId(userData, flightUserSignal()?.id!)
+        .then(() => {
+          console.log('success first operation');
+        })
+        .catch(() => {
+          this.errorService.errorHandler(6);
+        });
+    }
+   
+
+
+
+    const flightData: FlightModel = {
+      id: flightSignal()?.id,
+      userId: flightUserSignal()?.id,
+      PNRNO: generateId.generateUniqueId(6).toUpperCase(),
+      earningAirScore: flightSignal()?.earningAirScore,
+      fromCity: flightSignal()?.fromCity,
+      toCity: flightSignal()?.toCity,
+      dateFirst: flightSignal()?.dateFirst,
+      dateLast: flightSignal()?.dateLast,
+      hourFirst: flightSignal()?.hourFirst,
+      hourLast: flightSignal()?.hourLast,
+      priceFirst: flightSignal()?.priceFirst,
+      priceLast: flightSignal()?.priceLast,
+      adultNumber: flightSignal()?.adultNumber,
+      childNumber: flightSignal()?.childNumber,
+      babyNumber: flightSignal()?.babyNumber,
+      flightTimeFirst: flightSignal()?.flightTimeFirst,
+      flightTimeLast: flightSignal()?.flightTimeLast,
+      packageFirst: flightSignal()?.packageFirst,
+      packageLast: flightSignal()?.packageLast,
+      flexFirst: flightSignal()?.flexLast,
+      flexLast: flightSignal()?.flexLast,
+      seatFirst: flightSignal()?.seatFirst,
+      seatLast: flightSignal()?.seatLast,
+      totalPrice: flightSignal()?.totalPrice,
+      operationDate: Date.now(),
+    };
+    flightSignal.set(flightData);
+
+    await this.flightService
+      .addDataWithCustomDocId(flightData, flightSignal()?.id!)
+      .then(() => {
+        console.log('success second operation');
+      })
+      .catch(() => {
+        this.errorService.errorHandler(6);
+      });
+
     // Ödeme işlemi burada gerçekleştirilecek
-    console.log(
-      'Ödeme işlemi gerçekleşti',
-      this.form.controls['cardHolder'].value
-    );
-    // this.router.navigateByUrl('/find-flight/success-flight');
+    console.log('Ödeme işlemi gerçekleşti');
+    this.router.navigateByUrl('/find-flight/flight-done');
   }
 }
