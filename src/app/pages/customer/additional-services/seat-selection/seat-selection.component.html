@@ -1,76 +1,15 @@
-<div style="display: flex">
-  <!-- Info Part -->
-  <div class="flight-operations-item">
-    <h3 nz-typography nzType="secondary">
-      <span style="color: var(--title-text-color);">Koltuk Seçimini Yap</span>
-    </h3>
-    <h5 nz-typography nzType="secondary">
-      <span style="color: var(--subtitle-text-color);"
-        >Sana en uygun koltuğu seç, daha rahat bir uçuş deneyimi yakala.</span
-      >
-    </h5>
-  </div>
-  <div style="padding-left: 16px"></div>
-  <!-- Soyadı Input-->
-  <div style="padding-top: 16px">
-    <nz-input-group
-      [nzSuffix]="suffixTemplateInfo"
-      [nzPrefix]="prefixTemplateUser"
-    >
-      <input type="text" nz-input placeholder="Yolcunun Soyadı" />
-    </nz-input-group>
-    <ng-template #prefixTemplateUser
-      ><span nz-icon nzType="user"></span
-    ></ng-template>
-    <ng-template #suffixTemplateInfo>
-      <span
-        nz-icon
-        nz-tooltip
-        nzTooltipTitle="Ör: YILMAZ"
-        nzType="info-circle"
-      ></span>
-    </ng-template>
-  </div>
-  <div style="padding-left: 16px"></div>
-  <!-- PNR Input-->
-  <div style="padding-top: 16px">
-    <nz-input-group
-      [nzSuffix]="suffixTemplateInfo2"
-      [nzPrefix]="prefixTemplateUser"
-    >
-      <input type="text" nz-input placeholder="Rezervasyon Kodu (PNR)" />
-    </nz-input-group>
-    <ng-template #prefixTemplateUser
-      ><span nz-icon nzType="user"></span
-    ></ng-template>
-    <ng-template #suffixTemplateInfo2>
-      <span
-        nz-icon
-        nz-tooltip
-        nzTooltipTitle="Ör: A1N2L3"
-        nzType="info-circle"
-      ></span>
-    </ng-template>
-  </div>
-  <div style="padding-left: 16px"></div>
-  <!-- Uçuş Ara -->
-  <div style="padding-top: 16px">
-    <button (click)="findFlight()" nz-button nzType="primary">
-      <span
-        style="color: white"
-        nz-icon
-        nzType="arrow-right"
-        nzTheme="outline"
-      ></span>
-      Onayla
-    </button>
-  </div>
-</div>
+<h3 style="color: var(--title-text-color); display: flex; justify-content: center;" nz-typography>
+  Koltuk Seçimi
+</h3>
+<br>
+<p style="color: var(--subtitle-text-color)" nz-typography>
+  Uçuşunuz öncesinde konforunuzu artırmak için koltuk seçimi hizmetimizden yararlanabilirsiniz. Web sitemiz veya mobil uygulamamız aracılığıyla, istediğiniz koltukları kolayca seçebilir ve uçuş gününde yerinizi garanti altına alabilirsiniz. Pencere kenarı, ekstra bacak alanı veya yan yana oturma gibi tercihlerinizle seyahatinizi daha keyifli hale getirin. Koltuk seçimi sırasında bazı özel alanlar için ek ücret talep edilebilir. Herhangi bir değişiklik veya yardıma ihtiyacınız olduğunda müşteri hizmetlerimiz size destek olmaktan mutluluk duyacaktır. Konforlu bir yolculuk için koltuk seçiminizi yapmayı unutmayın!</p>
+<br>
 <div class="flex-container">
   <!-- Sol Kısım -->
   <nz-list style="width: fit-content" class="nz-list-container">
     <div nz-row [nzGutter]="16">
-      <div *ngFor="let item of data; track item; trackBy: trackByItem" class="nz-col">
+      <div *ngFor="let item of data; track item; trackBy: trackByItem" class="nz-col" nz-col nzXs="16" nzSm="24" nzMd="12" nzLg="8" nzXl="6">
         <nz-list-item>
           <nz-card
             [ngStyle]="{
@@ -166,7 +105,7 @@
   </nz-list>
   <!-- Sağ Kısım -->
   <div nz-row style="padding-right: 20px" class="nz-row" [nzGutter]="16">
-    <div class="nz-col" style="display: flex">
+    <div class="nz-col" style="display: flex" nz-col nzSm="16" nzMd="12" nzLg="8" nzXl="6">
       <!-- Sol Taraf -->
       <div class="seat-container">
         <div class="seat-row">
@@ -329,3 +268,4 @@
     </div>
   </div>
 </div>
+<br>

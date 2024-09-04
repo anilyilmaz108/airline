@@ -13,11 +13,11 @@ import { NzTypographyModule } from 'ng-zorro-antd/typography';
 })
 export class InflightServicesComponent {
   data = [
-    "Satın alınmış ek bagaj paketleri iade edilemez ve bagaj hakkı başka kişilere devredilemez.",
-    "Satın alınmış ek bagaj paketleri iade edilemez ve bagaj hakkı başka kişilere devredilemez.",
-    "Satın alınmış ek bagaj paketleri iade edilemez ve bagaj hakkı başka kişilere devredilemez.",
-    "Satın alınmış ek bagaj paketleri iade edilemez ve bagaj hakkı başka kişilere devredilemez.",
-    "Satın alınmış ek bagaj paketleri iade edilemez ve bagaj hakkı başka kişilere devredilemez.",
-    "Satın alınmış ek bagaj paketleri iade edilemez ve bagaj hakkı başka kişilere devredilemez.",
+    "Lezzetli yemekler ve geniş içecek seçeneklerimizle uçuş sırasında damak tadınıza hitap ederiz. Menü seçeneklerimizi, özel diyet taleplerinizi karşılayacak şekilde düzenleyebiliriz.",
+    "Geniş bir eğlence yelpazesi sunarak film, dizi ve müzik seçenekleriyle yolculuğunuzu keyifli hale getiririz. Kişisel ekranlarınızda dilediğiniz içerikleri izleyebilir veya dinleyebilirsiniz.",
+    "Rahat ve ergonomik koltuklarımız, uzun uçuşlarınızı daha konforlu hale getirir. Ekstra bacak alanı ve ayarlanabilir sırt yaslama özellikleriyle dinlenme imkanı sunarız.",
+    "Uçuş sırasında bağlantınızı kesmeden işlerinizi halletmenizi sağlayan Wi-Fi hizmetimiz ve elektronik cihazlarınızı şarj edebileceğiniz prizlerimiz mevcuttur.",
+    "Profesyonel kabin ekibimiz, her türlü ihtiyacınızda yanınızda olup, size üstün bir hizmet deneyimi sunmak için hazırdır. Sorularınız ve özel talepleriniz için ekibimize başvurabilirsiniz.",
+    "Uçak içi hijyen standartlarımıza yüksek öncelik veriyoruz. Temizlik ve dezenfeksiyon süreçlerimizle güvenli ve temiz bir ortam sunarız.",
   ];
 }

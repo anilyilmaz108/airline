@@ -112,7 +112,7 @@ export class SelectedFlightsComponent {
       arrivalTime: '12:25', 
       origin: flightSignal()?.fromCity, 
       destination: flightSignal()?.toCity, 
-      price: 1699.99, 
+      price: 1499.99, 
       duration: '1S 5DK' 
     },
     { 
@@ -121,7 +121,7 @@ export class SelectedFlightsComponent {
       arrivalTime: '15:35', 
       origin: flightSignal()?.fromCity, 
       destination: flightSignal()?.toCity, 
-      price: 1999.99, 
+      price: 1499.99, 
       duration: '1S 5DK' 
     },
     { 
@@ -130,7 +130,7 @@ export class SelectedFlightsComponent {
       arrivalTime: '21:00', 
       origin: flightSignal()?.fromCity, 
       destination: flightSignal()?.toCity, 
-      price: 1699.99, 
+      price: 1499.99, 
       duration: '1S 5DK' 
     },
   ];
@@ -151,7 +151,7 @@ export class SelectedFlightsComponent {
       arrivalTime: '10:50', 
       origin: flightSignal()?.toCity, 
       destination: flightSignal()?.fromCity, 
-      price: 1899.99, 
+      price: 1499.99, 
       duration: '1S 5DK' 
     },
     { 
@@ -160,7 +160,7 @@ export class SelectedFlightsComponent {
       arrivalTime: '12:25', 
       origin: flightSignal()?.toCity, 
       destination: flightSignal()?.fromCity, 
-      price: 1999.99, 
+      price: 1499.99, 
       duration: '1S 5DK' 
     },
     { 
@@ -169,7 +169,7 @@ export class SelectedFlightsComponent {
       arrivalTime: '15:35', 
       origin: flightSignal()?.toCity, 
       destination: flightSignal()?.fromCity, 
-      price: 2499.99, 
+      price: 1499.99, 
       duration: '1S 5DK' 
     },
     { 
@@ -178,7 +178,7 @@ export class SelectedFlightsComponent {
       arrivalTime: '21:00', 
       origin: flightSignal()?.toCity, 
       destination: flightSignal()?.fromCity, 
-      price: 2499.99, 
+      price: 1499.99, 
       duration: '1S 5DK' 
     },
   ];
@@ -197,7 +197,7 @@ export class SelectedFlightsComponent {
     // console.log('duration', this.cardSelect.duration);
     if(this.selectedDetail){
       this.selectedCardId = cardId;      
-      this.price = this.price + card.price + this.selectedDetail.price;
+      this.price += this.selectedDetail.price;
     } else {
       this.selectedCardId = this.selectedCardId === cardId ? null : cardId;  // Seçilen card ID'si toggle yapar
     }
@@ -207,7 +207,7 @@ export class SelectedFlightsComponent {
     this.cardSelectBack = card;
     if(this.selectedDetailBack){
       this.selectedCardIdBack = cardId;
-      this.price = this.price + card.price + this.selectedDetailBack.price;
+      this.price += this.selectedDetailBack.price;
     } else {
       this.selectedCardIdBack = this.selectedCardIdBack === cardId ? null : cardId;  // Seçilen card ID'si toggle yapar
     }

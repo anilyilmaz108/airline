@@ -14,11 +14,11 @@ import { NzTypographyModule } from 'ng-zorro-antd/typography';
 export class VipSelectionComponent {
 
   data = [
-    "Satın alınmış ek bagaj paketleri iade edilemez ve bagaj hakkı başka kişilere devredilemez.",
-    "Satın alınmış ek bagaj paketleri iade edilemez ve bagaj hakkı başka kişilere devredilemez.",
-    "Satın alınmış ek bagaj paketleri iade edilemez ve bagaj hakkı başka kişilere devredilemez.",
-    "Satın alınmış ek bagaj paketleri iade edilemez ve bagaj hakkı başka kişilere devredilemez.",
-    "Satın alınmış ek bagaj paketleri iade edilemez ve bagaj hakkı başka kişilere devredilemez.",
-    "Satın alınmış ek bagaj paketleri iade edilemez ve bagaj hakkı başka kişilere devredilemez.",
+    "Havaalanına vardığınızda hızlı ve zahmetsiz bir şekilde işlemlerinizi tamamlamanızı sağlayan öncelikli check-in ve boarding hizmetlerimizle, zamanınızı verimli bir şekilde kullanabilirsiniz.",
+    "Sizi rahatlatıcı bir ortamda beklemenizi sağlayan özel lounge erişimi sunuyoruz. Ücretsiz yiyecek ve içeceklerin yanı sıra, konforlu oturma alanları ve internet erişimiyle seyahat öncesi veya sonrası keyifli vakit geçirebilirsiniz.",
+    "Seyahatiniz boyunca özel asistanlarımız, tüm ihtiyaçlarınızı karşılamak için sizinle ilgilenir. Bilet düzenlemelerinden bagaj yönetimine kadar her türlü konuda destek sağlarlar.",
+    "Havaalanı transferleriniz, şehrin en konforlu araçlarıyla sağlanır. VIP araçlarımızla hızlı, güvenli ve rahat bir yolculuk deneyimi yaşarsınız.",
+    "Uçuşunuz sırasında size özel hazırlanan gurme yemekler ve içecek seçenekleri sunarak, en yüksek kaliteyi ve lezzeti deneyimlemenizi sağlarız.",
+    "Güvenliğiniz ve gizliliğiniz bizim önceliğimizdir. Özel güvenlik önlemleri ve gizlilik standartlarımızla, seyahatinizi endişesiz bir şekilde geçirebilirsiniz.",
   ];
 }

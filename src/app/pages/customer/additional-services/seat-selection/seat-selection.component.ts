@@ -6,6 +6,7 @@ import { CommonModule } from '@angular/common';
 import { NzGridModule } from 'ng-zorro-antd/grid';
 import { NzButtonModule } from 'ng-zorro-antd/button';
 import { NzInputModule } from 'ng-zorro-antd/input';
+import { NzTypographyModule } from 'ng-zorro-antd/typography';
 
 @Component({
   selector: 'app-seat-selection',
@@ -18,6 +19,7 @@ import { NzInputModule } from 'ng-zorro-antd/input';
     NzGridModule,
     NzButtonModule,
     NzInputModule,
+    NzTypographyModule
   ],
   templateUrl: './seat-selection.component.html',
   styleUrl: './seat-selection.component.less',

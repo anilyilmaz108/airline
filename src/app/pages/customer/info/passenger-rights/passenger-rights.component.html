@@ -15,13 +15,7 @@
 <br>
 
 <p style="color: var(--subtitle-text-color)" nz-typography>
-  Ant Design, a design language for background applications, is refined by Ant
-  UED Team. Ant Design, a design language for background applications, is
-  refined by Ant UED Team. Ant Design, a design language for background
-  applications, is refined by Ant UED Team. Ant Design, a design language for
-  background applications, is refined by Ant UED Team. Ant Design, a design
-  language for background applications, is refined by Ant UED Team. Ant Design,
-  a design language for background applications, is refined by Ant UED Team.
+  Hoş geldiniz! Havayolu firmamız olarak, siz değerli yolcularımızın haklarını korumak ve en iyi hizmeti sunmak öncelikli hedefimizdir. Bu sayfada, yolcu haklarınız ve bunları nasıl kullanabileceğiniz hakkında önemli bilgiler bulabilirsiniz.
 </p>
 <nz-divider></nz-divider>
 <br />
@@ -29,7 +23,10 @@
     Spesifik Durumlarda Değişebilecek Kurallar
 </h3>
 <ul *ngFor="let item of data">
-  <li style="color: var(--subtitle-text-color)" nz-typography>{{ item }}</li>
+  <li style="color: var(--subtitle-text-color)" nz-typography>
+    <span style="color: var(--title-text-color); font-weight: 500;">{{ item.title }} : </span>
+    <span style="color: var(--subtitle-text-color)">{{ item.desc }}</span>
+  </li>
 </ul>
 <br>
 <!-- Tips -->
