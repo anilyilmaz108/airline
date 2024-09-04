@@ -33,17 +33,12 @@
       nzMode="inline"
       [nzInlineCollapsed]="isCollapsed"
     >
-      <li
-        nz-menu-item
-        nzMatchRouter
-        nz-tooltip
-        nzTooltipPlacement="right"
-        [nzTooltipTitle]="isCollapsed ? 'Anasayfa' : ''"
-      >
-        <span nz-icon nzType="home" nzTheme="outline"></span>
-        <span><a style="color: white" routerLink="/">Anasayfa</a></span>
-      </li>
-
+      <ul nz-menu nzTheme="dark" nzMode="inline">
+        <li nz-menu-item nzMatchRouter nzMatchRouterExact routerLink="/">
+          <span nz-icon nzType="home" nzTheme="outline"></span>
+          <span><a style="color: white" routerLink="/">Anasayfa</a></span>
+        </li>
+      </ul>
       <li nz-submenu nzOpen nzTitle="Seyehat İşlemleri" nzIcon="dashboard">
         <ul>
           <li nz-menu-item nzMatchRouter>
