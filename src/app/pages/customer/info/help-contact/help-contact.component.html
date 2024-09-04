@@ -53,14 +53,20 @@
 <br>
 <!-- P1 -->
 <p style="color: var(--subtitle-text-color)" nz-typography>
-    Ant Design, a design language for background applications, is refined by Ant
-    UED Team. Ant Design, a design language for background applications, is
-    refined by Ant UED Team. Ant Design, a design language for background
-    applications, is refined by Ant UED Team. Ant Design, a design language for
-    background applications, is refined by Ant UED Team. Ant Design, a design
-    language for background applications, is refined by Ant UED Team. Ant Design,
-    a design language for background applications, is refined by Ant UED Team.
+  Sorularınızı veya sorunlarınızı e-posta yoluyla bize iletebilirsiniz. E-posta adresimiz: yardim&#64;air.com. E-posta ile iletişim kurduğunuzda, mesajınızın içeriğine bağlı olarak 24-48 saat içinde geri dönüş almayı bekleyebilirsiniz. Lütfen e-postanızda sorununuzu ayrıntılı bir şekilde açıklayın ve iletişim bilgilerinizi eklemeyi unutmayın.
   </p>
+  <br>
+  <!-- P2 -->
+  <p style="color: var(--subtitle-text-color)" nz-typography>
+    Anında destek almak isterseniz, canlı destek servisimizden yararlanabilirsiniz. Canlı destek ekibimiz, size sorularınız hakkında anında yardımcı olmak için buradadır. Çalışma Saatleri Pazartesi-Cuma, 09:00 - 18:00 arasındadır.
+    </p>
+    <br>
+  <!-- P2 -->
+  <p style="color: var(--subtitle-text-color)" nz-typography>
+    Geri bildirimleriniz bizim için çok değerli. Hizmetlerimizi geliştirmek ve müşteri memnuniyetini artırmak için öneri ve yorumlarınızı geri bildirim formumuzu doldurarak paylaşabilirsiniz. Her türlü geri bildiriminiz dikkate alınacak ve iyileştirme çalışmalarında kullanılacaktır.
+
+Her türlü sorunuz, geri bildiriminiz veya talebiniz için bizimle iletişime geçmekten çekinmeyin. Size yardımcı olmaktan memnuniyet duyacağız!
+    </p>
 <br>
 <h4 style="color: var(--title-text-color)" nz-typography>
     Bize Yazın
@@ -79,15 +85,12 @@
   <!-- Form -->
     <form style="width: 50%;" nz-form [formGroup]="validateForm" (ngSubmit)="submitForm()">
         <nz-form-item>
-          <nz-form-label [nzSpan]="7" nzRequired>Username</nz-form-label>
+          <nz-form-label [nzSpan]="7" nzRequired>Adınız</nz-form-label>
           <nz-form-control [nzSpan]="12" nzHasFeedback nzValidatingTip="Validating..." [nzErrorTip]="userErrorTpl">
-            <input nz-input formControlName="userName" placeholder="async validate try to write JasonWood" />
+            <input nz-input formControlName="userName" placeholder="isim soyisim şeklinde giriniz" />
             <ng-template #userErrorTpl let-control>
               @if (control.errors?.['required']) {
-                Please input your username!
-              }
-              @if (control.errors?.['duplicated']) {
-                The username is redundant!
+                Bu alan zorunlu!
               }
             </ng-template>
           </nz-form-control>
@@ -98,10 +101,10 @@
             <input nz-input formControlName="email" placeholder="email" type="email" />
             <ng-template #emailErrorTpl let-control>
               @if (control.errors?.['email']) {
-                The input is not valid E-mail!
+                Email formatında olmalı!
               }
               @if (control.errors?.['required']) {
-                Please input your E-mail!
+                Bu alan zorunlu!
               }
             </ng-template>
           </nz-form-control>
@@ -117,9 +120,10 @@
         </nz-form-item>
         <nz-form-item>
           <nz-form-control [nzOffset]="7" [nzSpan]="12">
-            <button style="color: white; background-color: var(--primary-color);" nz-button nzType="primary" [disabled]="!validateForm.valid">Submit</button>
-            <button nz-button (click)="resetForm($event)">Reset</button>
+            <button style="color: white; background-color: var(--primary-color);" nz-button nzType="primary" [disabled]="!validateForm.valid">Gönder</button>
+            <button nz-button (click)="resetForm($event)">Temizle</button>
           </nz-form-control>
         </nz-form-item>
       </form>
 </div>
+<br>

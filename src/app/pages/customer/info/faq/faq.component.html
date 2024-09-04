@@ -14,7 +14,7 @@
   "
   nz-typography
 >
-Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+Hoş geldiniz! Havayolu firmamız hakkında sıkça sorulan soruların cevaplarını burada bulabilirsiniz. Sizlere daha iyi hizmet verebilmek için, bu bölümde en çok karşılaşılan sorunları ve yanıtlarını derledik. Sorularınızın cevabını burada bulamazsanız, bizimle iletişime geçmekten çekinmeyin.
 </p>
 <br />
 <!-- Collapse -->
@@ -22,9 +22,9 @@ Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
     @for (panel of panels; track panel) {
       <nz-collapse-panel [nzHeader]="panel.name" [nzActive]="panel.active" [nzDisabled]="panel.disabled">
         <p style="margin:0; color: var(--subtitle-text-color);">
-          A dog is a type of domesticated animal. Known for its loyalty and faithfulness, it can be found as a welcome
-          guest in many households across the world.
+          {{panel.description}}
         </p>
       </nz-collapse-panel>
     }
   </nz-collapse>
+  <br>

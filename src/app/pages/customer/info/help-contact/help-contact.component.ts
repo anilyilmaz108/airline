@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import {
   AbstractControl,
   AsyncValidatorFn,
@@ -23,6 +23,9 @@ import { NzSkeletonModule } from 'ng-zorro-antd/skeleton';
 import { NzStatisticModule } from 'ng-zorro-antd/statistic';
 import { NzTypographyModule } from 'ng-zorro-antd/typography';
 import { Observable, Observer } from 'rxjs';
+import { ErrorService, HelpContactService, SuccessService } from '../../../../services';
+import { generateId } from '../../../../helpers/generate-id';
+import { HelpContact } from '../../../../models/help-contact';
 
 @Component({
   selector: 'app-help-contact',
@@ -46,6 +49,10 @@ import { Observable, Observer } from 'rxjs';
   styleUrl: './help-contact.component.less',
 })
 export class HelpContactComponent {
+  helpContactService = inject(HelpContactService);
+  errorService = inject(ErrorService);
+  successService = inject(SuccessService);
+
   validateForm: FormGroup<{
     userName: FormControl<string>;
     email: FormControl<string>;
@@ -53,22 +60,25 @@ export class HelpContactComponent {
   }>;
 
   submitForm(): void {
-    console.log('submit', this.validateForm.value);
-    this.validateForm.reset();
+    //console.log('submit', this.validateForm.value);
+    try {
+      const data: HelpContact = {
+        "id": generateId.generateUniqueId(10),
+        "fullName": this.validateForm.value.userName,
+        "email": this.validateForm.value.email,
+        "comment": this.validateForm.value.comment,
+        "operationDate": Date.now()
+      }
+  
+      this.helpContactService.add(data);
+      this.successService.successHandler(200);
+      this.validateForm.reset();
+    } catch (err) {
+      console.log(err);
+      this.errorService.errorHandler(5);
+    }
   }
 
-  userNameAsyncValidator: AsyncValidatorFn = (control: AbstractControl) =>
-    new Observable((observer: Observer<ValidationErrors | null>) => {
-      setTimeout(() => {
-        if (control.value === 'JasonWood') {
-          // you have to return `{error: true}` to mark it as an error event
-          observer.next({ error: true, duplicated: true });
-        } else {
-          observer.next(null);
-        }
-        observer.complete();
-      }, 1000);
-    });
 
   resetForm(e: MouseEvent): void {
     e.preventDefault();
@@ -77,7 +87,7 @@ export class HelpContactComponent {
 
   constructor(private fb: NonNullableFormBuilder) {
     this.validateForm = this.fb.group({
-      userName: ['', [Validators.required], [this.userNameAsyncValidator]],
+      userName: ['', [Validators.required]],
       email: ['', [Validators.email, Validators.required]],
       comment: ['', [Validators.required]],
     });
