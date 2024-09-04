@@ -1,49 +1,39 @@
 <!-- Old (nz-statistic) -->
 <div nz-row [nzGutter]="[16,16]">
-    <div nz-col class="gutter-row "  nzXs="24" nzSm="24" nzMd="24" nzLg="24" nzXl="8">
-      <nz-card class="stat-card">
-        <div>
-          <nz-statistic nzValue="10.987" [nzTitle]="'Title1'" [nzSuffix]="suffix"></nz-statistic>
-          <span class="text-gray" style="font-size: 11px;">1920 Hzr 5069 Kd</span>
-          <ng-template #suffix><span class="text-gray" style="font-size:14px;">&nbsp;<i nz-icon nzType="info-circle"></i></span></ng-template>
+    <div nz-col class="gutter-row "  nzXs="24" nzSm="24" nzMd="16" nzLg="8" nzXl="6">
+      <nz-card>
+        <div style="display: flex; flex-direction: column;">
+          <span style="color: var(--subtitle-text-color); font-weight: 400; padding-bottom: 4px; font-size: medium;">Yolcu Sayısı</span>
+          <span style="color: var(--title-text-color); font-weight: 500; font-size: x-large;" [countUp]="1500000" [duration]="1000"></span>
+          <span style="color: var(--subtitle-text-color); font-size: x-small">800.000 Yerli 700.000 Yabancı</span>
         </div>
-        <ng-template #loading><nz-skeleton [nzActive]="true" [nzParagraph]="{ rows: 1 }"></nz-skeleton></ng-template>
       </nz-card>
     </div>
-    <div nz-col class="gutter-row" nzXs="24" nzSm="24" nzMd="12" nzLg="6" nzXl="4">
+    <div nz-col class="gutter-row" nzXs="24" nzSm="24" nzMd="16" nzLg="8" nzXl="6">
       <nz-card class="stat-card">
-        <div>
-          <nz-statistic nzValue="9999" [nzTitle]="'Title2'"></nz-statistic>
-          <span class="text-gray" style="font-size: 11px;">1920 Hzr 5069 Kd</span>
+        <div style="display: flex; flex-direction: column;">
+          <span style="color: var(--subtitle-text-color); font-weight: 400; padding-bottom: 4px; font-size: medium;">Personel Sayısı</span>
+          <span style="color: var(--title-text-color); font-weight: 500; font-size: x-large;" [countUp]="435500" [duration]="1000"></span>
+          <span style="color: var(--subtitle-text-color); font-size: x-small">300.000 Yerli 135.500 Yabancı</span>
         </div>
-        <ng-template #loading><nz-skeleton [nzActive]="true"  [nzParagraph]="{ rows: 1 }"></nz-skeleton></ng-template>
       </nz-card>
     </div>
-    <div nz-col class="gutter-row" nzXs="24" nzSm="24" nzMd="12" nzLg="6" nzXl="4">
+    <div nz-col class="gutter-row" nzXs="24" nzSm="24" nzMd="16" nzLg="8" nzXl="6">
       <nz-card class="stat-card">
-        <div>
-          <nz-statistic nzValue="94321" [nzTitle]="'Title3'"></nz-statistic>
-          <span class="text-gray" style="font-size: 11px;">1920 Hzr 5069 Kd</span>
+        <div style="display: flex; flex-direction: column;">
+          <span style="color: var(--subtitle-text-color); font-weight: 400; padding-bottom: 4px; font-size: medium;">Müşteri Memnuniyeti</span>
+          <span style="color: var(--title-text-color); font-weight: 500; font-size: x-large;" [countUp]="4.7" [duration]="1000"></span>
+          <span style="color: var(--subtitle-text-color); font-size: x-small">4.6 Yerli 4.8 Yabancı</span>
         </div>
-        <ng-template #loading><nz-skeleton [nzActive]="true"  [nzParagraph]="{ rows: 1 }"></nz-skeleton></ng-template>
       </nz-card>
     </div>
-    <div nz-col class="gutter-row" nzXs="24" nzSm="24" nzMd="12" nzLg="6" nzXl="4">
+    <div nz-col class="gutter-row" nzXs="24" nzSm="24" nzMd="16" nzLg="8" nzXl="6">
       <nz-card class="stat-card">
-        <div>
-          <nz-statistic nzValue="4995" [nzTitle]="'Title4'"></nz-statistic>
-          <span class="text-gray" style="font-size: 11px;">1920 Hzr 5069 Kd</span>
+        <div style="display: flex; flex-direction: column;">
+          <span style="color: var(--subtitle-text-color); font-weight: 400; padding-bottom: 4px; font-size: medium;">Doluluk Oranı</span>
+          <span>% <span style="color: var(--title-text-color); font-weight: 500; font-size: x-large;" [countUp]="85" [duration]="1000"></span>        </span>
+          <span style="color: var(--subtitle-text-color); font-size: x-small">%55 Yerli %45 Yabancı</span>
         </div>
-        <ng-template #loading><nz-skeleton [nzActive]="true"  [nzParagraph]="{ rows: 1 }"></nz-skeleton></ng-template>
-      </nz-card>
-    </div>
-    <div nz-col class="gutter-row" nzXs="24" nzSm="24" nzMd="12" nzLg="6" nzXl="4">
-      <nz-card class="stat-card">
-        <div>
-          <nz-statistic nzValue="121221" [nzTitle]="'Title5'"></nz-statistic>
-          <span class="text-gray" style="font-size: 11px;">1920 Hzr 5069 Kd</span>
-        </div>
-        <ng-template #loading><nz-skeleton [nzActive]="true"  [nzParagraph]="{ rows: 1 }"></nz-skeleton></ng-template>
       </nz-card>
     </div>
   </div>
