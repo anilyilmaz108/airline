@@ -14,14 +14,15 @@ import pdfMake from 'pdfmake/build/pdfmake';
 import pdfFonts from 'pdfmake/build/vfs_fonts';
 pdfMake.vfs = pdfFonts.pdfMake.vfs;
 
+
 @Component({
-  selector: 'app-flight-done',
+  selector: 'app-check-in-done',
   standalone: true,
   imports: [CommonModule, FlightStepsComponent, NzCardModule, NzAvatarModule, NzIconModule, NzTypographyModule],
-  templateUrl: './flight-done.component.html',
-  styleUrl: './flight-done.component.less'
+  templateUrl: './check-in-done.component.html',
+  styleUrl: './check-in-done.component.less'
 })
-export class FlightDoneComponent {
+export class CheckInDoneComponent {
   flightService = inject(FlightService);
   authService = inject(AuthService);
   user = flightUserSignal();

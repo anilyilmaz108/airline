@@ -42,14 +42,14 @@
       <li nz-submenu nzOpen nzTitle="Seyehat İşlemleri" nzIcon="dashboard">
         <ul>
           <li nz-menu-item nzMatchRouter>
-            <a>Check-in</a>
+            <a routerLink="/check-in">Check-in</a>
           </li>
           <li nz-menu-item nzMatchRouter>
             <a>Bilet işlemleri</a>
           </li>
-          <li nz-menu-item nzMatchRouter>
+          <!--<li nz-menu-item nzMatchRouter>
             <a>Fırsat Uçuşlar</a>
-          </li>
+          </li>-->
         </ul>
       </li>
       <li nz-submenu nzTitle="Ek Hizmetler" nzIcon="form">
@@ -205,7 +205,7 @@
             nzTooltipTitle="Çıkış Yap"
             nzTooltipPlacement="bottomRight" nz-icon [nzType]="'logout'"></i>
           </span>
-          <span routerLink="/user/login" *ngIf="!user" class="header-icons" nz-icon  nz-tooltip
+          <span *ngIf="!user" routerLink="/user/login" class="header-icons" nz-icon  nz-tooltip
           nzTooltipTitle="Giriş Yap"
           nzTooltipPlacement="bottomRight" nzType="login" nzTheme="outline"></span>
         </div>

@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, SimpleChanges, inject, signal } from '@angular/core';
-import { FormGroup, FormsModule, NonNullableFormBuilder, ReactiveFormsModule } from '@angular/forms';
+import { FormGroup, FormsModule, NonNullableFormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { NzCardModule } from 'ng-zorro-antd/card';
 import { NzCascaderModule } from 'ng-zorro-antd/cascader';
 import { NzDividerModule } from 'ng-zorro-antd/divider';
@@ -19,9 +19,9 @@ import { NzCheckboxModule } from 'ng-zorro-antd/checkbox';
 import { NzToolTipModule } from 'ng-zorro-antd/tooltip';
 import { Auth } from '@angular/fire/auth';
 import { FlightService } from '../../../../services/flight.service';
-import { ErrorService } from '../../../../services';
+import { ErrorService, UserService } from '../../../../services';
 import { generateId } from '../../../../helpers/generate-id';
-import { flightSignal } from '../../../../core/data-values';
+import { flightSignal, flightUserSignal } from '../../../../core/data-values';
 import { FlightModel } from '../../../../models/flight';
 import { Router } from '@angular/router';
 import { environment } from '../../../../../environments/environment';
@@ -34,7 +34,7 @@ const options = [
     children: [
       {
         label: 'Adana-Şakirpaşa Havalimanı',
-        value: 'Adana-Şakirpaşa Havalimanı - ADA',
+        value: 'Adana-Şakirpaşa Havalimanı',
         isLeaf: true,
       },
     ],
@@ -45,7 +45,7 @@ const options = [
     children: [
       {
         label: 'Adıyaman Havalimanı',
-        value: 'Adıyaman Havalimanı - ADF',
+        value: 'Adıyaman Havalimanı',
         isLeaf: true,
       },
     ],
@@ -56,7 +56,7 @@ const options = [
     children: [
       {
         label: 'Ağrı Ahmed-i Hani Havalimanı',
-        value: 'Ağrı Ahmed-i Hani Havalimanı - AJI',
+        value: 'Ağrı Ahmed-i Hani Havalimanı',
         isLeaf: true,
       },
     ],
@@ -67,7 +67,7 @@ const options = [
     children: [
       {
         label: 'Amasya Merzifon Havalimanı',
-        value: 'Amasya Merzifon Havalimanı - MZH',
+        value: 'Amasya Merzifon Havalimanı',
         isLeaf: true,
       },
     ],
@@ -78,7 +78,7 @@ const options = [
     children: [
       {
         label: 'Ankara Esenboğa Havalimanı',
-        value: 'Ankara Esenboğa Havalimanı - ESB',
+        value: 'Ankara Esenboğa Havalimanı',
         isLeaf: true,
       },
     ],
@@ -89,7 +89,7 @@ const options = [
     children: [
       {
         label: 'Antalya Havaalanı',
-        value: 'Antalya Havaalanı- AYT',
+        value: 'Antalya Havaalanı',
         isLeaf: true,
       },
     ],
@@ -100,7 +100,7 @@ const options = [
     children: [
       {
         label: 'Balıkesir Koca Seyit Havalimanı',
-        value: 'Balıkesir Koca Seyit Havalimanıı- EDO',
+        value: 'Balıkesir Koca Seyit Havalimanıı',
         isLeaf: true,
       },
     ],
@@ -111,12 +111,12 @@ const options = [
     children: [
       {
         label: 'Sabiha Gökçen Havaalanı',
-        value: 'Sabiha Gökçen Havaalanı - SAW',
+        value: 'Sabiha Gökçen Havaalanı',
         isLeaf: true,
       },
       {
         label: 'İstanbul Yeni Havalimanı',
-        value: 'İstanbul Yeni Havalimanı - IST',
+        value: 'İstanbul Yeni Havalimanı',
         isLeaf: true,
       },
     ],
@@ -127,7 +127,7 @@ const options = [
     children: [
       {
         label: 'İzmir Adnan Menderes Havalimanı',
-        value: 'İzmir Adnan Menderes Havalimanı - ADB',
+        value: 'İzmir Adnan Menderes Havalimanı',
         isLeaf: true,
       },
     ],
@@ -138,7 +138,7 @@ const options = [
     children: [
       {
         label: 'Konya Havalimanı',
-        value: 'Konya Havalimanı - KYA',
+        value: 'Konya Havalimanı',
         isLeaf: true,
       },
     ],
@@ -152,7 +152,7 @@ const options2 = [
     children: [
       {
         label: 'Adana-Şakirpaşa Havalimanı',
-        value: 'Adana-Şakirpaşa Havalimanı - ADA',
+        value: 'Adana-Şakirpaşa Havalimanı',
         isLeaf: true,
       },
     ],
@@ -163,7 +163,7 @@ const options2 = [
     children: [
       {
         label: 'Adıyaman Havalimanı',
-        value: 'Adıyaman Havalimanı - ADF',
+        value: 'Adıyaman Havalimanı',
         isLeaf: true,
       },
     ],
@@ -174,7 +174,7 @@ const options2 = [
     children: [
       {
         label: 'Ağrı Ahmed-i Hani Havalimanı',
-        value: 'Ağrı Ahmed-i Hani Havalimanı - AJI',
+        value: 'Ağrı Ahmed-i Hani Havalimanı',
         isLeaf: true,
       },
     ],
@@ -185,7 +185,7 @@ const options2 = [
     children: [
       {
         label: 'Amasya Merzifon Havalimanı',
-        value: 'Amasya Merzifon Havalimanı - MZH',
+        value: 'Amasya Merzifon Havalimanı',
         isLeaf: true,
       },
     ],
@@ -196,7 +196,7 @@ const options2 = [
     children: [
       {
         label: 'Ankara Esenboğa Havalimanı',
-        value: 'Ankara Esenboğa Havalimanı - ESB',
+        value: 'Ankara Esenboğa Havalimanı',
         isLeaf: true,
       },
     ],
@@ -207,7 +207,7 @@ const options2 = [
     children: [
       {
         label: 'Antalya Havaalanı',
-        value: 'Antalya Havaalanı- AYT',
+        value: 'Antalya Havaalanı',
         isLeaf: true,
       },
     ],
@@ -218,7 +218,7 @@ const options2 = [
     children: [
       {
         label: 'Balıkesir Koca Seyit Havalimanı',
-        value: 'Balıkesir Koca Seyit Havalimanıı- EDO',
+        value: 'Balıkesir Koca Seyit Havalimanıı',
         isLeaf: true,
       },
     ],
@@ -229,12 +229,12 @@ const options2 = [
     children: [
       {
         label: 'Sabiha Gökçen Havaalanı',
-        value: 'Sabiha Gökçen Havaalanı - SAW',
+        value: 'Sabiha Gökçen Havaalanı',
         isLeaf: true,
       },
       {
         label: 'İstanbul Yeni Havalimanı',
-        value: 'İstanbul Yeni Havalimanı - IST',
+        value: 'İstanbul Yeni Havalimanı',
         isLeaf: true,
       },
     ],
@@ -245,7 +245,7 @@ const options2 = [
     children: [
       {
         label: 'İzmir Adnan Menderes Havalimanı',
-        value: 'İzmir Adnan Menderes Havalimanı - ADB',
+        value: 'İzmir Adnan Menderes Havalimanı',
         isLeaf: true,
       },
     ],
@@ -256,7 +256,7 @@ const options2 = [
     children: [
       {
         label: 'Konya Havalimanı',
-        value: 'Konya Havalimanı - KYA',
+        value: 'Konya Havalimanı',
         isLeaf: true,
       },
     ],
@@ -280,6 +280,7 @@ var babyNumberGlobal = signal("0");
     NzSkeletonModule,
     NzCascaderModule,
     FormsModule,
+    ReactiveFormsModule,
     NzDividerModule,
     NzDatePickerModule,
     NzInputModule,
@@ -298,11 +299,21 @@ export class FindFlightComponent {
   flightService = inject(FlightService);
   errorService = inject(ErrorService);
   private router = inject(Router);
-  
+  form!: FormGroup;
+  private formBuilder = inject(NonNullableFormBuilder);
+  userService = inject(UserService);
+
   nzOptions = options;
   nzOptions2 = options2;
   values: any = null;
   values2: any = null;
+
+  ngOnInit(): void {
+    //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
+    //Add 'implements OnInit' to the class.
+    this.getAllFlight();
+    this.buildForm();
+  }
 
   onChanges(values: any): void {
     // console.log(values, this.values);
@@ -328,13 +339,15 @@ export class FindFlightComponent {
   childNumberGlobal = childNumberGlobal();
   babyNumberGlobal = babyNumberGlobal();
   
+  list: any = [];
+  loading = false;
 
   async findFlight(){
     try{
       const userPath = this.auth.currentUser ? this.auth.currentUser?.uid : generateId.generateUniqueId(10);
       // console.log('Uçuş aranıyor..');
       // console.log('FindFlight: ', this.values, this.values2, this.date, this.twoWays, adultNumberGlobal(), childNumberGlobal(), babyNumberGlobal());
-      const data: FlightModel = !environment.production ? {
+      const data: FlightModel = {
         "id": generateId.generateUniqueId(8),
         "userId": userPath,
         "PNRNO": "",
@@ -342,7 +355,7 @@ export class FindFlightComponent {
         "fromCity": this.values,
         "toCity": this.values2,
         "dateFirst": this.date!.length == 2 ? this.date![0] : this.date,
-        "dateLast": this.date!.length == 2 ? this.date![1] : null,
+        "dateLast": this.date!.length == 2 ? this.date![1] : undefined,
         "hourFirst": "0",
         "hourLast": "0",
         "priceFirst": 0,
@@ -350,32 +363,6 @@ export class FindFlightComponent {
         "adultNumber": adultNumberGlobal(),
         "childNumber": childNumberGlobal(),
         "babyNumber": babyNumberGlobal(),
-        "flightTimeFirst": "",
-        "flightTimeLast": "",
-        "packageFirst": "",
-        "packageLast": "",
-        "flexFirst": false,
-        "flexLast": false,
-        "seatFirst": "",
-        "seatLast": "",
-        "totalPrice": 0,
-        "operationDate": Date.now()
-      }  : {
-        "id": generateId.generateUniqueId(8),
-        "userId": userPath,
-        "PNRNO": "",
-        "earningAirScore": 0,
-        "fromCity": "Adana-Şakirpaşa Havalimanı",
-        "toCity": "Adıyaman Havalimanı",
-        "dateFirst": Date.now(),
-        "dateLast": Date.now(),
-        "hourFirst": "0",
-        "hourLast": "0",
-        "priceFirst": 0,
-        "priceLast": 0,
-        "adultNumber": "1",
-        "childNumber": "0",
-        "babyNumber": "0",
         "flightTimeFirst": "",
         "flightTimeLast": "",
         "packageFirst": "",
@@ -403,6 +390,91 @@ export class FindFlightComponent {
      */
   }
  
+  async checkIn() {
+    try {
+      this.list.map((data: FlightModel) => {
+        //console.log(data);
+        if(this.form.value['pnrNo'] === data.PNRNO){ //ULSFC9
+          // console.log('==>', data);
+          this.userService.getAll().subscribe((matchData) => { //YILMAZ
+            matchData.map((user) => {
+              if(user.lastName?.toUpperCase() === this.form.value['lastName'].toUpperCase()){
+                // console.log('==>', user);
+                // console.log('-->', data);
+                const userData = {
+                  id: user.id,
+                  role: user.role,
+                  firstName: user.firstName,
+                  lastName: user.lastName,
+                  gender: user.gender,
+                  phone: user.phone,
+                  birth: user.birth,
+                  nationality: user.nationality,
+                  TCID: user.TCID,
+                  created_at: user.created_at,
+                  active: true,
+                  email: user.email,
+                  pass: user.pass,
+                  airScore: user.airScore
+                };
+                flightUserSignal.set(userData);
+  
+                const flightData: FlightModel = {
+                  id: data.id,
+                  userId: data.userId,
+                  PNRNO: data.PNRNO,
+                  earningAirScore: data.earningAirScore,
+                  fromCity: data.fromCity,
+                  toCity: data.toCity,
+                  dateFirst: data.dateFirst,
+                  dateLast: data.dateLast,
+                  hourFirst: data.hourFirst,
+                  hourLast: data.hourLast,
+                  priceFirst: data.priceFirst,
+                  priceLast: data.priceLast,
+                  adultNumber: data.adultNumber,
+                  childNumber: data.childNumber,
+                  babyNumber: data.babyNumber,
+                  flightTimeFirst: data.flightTimeFirst,
+                  flightTimeLast: data.flightTimeLast,
+                  packageFirst: data.packageFirst,
+                  packageLast: data.packageLast,
+                  flexFirst: data.flexLast,
+                  flexLast: data.flexLast,
+                  seatFirst: data.seatFirst,
+                  seatLast: data.seatLast,
+                  totalPrice: data.totalPrice,
+                  operationDate: data.operationDate,
+                };
+                flightSignal.set(flightData);
+                this.form.reset();
+                this.router.navigateByUrl('/check-in/select-check-in');
+              }
+            })
+          })
+        }
+  
+      });
+     
+    } catch (err) {
+      this.errorService.errorHandler(5);
+    }  
+  }
+
+  getAllFlight(){
+    this.loading = true;
+    this.flightService.getAll().subscribe((data) => {
+      this.list = data;
+      this.loading = false;
+    });
+  }
+
+  buildForm() {
+    this.form = this.formBuilder.group({
+      pnrNo: ['', Validators.required],
+      lastName: ['', Validators.required],
+    });
+  }
 
   onChange(result: Date[]): void {
     console.log('onChange: ', result);

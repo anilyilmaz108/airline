@@ -1,0 +1,52 @@
+<nz-card>
+    <nz-spin *ngIf="loading" nzSimple></nz-spin>
+    <h2 nz-typography>Online Check-In</h2>
+    <p nz-typography>
+      * Lütfen adınızı ve soyadınızı girerken BÜYÜK HARF kullanınız.<br />
+      * Lütfen adınızı ve soyadınızı biletinizde yazdığı şekilde girdiğinizden
+      emin olunuz. Eğer isminizde Almanca noktalama işaretleri (ä, ü, ö) veya
+      Türkçe karakter (ç, ı, ğ, ö, ş, ü) varsa bu karakterleri kullanmayınız. Çift
+      nokta işaretlerini ve Türkçe karakterleri belirtilen şekilde değiştirmenizi
+      rica ederiz: ä = ae, ü = ue, ö = oe veya ç=c, ı=i, ğ=g, ö=o, ş=s, ü=u
+    </p>
+  
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+      <div class="input-group">
+        <label style="color: var(--title-text-color);" for="bookingCode">Rezervasyon kodu*</label>
+        <input
+          type="text"
+          formControlName="pnrNo"
+          required
+        />
+      </div>
+  
+      <div class="input-group">
+        <label style="color: var(--title-text-color);" for="lastName">Soyadı*</label>
+        <input
+          type="text"
+          formControlName="lastName"
+          required
+        />
+      </div>
+  
+      <button nz-button type="submit" [disabled]="form.invalid">Onayla</button>
+    </form>
+</nz-card>
+<br />
+<!-- Tips -->
+<div style="display: flex; flex-direction: column">
+  <span nz-typography nzType="secondary"
+    >* Uçuşunuzdan bir gün öncesinde check-in işlemleri açılmaktadır.</span
+  >
+  <span nz-typography nzType="secondary"
+    >* Lütfen ekrandaki bilgileri doğru girdiğinizden emin olunuz. Olası bir
+    sorun dahilinde iletişime geçiniz.</span
+  >
+  <span nz-typography nzType="secondary">* Test amaçlı bir uygulamadır.</span>
+  <span nz-typography nzType="secondary"
+    >* Bilgileriniz tarafımızca korunur ve hiç bir şekilde üçüncü şahıs
+    kişilerle paylaşılmaz.</span
+  >
+  <span nz-typography nzType="secondary">* Temsili bir ekrandır.</span>
+</div>
+<br />

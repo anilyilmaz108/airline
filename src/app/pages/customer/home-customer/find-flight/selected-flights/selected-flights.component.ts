@@ -239,7 +239,7 @@ export class SelectedFlightsComponent {
       "fromCity": flightSignal()?.fromCity,
       "toCity": flightSignal()?.toCity,
       "dateFirst": this.selectedDate!,
-      "dateLast": this.selectedDateBack!,
+      "dateLast": this.flightSignalVal?.dateLast === null || this.flightSignalVal?.dateLast === undefined  ? undefined : this.selectedDateBack!,
       "hourFirst": `${this.selectedDate!.getHours() - this.selectedDate!.getMinutes()}`,
       "hourLast": this.flightSignalVal?.dateLast === null || this.flightSignalVal?.dateLast === undefined  ? "" : `${this.selectedDateBack!.getHours() - this.selectedDateBack!.getMinutes()}`,
       "priceFirst": this.cardSelect.price,
@@ -252,7 +252,7 @@ export class SelectedFlightsComponent {
       "packageFirst": `${this.selectedDetail.name}`,
       "packageLast": this.flightSignalVal?.dateLast === null || this.flightSignalVal?.dateLast === undefined  ? "" : `${this.selectedDetailBack.name}`,
       "flexFirst": this.selectedDetail.name !== 'Eco' ? true : false,
-      "flexLast": this.selectedDetailBack.name !== 'Eco' ? true : false,
+      "flexLast": this.flightSignalVal?.dateLast === null || this.flightSignalVal?.dateLast === undefined ? false : this.selectedDetailBack.name !== 'Eco' ? true : false,
       "seatFirst": "",
       "seatLast": "",
       "totalPrice": this.flightSignalVal?.dateLast === null || this.flightSignalVal?.dateLast === undefined ? this.cardSelect.price : this.cardSelect.price + this.cardSelectBack.price,
@@ -262,6 +262,7 @@ export class SelectedFlightsComponent {
     console.log('new Flight Signal:', flightSignal());
     this.router.navigateByUrl('/find-flight/passenger-informations');
    } catch (e) {
+    console.log(e);
     this.errorService.errorHandler(5);
    }
   }

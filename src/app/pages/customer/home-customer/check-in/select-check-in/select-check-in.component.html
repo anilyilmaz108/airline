@@ -1,0 +1,54 @@
+<!-- Uçuş Bilgileri -->
+<div class="flight-info-card" (click)="onSelectFunc()">
+    <div class="flight-info-container" [ngClass]="{
+        'card-default': !onSelect,
+        'card-selected': onSelect
+      }" >
+      <!-- Kalkış Bilgisi -->
+      <div class="flight-detail">
+        <div class="icon">✈️</div>
+        <div class="time-location">
+          <div class="time">
+            <span class="time-highlight">{{flightHour}}</span>
+          </div>
+          <div class="location">
+            {{flight?.fromCity}}, {{firstCity}}
+          </div>
+          <div class="date">
+            {{formattedDate}}
+          </div>
+        </div>
+      </div>
+  
+      <!-- Yönlendirme Oku -->
+      <div class="arrow-container">
+        <div class="custom-arrow"></div>
+      </div>
+  
+      <!-- Varış Bilgisi -->
+      <div class="flight-detail">
+        <div class="icon">✈️</div>
+        <div class="time-location">
+          <div class="time">
+            <span class="time-highlight">{{flightHourTime}}</span>
+          </div>
+          <div class="location">
+            {{ flight?.toCity}}, {{lastCity}}
+          </div>
+          <div class="date">
+            {{formattedDate}}
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+<br>
+<button *ngIf="onSelect" nz-button (click)="onContinue()" style="background-color: var(--primary-color); color: white;">Devam</button>
+<br>
+<!-- Tips -->
+<div *ngIf="!isCheckIn" style="display: flex; justify-content: center;">
+    <span nz-typography nzType="secondary"
+      >* Uçuşunuzdan bir gün öncesinde check-in işlemleri açılmaktadır.</span
+    >
+  </div>
+  <br>
