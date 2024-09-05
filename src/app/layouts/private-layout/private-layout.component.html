@@ -3,20 +3,12 @@
   <nz-sider
     class="menu-sidebar"
     nzCollapsible
-    [nzWidth]="!isMobile ? (isCollapsed ? '376px' : '256px') : '376px'"
+    nzWidth="256px"
     nzBreakpoint="md"
     [(nzCollapsed)]="isCollapsed"
     [nzTrigger]="null"
   >
-   <!--nzWidth="376px"-->
   <div class="sidebar-header">
-    <span *ngIf="(!isCollapsed && isMobile)" class="mobile-drawer" (click)="toggleCollapsed()">
-      <span
-        class="trigger"
-        nz-icon
-        [nzType]="isCollapsed ? 'menu-unfold' : 'menu-fold'"
-      ></span>
-    </span>
     <img class="m-auto" src="https://www.pngkey.com/png/full/152-1525248_airplane-clipart-logo-flight-logo-clipart.png" [width]="isCollapsed ? '55' : '66'" alt="logo"
       style="cursor: pointer" routerLink="/" />
     <h1>{{appName.toUpperCase()}}</h1>
@@ -60,7 +52,7 @@
           </li>-->
         </ul>
       </li>
-      <li nz-submenu nzTitle="Ek Hizmetler" nzIcon="form">
+      <li nz-submenu nzOpen nzTitle="Ek Hizmetler" nzIcon="form">
         <ul>
           <li nz-menu-item nzMatchRouter>
             <a routerLink="/additional-services/seat-selection">Koltuk Seçimi</a>
