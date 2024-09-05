@@ -106,5 +106,147 @@
         "We offer gourmet meals and beverage options prepared exclusively for you during your flight, ensuring you experience the highest quality and taste.",
         "Your safety and privacy are our priorities. With our special security measures and privacy standards, you can travel worry-free."
       ]
+    },
+    "DISCOVER": {
+      "ANKARA": {
+        "CITY_INFO": "City Information for Your Trip to Ankara (ESB)",
+        "CULTURE_TITLE": "Experience Art, Culture, and Concerts",
+        "STATISTICS": {
+          "AREA": "Area",
+          "POPULATION": "Population",
+          "PHONE_CODE": "Phone Code",
+          "REGION": "Region"
+        },
+        "STATISTICS_VALUES": {
+          "AREA": "24,521 km²",
+          "POPULATION": "5,803,482",
+          "PHONE_CODE": "(+90) 312",
+          "REGION": "Central Anatolia"
+        },
+        "DATAS": {
+          "FIRST_DATA": {
+            "TITLE": "Anıtkabir",
+            "SUBTITLE": "Anıtkabir, the mausoleum of Mustafa Kemal Atatürk, the founder of the Republic of Turkey, is one of those places you must see at least once in your lifetime. The park is filled with trees from various countries and Turkey. The Anıtkabir consists of the Monument Block, the Lion Road, the Ceremony Square, and the Mausoleum. Additionally, Anıtkabir has 10 towers. These towers represent important concepts and events in the formation of the state and nation, such as Freedom, Independence, Mehmetçik, Victory, Peace, April 23, National Pact, Revolution, Republic, and Defense of Law."
+          },
+          "SECOND_DATA": {
+            "TITLE": "Augustus Temple",
+            "SUBTITLE": "The temple dedicated to Emperor Augustus and the goddess of the city, built in Rome, is a significant structure not only for Ankara but for the entire world. The inscription ‘Achievements of the Deified Augustus’ is written on the walls of the temple. This bilingual inscription, describing Augustus' accomplishments, is of great historical value as it is the only preserved complete copy of the lost original and one of the most valuable documents from the Roman era."
+          },
+          "THIRD_DATA": {
+            "TITLE": "Haci Bayram Mosque",
+            "SUBTITLE": "Adjacent to the Augustus Temple, this mosque was built in honor of Hacı Bayram Veli, the founder of the Bayrami sect. The mosque, reflecting the characteristics of 17th-18th century mosques, is decorated with floral patterns and Kütahya tiles. Verses from the Quran are featured on the mihrab arch. The Hacı Bayram Tomb, one of the most beautiful examples of 15th-century tombs in Ankara, is adjacent to the mihrab wall of the mosque. The wooden doors of the tomb are exhibited at the Ankara Ethnography Museum."
+          }
+        },
+        "TITLE1": "Historical and Cultural Heritage of Ankara",
+        "TITLE2": "Modern Life and Social Life of Ankara",
+        "PARAGRAPH1": "Ankara, as the capital of Turkey, is a dynamic city that combines modern and historical elements. It hosts significant political and historical landmarks such as Anıtkabir, the mausoleum of Atatürk, the founder of the Republic, and the impressive Grand National Assembly of Turkey building...",
+        "PARAGRAPH2": "Ankara has a rich historical and cultural heritage. The city is associated with Anıtkabir, the mausoleum of Mustafa Kemal Atatürk, the founder of the Republic...",
+        "PARAGRAPH3": "In addition to its historical roots, Ankara offers a modern lifestyle. The city center, Kızılay, is filled with shopping malls, cafes, and restaurants, serving as the heart of social life."
+      },
+      "ANTALYA": {
+        "CITY_INFO": "City Information for Your Antalya (AYT) Trip",
+        "CULTURE_TITLE": "Summer, sun, beach. Only vacation!",
+        "STATISTICS": {
+          "AREA": "Area",
+          "POPULATION": "Population",
+          "PHONE_CODE": "Phone Code",
+          "REGION": "Region"
+        },
+        "STATISTICS_VALUES": {
+          "AREA": "20,909 km²",
+          "POPULATION": "2,288,456",
+          "PHONE_CODE": "(+90) 242",
+          "REGION": "Mediterranean"
+        },
+        "DATAS": {
+          "FIRST_DATA": {
+            "TITLE": "Düden Waterfall",
+            "SUBTITLE": "Among the must-see places in Antalya is Düden Waterfall, which is very easy to reach from the city center. Located in the Kepez district, Düden Waterfall is one of the most popular spots, especially in summer. The waterfall splits into two branches and flows into the Mediterranean Sea from a height of 40 km, creating a breathtaking view. You can simply be mesmerized by the sound of the water without doing anything. Of course, there are many other enjoyable activities; the area has observation terraces, walking paths, cafes, restaurants, and souvenir shops. After taking in the view, you can go for a peaceful nature walk and then enjoy a fresh cup of coffee. We should also mention that the cool breeze here will be a refreshing relief in Antalya's summer climate."
+          },
+          "SECOND_DATA": {
+            "TITLE": "Olympos Ancient City",
+            "SUBTITLE": "Olympos Ancient City, one of the largest port cities in the region, is located on the southern coast of Antalya and is one of the must-see places in Antalya. The ancient city, which attracts great interest from history and culture enthusiasts, was first built in 160 BC and later rebuilt by the Knights of Rhodes and Venetians during the 11th and 12th centuries. While exploring Olympos Ancient City, you will see many historical structures such as Roman temples, a still-standing medieval castle, an agora, and an ancient harbor. Olympos Ancient City welcomes local and foreign tourists every day from 08:00 to 21:00."
+          },
+          "THIRD_DATA": {
+            "TITLE": "Side Ancient City",
+            "SUBTITLE": "Side Ancient City is located within the borders of Selimiye neighborhood in the Manavgat district of Antalya. To visit Side Ancient City, you can follow the Mersin – Antalya road to Manavgat and continue towards Selimiye by private car. You can also reach the city by taxi or Side minibuses. Side, one of the popular holiday resorts in Manavgat, is home to the historical structures of Side Ancient City, which was built in the 1st century BC. As a port city used for a long time, Side Ancient City is known for its city walls and columned street. Among the must-see structures in Side Ancient City is the Side Ancient Theater, with a capacity of 17,000 people, which offers an impressive view. The Side Museum, located within the ancient city, is also among the places to visit in the region. Side Ancient City can be visited every day from 08:30 to 19:30."
+          }
+        },
+        "TITLE1": "Antalya's Historical and Cultural Heritage",
+        "TITLE2": "Antalya's Natural Beauty and Vacation Opportunities",
+        "PARAGRAPH1": "Antalya, a magnificent vacation paradise located on the southern coast of Turkey, is famous for its white beaches and turquoise sea, and offers a rich cultural heritage ranging from the historic streets of Kaleiçi to the ancient ruins of Perge and Aspendos. Known for its excellent weather conditions and natural beauty provided by the Mediterranean climate, Antalya is also a favorite for vacationers due to its vibrant nightlife, stylish restaurants, and shopping opportunities. For nature lovers, natural wonders like Düden and Manavgat Waterfalls, along with various outdoor activities, make this beautiful city an unforgettable destination.",
+        "PARAGRAPH2": "Antalya stands out as a city known for its historical and cultural richness on Turkey's southern coast. Walking through the narrow streets of Kaleiçi, you can discover Ottoman-era buildings and traces of the city's history. Additionally, ancient cities like Perge and Aspendos, which house Roman-era ruins, reveal the region's historical heritage. Antalya Museum is also an important cultural venue showcasing the archaeological finds and history of the area. The city offers an atmosphere that blends historical texture with modern life.",
+        "PARAGRAPH3": "Antalya attracts attention with its stunning natural beauty and vacation opportunities. Lara Beach and Konyaaltı Beach, famous for their white sands and turquoise waters, are perfect spots for sunbathing and enjoying the sea. Natural wonders like Düden and Manavgat Waterfalls offer peaceful moments to visitors. Additionally, holiday resorts around Antalya such as Çıralı and Olympos are known for their natural beauty and relaxing atmospheres. The city provides an unforgettable experience for vacationers with its combination of both historical and natural beauty."
+      },
+      "ISTANBUL": {
+        "CITY_INFO": "City Information for Your Istanbul (IST) Trip",
+        "CULTURE_TITLE": "Art, culture, history, and more...",
+        "STATISTICS": {
+          "AREA": "Area",
+          "POPULATION": "Population",
+          "PHONE_CODE": "Phone Code",
+          "REGION": "Region"
+        },
+        "STATISTICS_VALUES": {
+          "AREA": "5,461 km²",
+          "POPULATION": "15,655,924",
+          "PHONE_CODE": "(+90) 212",
+          "REGION": "Marmara"
+        },
+        "DATAS": {
+          "FIRST_DATA": {
+            "TITLE": "Hagia Sophia Mosque",
+            "SUBTITLE": "The first historical structure that comes to mind when thinking of Istanbul is, of course, Hagia Sophia Mosque, which was previously used as a church and a museum. Opened in 537 and built by Byzantine architects Isidoros and Anthemios, one of the most notable features of the mosque is that it has been built three times on the same site. Originally serving as a church and converted into a mosque after the conquest of Istanbul, the structure served as a museum between 1935-2020 by a decision of the Council of Ministers. Hagia Sophia, which started serving as a mosque again in 2020, is now considered one of the most important historical symbols not only of Istanbul but also of the world."
+          },
+          "SECOND_DATA": {
+            "TITLE": "Maiden's Tower",
+            "SUBTITLE": "Located off the coast of Salacak, many legends have been told about Maiden’s Tower, and the structure has been the subject of numerous myths. The tower, the only remaining Byzantine-era structure in Üsküdar, dates back to 24 BC. While it served as a tomb during the Greek period, over the years it has been used for various purposes such as a customs station and quarantine room, but its primary role has always been to guide ships. Restored in 2000, the tower now includes a restaurant, adding to its tourist appeal."
+          },
+          "THIRD_DATA": {
+            "TITLE": "Grand Bazaar",
+            "SUBTITLE": "One of the world's first shopping centers, the Grand Bazaar is one of the most iconic structures in Istanbul. Located at the intersection of Beyazıt, Nuruosmaniye, and Mercan districts, the Grand Bazaar is practically a world of its own with 4,000 shops and around 25,000 employees. While visiting the Grand Bazaar, you can simply experience the spirit of the city by walking through, or you can choose to shop for food, clothing, or jewelry from the stores here. This way, you can take home a few souvenirs from your Istanbul trip. The bazaar also provides insight into the city's merchant culture."
+          }
+        },
+        "TITLE1": "Istanbul's Historical and Cultural Heritage",
+        "TITLE2": "Istanbul's Modern Life and Social Scene",
+        "PARAGRAPH1": "Istanbul, a historic and cultural capital located on both the European and Asian continents, offers visitors a unique experience. Historic Istanbul, blending Byzantine and Ottoman heritage with modern life, dazzles with its impressive structures; historical sites like Hagia Sophia, Topkapi Palace, and the Blue Mosque showcase its rich cultural past. A boat tour along the Bosphorus, with its stunning views, is a great way to discover the enchanting beauty of Istanbul. Moreover, lively markets such as the Grand Bazaar and the Spice Bazaar reflect the city's energy and diversity. With its dynamic lifestyle, gourmet restaurants, and cultural events, Istanbul is a city worth exploring for both its historical and modern aspects.",
+        "PARAGRAPH2": "Istanbul is one of Turkey's most historically and culturally rich cities. As the capital of both the Byzantine and Ottoman empires, the city hosts many significant structures. Hagia Sophia, with its impressive architecture and historical significance, reflects this heritage, while Topkapi Palace and the Blue Mosque showcase the splendor of the Ottoman Empire. As you stroll through the narrow streets of Istanbul's historic districts, you can experience the vibrant atmosphere of traditional markets like the Grand Bazaar and the Spice Bazaar. These areas not only connect you to the city's past but also reflect its rich cultural diversity.",
+        "PARAGRAPH3": "In addition to its historical richness, Istanbul offers a dynamic and modern lifestyle. The city is a social hub, with spectacular views of the Bosphorus that connect two continents. Shopping malls, restaurants, and cafes in areas like Şişli and Beşiktaş reflect the city's modern face. Istanbul's energetic nightlife is filled with famous bars, clubs, and live music venues. Additionally, the city's cultural calendar is packed with art and cultural events, concerts, and exhibitions. Istanbul provides a rich experience for those looking to explore both its historical texture and contemporary life."
+      },
+      "IZMIR": {
+        "CITY_INFO": "City Information for Your Izmir (ADB) Trip",
+        "CULTURE_TITLE": "Sun, Sea & Exploration",
+        "STATISTICS": {
+          "AREA": "Area",
+          "POPULATION": "Population",
+          "PHONE_CODE": "Phone Code",
+          "REGION": "Region"
+        },
+        "STATISTICS_VALUES": {
+          "AREA": "12,012 km²",
+          "POPULATION": "4,479,525",
+          "PHONE_CODE": "(+90) 232",
+          "REGION": "Aegean"
+        },
+        "DATAS": {
+          "FIRST_DATA": {
+            "TITLE": "Izmir Clock Tower",
+            "SUBTITLE": "The most famous landmark of Izmir, the Izmir Clock Tower, was built in 1901 to celebrate the 25th anniversary of Sultan Abdulhamid II's ascension to the throne. Located at the entrance of Kemeralti Bazaar and next to Konak Yalı Mosque, this 25-meter-high, 4-story clock tower stands out with its distinctive architecture, setting it apart from other Ottoman clock towers. Designed by a renowned French architect, the Izmir Clock Tower is constructed from cut stones and adorned with impressive stone reliefs. The four fountains surrounding the tower and the columns symbolizing North Africa are also worth seeing. Don't leave the city without taking a photo at the 81 m² base of the Izmir Clock Tower, where Sultan Abdulhamid II's monogram is engraved as a relief."
+          },
+          "SECOND_DATA": {
+            "TITLE": "Izmir Historical Elevator",
+            "SUBTITLE": "One of Izmir's symbolic structures, the Historical Elevator, built by a businessman in 1907, will immediately catch your attention with its 58-meter height. Located between Mithatpaşa Street and Şehit Nihatbey Street, the Historical Elevator is famous for its panoramic views of Izmir and consists of 155 steps. At the top of the elevator, there is a café and an observation terrace. You can enjoy tea with panoramic views of Izmir at the terrace of the Historical Elevator, which is notable for its impressive classical stone architecture, and take stunning photos."
+          },
+          "THIRD_DATA": {
+            "TITLE": "Konak Square",
+            "SUBTITLE": "Officially known as Atatürk Square, Konak Square is one of the most vibrant squares in Izmir, hosting several iconic structures such as the First Bullet Monument, Izmir Clock Tower, and Konak Yalı Mosque. Always bustling, Konak Square is one of Izmir's important meeting points, and its parks with views of the Aegean Sea, walking paths, numerous shops, cafes, and quality restaurants make it an ideal starting point for exploring Izmir. In the evenings, you can listen to street musicians at Konak Square, which is also very close to popular places like Kıbrıs Şehitler Avenue and Alsancak Sevgi Yolu."
+          }
+        },
+        "TITLE1": "Izmir's Historical and Cultural Richness",
+        "TITLE2": "Izmir's Modern Life and Entertainment World",
+        "PARAGRAPH1": "Izmir, located in the western part of Turkey and one of the most popular cities in the Aegean region, stands out as a prime destination for vacations and exploration. Known as the modern face of ancient Smyrna, Izmir is famous for its impressive coastline, lively café culture, and historical wealth. You can enjoy pleasant walks along the Kordon promenade, shop in the famous Kemeralti Bazaar, or explore historical and cultural sites such as Ephesus and Şirince. Izmir's warm climate, delicious Aegean cuisine, and dynamic lifestyle offer an unforgettable experience to every visitor.",
+        "PARAGRAPH2": "Izmir stands out as a city where history and culture intertwine in the Aegean region of Turkey. As the modern reflection of ancient Smyrna, Izmir is home to many remnants from ancient times. The ancient city of Ephesus offers a fascinating experience with its impressive structures from the Roman and Byzantine periods, while the ruins of Pergamon and Asklepion in Bergama captivate history enthusiasts. The Kemeralti Bazaar in the city center is a historic market dating back to the Ottoman era, allowing you to enjoy the historical atmosphere while shopping. Additionally, the authentic atmosphere and traditional structures of Şirince Village make it an ideal stop for those wishing to discover Izmir's rich cultural heritage.",
+        "PARAGRAPH3": "In addition to its historical richness, Izmir is a dynamic representation of modern life. The Kordon promenade in the city center is famous for its seaside cafes and restaurants, making it a perfect spot for a leisurely walk or to watch the sunset. The districts of Alsancak and Bornova, with their shopping centers, boutique stores, and vibrant nightlife, reflect the energy of modern Izmir. Surrounding holiday resorts such as Çeşme and Alaçatı offer attractive options for vacationers with their beaches, vineyards, and charming stone houses. Izmir offers a variety of activities and experiences for those who want to enjoy both history and modern life."
+      }
     }
   }
