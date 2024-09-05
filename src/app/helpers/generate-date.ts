@@ -122,42 +122,24 @@ export const generateDate = {
       // Girilen tarih bilgisi kıyaslama -> Check-In işlemi için
       
       
-      checkIfNextDay(input: { seconds: number; nanoseconds: number } | number | Date): boolean {
-        let date: Date;
-    
-        // Eğer input Firestore Timestamp formatındaysa
-        if (typeof input === 'object' && 'seconds' in input && 'nanoseconds' in input) {
-            // Firestore Timestamp'i Date'e çevirme
-            date = new Date(input.seconds * 1000 + Math.floor(input.nanoseconds / 1000000));
-        } 
-        // Eğer input sayısal bir timestamp ise
-        else if (typeof input === 'number') {
-            date = new Date(input); // Unix timestamp milisaniye cinsinden
-        } 
-        // Eğer input zaten Date nesnesiyse
-        else if (input instanceof Date) {
-            date = input;
-        } else {
-            throw new Error('Geçersiz input türü');
-        }
-    
-        // Date'in geçerliliğini kontrol et
-        if (!(date instanceof Date) || isNaN(date.getTime())) {
-            throw new Error('Geçersiz tarih');
-        }
-    
-        // Bugünün tarihi
-        const today = new Date();
-        today.setHours(0, 0, 0, 0); // Bugünü sadece tarih olarak ele alıyoruz
-    
-        // 1 gün önceki tarih
-        const oneDayBefore = new Date(today);
-        oneDayBefore.setDate(today.getDate() - 1); // 1 gün geriye gidiyoruz
-    
-        const retVal = date < today && date >= oneDayBefore;
-        // Kontrol: girilen tarih 1 gün önce veya daha eski mi?
-        return retVal
-    }
+      checkIfNextDay(timestamp: { seconds: number; nanoseconds: number }): boolean {
+      // Verilen timestamp'i Date objesine dönüştürüyoruz
+      const givenDate = new Date(timestamp.seconds * 1000 + timestamp.nanoseconds / 1000000);
+      
+      // Şu anki tarihi alıyoruz
+      const currentDate = new Date();
+
+      // İki tarih arasındaki farkı milisaniye cinsinden hesaplıyoruz
+      const diffInMillis = currentDate.getTime() - givenDate.getTime();
+
+      // Farkı gün cinsinden hesaplıyoruz
+      const diffInDays = diffInMillis / (24 * 60 * 60 * 1000);
+
+      // Eğer fark 1 günden azsa true döndür
+      const myvar = diffInDays < 1  && diffInDays >= -1;
+      debugger;
+      return diffInDays < 1 && diffInDays >= -1
+      }
     
       
       

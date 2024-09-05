@@ -28,7 +28,7 @@ export class SelectCheckInComponent {
   private router = inject(Router);
 
   ngOnInit(): void {
-    // console.log(flightSignal()?.dateFirst);
+    console.log(flightSignal()?.dateFirst);
     // console.log(flightUserSignal());
     // console.log(generateDate.checkIfNextDay(flightSignal()?.dateFirst!));    
     this.isCheckIn = generateDate.checkIfNextDay(flightSignal()?.dateFirst!);

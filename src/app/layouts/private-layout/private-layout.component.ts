@@ -56,9 +56,13 @@ export class PrivateLayoutComponent {
       this.getUserData(this.fbAuth.currentUser?.uid!);
     
       // currentUser bilgisini yeniden yükleyip photoURL'yi güncelle
-      this.profilePhoto = this.fbAuth.currentUser?.photoURL
+      if(this.fbAuth.currentUser) {
+        this.profilePhoto = this.fbAuth.currentUser?.photoURL
       ? this.fbAuth.currentUser?.photoURL
       : "https://cdn-icons-png.freepik.com/512/6915/6915987.png";
+      } else {
+        this.profilePhoto = "https://cdn-icons-png.freepik.com/512/6915/6915987.png";
+      }
     
     console.log(this.profilePhoto);
     this.user = this.authService.userSignal()!;
