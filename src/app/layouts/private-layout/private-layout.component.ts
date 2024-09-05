@@ -49,6 +49,21 @@ export class PrivateLayoutComponent {
   isEnglish = false;
   user!: UserModel;
   profilePhoto = "";
+  isMobile = false;
+
+  checkIfMobile(): void {
+    this.isMobile = window.innerWidth <= 768;  // 768px ve altı mobil kabul ediliyor
+  }
+
+  toggleCollapsed(){
+    this.isCollapsed = !this.isCollapsed;
+    this.checkIfMobile();
+  }
+
+  ngOnInit(): void {
+    this.checkIfMobile();
+    window.addEventListener('resize', () => this.checkIfMobile());
+  }
 
   constructor() {
     this.isDarkMode = this.themeService.isDarkMode();
