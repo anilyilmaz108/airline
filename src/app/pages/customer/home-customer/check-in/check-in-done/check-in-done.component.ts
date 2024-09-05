@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, inject } from '@angular/core';
+import { ChangeDetectorRef, Component, effect, inject } from '@angular/core';
 import { FlightStepsComponent } from '../../../../../shared/flight-steps/flight-steps.component';
 import { NzCardModule } from 'ng-zorro-antd/card';
 import { NzIconModule } from 'ng-zorro-antd/icon';
@@ -25,26 +25,29 @@ pdfMake.vfs = pdfFonts.pdfMake.vfs;
 export class CheckInDoneComponent {
   flightService = inject(FlightService);
   authService = inject(AuthService);
-  user = flightUserSignal();
-  flight = flightSignal();
+  user:any = flightUserSignal();
+  flight:any = flightSignal();
   ticketNo:any;
   flightHour:any;
   flightHourTime:any;
   formattedDate:any;
   formattedPhone:any;
-  flightFullTime:any;
-  flightFullTimeArrive:any;
+  //flightFullTime:any;
+  //flightFullTimeArrive:any;
+
+
 
   ngOnInit(): void {
     // console.log('flight signal:', this.flight);
     // console.log('user signal:', this.user);
+   
     this.ticketNo = generateId.generateRandom13DigitNumber();
     this.flightHour = generateDate.generateDateToHour(flightSignal()?.dateFirst!);
     this.flightHourTime = generateDate.generateDateToHourFlight(flightSignal()?.dateFirst!);
     this.formattedDate = generateDate.generateFormattedDate(flightSignal()?.dateFirst!);
     this.formattedPhone = generateLetter.formatPhoneNumber(flightUserSignal()?.phone!);
-    this.flightFullTime = generateDate.generateFullDateTime(flightSignal()?.dateFirst!);
-    this.flightFullTimeArrive = generateDate.generateFullDateTimeArrive(flightSignal()?.dateFirst!);
+    //this.flightFullTime = generateDate.generateFullDateTime(flightSignal()?.dateFirst!);
+    //this.flightFullTimeArrive = generateDate.generateFullDateTimeArrive(flightSignal()?.dateFirst!);
   }
 
    downloadPDF() {
@@ -66,7 +69,7 @@ export class CheckInDoneComponent {
           ]
         },
         {
-          text: 'Ödeme başarılı. İyi seyahatler dileriz.',
+          text: 'Check-In başarılı. İyi seyahatler dileriz.',
           style: 'header',
           margin: [0, 0, 0, 20] // Üst, sağ, alt, sol boşluklar
         },
@@ -102,7 +105,7 @@ export class CheckInDoneComponent {
             widths: ['*', '*', '*', '*'],
             body: [
               ['Kalkış Zamanı', 'Varış Zamanı', 'Uçuş No', 'Bilet No'],
-              [`${this.flightFullTime}`, `${this.flightFullTimeArrive}`, 'PC2024', `${this.ticketNo}`]
+              [`${this.flightHour} - ${this.formattedDate}`, `${this.flightHourTime} - ${this.formattedDate}`, 'PC2024', `${this.ticketNo}`]
             ]
           },
           margin: [0, 10, 0, 10]
@@ -155,6 +158,6 @@ export class CheckInDoneComponent {
       },
     };
 
-    pdfMake.createPdf(docDefinition).download('rezervasyon-bilgi.pdf');
+    pdfMake.createPdf(docDefinition).download('check-in-bilgi.pdf');
   }
 }

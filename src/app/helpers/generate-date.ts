@@ -136,8 +136,6 @@ export const generateDate = {
       const diffInDays = diffInMillis / (24 * 60 * 60 * 1000);
 
       // Eğer fark 1 günden azsa true döndür
-      const myvar = diffInDays < 1  && diffInDays >= -1;
-      debugger;
       return diffInDays < 1 && diffInDays >= -1
       }
     

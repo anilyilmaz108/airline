@@ -1,19 +1,10 @@
-<app-flight-steps
-  steps1="wait"
-  steps2="wait"
-  steps4="wait"
-  steps5="wait"
-  steps6="finish"
->
-</app-flight-steps>
-<br>
 <div id="pdf-content">
 <!-- Success Mesajı -->
 <nz-card class="payment-success-card">
     <div class="payment-success-container">
         <nz-avatar [nzSize]="64" nzIcon="check-circle"></nz-avatar>
         <div class="text-container">
-            <span nz-typography class="payment-message">Ödeme başarılı. İyi seyahatler dileriz.</span>
+            <span nz-typography class="payment-message">Check-In başarılı. İyi seyahatler dileriz.</span>
             <span nz-typography class="pnr-message">
                 Rezervasyon (PNR) No: <span class="pnr-code">{{flight?.PNRNO}}</span>
             </span>
@@ -99,7 +90,7 @@
           </div>
           <div class="flight-row">
             <div class="info-label">Kalkış Zamanı</div>
-            <div class="info-value">{{flightFullTime}}</div>
+            <div class="info-value">{{formattedDate}} - {{flightHour}}</div>
           </div>
           <div class="flight-row">
             <div class="info-label">Nereye</div>
@@ -107,7 +98,7 @@
           </div>
           <div class="flight-row">
             <div class="info-label">Varış Zamanı</div>
-            <div class="info-value">{{flightFullTimeArrive}}</div>
+            <div class="info-value">{{formattedDate}} - {{flightHourTime}}</div>
           </div>
           <div class="flight-row">
             <div class="info-label">Uçuş No</div>
