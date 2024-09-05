@@ -1,5 +1,5 @@
 <h3 style="color: var(--title-text-color); display: flex; justify-content: center;" nz-typography>
-    VIP Hizmeti
+  {{ "VIP_SELECTION.TITLE" | translate }}
   </h3>
 <!-- Image -->
 <div style="display: flex; justify-content: space-around;">
@@ -30,13 +30,13 @@
 <br>
 
 <p style="color: var(--subtitle-text-color)" nz-typography>
-  Siz değerli misafirlerimize en yüksek konfor ve ayrıcalığı sunmak için özel VIP hizmetlerimizle yanınızdayız.
+  {{ "VIP_SELECTION.DESCRIPTION" | translate }}
 </p>
 <nz-divider></nz-divider>
 <br />
 <h3 style="color: var(--title-text-color)" nz-typography>
-  Seyahatinizi lüks ve rahatlık içinde geçirmeniz için sunduğumuz VIP hizmetlerimiz:
+  {{ "VIP_SELECTION.ADVANTAGES_TITLE" | translate }}
 </h3>
-<ul *ngFor="let item of data">
+<ul *ngFor="let item of 'VIP_SELECTION.ADVANTAGES' | translate">
   <li style="color: var(--subtitle-text-color)" nz-typography>{{ item }}</li>
 </ul>

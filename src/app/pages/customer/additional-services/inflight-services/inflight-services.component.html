@@ -1,9 +1,10 @@
 <h3 style="color: var(--title-text-color); display: flex; justify-content: center;" nz-typography>
-    Uçak İçi Hizmetler
-  </h3>
+  {{ "INFLIGHT_SERVICES.TITLE" | translate }}
+</h3>
+
 <!-- Image -->
 <div style="display: flex; justify-content: space-around;">
-    <img style="padding-right: 4px; border-radius: 10px;"
+  <img style="padding-right: 4px; border-radius: 10px;"
     nz-image
     width="30%"
     height="200px"
@@ -11,32 +12,39 @@
     alt=""
   />
   <img
-  nz-image style="padding-right: 4px; border-radius: 10px;"
-  width="30%"
-  height="200px"
-  nzSrc="https://ik.imgkit.net/3vlqs5axxjf/PCWW/uploadedImages/uploads/2017/10/In-Flight-Self-Enrollment-copy.jpg?tr=w-600%2Ch-300%2Cfo-auto"
-  alt=""
-/>
-<img style="border-radius: 10px;"
-      nz-image
-      width="30%"
-      height="200px"
-      nzSrc="https://img.freepik.com/premium-photo/happy-stewardess-looking-after-adult-businesswoman-passenger-air-hostess-flight-attendant-woman-covering-tired-sleeping-passengers-with-blanket-journey_28914-3775.jpg"
-      alt=""
-    />
+    nz-image
+    style="padding-right: 4px; border-radius: 10px;"
+    width="30%"
+    height="200px"
+    nzSrc="https://ik.imgkit.net/3vlqs5axxjf/PCWW/uploadedImages/uploads/2017/10/In-Flight-Self-Enrollment-copy.jpg?tr=w-600%2Ch-300%2Cfo-auto"
+    alt=""
+  />
+  <img style="border-radius: 10px;"
+    nz-image
+    width="30%"
+    height="200px"
+    nzSrc="https://img.freepik.com/premium-photo/happy-stewardess-looking-after-adult-businesswoman-passenger-air-hostess-flight-attendant-woman-covering-tired-sleeping-passengers-with-blanket-journey_28914-3775.jpg"
+    alt=""
+  />
 </div>
+
 <!-- Inflight Services Descriptions -->
 <br>
 <br>
 
 <p style="color: var(--subtitle-text-color)" nz-typography>
-  Uçuşlarınızda konforunuzu ve memnuniyetinizi ön planda tutarak sunduğumuz çeşitli uçak içi hizmetlerimizle tanışın. 
+  {{ "INFLIGHT_SERVICES.DESCRIPTION" | translate }}
 </p>
+
 <nz-divider></nz-divider>
 <br />
+
 <h3 style="color: var(--title-text-color)" nz-typography>
-  Yolculuklarınız boyunca size en iyi deneyimi sunmak için aşağıdaki hizmetleri sağlamaktayız:
+  {{ "INFLIGHT_SERVICES.SERVICES_TITLE" | translate }}
 </h3>
-<ul *ngFor="let item of data">
-  <li style="color: var(--subtitle-text-color)" nz-typography>{{ item }}</li>
+
+<ul>
+  <li *ngFor="let item of 'INFLIGHT_SERVICES.SERVICES' | translate" style="color: var(--subtitle-text-color)" nz-typography>
+    {{ item }}
+  </li>
 </ul>

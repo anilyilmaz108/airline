@@ -1,10 +1,11 @@
 <h3 style="color: var(--title-text-color); display: flex; justify-content: center;" nz-typography>
-  Koltuk Seçimi
+  {{ 'SEAT_SELECTION.TITLE' | translate }}
 </h3>
 <br>
 <p style="color: var(--subtitle-text-color)" nz-typography>
-  Uçuşunuz öncesinde konforunuzu artırmak için koltuk seçimi hizmetimizden yararlanabilirsiniz. Web sitemiz veya mobil uygulamamız aracılığıyla, istediğiniz koltukları kolayca seçebilir ve uçuş gününde yerinizi garanti altına alabilirsiniz. Pencere kenarı, ekstra bacak alanı veya yan yana oturma gibi tercihlerinizle seyahatinizi daha keyifli hale getirin. Koltuk seçimi sırasında bazı özel alanlar için ek ücret talep edilebilir. Herhangi bir değişiklik veya yardıma ihtiyacınız olduğunda müşteri hizmetlerimiz size destek olmaktan mutluluk duyacaktır. Konforlu bir yolculuk için koltuk seçiminizi yapmayı unutmayın!</p>
-<br>
+  {{ 'SEAT_SELECTION.DESCRIPTION' | translate }}
+</p>
+  <br>
 <div class="flex-container">
   <!-- Sol Kısım -->
   <nz-list style="width: fit-content" class="nz-list-container">
@@ -17,10 +18,10 @@
                 ? 'var(--light-color)'
                 : 'var(--card-color)'
             }"
-            [nzTitle]="item.title"
+            [nzTitle]="item.title | translate"
           >
             <h4 style="color: var(--subtitle-text-color)">
-              {{ item.subtitle }}
+              {{ item.subtitle | translate }}
             </h4>
             <br />
             <div style="display: flex">
@@ -31,15 +32,15 @@
                   padding-right: 4px;
                 "
               >
-                <h3 style="color: var(--title-text-color)">Yurtiçi</h3>
+                <h3 style="color: var(--title-text-color)">{{ 'SEAT_SELECTION.DOMESTIC' | translate }}</h3>
                 <h5 style="color: var(--subtitle-text-color)">
-                  {{ item.domestic_price }}
+                  {{ item.domestic_price | translate }}
                 </h5>
               </div>
               <div style="display: flex; flex-direction: column">
-                <h3 style="color: var(--title-text-color)">Yurtdışı</h3>
+                <h3 style="color: var(--title-text-color)">{{ 'SEAT_SELECTION.ABROAD' | translate }}</h3>
                 <h5 style="color: var(--subtitle-text-color)">
-                  {{ item.abroad_price }}
+                  {{ item.abroad_price | translate }}
                 </h5>
               </div>
             </div>
@@ -50,7 +51,7 @@
               nz-button
               nzType="primary"
             >
-              <span style="color: #fff">Koltukları Gör</span>
+              <span style="color: #fff">{{ 'SEAT_SELECTION.SEE_SEATS' | translate }}</span>
             </button>
             <button
               *ngIf="item.id === 2"
@@ -59,7 +60,7 @@
               nz-button
               nzType="primary"
             >
-              <span style="color: #fff">Koltukları Gör</span>
+              <span style="color: #fff">{{ 'SEAT_SELECTION.SEE_SEATS' | translate }}</span>
             </button>
             <button
               *ngIf="item.id === 3"
@@ -68,7 +69,7 @@
               nz-button
               nzType="primary"
             >
-              <span style="color: #fff">Koltukları Gör</span>
+              <span style="color: #fff">{{ 'SEAT_SELECTION.SEE_SEATS' | translate }}</span>
             </button>
             <button
               *ngIf="item.id === 4"
@@ -77,7 +78,7 @@
               nz-button
               nzType="primary"
             >
-              <span style="color: #fff">Koltukları Gör</span>
+              <span style="color: #fff">{{ 'SEAT_SELECTION.SEE_SEATS' | translate }}</span>
             </button>
             <button
               *ngIf="item.id === 5"
@@ -86,7 +87,7 @@
               nz-button
               nzType="primary"
             >
-              <span style="color: #fff">Koltukları Gör</span>
+              <span style="color: #fff">{{ 'SEAT_SELECTION.SEE_SEATS' | translate }}</span>
             </button>
             <button
               *ngIf="item.id === 6"
@@ -95,7 +96,7 @@
               nz-button
               nzType="primary"
             >
-              <span style="color: #fff">Koltukları Gör</span>
+              <span style="color: #fff">{{ 'SEAT_SELECTION.SEE_SEATS' | translate }}</span>
             </button>
           </nz-card>
         </nz-list-item>

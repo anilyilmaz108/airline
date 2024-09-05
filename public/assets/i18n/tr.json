@@ -1,0 +1,110 @@
+{
+  "APP_NAME": "Havayolu Test Uygulaması",
+  "BAGGAGE_ALLOWANCE": {
+    "BAGGAGE_RULES": [
+      "Her yolcu, uçuş sırasında yanına ücretsiz olarak bir adet el bagajı alabilir. Maksimum ölçüler ve ağırlık sınırlamaları, uçuş sınıfınıza göre değişiklik gösterebilir. Genel olarak, el bagajınızın maksimum ağırlığı 8 kg ve ölçüleri 55 x 40 x 20 cm olmalıdır.",
+      "El bagajınıza ek olarak, bir adet kişisel eşya (örneğin, el çantası, dizüstü bilgisayar çantası veya kamera çantası) taşıyabilirsiniz. Bu kişisel eşyaların da belirli boyut ve ağırlık sınırlarına uyması gerekmektedir.",
+      "Uçuşunuza bağlı olarak, ücretsiz bagaj hakkınız mevcuttur. Ekonomi sınıfında genellikle 20 kg, Business sınıfında ise 30 kg bagaj hakkı sunulmaktadır. Bagaj hakkı detayları bilet sınıfınıza ve destinasyonunuza göre değişebilir.",
+      "Ücretsiz bagaj hakkınızı aşmanız durumunda, fazla bagaj ücreti uygulanabilir. Ekstra bagaj hakkınızı önceden rezervasyon yaparak veya havaalanında check-in sırasında satın alabilirsiniz.",
+      "Spor ekipmanları, müzik aletleri veya diğer özel eşyalar için ek bagaj hakkı gerekebilir. Bu tür eşyalarınız için önceden bilgi vererek, uygun taşıma ve ücretlendirme hakkında bilgi alabilirsiniz.",
+      "Bagajınızın güvenliği ve takibi için modern sistemler kullanıyoruz. Her bagajınızın üzerinde etiket bulunmaktadır ve bu etiket, bagajınızı uçuş sırasında takip etmenize olanak tanır.",
+      "Bagajınızın kaybolması veya hasar görmesi durumunda, hemen havaalanı yetkilileri ile iletişime geçmelisiniz. Bagaj sorunlarıyla ilgili destek almak için müşteri hizmetlerimizden yardım alabilirsiniz."
+    ],
+    "LUGGAGE_RIGHTS": "Bagaj Hakkı",
+    "LUGGAGE_INFO": "Seyahatiniz sırasında rahatlığınızı sağlamak için bagaj hakkınızı bilmek önemlidir. Ücretsiz el bagajı hakkınız, uçuş sınıfınıza bağlı olarak belirli ölçü ve ağırlık sınırlarıyla sunulur, ayrıca kişisel eşyalarınızı da taşıyabilirsiniz. Kayıtlı bagaj hakkınız ise, genellikle 20 kg ile 30 kg arasında değişir; fazla bagaj için ek ücret uygulanabilir. Özel eşyalar ve spor ekipmanları için önceden bilgi vererek uygun taşıma düzenlemeleri yapabilirsiniz. Bagajınızın kaybolması veya hasar görmesi durumunda, havaalanı yetkilileri ve müşteri hizmetlerimiz size yardımcı olacaktır. Bagaj hakkınızla ilgili daha fazla bilgi için Bagaj Politikamız sayfasını ziyaret edebilirsiniz.",
+    "BAGGAGE_OPTIONS_DOMESTIC": "Bagaj Tercihleri - İç Hatlar",
+    "BAGGAGE_OPTIONS_INTERNATIONAL": "Bagaj Tercihleri - Dış Hatlar",
+    "LIGHT_PACKAGE": "LIGHT PAKET",
+    "SUPER_ECO_PACKAGE": "SÜPER EKO PAKET",
+    "ADVANTAGE_PACKAGE": "AVANTAJ PAKET",
+    "COMFORT_FLEX_PACKAGE": "COMFORT FLEX PAKET",
+    "PRICE_STARTING_FROM": "229,99 ₺’den başlayan fiyatlarla",
+    "WEIGHT_0KG": "0 KG",
+    "WEIGHT_20KG": "20 KG",
+    "BAGGAGE_RIGHTS_RULES": "Bagaj Hakları & Kuralları",
+    "BAGGAGE_RIGHTS_INFO": "Seyahatiniz boyunca bagaj haklarınızı bilmek, yolculuğunuzu daha rahat ve sorunsuz geçirebilmeniz için önemlidir.",
+    "BAGGAGE_POLICY_DETAILS": "Bagaj hakkı politikamızla ilgili detaylar:"
+  },
+  "FLEX_RESERVATION": {
+    "TITLE": "Esnek Rezervasyon",
+    "DESCRIPTION": "Seyahatiniz planlanırken, esneklik ve rahatlık önceliğimizdir. Esnek rezervasyon politikamız, değişen planlarınıza uyum sağlamanıza ve seyahat deneyiminizi daha esnek hale getirmenize olanak tanır.",
+    "ADVANTAGES_TITLE": "İşte esnek rezervasyon politikamızın sunduğu avantajlar:",
+    "ADVANTAGES": [
+      "Rezervasyonunuzu yaparken tarih veya saat değişiklikleri yapmanız gerekirse, belirli koşullar altında ücretsiz değişiklik yapabilirsiniz. Seyahat tarihlerinizi veya uçuş saatlerinizi değiştirmek için müşteri hizmetlerimizle iletişime geçebilirsiniz.",
+      "Planlarınızda değişiklik yapmanız gerektiğinde, esnek iptal seçeneklerimizle biletinizi iptal edebilir ve ödemenizi geri alabilirsiniz. İptal şartlarımız ve koşullarımız hakkında detaylı bilgiye İptal Politikamız sayfasından ulaşabilirsiniz.",
+      "Rezervasyonunuzu değiştirmek istediğinizde, hızlı ve kolay bir süreç sunarak sizin için en uygun alternatifleri belirleriz. Online portalımız veya müşteri hizmetlerimiz aracılığıyla değişiklik işlemlerinizi gerçekleştirebilirsiniz.",
+      "Esnek rezervasyon politikamız kapsamında karşılaşabileceğiniz her türlü sorun için profesyonel müşteri hizmetlerimiz size yardımcı olur. Sorularınızı yanıtlamak ve ihtiyaçlarınıza uygun çözümler sunmak için buradayız."
+    ]
+  },
+  "INFLIGHT_SERVICES": {
+    "TITLE": "Uçak İçi Hizmetler",
+    "DESCRIPTION": "Uçuşlarınızda konforunuzu ve memnuniyetinizi ön planda tutarak sunduğumuz çeşitli uçak içi hizmetlerimizle tanışın.",
+    "SERVICES_TITLE": "Yolculuklarınız boyunca size en iyi deneyimi sunmak için aşağıdaki hizmetleri sağlamaktayız:",
+    "SERVICES": [
+      "Lezzetli yemekler ve geniş içecek seçeneklerimizle uçuş sırasında damak tadınıza hitap ederiz. Menü seçeneklerimizi, özel diyet taleplerinizi karşılayacak şekilde düzenleyebiliriz.",
+      "Geniş bir eğlence yelpazesi sunarak film, dizi ve müzik seçenekleriyle yolculuğunuzu keyifli hale getiririz. Kişisel ekranlarınızda dilediğiniz içerikleri izleyebilir veya dinleyebilirsiniz.",
+      "Rahat ve ergonomik koltuklarımız, uzun uçuşlarınızı daha konforlu hale getirir. Ekstra bacak alanı ve ayarlanabilir sırt yaslama özellikleriyle dinlenme imkanı sunarız.",
+      "Uçuş sırasında bağlantınızı kesmeden işlerinizi halletmenizi sağlayan Wi-Fi hizmetimiz ve elektronik cihazlarınızı şarj edebileceğiniz prizlerimiz mevcuttur.",
+      "Profesyonel kabin ekibimiz, her türlü ihtiyacınızda yanınızda olup, size üstün bir hizmet deneyimi sunmak için hazırdır. Sorularınız ve özel talepleriniz için ekibimize başvurabilirsiniz.",
+      "Uçak içi hijyen standartlarımıza yüksek öncelik veriyoruz. Temizlik ve dezenfeksiyon süreçlerimizle güvenli ve temiz bir ortam sunarız."
+    ]
+  },
+  "SEAT_SELECTION": {
+    "TITLE": "Koltuk Seçimi",
+    "DESCRIPTION": "Uçuşunuz öncesinde konforunuzu artırmak için koltuk seçimi hizmetimizden yararlanabilirsiniz. Web sitemiz veya mobil uygulamamız aracılığıyla, istediğiniz koltukları kolayca seçebilir ve uçuş gününde yerinizi garanti altına alabilirsiniz. Pencere kenarı, ekstra bacak alanı veya yan yana oturma gibi tercihlerinizle seyahatinizi daha keyifli hale getirin. Koltuk seçimi sırasında bazı özel alanlar için ek ücret talep edilebilir. Herhangi bir değişiklik veya yardıma ihtiyacınız olduğunda müşteri hizmetlerimiz size destek olmaktan mutluluk duyacaktır. Konforlu bir yolculuk için koltuk seçiminizi yapmayı unutmayın!",
+    "ABROAD": "Yurtdışı",
+    "DOMESTIC": "Yurtiçi",
+    "SEE_SEATS": "Koltukları gör",
+    "SEATS": {
+      "EXTRA_LEGROOM": {
+        "TITLE": "Ekstra Diz Mesafesi",
+        "SUBTITLE": "Rahat etmek isteyenler için",
+        "DOMESTIC_PRICE": "499.99 TL'den başlayan",
+        "ABROAD_PRICE": "999.99 TL'den başlayan"
+      },
+      "FRONT_SEATS": {
+        "TITLE": "Ön Koltuklar",
+        "SUBTITLE": "Rahatça inip binmek isteyenler için",
+        "DOMESTIC_PRICE": "499.99 TL'den başlayan",
+        "ABROAD_PRICE": "999.99 TL'den başlayan"
+      },
+      "WINDOW_SEATS": {
+        "TITLE": "Pencere Kenarı",
+        "SUBTITLE": "Rahatsız edilmek istemeyenler için",
+        "DOMESTIC_PRICE": "499.99 TL'den başlayan",
+        "ABROAD_PRICE": "999.99 TL'den başlayan"
+      },
+      "AISLE_SEATS": {
+        "TITLE": "Koridor Kenarı",
+        "SUBTITLE": "Sıkça yerinden kalkanlar için",
+        "DOMESTIC_PRICE": "499.99 TL'den başlayan",
+        "ABROAD_PRICE": "999.99 TL'den başlayan"
+      },
+      "OTHER_SEATS": {
+        "TITLE": "Diğer Koltuklar",
+        "SUBTITLE": "Birlikte oturmak isteyenler için",
+        "DOMESTIC_PRICE": "499.99 TL'den başlayan",
+        "ABROAD_PRICE": "999.99 TL'den başlayan"
+      },
+      "RANDOM_SEAT": {
+        "TITLE": "Rastgele Koltuk",
+        "SUBTITLE": "Ek koltuk ücreti vermek istemeyenler için",
+        "DOMESTIC_PRICE": "0 TL (rastgele gelen koltuk - ödemesiz)",
+        "ABROAD_PRICE": "0 TL (rastgele gelen koltuk - ödemesiz)"
+      }
+    }
+  },
+  "VIP_SELECTION": {
+    "TITLE": "VIP Hizmeti",
+    "DESCRIPTION": "Siz değerli misafirlerimize en yüksek konfor ve ayrıcalığı sunmak için özel VIP hizmetlerimizle yanınızdayız.",
+    "ADVANTAGES_TITLE": "Seyahatinizi lüks ve rahatlık içinde geçirmeniz için sunduğumuz VIP hizmetlerimiz:",
+    "ADVANTAGES": [
+      "Havaalanına vardığınızda hızlı ve zahmetsiz bir şekilde işlemlerinizi tamamlamanızı sağlayan öncelikli check-in ve boarding hizmetlerimizle, zamanınızı verimli bir şekilde kullanabilirsiniz.",
+      "Sizi rahatlatıcı bir ortamda beklemenizi sağlayan özel lounge erişimi sunuyoruz. Ücretsiz yiyecek ve içeceklerin yanı sıra, konforlu oturma alanları ve internet erişimiyle seyahat öncesi veya sonrası keyifli vakit geçirebilirsiniz.",
+      "Seyahatiniz boyunca özel asistanlarımız, tüm ihtiyaçlarınızı karşılamak için sizinle ilgilenir. Bilet düzenlemelerinden bagaj yönetimine kadar her türlü konuda destek sağlarlar.",
+      "Havaalanı transferleriniz, şehrin en konforlu araçlarıyla sağlanır. VIP araçlarımızla hızlı, güvenli ve rahat bir yolculuk deneyimi yaşarsınız.",
+      "Uçuşunuz sırasında size özel hazırlanan gurme yemekler ve içecek seçenekleri sunarak, en yüksek kaliteyi ve lezzeti deneyimlemenizi sağlarız.",
+      "Güvenliğiniz ve gizliliğiniz bizim önceliğimizdir. Özel güvenlik önlemleri ve gizlilik standartlarımızla, seyahatinizi endişesiz bir şekilde geçirebilirsiniz."
+    ]
+  }
+}

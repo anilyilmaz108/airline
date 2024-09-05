@@ -1,28 +1,34 @@
 <h3 style="color: var(--title-text-color); display: flex; justify-content: center;" nz-typography>
-    Esnek Rezervasyon
-  </h3>
+  {{ "FLEX_RESERVATION.TITLE" | translate }}
+</h3>
+
 <!-- Image -->
-    <img style="display: flex; justify-content: center; border-radius: 10px;"
-    nz-image
-    width="100%"
-    height="400px"
-    nzSrc="https://www.flextickets.nl/wp-content/uploads/2023/10/aanmelden-2.jpg"
-    alt=""
-  />
+<img style="display: flex; justify-content: center; border-radius: 10px;"
+  nz-image
+  width="100%"
+  height="400px"
+  nzSrc="https://www.flextickets.nl/wp-content/uploads/2023/10/aanmelden-2.jpg"
+  alt=""
+/>
 
 <!-- Flex Reservation Descriptions -->
 <br>
 <br>
 
 <p style="color: var(--subtitle-text-color)" nz-typography>
-  Seyahatiniz planlanırken, esneklik ve rahatlık önceliğimizdir. Esnek rezervasyon politikamız, değişen planlarınıza uyum sağlamanıza ve seyahat deneyiminizi daha esnek hale getirmenize olanak tanır. 
+  {{ "FLEX_RESERVATION.DESCRIPTION" | translate }}
 </p>
+
 <nz-divider></nz-divider>
 <br />
+
 <h3 style="color: var(--title-text-color)" nz-typography>
-  İşte esnek rezervasyon politikamızın sunduğu avantajlar:
+  {{ "FLEX_RESERVATION.ADVANTAGES_TITLE" | translate }}
 </h3>
-<ul *ngFor="let item of data">
-  <li style="color: var(--subtitle-text-color)" nz-typography>{{ item }}</li>
+
+<ul>
+  <li *ngFor="let item of 'FLEX_RESERVATION.ADVANTAGES' | translate" style="color: var(--subtitle-text-color)" nz-typography>
+    {{ item }}
+  </li>
 </ul>
 <br>

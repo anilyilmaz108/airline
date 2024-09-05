@@ -1,49 +1,48 @@
 <h3 style="color: var(--title-text-color); display: flex; justify-content: center;" nz-typography>
-  Bagaj Hakkı
+  {{ 'BAGGAGE_ALLOWANCE.LUGGAGE_RIGHTS' | translate }}
 </h3>
 <br>
 <p style="color: var(--subtitle-text-color)" nz-typography>
-  Seyahatiniz sırasında rahatlığınızı sağlamak için bagaj hakkınızı bilmek önemlidir. Ücretsiz el bagajı hakkınız, uçuş sınıfınıza bağlı olarak belirli ölçü ve ağırlık sınırlarıyla sunulur, ayrıca kişisel eşyalarınızı da taşıyabilirsiniz. Kayıtlı bagaj hakkınız ise, genellikle 20 kg ile 30 kg arasında değişir; fazla bagaj için ek ücret uygulanabilir. Özel eşyalar ve spor ekipmanları için önceden bilgi vererek uygun taşıma düzenlemeleri yapabilirsiniz. Bagajınızın kaybolması veya hasar görmesi durumunda, havaalanı yetkilileri ve müşteri hizmetlerimiz size yardımcı olacaktır. Bagaj hakkınızla ilgili daha fazla bilgi için Bagaj Politikamız sayfasını ziyaret edebilirsiniz.
+  {{ 'BAGGAGE_ALLOWANCE.LUGGAGE_INFO' | translate }}
 </p>
-  <br>
+<br>
 <!-- Baggage Options -->
-<!-- İç Hatlar -->
+<!-- Domestic Flights -->
 <nz-descriptions
-  nzTitle="Bagaj Tercihleri - İç Hatlar"
+  nzTitle="{{ 'BAGGAGE_ALLOWANCE.BAGGAGE_OPTIONS_DOMESTIC' | translate }}"
   nzBordered
   [nzColumn]="{ xxl: 2, xl: 2, lg: 2, md: 2, sm: 2, xs: 1 }"
 >
-  <nz-descriptions-item nzTitle="LIGHT PAKET">0 KG - 229,99 ₺’den başlayan fiyatlarla</nz-descriptions-item>
-  <nz-descriptions-item nzTitle="SÜPER EKO PAKET">20 KG - 229,99 ₺’den başlayan fiyatlarla</nz-descriptions-item>
-  <nz-descriptions-item nzTitle="AVANTAJ PAKET">20 KG - 229,99 ₺’den başlayan fiyatlarla</nz-descriptions-item>
-  <nz-descriptions-item nzTitle="COMFORT FLEX PAKET">20 KG - 229,99 ₺’den başlayan fiyatlarla</nz-descriptions-item>
+  <nz-descriptions-item nzTitle="{{ 'BAGGAGE_ALLOWANCE.LIGHT_PACKAGE' | translate }}">{{ 'BAGGAGE_ALLOWANCE.WEIGHT_0KG' | translate }} - {{ 'BAGGAGE_ALLOWANCE.PRICE_STARTING_FROM' | translate }}</nz-descriptions-item>
+  <nz-descriptions-item nzTitle="{{ 'BAGGAGE_ALLOWANCE.SUPER_ECO_PACKAGE' | translate }}">{{ 'BAGGAGE_ALLOWANCE.WEIGHT_0KG' | translate }} - {{ 'BAGGAGE_ALLOWANCE.PRICE_STARTING_FROM' | translate }}</nz-descriptions-item>
+  <nz-descriptions-item nzTitle="{{ 'BAGGAGE_ALLOWANCE.ADVANTAGE_PACKAGE' | translate }}">{{ 'BAGGAGE_ALLOWANCE.WEIGHT_0KG' | translate }} - {{ 'BAGGAGE_ALLOWANCE.PRICE_STARTING_FROM' | translate }}</nz-descriptions-item>
+  <nz-descriptions-item nzTitle="{{ 'BAGGAGE_ALLOWANCE.COMFORT_FLEX_PACKAGE' | translate }}">{{ 'BAGGAGE_ALLOWANCE.WEIGHT_0KG' | translate }} - {{ 'BAGGAGE_ALLOWANCE.PRICE_STARTING_FROM' | translate }}</nz-descriptions-item>
 </nz-descriptions>
 <br>
-<!-- Dış Hatlar -->
+<!-- International Flights -->
 <nz-descriptions
-  nzTitle="Bagaj Tercihleri - Dış Hatlar"
+  nzTitle="{{ 'BAGGAGE_ALLOWANCE.BAGGAGE_OPTIONS_INTERNATIONAL' | translate }}"
   nzBordered
   [nzColumn]="{ xxl: 2, xl: 2, lg: 2, md: 2, sm: 2, xs: 1 }"
 >
-  <nz-descriptions-item nzTitle="LIGHT PAKET">0 KG - 229,99 ₺’den başlayan fiyatlarla</nz-descriptions-item>
-  <nz-descriptions-item nzTitle="SÜPER EKO PAKET">20 KG - 229,99 ₺’den başlayan fiyatlarla</nz-descriptions-item>
-  <nz-descriptions-item nzTitle="AVANTAJ PAKET">20 KG - 229,99 ₺’den başlayan fiyatlarla</nz-descriptions-item>
-  <nz-descriptions-item nzTitle="COMFORT FLEX PAKET">20 KG - 229,99 ₺’den başlayan fiyatlarla</nz-descriptions-item>
+  <nz-descriptions-item nzTitle="{{ 'BAGGAGE_ALLOWANCE.LIGHT_PACKAGE' | translate }}">{{ 'BAGGAGE_ALLOWANCE.WEIGHT_0KG' | translate }} - {{ 'BAGGAGE_ALLOWANCE.PRICE_STARTING_FROM' | translate }}</nz-descriptions-item>
+  <nz-descriptions-item nzTitle="{{ 'BAGGAGE_ALLOWANCE.SUPER_ECO_PACKAGE' | translate }}">{{ 'BAGGAGE_ALLOWANCE.WEIGHT_0KG' | translate }} - {{ 'BAGGAGE_ALLOWANCE.PRICE_STARTING_FROM' | translate }}</nz-descriptions-item>
+  <nz-descriptions-item nzTitle="{{ 'BAGGAGE_ALLOWANCE.ADVANTAGE_PACKAGE' | translate }}">{{ 'BAGGAGE_ALLOWANCE.WEIGHT_0KG' | translate }} - {{ 'BAGGAGE_ALLOWANCE.PRICE_STARTING_FROM' | translate }}</nz-descriptions-item>
+  <nz-descriptions-item nzTitle="{{ 'BAGGAGE_ALLOWANCE.COMFORT_FLEX_PACKAGE' | translate }}">{{ 'BAGGAGE_ALLOWANCE.WEIGHT_0KG' | translate }} - {{ 'BAGGAGE_ALLOWANCE.PRICE_STARTING_FROM' | translate }}</nz-descriptions-item>
 </nz-descriptions>
-<!-- Baggage Descriptions -->
 <br/>
 <h3 style="color: var(--title-text-color)" nz-typography>
-  Bagaj Hakları & Kuralları
+  {{ 'BAGGAGE_ALLOWANCE.BAGGAGE_RIGHTS_RULES' | translate }}
 </h3>
 <p style="color: var(--subtitle-text-color)" nz-typography>
-  Seyahatiniz boyunca bagaj haklarınızı bilmek, yolculuğunuzu daha rahat ve sorunsuz geçirebilmeniz için önemlidir.
+  {{ 'BAGGAGE_ALLOWANCE.BAGGAGE_RIGHTS_INFO' | translate }}
 </p>
 <nz-divider></nz-divider>
 <br />
 <h3 style="color: var(--title-text-color)" nz-typography>
-  Bagaj hakkı politikamızla ilgili detaylar:
+  {{ 'BAGGAGE_ALLOWANCE.BAGGAGE_POLICY_DETAILS' | translate }}
 </h3>
-<ul *ngFor="let item of data">
+<ul *ngFor="let item of 'BAGGAGE_ALLOWANCE.BAGGAGE_RULES' | translate">
   <li style="color: var(--subtitle-text-color)" nz-typography>{{ item }}</li>
 </ul>
 <br>

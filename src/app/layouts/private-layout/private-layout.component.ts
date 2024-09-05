@@ -1,4 +1,4 @@
-import { Component, effect, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, effect, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Router, RouterLink, RouterOutlet } from '@angular/router';
 import { NzIconModule } from 'ng-zorro-antd/icon';
@@ -15,6 +15,8 @@ import { Auth, user } from '@angular/fire/auth';
 import { appName } from '../../core/constants';
 import { UserModel } from '../../models/user';
 import { UserService } from '../../services/user.service';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { TranslationService } from '../../services/translate.service';
 
 @Component({
   selector: 'app-private-layout',
@@ -30,16 +32,20 @@ import { UserService } from '../../services/user.service';
     FooterComponent,
     NzBackTopModule,
     NzIconModule,
+    TranslateModule
   ],
   templateUrl: './private-layout.component.html',
   styleUrl: './private-layout.component.less',
   host: { ngSkipHydration: 'true' },
+  //changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class PrivateLayoutComponent {
   themeService = inject(ThemeService);
   private fbAuth = inject(Auth);
   authService = inject(AuthService);
   userService = inject(UserService);
+  //translate = inject(TranslateService);
+  tranlationService = inject(TranslationService);
 
   router = inject(Router);
   airScore = 0;
@@ -49,7 +55,7 @@ export class PrivateLayoutComponent {
   isEnglish = false;
   user!: UserModel;
   profilePhoto = "";
-
+  lang: string = "TR";
 
 
   toggleCollapsed(){
@@ -61,6 +67,7 @@ export class PrivateLayoutComponent {
   }
 
   constructor() {
+    this.tranlationService.initTranslate();
     this.isDarkMode = this.themeService.isDarkMode();
     user(this.fbAuth).subscribe((fbuser: any) => {
       this.getUserData(this.fbAuth.currentUser?.uid!);
@@ -101,8 +108,10 @@ export class PrivateLayoutComponent {
     this.themeService.setDarkMode(this.isDarkMode);
   }
 
-  toggleLanguage() {
+  toggleLanguage(val: string) {
     this.isEnglish = !this.isEnglish;
+    this.tranlationService.changeLanguage(val);
+    this.lang = val;
   }
 
   logout() {

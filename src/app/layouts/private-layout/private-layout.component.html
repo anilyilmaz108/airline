@@ -13,7 +13,7 @@
       style="cursor: pointer" routerLink="/" />
     <h1>{{appName.toUpperCase()}}</h1>
     <h4 style="color: var(--tips-text-color);" *ngIf="!isCollapsed">
-      {{ user ? user.email : 'Havayolu Test Uygulaması'}}
+      {{ user ? user.email : "APP_NAME" | translate }}
     </h4>
     <div
       [ngClass]="isCollapsed ? 'profile-small' : 'profile'" routerLink="/user/profile"> <!--profile-->
@@ -127,7 +127,7 @@
           *ngIf="isEnglish"
           class="header-icons"
           nz-icon
-          (click)="toggleLanguage()"
+          (click)="toggleLanguage('en')"
           nz-tooltip
           nzTooltipTitle="English"
           nzTooltipPlacement="bottomRight"
@@ -139,7 +139,7 @@
           *ngIf="!isEnglish"
           class="header-icons"
           nz-icon
-          (click)="toggleLanguage()"
+          (click)="toggleLanguage('tr')"
           nz-tooltip
           nzTooltipTitle="Türkçe"
           nzTooltipPlacement="bottomRight"

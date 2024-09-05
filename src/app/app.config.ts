@@ -14,8 +14,9 @@ import { registerLocaleData } from '@angular/common';
 import tr from '@angular/common/locales/tr';
 import { FormsModule } from '@angular/forms';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
-import { provideHttpClient } from '@angular/common/http';
+import { HttpClient, provideHttpClient } from '@angular/common/http';
 import { provideAngularSvgIcon } from 'angular-svg-icon';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
 registerLocaleData(tr);
 
@@ -32,6 +33,24 @@ import {
   UserTrackingService,
 } from '@angular/fire/analytics';
 import { firebaseConfig } from './core/config';
+import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+
+export function HttpLoaderFactory(http: HttpClient) {
+  return new TranslateHttpLoader(http, './assets/i18n/', '.json');
+}
+
+
+function provideTranslateModule() {
+  const translateModule = TranslateModule.forRoot({
+    loader: {
+      provide: TranslateLoader,
+      useFactory: HttpLoaderFactory,
+      deps: [HttpClient],
+    },
+  });
+
+  return translateModule.providers ? [...translateModule.providers] : [];
+}
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -40,6 +59,7 @@ export const appConfig: ApplicationConfig = {
     provideClientHydration(),
     provideNzIcons(icons),
     provideNzI18n(tr_TR),
+    ...provideTranslateModule(),
     importProvidersFrom(FormsModule),
     provideAnimationsAsync(),
     provideHttpClient(),

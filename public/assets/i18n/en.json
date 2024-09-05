@@ -1,0 +1,110 @@
+{
+    "APP_NAME": "Airport Test App",
+    "BAGGAGE_ALLOWANCE": {
+      "BAGGAGE_RULES": [
+        "Each passenger can bring one free carry-on baggage during the flight. Maximum size and weight limits may vary depending on your flight class. In general, the maximum weight of your carry-on baggage should be 8 kg and its dimensions should be 55 x 40 x 20 cm.",
+        "In addition to your carry-on baggage, you can carry one personal item (e.g., handbag, laptop bag, or camera bag). These personal items must also comply with specific size and weight limits.",
+        "Depending on your flight, you may have free baggage allowance. Typically, Economy Class offers a baggage allowance of 20 kg, and Business Class offers 30 kg. Baggage allowance details may vary according to your ticket class and destination.",
+        "If you exceed your free baggage allowance, excess baggage fees may apply. You can purchase additional baggage allowance in advance by making a reservation or during check-in at the airport.",
+        "Additional baggage allowance may be required for sports equipment, musical instruments, or other special items. You can provide prior notice for such items and get information on appropriate handling and fees.",
+        "We use modern systems to ensure the safety and tracking of your baggage. Each of your bags has a tag, allowing you to track your baggage during the flight.",
+        "If your baggage is lost or damaged, you should contact airport authorities immediately. You can get support for baggage issues from our customer service team."
+      ],
+      "LUGGAGE_RIGHTS": "Baggage Rights",
+      "LUGGAGE_INFO": "It is important to know your baggage allowance to ensure comfort during your trip. Your free hand luggage allowance is provided with specific size and weight limits based on your flight class, and you can also carry personal items. Your checked baggage allowance usually ranges between 20 kg and 30 kg; extra baggage may incur additional charges. For special items and sports equipment, you can make appropriate arrangements by informing us in advance. In case of loss or damage to your baggage, airport authorities and our customer service will assist you. For more information about your baggage allowance, you can visit our Baggage Policy page.",
+      "BAGGAGE_OPTIONS_DOMESTIC": "Baggage Options - Domestic",
+      "BAGGAGE_OPTIONS_INTERNATIONAL": "Baggage Options - International",
+      "LIGHT_PACKAGE": "LIGHT PACKAGE",
+      "SUPER_ECO_PACKAGE": "SUPER ECO PACKAGE",
+      "ADVANTAGE_PACKAGE": "ADVANTAGE PACKAGE",
+      "COMFORT_FLEX_PACKAGE": "COMFORT FLEX PACKAGE",
+      "PRICE_STARTING_FROM": "starting from 229.99 ₺",
+      "WEIGHT_0KG": "0 KG",
+      "WEIGHT_20KG": "20 KG",
+      "BAGGAGE_RIGHTS_RULES": "Baggage Rights & Rules",
+      "BAGGAGE_RIGHTS_INFO": "Knowing your baggage rights during your journey is important to ensure a more comfortable and smooth trip.",
+      "BAGGAGE_POLICY_DETAILS": "Details about our baggage allowance policy:"
+    },
+    "FLEX_RESERVATION": {
+      "TITLE": "Flexible Reservation",
+      "DESCRIPTION": "When planning your trip, flexibility and convenience are our priority. Our flexible reservation policy allows you to adapt to your changing plans and make your travel experience more flexible.",
+      "ADVANTAGES_TITLE": "Here are the benefits of our flexible reservation policy:",
+      "ADVANTAGES": [
+        "If you need to make changes to your reservation, you can do so for free under certain conditions. Contact our customer service to change your travel dates or flight times.",
+        "When you need to change your plans, you can cancel your ticket with our flexible cancellation options and receive a refund. For more detailed information about our cancellation terms and conditions, please visit our Cancellation Policy page.",
+        "When you want to change your reservation, we offer a fast and easy process to find the best alternatives for you. You can make changes through our online portal or customer service.",
+        "Our professional customer service is here to assist you with any issues you may encounter under our flexible reservation policy. We are here to answer your questions and offer solutions that suit your needs."
+      ]
+    },
+    "INFLIGHT_SERVICES": {
+      "TITLE": "Inflight Services",
+      "DESCRIPTION": "Experience our wide range of inflight services designed with your comfort and satisfaction in mind during your flights.",
+      "SERVICES_TITLE": "We provide the following services to offer you the best experience during your journeys:",
+      "SERVICES": [
+        "We offer delicious meals and a wide selection of beverages to cater to your taste during the flight. We can adjust our menu options to accommodate your special dietary requests.",
+        "We provide a wide range of entertainment options with movies, series, and music to make your journey enjoyable. You can watch or listen to your preferred content on your personal screens.",
+        "Our comfortable and ergonomic seats make long flights more pleasant. With extra legroom and adjustable reclining features, we offer you the opportunity to rest.",
+        "We offer Wi-Fi services and power outlets for charging your devices, allowing you to stay connected and manage your work during the flight.",
+        "Our professional cabin crew is ready to assist you with any need, providing you with an exceptional service experience. Feel free to reach out to our crew for any questions or special requests.",
+        "We prioritize inflight hygiene standards. Our cleaning and disinfection processes ensure a safe and clean environment for you."
+      ]
+    },
+    "SEAT_SELECTION": {
+      "TITLE": "Seat Selection",
+      "DESCRIPTION": "Before your flight, you can take advantage of our seat selection service to increase your comfort. You can easily select your desired seats via our website or mobile app and secure your spot on the day of the flight. Make your journey more enjoyable with preferences such as window seats, extra legroom, or sitting side by side. Some special areas may require an additional fee for seat selection. Our customer service will be happy to assist you if you need any changes or help. Don't forget to choose your seat for a comfortable journey!",
+      "ABROAD": "Abroad",
+      "DOMESTIC": "Domestic",
+      "SEE_SEATS": "See seats",
+      "SEATS": {
+        "EXTRA_LEGROOM": {
+          "TITLE": "Extra Legroom",
+          "SUBTITLE": "People who want extra comfort",
+          "DOMESTIC_PRICE": "Starting from 499.99 TL",
+          "ABROAD_PRICE": "Starting from 999.99 TL"
+        },
+        "FRONT_SEATS": {
+          "TITLE": "Front Seats",
+          "SUBTITLE": "Easily board and disembark",
+          "DOMESTIC_PRICE": "Starting from 499.99 TL",
+          "ABROAD_PRICE": "Starting from 999.99 TL"
+        },
+        "WINDOW_SEATS": {
+          "TITLE": "Window Seats",
+          "SUBTITLE": "For those who do not want to be disturbed",
+          "DOMESTIC_PRICE": "Starting from 499.99 TL",
+          "ABROAD_PRICE": "Starting from 999.99 TL"
+        },
+        "AISLE_SEATS": {
+          "TITLE": "Aisle Seats",
+          "SUBTITLE": "For those who get up frequently",
+          "DOMESTIC_PRICE": "Starting from 499.99 TL",
+          "ABROAD_PRICE": "Starting from 999.99 TL"
+        },
+        "OTHER_SEATS": {
+          "TITLE": "Other Seats",
+          "SUBTITLE": "For those who want to sit together",
+          "DOMESTIC_PRICE": "Starting from 499.99 TL",
+          "ABROAD_PRICE": "Starting from 999.99 TL"
+        },
+        "RANDOM_SEAT": {
+          "TITLE": "Random Seat",
+          "SUBTITLE": "Don't want to pay extra for a seat",
+          "DOMESTIC_PRICE": "0 TL (random seat)",
+          "ABROAD_PRICE": "0 TL (random seat)"
+        }
+      }
+    },
+    "VIP_SELECTION": {
+      "TITLE": "VIP Service",
+      "DESCRIPTION": "We are here to provide you with the highest comfort and exclusivity through our special VIP services.",
+      "ADVANTAGES_TITLE": "Our VIP services to ensure you have a luxurious and comfortable travel experience:",
+      "ADVANTAGES": [
+        "Priority check-in and boarding services that allow you to complete your procedures quickly and effortlessly upon arrival at the airport, enabling you to use your time efficiently.",
+        "Special lounge access that allows you to wait in a relaxing environment. Enjoy complimentary food and beverages, comfortable seating areas, and internet access for a pleasant time before or after your trip.",
+        "Our dedicated assistants will take care of all your needs throughout your journey. They provide support for everything from ticket arrangements to baggage management.",
+        "Airport transfers are provided with the most comfortable vehicles in the city. Experience a fast, secure, and comfortable journey with our VIP vehicles.",
+        "We offer gourmet meals and beverage options prepared exclusively for you during your flight, ensuring you experience the highest quality and taste.",
+        "Your safety and privacy are our priorities. With our special security measures and privacy standards, you can travel worry-free."
+      ]
+    }
+  }
