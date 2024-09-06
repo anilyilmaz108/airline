@@ -1,5 +1,4 @@
 {
-  "APP_NAME": "Airport Test App",
   "BAGGAGE_ALLOWANCE": {
     "BAGGAGE_RULES": [
       "Each passenger can bring one free carry-on baggage during the flight. Maximum size and weight limits may vary depending on your flight class. In general, the maximum weight of your carry-on baggage should be 8 kg and its dimensions should be 55 x 40 x 20 cm.",
@@ -651,5 +650,36 @@
     "BIRTH": "Date of Birth",
     "TCID": "ID Number",
     "NATIONALITY": "Nationality"
+  },
+  "FOOTER": {
+    "FIELD1": "Anıl Yılmaz",
+    "FIELD2": "General Rules",
+    "FIELD3": "Contact",
+    "FIELD4": "FAQ",
+    "FIELD5": "Airline Test Application"
+  },
+  "PRIVATE_LAYOUT": {
+    "APP_NAME": "Airline Test Application",
+    "HOME": "Home",
+    "MENU1": "Travel Operations",
+    "CHECK_IN": "Check-In",
+    "MENU2": "Additional Services",
+    "SEAT_SELECTION": "Seat Selection",
+    "BAGGAGE_ALLOWANCE": "Baggage Allowance",
+    "VIP_SELECTION": "VIP Services",
+    "FLEX_RESERVATION": "Flexible Reservation",
+    "INFLIGHT_SERVICES": "In-Flight Services",
+    "MENU3": "Explore",
+    "MENU4": "Help",
+    "AIR_POINTS": "What are Air Points",
+    "GENERAL_INFO": "General Rules",
+    "AIRPORT_INFO": "Airport Information",
+    "PASSENGER_RIGHTS": "Passenger Rights",
+    "CONTACT": "Help & Contact",
+    "FAQ": "Frequently Asked Questions",
+    "LIGHT_MODE": "Light Mode",
+    "DARK_MODE": "Dark Mode",
+    "SIGN_IN": "Sign In",
+    "SIGN_OUT": "Sign Out"
   }
 }

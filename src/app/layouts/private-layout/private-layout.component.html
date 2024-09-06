@@ -13,7 +13,7 @@
       style="cursor: pointer" routerLink="/" />
     <h1>{{appName.toUpperCase()}}</h1>
     <h4 style="color: var(--tips-text-color);" *ngIf="!isCollapsed">
-      {{ user ? user.email : "APP_NAME" | translate }}
+      {{ user ? user.email : "PRIVATE_LAYOUT.APP_NAME" | translate }}
     </h4>
     <div
       [ngClass]="isCollapsed ? 'profile-small' : 'profile'" routerLink="/user/profile"> <!--profile-->
@@ -36,13 +36,13 @@
       <ul nz-menu nzTheme="dark" nzMode="inline">
         <li nz-menu-item nzMatchRouter nzMatchRouterExact routerLink="/">
           <span nz-icon nzType="home" nzTheme="outline"></span>
-          <span><a style="color: white" routerLink="/">Anasayfa</a></span>
+          <span><a style="color: white" routerLink="/">{{ 'PRIVATE_LAYOUT.HOME' | translate }}</a></span>
         </li>
       </ul>
-      <li nz-submenu nzOpen nzTitle="Seyehat İşlemleri" nzIcon="dashboard">
+      <li nz-submenu nzOpen [nzTitle]="'PRIVATE_LAYOUT.MENU1' | translate" nzIcon="dashboard">
         <ul>
           <li nz-menu-item nzMatchRouter>
-            <a routerLink="/check-in">Check-in</a>
+            <a routerLink="/check-in">{{ 'PRIVATE_LAYOUT.CHECK_IN' | translate }}</a>
           </li>
           <!--<li nz-menu-item nzMatchRouter>
             <a>Bilet işlemleri</a>
@@ -52,26 +52,26 @@
           </li>-->
         </ul>
       </li>
-      <li nz-submenu nzOpen nzTitle="Ek Hizmetler" nzIcon="form">
+      <li nz-submenu nzOpen [nzTitle]="'PRIVATE_LAYOUT.MENU2' | translate" nzIcon="form">
         <ul>
           <li nz-menu-item nzMatchRouter>
-            <a routerLink="/additional-services/seat-selection">Koltuk Seçimi</a>
+            <a routerLink="/additional-services/seat-selection">{{ 'PRIVATE_LAYOUT.SEAT_SELECTION' | translate }}</a>
           </li>
           <li nz-menu-item nzMatchRouter>
-            <a routerLink="/additional-services/baggage-allowance">Bagaj Hakkı</a>
+            <a routerLink="/additional-services/baggage-allowance">{{ 'PRIVATE_LAYOUT.BAGGAGE_ALLOWANCE' | translate }}</a>
           </li>
           <li nz-menu-item nzMatchRouter>
-            <a routerLink="/additional-services/vip-selection">VIP Hizmetler</a>
+            <a routerLink="/additional-services/vip-selection">{{ 'PRIVATE_LAYOUT.VIP_SELECTION' | translate }}</a>
           </li>
           <li nz-menu-item nzMatchRouter>
-            <a routerLink="/additional-services/flex-reservation">Esnek Rezervasyon</a>
+            <a routerLink="/additional-services/flex-reservation">{{ 'PRIVATE_LAYOUT.FLEX_RESERVATION' | translate }}</a>
           </li>
           <li nz-menu-item nzMatchRouter>
-            <a routerLink="/additional-services/inflight-services">Uçak İçi Hizmetler</a>
+            <a routerLink="/additional-services/inflight-services">{{ 'PRIVATE_LAYOUT.INFLIGHT_SERVICES' | translate }}</a>
           </li>
         </ul>
       </li>
-      <li nz-submenu nzTitle="Keşfet" nzIcon="form">
+      <li nz-submenu [nzTitle]="'PRIVATE_LAYOUT.MENU3' | translate" nzIcon="form">
         <ul>
           <li nz-menu-item nzMatchRouter>
             <a routerLink="/discover/istanbul">İstanbul</a>
@@ -87,25 +87,25 @@
           </li>
         </ul>
       </li>
-      <li nz-submenu nzTitle="Yardım" nzIcon="form">
+      <li nz-submenu [nzTitle]="'PRIVATE_LAYOUT.MENU4' | translate" nzIcon="form">
         <ul>
           <li nz-menu-item nzMatchRouter>
-            <a routerLink="/info/air-info">Air Puan Nedir</a>
+            <a routerLink="/info/air-info">{{ 'PRIVATE_LAYOUT.AIR_POINTS' | translate }}</a>
           </li>
           <li nz-menu-item nzMatchRouter>
-            <a routerLink="/info/general-info">Genel Kurallar</a>
+            <a routerLink="/info/general-info">{{ 'PRIVATE_LAYOUT.GENERAL_INFO' | translate }}</a>
           </li>
           <li nz-menu-item nzMatchRouter>
-            <a routerLink="/info/airport-info">Havaalanı Bilgileri</a>
+            <a routerLink="/info/airport-info">{{ 'PRIVATE_LAYOUT.AIRPORT_INFO' | translate }}</a>
           </li>
           <li nz-menu-item nzMatchRouter>
-            <a routerLink="/info/passenger-rights">Yolcu Hakları</a>
+            <a routerLink="/info/passenger-rights">{{ 'PRIVATE_LAYOUT.PASSENGER_RIGHTS' | translate }}</a>
           </li>
           <li nz-menu-item nzMatchRouter>
-            <a routerLink="/info/help-contact">Yardım & İletişim</a>
+            <a routerLink="/info/help-contact">{{ 'PRIVATE_LAYOUT.CONTACT' | translate }}</a>
           </li>
           <li nz-menu-item nzMatchRouter>
-            <a routerLink="/info/faq">Sıkça Sorulan Sorular</a>
+            <a routerLink="/info/faq">{{ 'PRIVATE_LAYOUT.FAQ' | translate }}</a>
           </li>
         </ul>
       </li>
@@ -177,7 +177,7 @@
             nz-icon
             (click)="toggleTheme()"
             nz-tooltip
-            nzTooltipTitle="Açık Mod"
+            [nzTooltipTitle]="'PRIVATE_LAYOUT.LIGHT_MODE' | translate "
             nzTooltipPlacement="bottomRight"
           >
             <span nz-icon nzType="sun" nzTheme="outline"></span>
@@ -188,7 +188,7 @@
             nz-icon
             (click)="toggleTheme()"
             nz-tooltip
-            nzTooltipTitle="Koyu Mod"
+            [nzTooltipTitle]="'PRIVATE_LAYOUT.DARK_MODE' | translate "
             nzTooltipPlacement="bottomRight"
           >
             <span
@@ -202,11 +202,11 @@
           <span *ngIf="user" class="header-icons">{{airScore}} Air</span>
           <span *ngIf="user" (click)="logout()" class="header-icons">
             <i class="trigger" nz-tooltip
-            nzTooltipTitle="Çıkış Yap"
+            [nzTooltipTitle]="'PRIVATE_LAYOUT.SIGN_IN' | translate "
             nzTooltipPlacement="bottomRight" nz-icon [nzType]="'logout'"></i>
           </span>
           <span *ngIf="!user" routerLink="/user/login" class="header-icons" nz-icon  nz-tooltip
-          nzTooltipTitle="Giriş Yap"
+          [nzTooltipTitle]="'PRIVATE_LAYOUT.SIGN_OUT' | translate "
           nzTooltipPlacement="bottomRight" nzType="login" nzTheme="outline"></span>
         </div>
       </div>

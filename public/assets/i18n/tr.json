@@ -1,5 +1,4 @@
 {
-  "APP_NAME": "Havayolu Test Uygulaması",
   "BAGGAGE_ALLOWANCE": {
     "BAGGAGE_RULES": [
       "Her yolcu, uçuş sırasında yanına ücretsiz olarak bir adet el bagajı alabilir. Maksimum ölçüler ve ağırlık sınırlamaları, uçuş sınıfınıza göre değişiklik gösterebilir. Genel olarak, el bagajınızın maksimum ağırlığı 8 kg ve ölçüleri 55 x 40 x 20 cm olmalıdır.",
@@ -651,5 +650,36 @@
     "BIRTH": "Doğum Tarihi",
     "TCID": "TC Kimlik No",
     "NATIONALITY": "Uyruk"
+  },
+  "FOOTER": {
+    "FIELD1": "Anıl Yılmaz",
+    "FIELD2": "Genel Kurallar",
+    "FIELD3": "İletişim",
+    "FIELD4": "SSS",
+    "FIELD5": "Airline Havayolu Test Uygulaması"
+  },
+  "PRIVATE_LAYOUT": {
+    "APP_NAME": "Havayolu Test Uygulaması",
+    "HOME": "Anasayfa",
+    "MENU1": "Seyehat İşlemleri",
+    "CHECK_IN": "Check-In",
+    "MENU2": "Ek Hizmetler",
+    "SEAT_SELECTION": "Koltuk Seçimi",
+    "BAGGAGE_ALLOWANCE": "Bagaj Hakkı",
+    "VIP_SELECTION": "VIP Hizmetler",
+    "FLEX_RESERVATION": "Esnek Rezervasyon",
+    "INFLIGHT_SERVICES": "Uçak İçi Hizmetler",
+    "MENU3": "Keşfet",
+    "MENU4": "Yardım",
+    "AIR_POINTS": "Air Puan Nedir",
+    "GENERAL_INFO": "Genel Kurallar",
+    "AIRPORT_INFO": "Havaalanı Bilgileri",
+    "PASSENGER_RIGHTS": "Yolcu Hakları",
+    "CONTACT": "Yardım & İletişim",
+    "FAQ": "Sıkça Sorulan Sorular",
+    "LIGHT_MODE": "Açık Mod",
+    "DARK_MODE": "Gece Modu",
+    "SIGN_IN": "Giriş Yap",
+    "SIGN_OUT": "Çıkış Yap" 
   }
 }
