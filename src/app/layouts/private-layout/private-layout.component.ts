@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, effect, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, HostListener, effect, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Router, RouterLink, RouterOutlet } from '@angular/router';
 import { NzIconModule } from 'ng-zorro-antd/icon';
@@ -51,6 +51,7 @@ export class PrivateLayoutComponent {
   airScore = 0;
   appName = appName;
   isCollapsed = false;
+  isMobile = false;
   isDarkMode: boolean;
   isEnglish = false;
   user!: UserModel;
@@ -66,7 +67,20 @@ export class PrivateLayoutComponent {
     
   }
 
+  @HostListener('window:resize', ['$event'])
+  onResize(event:any) {
+    this.checkScreenSize();
+  }
+
+  checkScreenSize() {
+    this.isMobile = window.innerWidth <= 768; // Mobil ekran boyutu eşiğini ayarlayabilirsiniz
+    if (this.isMobile) {
+      this.isCollapsed = true;
+    }
+  }
+
   constructor() {
+    this.checkScreenSize();
     this.tranlationService.initTranslate();
     this.isDarkMode = this.themeService.isDarkMode();
     effect(() => {
