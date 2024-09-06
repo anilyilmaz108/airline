@@ -620,5 +620,36 @@
   },
   "CHECK_IN_DONE": {
     "SUCCESS_ALERT": "Check-In başarılı. İyi seyahatler dileriz."
+  },
+  "LOGIN": {
+    "PASSWORD": "Parola",
+    "REMEMBER_ME": "Beni Hatırla",
+    "SIGN_IN": "Oturum Aç",
+    "P1": "Hesabınız yok mu?",
+    "SIGN_UP": "Üye Ol"
+  },
+  "REGISTER": {
+    "PASSWORD": "Parola",
+    "REPASSWORD": "Parola Tekrarı",
+    "CONFIRM_COOKIES": "Çerezlere İzin Ver",
+    "SIGN_IN": "Oturum Aç",
+    "P1": "Zaten bir hesabınız var mı?",
+    "SIGN_UP": "Üye Ol"
+  },
+  "PROFILE": {
+    "TITLE": "Profilim",
+    "DOWNLOAD": "Yükle",
+    "P1": "Bilet alırken hızlı işlem yapabilmeniz için profilinizdeki bilgileri doldurmanızı öneririz.",
+    "P2": "Profilinizi oluşturmak için lütfen giriş yapınız.",
+    "SIGN_IN": "Giriş Yap",
+    "EMAIL": "Email",
+    "PASSWORD": "Parola",
+    "FIRST_NAME": "İsim",
+    "LAST_NAME": "Soyisim",
+    "PHONE_NUMBER": "Cep Telefonu",
+    "GENDER": "Cinsiyet",
+    "BIRTH": "Doğum Tarihi",
+    "TCID": "TC Kimlik No",
+    "NATIONALITY": "Uyruk"
   }
 }

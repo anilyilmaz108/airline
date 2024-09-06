@@ -26,7 +26,7 @@
                 type="password"
                 nz-input
                 formControlName="pass"
-                placeholder="Parola"
+                [placeholder]="'REGISTER.PASSWORD' | translate"
               />
             </nz-input-group>
           </nz-form-control>
@@ -38,7 +38,7 @@
                   type="password"
                   nz-input
                   formControlName="rePass"
-                  placeholder="Parola Tekrarı"
+                  [placeholder]="'REGISTER.REPASSWORD' | translate"
                 />
               </nz-input-group>
             </nz-form-control>
@@ -46,7 +46,7 @@
         <div nz-row class="login-form-margin">
           <div nz-col [nzSpan]="14">
             <label nz-checkbox formControlName="confirmPrivacy">
-              <span style="color: var(--tips-text-color);">Kvkk aydınlatma metnini okudum, anladım.</span>
+              <span style="color: var(--tips-text-color);">{{ 'REGISTER.CONFIRM_COOKIES' | translate }}</span>
             </label>
           </div>
           <!-- <div nz-col [nzSpan]="10">
@@ -59,10 +59,10 @@
           [nzType]="'primary'"
           [disabled]="!form.valid"
         >
-          Kayıt Ol
+          {{ 'REGISTER.SIGN_UP' | translate }}
         </button>
         <p style="color: var(--subtitle-text-color); display: flex; justify-content: center;" nz-typography>
-          Zaten bir hesabınız var mı?&nbsp; <a routerLink="/user/login">Giriş Yap</a> 
+          {{ 'REGISTER.P1' | translate }}&nbsp; <a routerLink="/user/login">{{ 'REGISTER.SIGN_IN' | translate }}</a> 
         </p>
       </form>
     </nz-card>

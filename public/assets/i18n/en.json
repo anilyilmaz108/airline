@@ -620,5 +620,36 @@
   },
   "CHECK_IN_DONE": {
     "SUCCESS_ALERT": "Check-In successful. Have a nice trip."
+  },
+  "LOGIN": {
+    "PASSWORD": "Password",
+    "REMEMBER_ME": "Remember Me",
+    "SIGN_IN": "Sign In",
+    "P1": "Don't have an account?",
+    "SIGN_UP": "Sign Up"
+  },
+  "REGISTER": {
+    "PASSWORD": "Password",
+    "REPASSWORD": "Confirm Password",
+    "CONFIRM_COOKIES": "Confirm Cookies",
+    "SIGN_IN": "Sign In",
+    "P1": "Already have an account?",
+    "SIGN_UP": "Sign Up"
+  },
+  "PROFILE": {
+    "TITLE": "My Profile",
+    "DOWNLOAD": "Upload",
+    "P1": "We recommend filling in the information in your profile to speed up the ticket purchasing process.",
+    "P2": "Please log in to create your profile.",
+    "SIGN_IN": "Log In",
+    "EMAIL": "Email",
+    "PASSWORD": "Password",
+    "FIRST_NAME": "First Name",
+    "LAST_NAME": "Last Name",
+    "PHONE_NUMBER": "Mobile Phone",
+    "GENDER": "Gender",
+    "BIRTH": "Date of Birth",
+    "TCID": "ID Number",
+    "NATIONALITY": "Nationality"
   }
 }

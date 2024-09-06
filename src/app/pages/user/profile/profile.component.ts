@@ -18,6 +18,7 @@ import { NzEmptyModule } from 'ng-zorro-antd/empty';
 import { RouterLink } from '@angular/router';
 import { Auth, user } from '@angular/fire/auth';
 import { updateProfile } from 'firebase/auth';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-profile',
@@ -35,7 +36,8 @@ import { updateProfile } from 'firebase/auth';
     NzUploadModule,
     NzButtonModule,
     NzEmptyModule,
-    RouterLink
+    RouterLink,
+    TranslateModule
   ],
   templateUrl: './profile.component.html',
   styleUrl: './profile.component.less',
@@ -67,7 +69,7 @@ export class ProfileComponent {
   ngOnInit(): void {
     // console.log(this.authService.userSignal());
     this.user = this.authService.userSignal()!;
-    console.log('Profil', this.user);
+    // console.log('Profil', this.user);
    /** this.userService.getUser(this.user.id!).then((data) => {
       data.subscribe((val) => {
         console.log(val[0]);
@@ -375,7 +377,7 @@ export class ProfileComponent {
         this.user = this.authService.userSignal()!;
       });
     } catch (error) {
-      console.error('Error fetching user:', error);
+      // console.error('Error fetching user:', error);
     }
   }
 
@@ -389,13 +391,13 @@ export class ProfileComponent {
     }).then(async() => {
       // Profil güncellemesi başarılı
       await user!.reload();
-      console.log('Kullanıcı fotoğraf URL\'si başarıyla güncellendi.');
+      // console.log('Kullanıcı fotoğraf URL\'si başarıyla güncellendi.');
       this.successService.successHandler(203);
       this.profilePhoto = this.auth.currentUser?.photoURL ? this.auth.currentUser.photoURL : "https://cdn-icons-png.freepik.com/512/6915/6915987.png";
       this.userPhotos = true;
     }).catch((error) => {
       // Bir hata meydana geldi
-      console.error('Fotoğraf güncelleme hatası: ', error);
+      // console.error('Fotoğraf güncelleme hatası: ', error);
       this.errorService.errorHandler(3);
     });
   }

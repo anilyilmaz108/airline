@@ -1,5 +1,5 @@
 <h3 style="color: var(--title-text-color); display: flex; justify-content: center;" nz-typography>
-    Profilim
+    {{ 'PROFILE.TITLE' | translate }}
   </h3>
 <!--Profile Photo-->
 <div  *ngIf="user" class="pp-container">
@@ -7,13 +7,13 @@
     <img src="{{profilePhoto}}" class="pp-image"/> 
     <br>
       <input type="file" id="fileInput" #fileInput class="file-input">
-      <button nz-button class="upload-button" (click)="uploadPhoto(fileInput)">Yükle</button>
+      <button nz-button class="upload-button" (click)="uploadPhoto(fileInput)">{{ 'PROFILE.DOWNLOAD' | translate }}</button>
   </div>
 </div>
 <br>
 <div *ngIf="profileRate != 100 && user" style="background-color: var(--primary-color); padding: 16px; border-radius: 10px; ">
     <p style="color: white; display: flex; justify-content: center;" nz-typography>
-        Bilet alırken hızlı işlem yapabilmeniz için profilinizdeki bilgileri doldurmanızı öneririz.
+      {{ 'PROFILE.P1' | translate }}
       </p>
       <nz-progress nzStrokeColor="var(--announcement-color)" [nzPercent]="profileRate"></nz-progress>
     </div>
@@ -26,11 +26,11 @@
 >
   <ng-template #contentTpl>
     <span style="color: var(--title-text-color);">
-      Profilinizi oluşturmak için lütfen giriş yapınız.
+      {{ 'PROFILE.P2' | translate }}
     </span>
   </ng-template>
   <ng-template #footerTpl>
-    <button style="background-color: var(--primary-color);" nz-button nzType="primary" routerLink="/user/login">Giriş Yap</button>
+    <button style="background-color: var(--primary-color);" nz-button nzType="primary" routerLink="/user/login">{{ 'PROFILE.SIGN_IN' | translate }}</button>
   </ng-template>
 </nz-empty>
   <nz-content style="display: flex; justify-content: center;">
@@ -54,12 +54,12 @@
     <tr>
       <td>
         <span style="color: var(--subtitle-text-color)">{{
-          data.title
+          data.title | translate
         }}</span>
       </td>
       <td>
         <span style="color: var(--subtitle-text-color)">{{
-          data.desc
+          data.desc | translate
         }}</span>
       </td>
       <td>

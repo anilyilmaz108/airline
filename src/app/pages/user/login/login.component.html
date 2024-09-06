@@ -27,7 +27,7 @@
                 type="password"
                 nz-input
                 formControlName="pass"
-                placeholder="Parola"
+                [placeholder]="'LOGIN.PASSWORD' | translate"
               />
             </nz-input-group>
           </nz-form-control>
@@ -35,7 +35,7 @@
         <div nz-row class="login-form-margin">
           <div nz-col [nzSpan]="14">
             <label nz-checkbox formControlName="rememberMe">
-              <span style="color: var(--tips-text-color);">Beni Hatırla</span>
+              <span style="color: var(--tips-text-color);">{{ 'LOGIN.REMEMBER_ME' | translate }}</span>
             </label>
           </div>
           <!-- <div nz-col [nzSpan]="10">
@@ -48,14 +48,14 @@
           [nzType]="'primary'"
           [disabled]="!form.valid"
         >
-          Oturum Aç
+          {{ 'LOGIN.SIGN_IN' | translate }}
         </button>
         <p style="color: var(--subtitle-text-color); display: flex; justify-content: center;" nz-typography>
-          Hesabınız yok mu?&nbsp; <a routerLink="/user/register">Üye Ol</a> 
+          {{'LOGIN.P1' | translate}}&nbsp; <a routerLink="/user/register">{{ 'LOGIN.SIGN_UP' | translate }}</a> 
         </p>
-        <p style="color: var(--subtitle-text-color); display: flex; justify-content: center;" nz-typography>
+        <!--<p style="color: var(--subtitle-text-color); display: flex; justify-content: center;" nz-typography>
           Şifrenizi mi unuttunuz?&nbsp; <a routerLink="/user/reset-pass">Şifremi Sıfırla</a> 
-        </p>
+        </p>-->
       </form>
     </nz-card>
     <ng-template #coverTemplate>

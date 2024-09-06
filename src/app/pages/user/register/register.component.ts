@@ -29,6 +29,7 @@ import { Router, RouterLink } from '@angular/router';
 import { LoginComponent } from '../login/login.component';
 import { ErrorService, SuccessService, UserService } from '../../../services';
 import { Auth } from '@angular/fire/auth';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-register',
@@ -46,6 +47,7 @@ import { Auth } from '@angular/fire/auth';
     NzTypographyModule,
     LoginComponent,
     RouterLink,
+    TranslateModule,
   ],
   templateUrl: './register.component.html',
   styleUrl: './register.component.less',
@@ -62,8 +64,7 @@ export class RegisterComponent {
   error = '';
   appName = appName;
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
   confirmValidator: ValidatorFn = (control: AbstractControl) => {
     if (!control.value) {
@@ -75,19 +76,9 @@ export class RegisterComponent {
   };
 
   form = this.formBuilder.group({
-    email: [environment.testEmail, [Validators.required, Validators.email]],
-    pass: [
-      environment.testPass,
-      [Validators.required, Validators.minLength(6)],
-    ],
-    rePass: [
-      environment.production === true ? environment.testPass : '',
-      [
-        environment.production === true
-          ? Validators.required
-          : this.confirmValidator,
-      ],
-    ],
+    email: ['', [Validators.required, Validators.email]],
+    pass: ['', [Validators.required, Validators.minLength(6)]],
+    rePass: ['', [this.confirmValidator]],
     confirmPrivacy: ['', [Validators.requiredTrue]],
   });
 
@@ -95,44 +86,42 @@ export class RegisterComponent {
     await this.authService.fbRegister(
       this.form.controls['email'].value!,
       this.form.controls['pass'].value!
-    )
+    );
     const userPath = this.auth.currentUser?.uid;
     console.log(userPath);
     const body = {
       id: userPath,
-      role: "user",
-      firstName: "",
-      lastName: "",
-      gender: "",
-      phone: "",
+      role: 'user',
+      firstName: '',
+      lastName: '',
+      gender: '',
+      phone: '',
       birth: undefined,
-      nationality: "",
-      TCID: "",
+      nationality: '',
+      TCID: '',
       created_at: Date.now(),
       active: true,
       email: this.form.controls['email'].value!,
       pass: this.form.controls['pass'].value!,
-      airScore: 0
+      airScore: 0,
     };
-    console.log(body);
-    
+    // console.log(body);
+
     await this.userService
       .addDataWithCustomDocId(body, userPath!)
       .then(() => {
         this.authService.userSignal.set(body);
         this.successService.successHandler(201);
-      }).catch(() => {
+      })
+      .catch(() => {
         this.errorService.errorHandler(1);
       });
 
-    console.log('FB register işlemi yapıldı');
+    // console.log('FB register işlemi yapıldı');
     this.resetForm();
   }
 
   resetForm() {
     this.form.reset();
   }
-
 }
-
-

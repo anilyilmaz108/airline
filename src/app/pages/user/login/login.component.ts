@@ -16,6 +16,7 @@ import { UserService } from '../../../services/user.service';
 import { Auth } from '@angular/fire/auth';
 import { SuccessService } from '../../../services/success.service';
 import { ErrorService } from '../../../services/error.service';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-login',
@@ -31,7 +32,8 @@ import { ErrorService } from '../../../services/error.service';
     RegisterComponent,
     NzTypographyModule,
     RouterLink,
-    FormsModule
+    FormsModule,
+    TranslateModule
   ],
   templateUrl: './login.component.html',
   styleUrl: './login.component.less',
