@@ -3,7 +3,7 @@
   style="color: var(--title-text-color); display: flex; justify-content: center"
   nz-typography
 >
-  Havalimanı bilgileri
+{{ 'AIRPORT_INFO.TITLE' | translate }}
 </h3>
 <br />
 <h5
@@ -14,8 +14,8 @@
   "
   nz-typography
 >
-  *En güncel bilgiye ulaşmak için her zaman ilgili havalimanının internet
-  sitesini kontrol etmenizi öneririz.
+{{ 'AIRPORT_INFO.DESCRIPTION' | translate }}
+
 </h5>
 <br />
 <!-- Table -->
@@ -23,7 +23,7 @@
   <thead>
     <tr>
       <th style="background-color: var(--card-color)" nzCustomFilter>
-        <span style="color: var(--title-text-color)">HAVAALANI ADI</span>
+        <span style="color: var(--title-text-color)">{{ 'AIRPORT_INFO.AIRPORT_NAME' | translate }}</span>
         <nz-filter-trigger
           [(nzVisible)]="visible"
           [nzActive]="searchValue.length > 0"
@@ -33,13 +33,13 @@
         </nz-filter-trigger>
       </th>
       <th style="background-color: var(--card-color)">
-        <span style="color: var(--title-text-color)">HAVAALANI KODU</span>
+        <span style="color: var(--title-text-color)">{{ 'AIRPORT_INFO.AIRPORT_CODE' | translate }}</span>
       </th>
       <th style="background-color: var(--card-color)">
-        <span style="color: var(--title-text-color)">ŞEHİR</span>
+        <span style="color: var(--title-text-color)">{{ 'AIRPORT_INFO.AIRPORT_CITY' | translate }}</span>
       </th>
       <th style="background-color: var(--card-color)">
-        <span style="color: var(--title-text-color)">TERMİNAL</span>
+        <span style="color: var(--title-text-color)">{{ 'AIRPORT_INFO.AIRPORT_TERMINAL' | translate }}</span>
       </th>
     </tr>
   </thead>
@@ -48,7 +48,7 @@
     <tr>
       <td>
         <span style="color: var(--subtitle-text-color)">{{
-          data.airportName
+          data.airportName | translate
         }}</span>
       </td>
       <td>
@@ -74,32 +74,33 @@
       <input
         type="text"
         nz-input
-        placeholder="Search name"
+        [placeholder]="'AIRPORT_INFO.PLACEHOLDER' | translate"
         [(ngModel)]="searchValue"
       />
       <button
+      style="background-color: var(--primary-color);"
         nz-button
         nzSize="small"
         nzType="primary"
         (click)="search()"
         class="search-button"
       >
-        Search
+      {{ 'AIRPORT_INFO.SEARCH' | translate }}
       </button>
-      <button nz-button nzSize="small" (click)="reset()">Reset</button>
+      <button nz-button nzSize="small" (click)="reset()">{{ 'AIRPORT_INFO.RESET' | translate }}</button>
     </div>
   </div>
 </nz-dropdown-menu>
 <div style="display: flex; flex-direction: column">
   <span nz-typography nzType="secondary"
-    >* Temsili sayıda veri girilmiştir.</span
+    >{{ 'AIRPORT_INFO.TIPS1' | translate }}
+    </span
   >
   <span nz-typography nzType="secondary"
-    >* Terminal bilgileri gerçek bilgileri göstermeyebilir.</span
+    >{{ 'AIRPORT_INFO.TIPS2' | translate }}</span
   >
   <span nz-typography nzType="secondary"
-    >* Test amaçlı bir uygulama olduğu için gerçek verileri ilgili havalimanının
-    internet sitesinden kontrol edebilirsiniz.</span
+    >{{ 'AIRPORT_INFO.TIPS3' | translate }}</span
   >
 </div>
 <br>

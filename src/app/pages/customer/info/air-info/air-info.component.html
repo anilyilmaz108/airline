@@ -3,63 +3,67 @@
   style="color: var(--title-text-color); display: flex; justify-content: center"
   nz-typography
 >
-  Air Puan Nedir?
+  {{ 'AIR_POINTS.TITLE1' | translate }}
 </h3>
 <br />
 <p
-  style="
-    color: var(--subtitle-text-color);
-    display: flex;
-    justify-content: center;
-  "
+  style="color: var(--subtitle-text-color); display: flex; justify-content: center"
   nz-typography
 >
-Air Puan, uçuşlarınız ve diğer hizmetlerimizle kazandığınız bir ödül puan sistemidir. Her uçuşta veya belirli işlemlerde kazandığınız puanları, bilet alımlarında, ek hizmetlerde, koltuk seçimlerinde ve paket avantajlarında kullanabilirsiniz. Air Puanlarınızı takip etmek ve kullanmak için Hesabım bölümünden puan bakiyenizi kontrol edebilir, kazançlarınızı görebilir ve puan kullanımıyla ilgili işlemlerinizi gerçekleştirebilirsiniz.
+  {{ 'AIR_POINTS.DESCRIPTION1' | translate }}
 </p>
 <br />
 <h3
   style="color: var(--title-text-color); display: flex; justify-content: center"
   nz-typography
 >
-  Air Puan Nasıl Kazanılır?
+  {{ 'AIR_POINTS.TITLE2' | translate }}
 </h3>
-<br>
+<br />
 <!-- Timeline -->
 <nz-timeline nzMode="alternate">
-    <nz-timeline-item>Hesap Oluştur</nz-timeline-item>
-    <nz-timeline-item nzColor="green">Uçak Bileti Al</nz-timeline-item>
-    <nz-timeline-item nzColor="red">Uçuşun Gerçekleştikten Sonra Air Puan Kazan</nz-timeline-item>
-    <nz-timeline-item nzColor="purple">Sonraki Uçuşlarında Air Puanlar ile Fırsatlardan Yararlan</nz-timeline-item>
-  </nz-timeline>
-  <br />
-  <h3
-    style="color: var(--title-text-color); display: flex; justify-content: center"
-    nz-typography
-  >
-    Air Puanlar ile Neler Yapılabilir?
-  </h3>
-  <br>
-  <!-- AIR PUAN-->
+  <nz-timeline-item>{{ 'AIR_POINTS.TIMELINE.STEP1' | translate }}</nz-timeline-item>
+  <nz-timeline-item nzColor="green">{{ 'AIR_POINTS.TIMELINE.STEP2' | translate }}</nz-timeline-item>
+  <nz-timeline-item nzColor="red">{{ 'AIR_POINTS.TIMELINE.STEP3' | translate }}</nz-timeline-item>
+  <nz-timeline-item nzColor="purple">{{ 'AIR_POINTS.TIMELINE.STEP4' | translate }}</nz-timeline-item>
+</nz-timeline>
+<br />
+<h3
+  style="color: var(--title-text-color); display: flex; justify-content: center"
+  nz-typography
+>
+  {{ 'AIR_POINTS.TITLE3' | translate }}
+</h3>
+<br />
+<!-- AIR PUAN -->
 <div nz-row [nzGutter]="[16,16]">
-    <div nz-col  nzXs="24" nzSm="24" nzMd="24" nzLg="24" nzXl="6">
-        <nz-ribbon nzText="Bilet">
-            <nz-card nzTitle="Ücretsiz Uçak Bileti" nzSize="small"> Yolculuklardan kazandığın Air Puanlar ile ücretsiz uçak bileti al. </nz-card>
-          </nz-ribbon>
-    </div>
-    <div nz-col nzXs="24" nzSm="24" nzMd="24" nzLg="24" nzXl="6">
-        <nz-ribbon nzText="Bagaj">
-            <nz-card nzTitle="Ek Bagaj Fırsatı" nzSize="small"> Yolculuklarda kullanabileceğin ek bagaj fırsatından yararlan. </nz-card>
-          </nz-ribbon>
-    </div>
-    <div nz-col nzXs="24" nzSm="24" nzMd="24" nzLg="24" nzXl="6">
-        <nz-ribbon nzText="Koltuk">
-            <nz-card nzTitle="Koltuk Seçimi" nzSize="small"> Yolculuğunu dilediğin koltuğu seçerek gerçekleştir. </nz-card>
-          </nz-ribbon>
-    </div>
-    <div nz-col nzXs="24" nzSm="24" nzMd="24" nzLg="24" nzXl="6">
-        <nz-ribbon nzText="Hizmet">
-            <nz-card nzTitle="Uçak İçi Hizmetler" nzSize="small"> Uçuş sırasında yiyecek, içecek, eğlence gibi hizmetlerden yararlan. </nz-card>
-          </nz-ribbon>
-    </div>
+  <div nz-col nzXs="24" nzSm="24" nzMd="24" nzLg="24" nzXl="6">
+    <nz-ribbon nzText="Bilet">
+      <nz-card nzTitle="{{ 'AIR_POINTS.OPTIONS.TICKET' | translate }}" nzSize="small">
+        {{ 'AIR_POINTS.OPTIONS_DESC.TICKET' | translate }}
+      </nz-card>
+    </nz-ribbon>
+  </div>
+  <div nz-col nzXs="24" nzSm="24" nzMd="24" nzLg="24" nzXl="6">
+    <nz-ribbon nzText="Bagaj">
+      <nz-card nzTitle="{{ 'AIR_POINTS.OPTIONS.BAGGAGE' | translate }}" nzSize="small">
+        {{ 'AIR_POINTS.OPTIONS_DESC.BAGGAGE' | translate }}
+      </nz-card>
+    </nz-ribbon>
+  </div>
+  <div nz-col nzXs="24" nzSm="24" nzMd="24" nzLg="24" nzXl="6">
+    <nz-ribbon nzText="Koltuk">
+      <nz-card nzTitle="{{ 'AIR_POINTS.OPTIONS.SEAT' | translate }}" nzSize="small">
+        {{ 'AIR_POINTS.OPTIONS_DESC.SEAT' | translate }}
+      </nz-card>
+    </nz-ribbon>
+  </div>
+  <div nz-col nzXs="24" nzSm="24" nzMd="24" nzLg="24" nzXl="6">
+    <nz-ribbon nzText="Hizmet">
+      <nz-card nzTitle="{{ 'AIR_POINTS.OPTIONS.SERVICE' | translate }}" nzSize="small">
+        {{ 'AIR_POINTS.OPTIONS_DESC.SERVICE' | translate }}
+      </nz-card>
+    </nz-ribbon>
+  </div>
 </div>
-  <br />
+<br>

@@ -3,7 +3,7 @@
   style="color: var(--title-text-color); display: flex; justify-content: center"
   nz-typography
 >
-  Genel Kurallar
+{{ 'GENERAL_INFO.TITLE' | translate }}
 </h3>
 <br />
 <p
@@ -14,15 +14,14 @@
   "
   nz-typography
 >
-Hoş geldiniz! Bu sayfada, hizmetlerimizi kullanırken uymanız gereken genel kurallar ve politikalar hakkında bilgi bulabilirsiniz. Bu kurallar, güvenliğiniz, konforunuz ve adil bir deneyim için önemlidir. Lütfen aşağıdaki kuralları dikkatlice inceleyin.
-</p>
+{{ 'GENERAL_INFO.DESCRIPTION' | translate }}</p>
 <br />
 <!-- Collapse -->
 <nz-collapse>
     @for (panel of panels; track panel) {
-      <nz-collapse-panel [nzHeader]="panel.name" [nzActive]="panel.active" [nzDisabled]="panel.disabled">
+      <nz-collapse-panel [nzHeader]="panel.name | translate " [nzActive]="panel.active" [nzDisabled]="panel.disabled">
         <p style="margin:0; color: var(--subtitle-text-color);">
-          {{panel.desc}}
+          {{panel.description | translate }}
         </p>
       </nz-collapse-panel>
     }

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { TranslateModule } from '@ngx-translate/core';
 import { NzBadgeModule } from 'ng-zorro-antd/badge';
 import { NzCardModule } from 'ng-zorro-antd/card';
 import { NzGridModule } from 'ng-zorro-antd/grid';
@@ -9,10 +10,16 @@ import { NzTypographyModule } from 'ng-zorro-antd/typography';
 @Component({
   selector: 'app-air-info',
   standalone: true,
-  imports: [NzTypographyModule, NzTimelineModule, NzIconModule, NzBadgeModule, NzCardModule, NzGridModule],
+  imports: [
+    NzTypographyModule,
+    NzTimelineModule,
+    NzIconModule,
+    NzBadgeModule,
+    NzCardModule,
+    NzGridModule,
+    TranslateModule,
+  ],
   templateUrl: './air-info.component.html',
-  styleUrl: './air-info.component.less'
+  styleUrl: './air-info.component.less',
 })
-export class AirInfoComponent {
-
-}
+export class AirInfoComponent {}

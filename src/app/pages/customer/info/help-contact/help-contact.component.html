@@ -1,129 +1,125 @@
 <h3 style="color: var(--title-text-color); display: flex; justify-content: center;" nz-typography>
-    Yardım & İletişim
-  </h3>
+  {{ 'CONTACT.TITLE' | translate }}
+</h3>
+
 <!-- Image -->
-    <img style="display: flex; justify-content: center; border-radius: 10px;"
-    nz-image
-    width="100%"
-    height="400px"
-    nzSrc="https://www.travelopro.com/public/images/section-3.jpg"
-    alt=""
-  />
-<br>
-<br>
+<img style="display: flex; justify-content: center; border-radius: 10px;" nz-image width="100%" height="400px"
+  nzSrc="https://www.travelopro.com/public/images/section-3.jpg" alt="" />
+<br><br>
+
 <h5 style="color: var(--title-text-color)" nz-typography>
-    Sizlere yardımcı olmaktan büyük mutluluk duyarız. Ancak öncelikle sorularınızı yanıtlamaya yardımcı olmasını düşündüğümüz için <a routerLink="/info/faq">Sıkça Sorulan Sorular</a> sayfasına gitmenizi öneririz.
+  {{ 'CONTACT.INTRO' | translate }} <a routerLink="/info/faq">{{ 'CONTACT.FAQ_LINK' | translate }}</a>
 </h5>
 <br>
+
 <!-- Old (nz-statistic) -->
 <div nz-row [nzGutter]="[16,16]">
-    <div nz-col class="gutter-row" nzXs="24" nzSm="24" nzMd="12" nzLg="8" nzXl="6">
-      <nz-card class="stat-card">
-        <div>
-          <nz-statistic nzValue="+90 (555) 555 55 55" [nzTitle]="'Telefon'"></nz-statistic>
-        </div>
-        <ng-template #loading><nz-skeleton [nzActive]="true"  [nzParagraph]="{ rows: 1 }"></nz-skeleton></ng-template>
-      </nz-card>
-    </div>
-    <div nz-col class="gutter-row" nzXs="24" nzSm="24" nzMd="12" nzLg="8" nzXl="6">
-        <nz-card class="stat-card">
-          <div>
-            <nz-statistic nzValue="+90 (555) 555 55 55" [nzTitle]="'Faks'"></nz-statistic>
-          </div>
-          <ng-template #loading><nz-skeleton [nzActive]="true"  [nzParagraph]="{ rows: 1 }"></nz-skeleton></ng-template>
-        </nz-card>
+  <div nz-col class="gutter-row" nzXs="24" nzSm="24" nzMd="12" nzLg="8" nzXl="6">
+    <nz-card class="stat-card">
+      <div>
+        <nz-statistic nzValue="+90 (555) 555 55 55" [nzTitle]="'CONTACT.PHONE' | translate"></nz-statistic>
       </div>
-    <div nz-col class="gutter-row" nzXs="24" nzSm="24" nzMd="12" nzLg="8" nzXl="6">
-        <nz-card class="stat-card">
-          <div>
-            <nz-statistic nzValue="Ataşehir / İstanbul" [nzTitle]="'Adres'"></nz-statistic>
-          </div>
-          <ng-template #loading><nz-skeleton [nzActive]="true"  [nzParagraph]="{ rows: 1 }"></nz-skeleton></ng-template>
-        </nz-card>
-      </div>
-      <div nz-col class="gutter-row" nzXs="24" nzSm="24" nzMd="12" nzLg="8" nzXl="6">
-        <nz-card class="stat-card">
-          <div>
-            <nz-statistic nzValue="air@gmail.com" [nzTitle]="'Mail'"></nz-statistic>
-          </div>
-          <ng-template #loading><nz-skeleton [nzActive]="true"  [nzParagraph]="{ rows: 1 }"></nz-skeleton></ng-template>
-        </nz-card>
-      </div>
+    </nz-card>
   </div>
+  <div nz-col class="gutter-row" nzXs="24" nzSm="24" nzMd="12" nzLg="8" nzXl="6">
+    <nz-card class="stat-card">
+      <div>
+        <nz-statistic nzValue="+90 (555) 555 55 55" [nzTitle]=" 'CONTACT.FAX' | translate "></nz-statistic>
+      </div>
+    </nz-card>
+  </div>
+  <div nz-col class="gutter-row" nzXs="24" nzSm="24" nzMd="12" nzLg="8" nzXl="6">
+    <nz-card class="stat-card">
+      <div>
+        <nz-statistic nzValue="Ataşehir / İstanbul" [nzTitle]="'CONTACT.ADDRESS' | translate "></nz-statistic>
+      </div>
+    </nz-card>
+  </div>
+  <div nz-col class="gutter-row" nzXs="24" nzSm="24" nzMd="12" nzLg="8" nzXl="6">
+    <nz-card class="stat-card">
+      <div>
+        <nz-statistic nzValue="air@gmail.com" [nzTitle]=" 'CONTACT.EMAIL' | translate "></nz-statistic>
+      </div>
+    </nz-card>
+  </div>
+</div>
+
 <br>
+
 <!-- P1 -->
 <p style="color: var(--subtitle-text-color)" nz-typography>
-  Sorularınızı veya sorunlarınızı e-posta yoluyla bize iletebilirsiniz. E-posta adresimiz: yardim&#64;air.com. E-posta ile iletişim kurduğunuzda, mesajınızın içeriğine bağlı olarak 24-48 saat içinde geri dönüş almayı bekleyebilirsiniz. Lütfen e-postanızda sorununuzu ayrıntılı bir şekilde açıklayın ve iletişim bilgilerinizi eklemeyi unutmayın.
-  </p>
-  <br>
-  <!-- P2 -->
-  <p style="color: var(--subtitle-text-color)" nz-typography>
-    Anında destek almak isterseniz, canlı destek servisimizden yararlanabilirsiniz. Canlı destek ekibimiz, size sorularınız hakkında anında yardımcı olmak için buradadır. Çalışma Saatleri Pazartesi-Cuma, 09:00 - 18:00 arasındadır.
-    </p>
-    <br>
-  <!-- P2 -->
-  <p style="color: var(--subtitle-text-color)" nz-typography>
-    Geri bildirimleriniz bizim için çok değerli. Hizmetlerimizi geliştirmek ve müşteri memnuniyetini artırmak için öneri ve yorumlarınızı geri bildirim formumuzu doldurarak paylaşabilirsiniz. Her türlü geri bildiriminiz dikkate alınacak ve iyileştirme çalışmalarında kullanılacaktır.
-
-Her türlü sorunuz, geri bildiriminiz veya talebiniz için bizimle iletişime geçmekten çekinmeyin. Size yardımcı olmaktan memnuniyet duyacağız!
-    </p>
+  {{ 'CONTACT.P1' | translate }}
+</p>
 <br>
+
+<!-- P2 -->
+<p style="color: var(--subtitle-text-color)" nz-typography>
+  {{ 'CONTACT.P2' | translate }}
+</p>
+<br>
+
+<!-- P3 -->
+<p style="color: var(--subtitle-text-color)" nz-typography>
+  {{ 'CONTACT.P3' | translate }}
+</p>
+<br>
+
 <h4 style="color: var(--title-text-color)" nz-typography>
-    Bize Yazın
+  {{ 'CONTACT.WRITE_TO_US' | translate }}
 </h4>
 <nz-divider></nz-divider>
 <br>
+
 <div style="display: flex; justify-content: space-around;">
-    <!-- Image -->
-    <img style="display: flex; justify-content: center; border-radius: 10px;"
-    nz-image
-    width="40%"
-    height="300px"
-    nzSrc="https://www.ufficioservice.it/files/services/5/contact-center-e-call-center-1-headerimg.jpg"
-    alt=""
-  />
+  <!-- Image -->
+  <img style="display: flex; justify-content: center; border-radius: 10px;" nz-image width="40%" height="300px"
+    nzSrc="https://www.ufficioservice.it/files/services/5/contact-center-e-call-center-1-headerimg.jpg" alt="" />
+  
   <!-- Form -->
-    <form style="width: 50%;" nz-form [formGroup]="validateForm" (ngSubmit)="submitForm()">
-        <nz-form-item>
-          <nz-form-label [nzSpan]="7" nzRequired>Adınız</nz-form-label>
-          <nz-form-control [nzSpan]="12" nzHasFeedback nzValidatingTip="Validating..." [nzErrorTip]="userErrorTpl">
-            <input nz-input formControlName="userName" placeholder="isim soyisim şeklinde giriniz" />
-            <ng-template #userErrorTpl let-control>
-              @if (control.errors?.['required']) {
-                Bu alan zorunlu!
-              }
-            </ng-template>
-          </nz-form-control>
-        </nz-form-item>
-        <nz-form-item>
-          <nz-form-label [nzSpan]="7" nzRequired>E-mail</nz-form-label>
-          <nz-form-control [nzSpan]="12" nzHasFeedback [nzErrorTip]="emailErrorTpl">
-            <input nz-input formControlName="email" placeholder="email" type="email" />
-            <ng-template #emailErrorTpl let-control>
-              @if (control.errors?.['email']) {
-                Email formatında olmalı!
-              }
-              @if (control.errors?.['required']) {
-                Bu alan zorunlu!
-              }
-            </ng-template>
-          </nz-form-control>
-        </nz-form-item>
-     
-        <nz-form-item>
-          <nz-form-label [nzSpan]="7" nzRequired>Comment</nz-form-label>
-          <nz-form-control [nzSpan]="12" nzHasFeedback nzErrorTip="Please write something here!">
-            <nz-textarea-count [nzMaxCharacterCount]="2000">
-              <textarea formControlName="comment" nz-input rows="2" placeholder="write any thing"></textarea>
-            </nz-textarea-count>
-          </nz-form-control>
-        </nz-form-item>
-        <nz-form-item>
-          <nz-form-control [nzOffset]="7" [nzSpan]="12">
-            <button style="color: white; background-color: var(--primary-color);" nz-button nzType="primary" [disabled]="!validateForm.valid">Gönder</button>
-            <button nz-button (click)="resetForm($event)">Temizle</button>
-          </nz-form-control>
-        </nz-form-item>
-      </form>
+  <form style="width: 50%;" nz-form [formGroup]="validateForm" (ngSubmit)="submitForm()">
+    <nz-form-item>
+      <nz-form-label [nzSpan]="7" nzRequired>{{ 'CONTACT.FORM.NAME_LABEL' | translate }}</nz-form-label>
+      <nz-form-control [nzSpan]="12" nzHasFeedback [nzErrorTip]="userErrorTpl">
+        <input nz-input formControlName="userName" placeholder="{{ 'CONTACT.FORM.NAME_PLACEHOLDER' | translate }}" />
+        <ng-template #userErrorTpl let-control>
+          @if (control.errors?.['required']) {
+            {{ 'CONTACT.ERRORS.REQUIRED' | translate }}
+          }
+        </ng-template>
+      </nz-form-control>
+    </nz-form-item>
+
+    <nz-form-item>
+      <nz-form-label [nzSpan]="7" nzRequired>{{ 'CONTACT.FORM.EMAIL_LABEL' | translate }}</nz-form-label>
+      <nz-form-control [nzSpan]="12" nzHasFeedback [nzErrorTip]="emailErrorTpl">
+        <input nz-input formControlName="email" placeholder="{{ 'CONTACT.FORM.EMAIL_PLACEHOLDER' | translate }}" type="email" />
+        <ng-template #emailErrorTpl let-control>
+          @if (control.errors?.['email']) {
+            {{ 'CONTACT.ERRORS.EMAIL_FORMAT' | translate }}
+          }
+          @if (control.errors?.['required']) {
+            {{ 'CONTACT.ERRORS.REQUIRED' | translate }}
+          }
+        </ng-template>
+      </nz-form-control>
+    </nz-form-item>
+
+    <nz-form-item>
+      <nz-form-label [nzSpan]="7" nzRequired>{{ 'CONTACT.FORM.COMMENT_LABEL' | translate }}</nz-form-label>
+      <nz-form-control [nzSpan]="12" nzHasFeedback nzErrorTip="{{ 'CONTACT.ERRORS.COMMENT_REQUIRED' | translate }}">
+        <nz-textarea-count [nzMaxCharacterCount]="2000">
+          <textarea formControlName="comment" nz-input rows="2" placeholder="{{ 'CONTACT.FORM.COMMENT_PLACEHOLDER' | translate }}"></textarea>
+        </nz-textarea-count>
+      </nz-form-control>
+    </nz-form-item>
+
+    <nz-form-item>
+      <nz-form-control [nzOffset]="7" [nzSpan]="12">
+        <button style="color: white; background-color: var(--primary-color);" nz-button nzType="primary"
+          [disabled]="!validateForm.valid">{{ 'CONTACT.SUBMIT_BUTTON' | translate }}</button>
+        <button nz-button (click)="resetForm($event)">{{ 'CONTACT.RESET_BUTTON' | translate }}</button>
+      </nz-form-control>
+    </nz-form-item>
+  </form>
 </div>
 <br>

@@ -248,5 +248,208 @@
       "PARAGRAPH2": "İzmir, Türkiye'nin Ege Bölgesi’nde tarih ve kültürün iç içe geçtiği bir şehir olarak öne çıkar. Tarihi Smyrna'nın modern yansıması olan İzmir, antik dönemlere ait birçok kalıntıya ev sahipliği yapar. Efes Antik Kenti, Roma ve Bizans dönemlerine ait etkileyici yapılarıyla büyüleyici bir deneyim sunarken, Bergama’daki Pergamon ve Asklepion kalıntıları da tarihi meraklılarını cezbetmektedir. Şehir merkezindeki Kemeralti Çarşısı, Osmanlı döneminden kalma tarihi bir pazar olup, alışveriş yaparken tarihi dokunun tadını çıkarmanızı sağlar. Ayrıca, Şirince Köyü’nün otantik atmosferi ve geleneksel yapıları, İzmir’in zengin kültürel mirasını keşfetmek isteyenler için ideal bir duraktır.",
       "PARAGRAPH3": "İzmir, tarihi zenginliklerinin yanı sıra modern yaşamın da dinamik bir temsilcisidir. Şehir merkezindeki Kordonboyu, deniz kenarındaki kafeleri ve restoranlarıyla ünlü olup, güzel bir yürüyüş yapmak veya gün batımını izlemek için mükemmel bir mekandır. Alsancak ve Bornova gibi bölgelerdeki alışveriş merkezleri, butik mağazalar ve canlı gece hayatı, modern İzmir'in enerjisini yansıtır. Çeşme ve Alaçatı gibi çevre tatil beldeleri, plajları, şarap bağları ve şirin taş evleriyle tatilciler için cazip bir seçenek sunar. İzmir, hem tarih hem de modern yaşamın keyfini çıkarmak isteyenler için çeşitli aktiviteler ve deneyimler sunar."
     }
+  },
+  "AIR_POINTS": {
+    "TITLE1": "Air Puan Nedir?",
+    "DESCRIPTION1": "Air Puan, uçuşlarınız ve diğer hizmetlerimizle kazandığınız bir ödül puan sistemidir. Her uçuşta veya belirli işlemlerde kazandığınız puanları, bilet alımlarında, ek hizmetlerde, koltuk seçimlerinde ve paket avantajlarında kullanabilirsiniz. Air Puanlarınızı takip etmek ve kullanmak için Hesabım bölümünden puan bakiyenizi kontrol edebilir, kazançlarınızı görebilir ve puan kullanımıyla ilgili işlemlerinizi gerçekleştirebilirsiniz.",
+    "TITLE2": "Air Puan Nasıl Kazanılır?",
+    "TIMELINE": {
+      "STEP1": "Hesap Oluştur",
+      "STEP2": "Uçak Bileti Al",
+      "STEP3": "Uçuşun Gerçekleştikten Sonra Air Puan Kazan",
+      "STEP4": "Sonraki Uçuşlarında Air Puanlar ile Fırsatlardan Yararlan"
+    },
+    "TITLE3": "Air Puanlar ile Neler Yapılabilir?",
+    "OPTIONS": {
+      "TICKET": "Ücretsiz Uçak Bileti",
+      "BAGGAGE": "Ek Bagaj Fırsatı",
+      "SEAT": "Koltuk Seçimi",
+      "SERVICE": "Uçak İçi Hizmetler"
+    },
+    "OPTIONS_DESC": {
+      "TICKET": "Yolculuklardan kazandığın Air Puanlar ile ücretsiz uçak bileti al.",
+      "BAGGAGE": "Yolculuklarda kullanabileceğin ek bagaj fırsatından yararlan.",
+      "SEAT": "Yolculuğunu dilediğin koltuğu seçerek gerçekleştir.",
+      "SERVICE": "Uçuş sırasında yiyecek, içecek, eğlence gibi hizmetlerden yararlan."
+    }
+  },
+  "AIRPORT_INFO": {
+    "TITLE": "Havalimanı bilgileri",
+    "DESCRIPTION": "En güncel bilgiye ulaşmak için her zaman ilgili havalimanının internet sitesini kontrol etmenizi öneririz.",
+    "TIPS1": "* Temsili sayıda veri girilmiştir.",
+    "TIPS2": "* Terminal bilgileri gerçek bilgileri göstermeyebilir.",
+    "TIPS3": "* Test amaçlı bir uygulama olduğu için gerçek verileri ilgili havalimanının internet sitesinden kontrol edebilirsiniz.",
+    "AIRPORT_NAME": "HAVAALANI ADI",
+    "AIRPORT_CODE": "HAVAALANI KODU",
+    "AIRPORT_CITY": "ŞEHİR",
+    "AIRPORT_TERMINAL": "TERMİNAL",
+    "SEARCH": "Ara",
+    "RESET": "Sıfırla",
+    "PLACEHOLDER": "İsme göre ara",
+    "AIRPORTS": {
+      "ADANA_AIRPORT": "Adana-Şakirpaşa Havalimanı",
+      "ISTANBUL_AIRPORT": "Sabiha Gökçen Havalimanı",
+      "ANKARA_AIRPORT": "Ankara Esenboğa Havalimanı",
+      "IZMIR_AIRPORT": "İzmir Adnan Menderes Havalimanı",
+      "ANTALYA_AIRPORT": "Antalya Havalimanı",
+      "TRABZON_AIRPORT": "Trabzon Havalimanı",
+      "KONYA_AIRPORT": "Konya Havalimanı"
+    }
+  },
+  "FAQ": {
+    "TITLE": "Sıkça Sorulan Sorular",
+    "DESCRIPTION": "Hoş geldiniz! Havayolu firmamız hakkında sıkça sorulan soruların cevaplarını burada bulabilirsiniz. Sizlere daha iyi hizmet verebilmek için, bu bölümde en çok karşılaşılan sorunları ve yanıtlarını derledik. Sorularınızın cevabını burada bulamazsanız, bizimle iletişime geçmekten çekinmeyin.",
+    "DATAS": {
+      "DATA1": {
+        "QUESTION": "Uçuş rezervasyonumu nasıl yapabilirim?",
+        "ANSWER": "Uçuş rezervasyonunuzu web sitemiz üzerinden kolayca yapabilirsiniz. Anasayfada yer alan Rezervasyonlarım butonuna tıklayın, uçuş bilgilerinizi girin ve arama yapın. Seçtiğiniz uçuşu onayladıktan sonra, yolcu bilgilerinizi girip ödeme işlemini tamamlayarak rezervasyonunuzu gerçekleştirebilirsiniz."
+      },
+      "DATA2": {
+        "QUESTION": "Rezervasyonumu nasıl değiştirebilirim?",
+        "ANSWER": "Rezervasyonunuzu değiştirmek için Rezervasyonlarım bölümüne gidin ve giriş yaparak ilgili rezervasyonu seçin. Rezervasyon detaylarını güncellemek için talimatları izleyin. Değişiklikleriniz onaylandıktan sonra yeni uçuş bilgileriniz e-posta ile gönderilecektir. Rezervasyon değişiklikleri belirli şartlara bağlı olarak ek ücretler içerebilir."
+      },
+      "DATA3": {
+        "QUESTION": "Biletimi nasıl iptal edebilirim?",
+        "ANSWER": "Biletinizi iptal etmek için Rezervasyonlarım sayfasına giriş yaparak ilgili rezervasyonu seçin ve iptal işlemini başlatın. İptal işlemi tamamlandığında, iptal politikasına bağlı olarak ücret iadesi yapılacaktır. İptal işlemi için geçerli kurallar ve ücretler hakkında daha fazla bilgi almak için iptal politikamız sayfasını ziyaret edebilirsiniz."
+      },
+      "DATA4": {
+        "QUESTION": "Bagaj hakkım nedir?",
+        "ANSWER": "Standart bagaj hakkınız, ekonomi sınıfında 1 adet el bagajı ve 1 adet kabin bagajıdır. İş sınıfı ve ilk sınıf yolcuları için bagaj hakları farklı olabilir. Bagaj haklarınız hakkında detaylı bilgiye Bagaj Politikamız sayfasından ulaşabilirsiniz. Ayrıca, ekstra bagaj hakkı satın almak isterseniz, rezervasyon sırasında veya havaalanında ek ücret karşılığında bunu yapabilirsiniz."
+      },
+      "DATA5": {
+        "QUESTION": "Ödeme seçeneklerim nelerdir?",
+        "ANSWER": "Web sitemiz üzerinden bilet alırken kredi kartı, banka kartı ve çeşitli ödeme yöntemlerini kullanabilirsiniz. Ödeme seçeneklerimiz hakkında daha fazla bilgi almak için Ödeme Seçenekleri sayfasını ziyaret edebilirsiniz."
+      },
+      "DATA6": {
+        "QUESTION": "Uçuşumun gecikmesi veya iptali durumunda ne yapmalıyım?",
+        "ANSWER": "Uçuşunuzun gecikmesi veya iptali durumunda, müşteri hizmetlerimizle iletişime geçebilir veya havaalanındaki müşteri hizmetleri noktasından yardım alabilirsiniz. Gecikme veya iptal durumunda uygulanacak politikalar ve haklarınız hakkında detaylı bilgiye Gecikme ve İptal Politikası sayfasından ulaşabilirsiniz."
+      },
+      "DATA7": {
+        "QUESTION": "Yolcu haklarım nedir?",
+        "ANSWER": "Yolcu haklarınız, uçuşunuzla ilgili olası sorunlar durumunda size nasıl yardımcı olabileceğimiz konusunda bilgi sunar. Yolcu Hakları sayfamızda, haklarınız ve bunları nasıl kullanabileceğiniz hakkında detaylı bilgi bulabilirsiniz."
+      },
+      "DATA8": {
+        "QUESTION": "Hangi belgeleri yanımda bulundurmam gerekiyor?",
+        "ANSWER": "Uçuşa başlamadan önce kimlik belgesi (pasaport, kimlik kartı veya ehliyet) ve biletinizin bir kopyasını yanınızda bulundurmanız gerekmektedir. Uluslararası uçuşlarda pasaportunuzun geçerlilik süresinin uçuş tarihinden itibaren en az 6 ay olması gerektiğini unutmayın. Daha fazla bilgi için Belgeler sayfamızı kontrol edebilirsiniz."
+      },
+      "DATA9": {
+        "QUESTION": "Havaalanında hangi hizmetler sunulmaktadır?",
+        "ANSWER": "Havaalanlarında sunulan hizmetler hakkında bilgi almak için Havaalanı Hizmetleri sayfasını ziyaret edebilirsiniz. Bu hizmetler arasında dinlenme salonları, restoranlar, alışveriş noktaları ve diğer yolcu konfor hizmetleri yer almaktadır."
+      },
+      "DATA10": {
+        "QUESTION": "Şikayet veya geri bildirimde bulunmak istiyorum, ne yapmalıyım?",
+        "ANSWER": "Her türlü şikayet ve geri bildiriminiz bizim için önemlidir. Şikayetlerinizi veya geri bildirimlerinizi Geri Bildirim Formu aracılığıyla iletebilirsiniz. Ayrıca, müşteri hizmetlerimize e-posta göndererek veya telefonla iletişime geçerek de şikayetlerinizi bildirebilirsiniz."
+      }
+    }
+  },
+  "GENERAL_INFO": {
+    "TITLE": "Genel Kurallar",
+    "DESCRIPTION": "Hoş geldiniz! Bu sayfada, hizmetlerimizi kullanırken uymanız gereken genel kurallar ve politikalar hakkında bilgi bulabilirsiniz. Bu kurallar, güvenliğiniz, konforunuz ve adil bir deneyim için önemlidir. Lütfen aşağıdaki kuralları dikkatlice inceleyin.",
+    "DATAS": {
+      "DATA1": {
+        "QUESTION": "Rezervasyon",
+        "ANSWER": "Uçuş rezervasyonlarınızı web sitemiz üzerinden veya müşteri hizmetlerimiz aracılığıyla yapabilirsiniz. Rezervasyonlarınızın doğruluğunu kontrol etmek sizin sorumluluğunuzdadır."
+      },
+      "DATA2": {
+        "QUESTION": "Biletler",
+        "ANSWER": "Biletlerinizi rezervasyon sırasında belirtilen kurallara uygun olarak satın almalı ve ödeme işlemlerini tamamlamalısınız. Biletlerdeki bilgilerin doğruluğunu kontrol edin ve gerekli durumlarda değişiklik yapın."
+      },
+      "DATA3": {
+        "QUESTION": "Check-in",
+        "ANSWER": "Uçuşunuzdan en az 2 saat önce havaalanında bulunarak check-in işlemlerinizi tamamlamalısınız. Online check-in hizmetimizden de faydalanabilirsiniz."
+      },
+      "DATA4": {
+        "QUESTION": "Bagaj",
+        "ANSWER": "Standart bagaj hakkınızın dışında ek bagaj ücreti uygulanabilir. Bagajınızı havaalanına getirmeden önce kurallara uygun olarak hazırlamanız gerekmektedir. Kayıp veya hasarlı bagaj durumunda derhal bildirimde bulunun."
+      },
+      "DATA5": {
+        "QUESTION": "Yasaklı Maddeler",
+        "ANSWER": "Güvenlik kontrolünde yasaklı maddeler, sıvılar ve kesici eşyalar hakkında bilgi almak için güvenlik kuralları sayfamızı ziyaret edin. Bu maddeler havaalanına sokulamayacak ve güvenlik sorunlarına yol açabilir."
+      },
+      "DATA6": {
+        "QUESTION": "Kişisel Güvenlik",
+        "ANSWER": "Güvenlik personelinin talimatlarına uymalısınız. Herhangi bir şüpheli durum veya güvenlik ihlali derhal bildirilmeli ve işbirliği yapılmalıdır."
+      },
+      "DATA7": {
+        "QUESTION": "Genel Davranış",
+        "ANSWER": "Diğer yolcuların konforunu sağlamak için saygılı ve anlayışlı davranışlarda bulunmalısınız. Gürültü yapmaktan, rahatsız edici davranışlardan kaçının."
+      },
+      "DATA8": {
+        "QUESTION": "Sigara İçme",
+        "ANSWER": "Uçak içinde ve havaalanı içinde sigara içmek yasaktır. Sigara içme alanlarını kullanmalısınız."
+      },
+      "DATA9": {
+        "QUESTION": "Sağlık Bilgileri",
+        "ANSWER": "Özellikle bulaşıcı hastalıklar gibi sağlık sorunlarınız varsa, uçuş öncesinde doktorunuza danışın. Sağlık durumunuzla ilgili gerekli bilgileri hava yolu şirketine bildirmeniz gerekebilir."
+      },
+      "DATA10": {
+        "QUESTION": "Acil Durumlar",
+        "ANSWER": "Acil durum prosedürleri hakkında bilgi edinmeli ve acil durum ekipmanlarını nasıl kullanacağınızı öğrenmelisiniz."
+      }
+    }
+  },
+  "CONTACT": {
+    "TITLE": "Yardım & İletişim",
+    "INTRO": "Sizlere yardımcı olmaktan büyük mutluluk duyarız. Ancak öncelikle sorularınızı yanıtlamaya yardımcı olmasını düşündüğümüz için",
+    "FAQ_LINK": "Sıkça Sorulan Sorular",
+    "PHONE": "Telefon",
+    "FAX": "Faks",
+    "ADDRESS": "Adres",
+    "EMAIL": "Mail",
+    "P1": "Sorularınızı veya sorunlarınızı e-posta yoluyla bize iletebilirsiniz. E-posta adresimiz: yardim@air.com. E-posta ile iletişim kurduğunuzda, mesajınızın içeriğine bağlı olarak 24-48 saat içinde geri dönüş almayı bekleyebilirsiniz. Lütfen e-postanızda sorununuzu ayrıntılı bir şekilde açıklayın ve iletişim bilgilerinizi eklemeyi unutmayın.",
+    "P2": "Anında destek almak isterseniz, canlı destek servisimizden yararlanabilirsiniz. Canlı destek ekibimiz, size sorularınız hakkında anında yardımcı olmak için buradadır. Çalışma Saatleri Pazartesi-Cuma, 09:00 - 18:00 arasındadır.",
+    "P3": "Geri bildirimleriniz bizim için çok değerli. Hizmetlerimizi geliştirmek ve müşteri memnuniyetini artırmak için öneri ve yorumlarınızı geri bildirim formumuzu doldurarak paylaşabilirsiniz.",
+    "WRITE_TO_US": "Bize Yazın",
+    "SUBMIT_BUTTON": "Gönder",
+    "RESET_BUTTON": "Temizle",
+    "FORM": {
+      "NAME_LABEL": "Adınız",
+      "EMAIL_LABEL": "E-mail",
+      "COMMENT_LABEL": "Yorum",
+      "NAME_PLACEHOLDER": "isim soyisim şeklinde giriniz",
+      "EMAIL_PLACEHOLDER": "email",
+      "COMMENT_PLACEHOLDER": "Herhangi bir şey yazın"
+    },
+    "ERRORS": {
+      "REQUIRED": "Bu alan zorunlu!",
+      "EMAIL_FORMAT": "Email formatında olmalı!",
+      "COMMENT_REQUIRED": "Lütfen buraya bir şeyler yazın!"
+    }
+  },
+  "PASSENGER_RIGHTS": {
+    "TITLE": "Yolcu Hakları Bilgilendirmesi",
+    "WELCOME_MESSAGE": "Hoş geldiniz! Havayolu firmamız olarak, siz değerli yolcularımızın haklarını korumak ve en iyi hizmeti sunmak öncelikli hedefimizdir. Bu sayfada, yolcu haklarınız ve bunları nasıl kullanabileceğiniz hakkında önemli bilgiler bulabilirsiniz.",
+    "SPECIFIC_RULES_TITLE": "Spesifik Durumlarda Değişebilecek Kurallar",
+    "CONTACT_INFO": {
+      "PHONE": "* Telefon Numarası: 444 4 444",
+      "FAX": "* Fax Numarası: +90 (555) 555 55 55",
+      "HELP_PAGE": "* Detaylı bilgi almak için Yardım & İletişim sayfasına gidiniz"
+    },
+    "RIGHTS": [
+      {
+        "TITLE": "Uçuş Gecikmeleri ve İptalleri",
+        "DESCRIPTION": "Eğer uçuşunuz planlanan kalkış saatinden 2 saatten fazla gecikirse, yemek, içecek ve gerekli durumlarda konaklama hizmetleri sunulur. Ayrıca, gecikme süresine göre tazminat hakkınız olabilir. Uçuşunuz iptal edilirse, alternatif uçuş seçenekleri sunulur veya biletinizin ücretinin geri ödemesi yapılır. Uçuş iptalleri hakkında detaylı bilgi ve tazminat hakları için iptal politikamız sayfasını ziyaret edebilirsiniz."
+      },
+      {
+        "TITLE": "Kaybolan ve Geciken Bagaj",
+        "DESCRIPTION": "Eğer bagajınız kaybolur veya gecikirse, derhal havaalanı yetkililerine bildirmeniz gerekmektedir. Bagajınızın bulunması ve teslim edilmesi sürecinde destek alabilirsiniz. Kaybolan bagaj için tazminat başvurusu yapabilir ve gecikme süresine göre zararlarınızı karşılayabiliriz."
+      },
+      {
+        "TITLE": "Yetersiz Hizmet ve Şikayetler",
+        "DESCRIPTION": "Hizmet kalitesiyle ilgili herhangi bir sorun yaşarsanız, müşteri hizmetlerimiz ile iletişime geçebilirsiniz. Şikayetlerinizi bildirmeniz halinde, sorunlarınız en kısa sürede çözülmeye çalışılacak ve geri bildirimleriniz dikkate alınacaktır."
+      },
+      {
+        "TITLE": "Engelli Yolcu Hakları",
+        "DESCRIPTION": "Engelli yolcular için özel hizmetler ve yardımcı araçlar sunulmaktadır. Uçuş öncesi taleplerinizi bize bildirerek, ihtiyacınıza uygun hizmetlerin hazırlanmasını sağlayabilirsiniz. Engelli yolcu hizmetleri hakkında daha fazla bilgiye buradan ulaşabilirsiniz."
+      },
+      {
+        "TITLE": "Ücret İadesi ve Tazminat",
+        "DESCRIPTION": "Biletinizin iptali, değişikliği veya uçuş sorunları durumunda ücret iadesi ve tazminat hakkınız bulunmaktadır. Bu süreçlerle ilgili detaylı bilgi ve başvuru formuna ücret iadesi ve tazminat sayfasından erişebilirsiniz."
+      },
+      {
+        "TITLE": "Haklarınızla İlgili Yardım",
+        "DESCRIPTION": "Yolcu haklarınızla ilgili daha fazla bilgi almak veya yardım talep etmek için yardım merkezi veya iletişim formu üzerinden bizimle iletişime geçebilirsiniz. Amacımız, size en iyi deneyimi sunmak ve herhangi bir sorun yaşamanız durumunda yanınızda olmaktır."
+      }
+    ]
   }
 }

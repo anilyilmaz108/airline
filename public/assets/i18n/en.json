@@ -248,5 +248,208 @@
         "PARAGRAPH2": "Izmir stands out as a city where history and culture intertwine in the Aegean region of Turkey. As the modern reflection of ancient Smyrna, Izmir is home to many remnants from ancient times. The ancient city of Ephesus offers a fascinating experience with its impressive structures from the Roman and Byzantine periods, while the ruins of Pergamon and Asklepion in Bergama captivate history enthusiasts. The Kemeralti Bazaar in the city center is a historic market dating back to the Ottoman era, allowing you to enjoy the historical atmosphere while shopping. Additionally, the authentic atmosphere and traditional structures of Şirince Village make it an ideal stop for those wishing to discover Izmir's rich cultural heritage.",
         "PARAGRAPH3": "In addition to its historical richness, Izmir is a dynamic representation of modern life. The Kordon promenade in the city center is famous for its seaside cafes and restaurants, making it a perfect spot for a leisurely walk or to watch the sunset. The districts of Alsancak and Bornova, with their shopping centers, boutique stores, and vibrant nightlife, reflect the energy of modern Izmir. Surrounding holiday resorts such as Çeşme and Alaçatı offer attractive options for vacationers with their beaches, vineyards, and charming stone houses. Izmir offers a variety of activities and experiences for those who want to enjoy both history and modern life."
       }
+    },
+    "AIR_POINTS": {
+      "TITLE1": "What is Air Points?",
+      "DESCRIPTION1": "Air Points is a reward points system that you earn with your flights and other services. You can use the points you earn on each flight or specific transactions for ticket purchases, additional services, seat selection, and package benefits. To track and use your Air Points, you can check your point balance in the My Account section, view your earnings, and perform transactions related to point usage.",
+      "TITLE2": "How to Earn Air Points?",
+      "TIMELINE": {
+        "STEP1": "Create an Account",
+        "STEP2": "Purchase a Flight Ticket",
+        "STEP3": "Earn Air Points After Your Flight",
+        "STEP4": "Benefit from Opportunities with Air Points on Your Next Flights"
+      },
+      "TITLE3": "What Can Be Done with Air Points?",
+      "OPTIONS": {
+        "TICKET": "Free Flight Ticket",
+        "BAGGAGE": "Extra Baggage Opportunity",
+        "SEAT": "Seat Selection",
+        "SERVICE": "In-flight Services"
+      },
+      "OPTIONS_DESC": {
+        "TICKET": "Get a free flight ticket with the Air Points you earn from your trips.",
+        "BAGGAGE": "Take advantage of the extra baggage opportunity for your trips.",
+        "SEAT": "Choose your desired seat for your journey.",
+        "SERVICE": "Enjoy services like food, beverages, and entertainment during your flight."
+      }
+    },
+    "AIRPORT_INFO": {
+      "TITLE": "Airport Information",
+      "DESCRIPTION": "We recommend always checking the official website of the respective airport for the most up-to-date information.",
+      "TIPS1": "* A representative amount of data has been entered.",
+      "TIPS2": "* Terminal information may not reflect actual data.",
+      "TIPS3": "* As this is a test application, please check the official airport website for real information.",
+      "AIRPORT_NAME": "AIRPORT NAME",
+      "AIRPORT_CODE": "AIRPORT CODE",
+      "AIRPORT_CITY": "CITY",
+      "AIRPORT_TERMINAL": "TERMINAL",
+      "SEARCH": "Search",
+      "RESET": "Reset",
+      "PLACEHOLDER": "Search by name",
+      "AIRPORTS": {
+        "ADANA_AIRPORT": "Adana-Şakirpaşa Airport",
+        "ISTANBUL_AIRPORT": "Sabiha Gökçen Airport",
+        "ANKARA_AIRPORT": "Ankara Esenboğa Airport",
+        "IZMIR_AIRPORT": "Izmir Adnan Menderes Airport",
+        "ANTALYA_AIRPORT": "Antalya Airport",
+        "TRABZON_AIRPORT": "Trabzon Airport",
+        "KONYA_AIRPORT": "Konya Airport"
+      }
+    },
+    "FAQ": {
+      "TITLE": "Frequently Asked Questions",
+      "DESCRIPTION": "Welcome! Here you can find answers to frequently asked questions about our airline. We have compiled common issues and their answers to provide you with better service. If you can't find the answer to your question here, please feel free to contact us.",
+      "DATAS": {
+        "DATA1": {
+          "QUESTION": "How can I make a flight reservation?",
+          "ANSWER": "You can easily make a flight reservation through our website. Click on the 'My Reservations' button on the homepage, enter your flight details, and search. After selecting the flight of your choice, enter your passenger information and complete the payment process to finalize your reservation."
+        },
+        "DATA2": {
+          "QUESTION": "How can I change my reservation?",
+          "ANSWER": "To change your reservation, go to the 'My Reservations' section, log in, and select the reservation you wish to modify. Follow the instructions to update the reservation details. Once your changes are confirmed, your new flight information will be sent to you via email. Reservation changes may incur additional fees depending on certain conditions."
+        },
+        "DATA3": {
+          "QUESTION": "How can I cancel my ticket?",
+          "ANSWER": "To cancel your ticket, log in to the 'My Reservations' page, select the relevant reservation, and initiate the cancellation process. Once the cancellation is completed, a refund will be issued according to our cancellation policy. For more information on the rules and fees associated with cancellations, please visit our Cancellation Policy page."
+        },
+        "DATA4": {
+          "QUESTION": "What is my baggage allowance?",
+          "ANSWER": "Your standard baggage allowance includes 1 piece of hand luggage and 1 piece of cabin baggage in economy class. Business and first-class passengers may have different baggage allowances. For detailed information on your baggage allowance, please refer to our Baggage Policy page. Additionally, if you wish to purchase extra baggage allowance, you can do so during booking or at the airport for an additional fee."
+        },
+        "DATA5": {
+          "QUESTION": "What are my payment options?",
+          "ANSWER": "When purchasing tickets through our website, you can use credit cards, debit cards, and various other payment methods. For more information on our payment options, please visit our Payment Options page."
+        },
+        "DATA6": {
+          "QUESTION": "What should I do if my flight is delayed or cancelled?",
+          "ANSWER": "In case of flight delays or cancellations, you can contact our customer service or seek assistance at the airport's customer service desk. For detailed information on policies and your rights in case of delays or cancellations, please refer to our Delay and Cancellation Policy page."
+        },
+        "DATA7": {
+          "QUESTION": "What are my passenger rights?",
+          "ANSWER": "Your passenger rights provide information on how we can assist you in case of any issues with your flight. For detailed information on your rights and how to exercise them, please visit our Passenger Rights page."
+        },
+        "DATA8": {
+          "QUESTION": "What documents do I need to carry with me?",
+          "ANSWER": "Before boarding, you need to carry an identification document (passport, ID card, or driver's license) and a copy of your ticket. For international flights, ensure your passport is valid for at least 6 months from the flight date. For more information, please check our Documents page."
+        },
+        "DATA9": {
+          "QUESTION": "What services are available at the airport?",
+          "ANSWER": "For information on services available at the airport, please visit our Airport Services page. These services include lounges, restaurants, shopping points, and other passenger comfort services."
+        },
+        "DATA10": {
+          "QUESTION": "I want to make a complaint or provide feedback. What should I do?",
+          "ANSWER": "Your complaints and feedback are important to us. You can submit your complaints or feedback through our Feedback Form. You can also contact our customer service via email or phone to report any issues."
+        }
+      }
+    },
+    "GENERAL_INFO": {
+      "TITLE": "General Rules",
+      "DESCRIPTION": "Welcome! On this page, you can find information about the general rules and policies you need to follow while using our services. These rules are important for your safety, comfort, and a fair experience. Please review the rules below carefully.",
+      "DATAS": {
+        "DATA1": {
+          "QUESTION": "Reservations",
+          "ANSWER": "You can make your flight reservations through our website or via our customer service. It is your responsibility to verify the accuracy of your reservations."
+        },
+        "DATA2": {
+          "QUESTION": "Tickets",
+          "ANSWER": "You should purchase your tickets in accordance with the rules specified during the reservation and complete the payment process. Check the accuracy of the information on your tickets and make changes if necessary."
+        },
+        "DATA3": {
+          "QUESTION": "Check-in",
+          "ANSWER": "You should complete your check-in process at the airport at least 2 hours before your flight. You can also take advantage of our online check-in service."
+        },
+        "DATA4": {
+          "QUESTION": "Baggage",
+          "ANSWER": "Additional baggage fees may apply beyond your standard baggage allowance. You must prepare your baggage according to the rules before bringing it to the airport. In case of lost or damaged baggage, report it immediately."
+        },
+        "DATA5": {
+          "QUESTION": "Prohibited Items",
+          "ANSWER": "For information on prohibited items, liquids, and sharp objects during security checks, please visit our security rules page. These items cannot be brought into the airport and may cause security issues."
+        },
+        "DATA6": {
+          "QUESTION": "Personal Security",
+          "ANSWER": "You must comply with the instructions of security personnel. Any suspicious activity or security breaches should be reported immediately, and cooperation is required."
+        },
+        "DATA7": {
+          "QUESTION": "General Behavior",
+          "ANSWER": "To ensure the comfort of other passengers, you should behave respectfully and considerately. Avoid making noise and engaging in disruptive behavior."
+        },
+        "DATA8": {
+          "QUESTION": "Smoking",
+          "ANSWER": "Smoking is prohibited inside the aircraft and within the airport. You should use designated smoking areas."
+        },
+        "DATA9": {
+          "QUESTION": "Health Information",
+          "ANSWER": "If you have health issues, especially contagious diseases, consult your doctor before your flight. You may need to inform the airline about your health condition."
+        },
+        "DATA10": {
+          "QUESTION": "Emergency Procedures",
+          "ANSWER": "You should familiarize yourself with emergency procedures and learn how to use emergency equipment."
+        }
+      }
+    },
+    "CONTACT": {
+      "TITLE": "Help & Contact",
+      "INTRO": "We are delighted to assist you. However, we recommend that you first visit the",
+      "FAQ_LINK": "Frequently Asked Questions",
+      "PHONE": "Phone",
+      "FAX": "Fax",
+      "ADDRESS": "Address",
+      "EMAIL": "Email",
+      "P1": "You can send your questions or issues to us via email. Our email address is: yardim@air.com. Depending on the content of your message, expect a response within 24-48 hours.",
+      "P2": "For instant support, you can take advantage of our live support service. Our live support team is here to help with your inquiries. Our working hours are Monday-Friday, 09:00 - 18:00.",
+      "P3": "Your feedback is valuable to us. To improve our services, please share your suggestions and comments by filling out our feedback form.",
+      "WRITE_TO_US": "Write to Us",
+      "SUBMIT_BUTTON": "Submit",
+      "RESET_BUTTON": "Reset",
+      "FORM": {
+        "NAME_LABEL": "Your Name",
+        "EMAIL_LABEL": "E-mail",
+        "COMMENT_LABEL": "Comment",
+        "NAME_PLACEHOLDER": "Enter as first and last name",
+        "EMAIL_PLACEHOLDER": "email",
+        "COMMENT_PLACEHOLDER": "Write anything"
+      },
+      "ERRORS": {
+        "REQUIRED": "This field is required!",
+        "EMAIL_FORMAT": "Must be in email format!",
+        "COMMENT_REQUIRED": "Please write something here!"
+      }
+    },
+    "PASSENGER_RIGHTS": {
+      "TITLE": "Passenger Rights Information",
+      "WELCOME_MESSAGE": "Welcome! As an airline, our primary goal is to protect the rights of our valued passengers and provide the best service. On this page, you will find important information about your rights as a passenger and how to exercise them.",
+      "SPECIFIC_RULES_TITLE": "Rules that may Vary in Specific Situations",
+      "CONTACT_INFO": {
+        "PHONE": "* Phone Number: 444 4 444",
+        "FAX": "* Fax Number: +90 (555) 555 55 55",
+        "HELP_PAGE": "* For more detailed information, please visit the Help & Contact page."
+      },
+      "RIGHTS": [
+        {
+          "TITLE": "Flight Delays and Cancellations",
+          "DESCRIPTION": "If your flight is delayed by more than 2 hours from the scheduled departure time, food, beverages, and, if necessary, accommodation services will be provided. Additionally, you may be entitled to compensation depending on the length of the delay. If your flight is canceled, alternative flight options will be offered, or a refund of your ticket price will be provided. For more detailed information and compensation rights regarding flight cancellations, please visit our cancellation policy page."
+        },
+        {
+          "TITLE": "Lost and Delayed Baggage",
+          "DESCRIPTION": "If your baggage is lost or delayed, you must report it to the airport authorities immediately. You can receive assistance during the process of locating and delivering your baggage. You may also file a claim for compensation for lost baggage, and we can cover damages based on the delay."
+        },
+        {
+          "TITLE": "Insufficient Service and Complaints",
+          "DESCRIPTION": "If you experience any issues with service quality, you can contact our customer service. If you report your complaints, we will work to resolve your issues as soon as possible and take your feedback into account."
+        },
+        {
+          "TITLE": "Rights of Disabled Passengers",
+          "DESCRIPTION": "Special services and assistive devices are available for disabled passengers. By notifying us of your requests before the flight, you can ensure that appropriate services are prepared for your needs. For more information on services for disabled passengers, please click here."
+        },
+        {
+          "TITLE": "Refunds and Compensation",
+          "DESCRIPTION": "In the event of ticket cancellation, changes, or flight issues, you are entitled to a refund and compensation. You can access detailed information and the application form for refunds and compensation on the refund and compensation page."
+        },
+        {
+          "TITLE": "Help Regarding Your Rights",
+          "DESCRIPTION": "For more information or assistance regarding your passenger rights, you can contact us via the help center or contact form. Our goal is to provide you with the best experience and support you in the event of any issues."
+        }
+      ]
     }
   }

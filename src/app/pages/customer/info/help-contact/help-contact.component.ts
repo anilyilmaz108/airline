@@ -26,6 +26,7 @@ import { Observable, Observer } from 'rxjs';
 import { ErrorService, HelpContactService, SuccessService } from '../../../../services';
 import { generateId } from '../../../../helpers/generate-id';
 import { HelpContact } from '../../../../models/help-contact';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-help-contact',
@@ -44,6 +45,7 @@ import { HelpContact } from '../../../../models/help-contact';
     NzFormModule,
     ReactiveFormsModule,
     NzInputModule,
+    TranslateModule
   ],
   templateUrl: './help-contact.component.html',
   styleUrl: './help-contact.component.less',

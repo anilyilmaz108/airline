@@ -1,75 +1,76 @@
 import { Component } from '@angular/core';
+import { TranslateModule } from '@ngx-translate/core';
 import { NzCollapseModule } from 'ng-zorro-antd/collapse';
 import { NzTypographyComponent } from 'ng-zorro-antd/typography';
 
 @Component({
   selector: 'app-general-info',
   standalone: true,
-  imports: [NzTypographyComponent, NzCollapseModule],
+  imports: [NzTypographyComponent, NzCollapseModule, TranslateModule],
   templateUrl: './general-info.component.html',
-  styleUrl: './general-info.component.less'
+  styleUrl: './general-info.component.less',
 })
 export class GeneralInfoComponent {
   panels = [
     {
       active: true,
-      name: 'Rezervasyon',
       disabled: false,
-      desc: 'Uçuş rezervasyonlarınızı web sitemiz üzerinden veya müşteri hizmetlerimiz aracılığıyla yapabilirsiniz. Rezervasyonlarınızın doğruluğunu kontrol etmek sizin sorumluluğunuzdadır.'
+      name: 'GENERAL_INFO.DATAS.DATA1.QUESTION',
+      description: 'GENERAL_INFO.DATAS.DATA1.ANSWER',
     },
     {
       active: false,
       disabled: false,
-      name: 'Biletler',
-      desc: 'Biletlerinizi rezervasyon sırasında belirtilen kurallara uygun olarak satın almalı ve ödeme işlemlerini tamamlamalısınız. Biletlerdeki bilgilerin doğruluğunu kontrol edin ve gerekli durumlarda değişiklik yapın.'
+      name: 'GENERAL_INFO.DATAS.DATA2.QUESTION',
+      description: 'GENERAL_INFO.DATAS.DATA2.ANSWER',
     },
     {
       active: false,
       disabled: false,
-      name: 'Check-in',
-      desc: 'Uçuşunuzdan en az 2 saat önce havaalanında bulunarak check-in işlemlerinizi tamamlamalısınız. Online check-in hizmetimizden de faydalanabilirsiniz.'
-    },
-    {
-      active: false,
-      name: 'Bagaj',
-      disabled: false,
-      desc: 'Standart bagaj hakkınızın dışında ek bagaj ücreti uygulanabilir. Bagajınızı havaalanına getirmeden önce kurallara uygun olarak hazırlamanız gerekmektedir. Kayıp veya hasarlı bagaj durumunda derhal bildirimde bulunun.'
+      name: 'GENERAL_INFO.DATAS.DATA3.QUESTION',
+      description: 'GENERAL_INFO.DATAS.DATA3.ANSWER',
     },
     {
       active: false,
       disabled: false,
-      name: 'Yasaklı Maddeler',
-      desc: 'Güvenlik kontrolünde yasaklı maddeler, sıvılar ve kesici eşyalar hakkında bilgi almak için güvenlik kuralları sayfamızı ziyaret edin. Bu maddeler havaalanına sokulamayacak ve güvenlik sorunlarına yol açabilir.'
+      name: 'GENERAL_INFO.DATAS.DATA4.QUESTION',
+      description: 'GENERAL_INFO.DATAS.DATA4.ANSWER',
     },
     {
       active: false,
       disabled: false,
-      name: 'Kişisel Güvenlik',
-      desc: 'Güvenlik personelinin talimatlarına uymalısınız. Herhangi bir şüpheli durum veya güvenlik ihlali derhal bildirilmeli ve işbirliği yapılmalıdır.'
+      name: 'GENERAL_INFO.DATAS.DATA5.QUESTION',
+      description: 'GENERAL_INFO.DATAS.DATA5.ANSWER',
     },
     {
       active: false,
       disabled: false,
-      name: 'Genel Davranış',
-      desc: 'Diğer yolcuların konforunu sağlamak için saygılı ve anlayışlı davranışlarda bulunmalısınız. Gürültü yapmaktan, rahatsız edici davranışlardan kaçının.'
+      name: 'GENERAL_INFO.DATAS.DATA6.QUESTION',
+      description: 'GENERAL_INFO.DATAS.DATA6.ANSWER',
     },
     {
       active: false,
       disabled: false,
-      name: 'Sigara İçme',
-      desc: 'Uçak içinde ve havaalanı içinde sigara içmek yasaktır. Sigara içme alanlarını kullanmalısınız.'
+      name: 'GENERAL_INFO.DATAS.DATA7.QUESTION',
+      description: 'GENERAL_INFO.DATAS.DATA7.ANSWER',
     },
     {
       active: false,
       disabled: false,
-      name: 'Sağlık Bilgileri',
-      desc: 'Özellikle bulaşıcı hastalıklar gibi sağlık sorunlarınız varsa, uçuş öncesinde doktorunuza danışın. Sağlık durumunuzla ilgili gerekli bilgileri hava yolu şirketine bildirmeniz gerekebilir.'
+      name: 'GENERAL_INFO.DATAS.DATA8.QUESTION',
+      description: 'GENERAL_INFO.DATAS.DATA8.ANSWER',
     },
     {
       active: false,
       disabled: false,
-      name: 'Acil Durumlar',
-      desc: 'Acil durum prosedürleri hakkında bilgi edinmeli ve acil durum ekipmanlarını nasıl kullanacağınızı öğrenmelisiniz.'
+      name: 'GENERAL_INFO.DATAS.DATA9.QUESTION',
+      description: 'GENERAL_INFO.DATAS.DATA9.ANSWER',
+    },
+    {
+      active: false,
+      disabled: false,
+      name: 'GENERAL_INFO.DATAS.DATA10.QUESTION',
+      description: 'GENERAL_INFO.DATAS.DATA10.ANSWER',
     },
   ];
 }

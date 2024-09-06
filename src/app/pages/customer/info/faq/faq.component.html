@@ -3,7 +3,7 @@
   style="color: var(--title-text-color); display: flex; justify-content: center"
   nz-typography
 >
-  Sıkça Sorulan Sorular
+  {{ 'FAQ.TITLE' | translate }}
 </h3>
 <br />
 <p
@@ -14,15 +14,14 @@
   "
   nz-typography
 >
-Hoş geldiniz! Havayolu firmamız hakkında sıkça sorulan soruların cevaplarını burada bulabilirsiniz. Sizlere daha iyi hizmet verebilmek için, bu bölümde en çok karşılaşılan sorunları ve yanıtlarını derledik. Sorularınızın cevabını burada bulamazsanız, bizimle iletişime geçmekten çekinmeyin.
-</p>
+{{ 'FAQ.DESCRIPTION' | translate }}</p>
 <br />
 <!-- Collapse -->
 <nz-collapse>
     @for (panel of panels; track panel) {
-      <nz-collapse-panel [nzHeader]="panel.name" [nzActive]="panel.active" [nzDisabled]="panel.disabled">
+      <nz-collapse-panel [nzHeader]="panel.name | translate" [nzActive]="panel.active" [nzDisabled]="panel.disabled">
         <p style="margin:0; color: var(--subtitle-text-color);">
-          {{panel.description}}
+          {{panel.description | translate}}
         </p>
       </nz-collapse-panel>
     }
