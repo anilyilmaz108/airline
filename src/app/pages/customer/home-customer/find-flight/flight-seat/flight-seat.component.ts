@@ -16,6 +16,7 @@ import { Router } from '@angular/router';
 import { ErrorService } from '../../../../../services/error.service';
 import { FlightModel } from '../../../../../models/flight';
 import { generateId } from '../../../../../helpers/generate-id';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-flight-seat',
@@ -30,6 +31,7 @@ import { generateId } from '../../../../../helpers/generate-id';
     NzGridModule,
     NzButtonModule,
     NzInputModule,
+    TranslateModule
   ],
   templateUrl: './flight-seat.component.html',
   styleUrl: './flight-seat.component.less',
@@ -320,46 +322,46 @@ export class FlightSeatComponent {
   data = [
     {
       id: 1,
-      title: 'Ekstra Diz Mesafesi',
-      subtitle: 'Uzun boylu olanlar ve rahat etmek isteyenler için',
-      domestic_price: "499.99 TL'den başlayan",
-      abroad_price: "999.99 TL'den başlayan",
+      title: 'SEAT_SELECTION.SEATS.EXTRA_LEGROOM.TITLE',
+      subtitle: 'SEAT_SELECTION.SEATS.EXTRA_LEGROOM.SUBTITLE',
+      domestic_price: 'SEAT_SELECTION.SEATS.EXTRA_LEGROOM.DOMESTIC_PRICE',
+      abroad_price: 'SEAT_SELECTION.SEATS.EXTRA_LEGROOM.ABROAD_PRICE'
     },
     {
       id: 2,
-      title: 'Ön Koltuklar',
-      subtitle: 'Rahatça inip binmek isteyenler için',
-      domestic_price: "499.99 TL'den başlayan",
-      abroad_price: "999.99 TL'den başlayan",
+      title: 'SEAT_SELECTION.SEATS.FRONT_SEATS.TITLE',
+      subtitle: 'SEAT_SELECTION.SEATS.FRONT_SEATS.SUBTITLE',
+      domestic_price: 'SEAT_SELECTION.SEATS.FRONT_SEATS.DOMESTIC_PRICE',
+      abroad_price: 'SEAT_SELECTION.SEATS.FRONT_SEATS.ABROAD_PRICE'
     },
     {
       id: 3,
-      title: 'Pencere Kenarı',
-      subtitle: 'Rahatsız edilmek istemeyenler için',
-      domestic_price: "499.99 TL'den başlayan",
-      abroad_price: "999.99 TL'den başlayan",
+      title: 'SEAT_SELECTION.SEATS.WINDOW_SEATS.TITLE',
+      subtitle: 'SEAT_SELECTION.SEATS.WINDOW_SEATS.SUBTITLE',
+      domestic_price: 'SEAT_SELECTION.SEATS.WINDOW_SEATS.DOMESTIC_PRICE',
+      abroad_price: 'SEAT_SELECTION.SEATS.WINDOW_SEATS.ABROAD_PRICE'
     },
     {
       id: 4,
-      title: 'Koridor Kenarı',
-      subtitle: 'Sıkça yerinden kalkanlar için',
-      domestic_price: "499.99 TL'den başlayan",
-      abroad_price: "999.99 TL'den başlayan",
+      title: 'SEAT_SELECTION.SEATS.AISLE_SEATS.TITLE',
+      subtitle: 'SEAT_SELECTION.SEATS.AISLE_SEATS.SUBTITLE',
+      domestic_price: 'SEAT_SELECTION.SEATS.AISLE_SEATS.DOMESTIC_PRICE',
+      abroad_price: 'SEAT_SELECTION.SEATS.AISLE_SEATS.ABROAD_PRICE'
     },
     {
       id: 5,
-      title: 'Diğer Koltuklar',
-      subtitle: 'Birlikte oturmak isteyenler için',
-      domestic_price: "499.99 TL'den başlayan",
-      abroad_price: "999.99 TL'den başlayan",
+      title: 'SEAT_SELECTION.SEATS.OTHER_SEATS.TITLE',
+      subtitle: 'SEAT_SELECTION.SEATS.OTHER_SEATS.SUBTITLE',
+      domestic_price: 'SEAT_SELECTION.SEATS.OTHER_SEATS.DOMESTIC_PRICE',
+      abroad_price: 'SEAT_SELECTION.SEATS.OTHER_SEATS.ABROAD_PRICE'
     },
     {
       id: 6,
-      title: 'Rastgele Koltuk',
-      subtitle: 'Ek koltuk ücreti vermek istemeyenler için',
-      domestic_price: '0 TL (rastgele gelen koltuk)',
-      abroad_price: '0 TL (rastgele gelen koltuk)',
-    },
+      title: 'SEAT_SELECTION.SEATS.RANDOM_SEAT.TITLE',
+      subtitle: 'SEAT_SELECTION.SEATS.RANDOM_SEAT.SUBTITLE',
+      domestic_price: 'SEAT_SELECTION.SEATS.RANDOM_SEAT.DOMESTIC_PRICE',
+      abroad_price: 'SEAT_SELECTION.SEATS.RANDOM_SEAT.ABROAD_PRICE'
+    }
   ];
 
   selectedCardId: number | null = null;

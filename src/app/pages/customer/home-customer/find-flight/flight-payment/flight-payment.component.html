@@ -38,13 +38,13 @@
   </div>
   <br>
   <form nz-form [formGroup]="form" (ngSubmit)="submitPayment()">
-    <label for="cardNumber" style="color: var(--title-text-color);">Kart Numarası</label>
+    <label for="cardNumber" style="color: var(--title-text-color);">{{ 'FLIGHT_PAYMENT.CARD_NUMBER' | translate }}</label>
     <input id="cardNumber" nz-input formControlName="cardNumber" type="text" [(ngModel)]="cardNumber" maxlength="16" minlength="16" />
   
-    <label for="cardHolder" style="color: var(--title-text-color);">Kart Sahibi</label>
+    <label for="cardHolder" style="color: var(--title-text-color);">{{ 'FLIGHT_PAYMENT.CARD_HOLDER' | translate }}</label>
     <input id="cardHolder" nz-input (input)="cardHolder = cardHolder.toUpperCase()" formControlName="cardHolder" type="text" [(ngModel)]="cardHolder" />
   
-    <label style="color: var(--title-text-color);">Son Kullanma Tarihi</label>
+    <label style="color: var(--title-text-color);">{{ 'FLIGHT_PAYMENT.SKT' | translate }}</label>
     <input id="expirationMonth" nz-input formControlName="expirationMonth" type="text" placeholder="MM" [(ngModel)]="expirationMonth" maxlength="2" minlength="2" />
     <input id="expirationYear" nz-input formControlName="expirationYear" type="text" placeholder="YY" [(ngModel)]="expirationYear" maxlength="2" minlength="2"/>
   
@@ -60,7 +60,7 @@
       (focus)="flipCard(true)"
       (blur)="flipCard(false)"
     />
-    <button [disabled]="!form.valid" (click)="submitPayment()" type="submit">Ödeme Yap</button>
+    <button [disabled]="!form.valid" (click)="submitPayment()" type="submit">{{ 'FLIGHT_PAYMENT.PAYMENT' | translate }}</button>
   
   </form>
 </nz-card>

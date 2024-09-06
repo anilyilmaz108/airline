@@ -20,17 +20,17 @@ nzNotFoundImage="https://gw.alipayobjects.com/zos/antfincdn/ZHrcdLPrvN/empty.svg
 >
 <ng-template #contentTpl>
   <span style="color: var(--title-text-color);">
-    Giriş yaparak işlemlerinizi hızlandırabilirsiniz.
+    {{ 'PASSENGER_INFORMATION.LOGIN_TIPS' | translate }}
   </span>
 </ng-template>
 <ng-template #footerTpl>
-  <button style="background-color: var(--primary-color);" nz-button nzType="primary" routerLink="/user/login">Giriş Yap</button>
+  <button style="background-color: var(--primary-color);" nz-button nzType="primary" routerLink="/user/login">{{ 'PASSENGER_INFORMATION.LOGIN' | translate }}</button>
 </ng-template>
 </nz-empty>
 <br>
 <nz-card>
     <h4 style="color: var(--title-text-color); display: flex; justify-content: center;" nz-typography>
-        Kişisel Bilgiler
+      {{ 'PASSENGER_INFORMATION.PERSONAL_INFO' | translate }}
       </h4>
       <br>
     <form nz-form [formGroup]="validateForm" (ngSubmit)="submitForm()">
@@ -42,9 +42,9 @@ nzNotFoundImage="https://gw.alipayobjects.com/zos/antfincdn/ZHrcdLPrvN/empty.svg
               nzFor="firstname"
               nzRequired
             >
-              <span>İsim</span>
+              <span>{{ 'PASSENGER_INFORMATION.NAME' | translate }}</span>
             </nz-form-label>
-            <nz-form-control [nzSm]="14" [nzXs]="24" nzErrorTip="İsim alanı zorunlu!">
+            <nz-form-control [nzSm]="14" [nzXs]="24" [nzErrorTip]="'PASSENGER_INFORMATION.NAME_ERROR' | translate">
               <input nz-input id="firstname" formControlName="firstname" />
             </nz-form-control>
           </nz-form-item>
@@ -56,41 +56,41 @@ nzNotFoundImage="https://gw.alipayobjects.com/zos/antfincdn/ZHrcdLPrvN/empty.svg
               nzFor="lastname"
               nzRequired
             >
-              <span>Soyisim</span>
+              <span>{{ 'PASSENGER_INFORMATION.LASTNAME' | translate }}</span>
             </nz-form-label>
-            <nz-form-control [nzSm]="14" [nzXs]="24" nzErrorTip="Soyisim alanı zorunlu!">
+            <nz-form-control [nzSm]="14" [nzXs]="24" [nzErrorTip]="'PASSENGER_INFORMATION.LASTNAME_ERROR' | translate">
               <input nz-input id="lastname" formControlName="lastname" />
             </nz-form-control>
           </nz-form-item>
           <!--gender-->
           <nz-form-item>
-            <nz-form-label [nzSm]="6" [nzXs]="24" nzFor="gender" nzRequired>Cinsiyet</nz-form-label>
-            <nz-form-control [nzSm]="14" [nzXs]="24" nzErrorTip="Cinsiyet alanı zorunlu!">
+            <nz-form-label [nzSm]="6" [nzXs]="24" nzFor="gender" nzRequired>{{ 'PASSENGER_INFORMATION.GENDER' | translate }}</nz-form-label>
+            <nz-form-control [nzSm]="14" [nzXs]="24" [nzErrorTip]="'PASSENGER_INFORMATION.GENDER_ERROR' | translate">
               <nz-select
                 id="gender"
                 formControlName="gender"
-                nzPlaceHolder="Cinsiyetinizi seçiniz"
+                nzPlaceHolder="'PASSENGER_INFORMATION.GENDER_PLACEHOLDER' | translate"
               >
-                <nz-option nzValue="Erkek" nzLabel="Erkek"></nz-option>
-                <nz-option nzValue="Kadın" nzLabel="Kadın"></nz-option>
+                <nz-option nzValue="Erkek" [nzLabel]="'PASSENGER_INFORMATION.MALE' | translate"></nz-option>
+                <nz-option nzValue="Kadın" [nzLabel]="'PASSENGER_INFORMATION.FEMALE' | translate"></nz-option>
               </nz-select>
             </nz-form-control>
           </nz-form-item>
         <!--email-->
         <nz-form-item>
-          <nz-form-label [nzSm]="6" [nzXs]="24" nzRequired nzFor="email">E-mail</nz-form-label>
-          <nz-form-control [nzSm]="14" [nzXs]="24" nzErrorTip="The input is not valid E-mail!">
+          <nz-form-label [nzSm]="6" [nzXs]="24" nzRequired nzFor="email">{{ 'PASSENGER_INFORMATION.EMAIL' | translate }}</nz-form-label>
+          <nz-form-control [nzSm]="14" [nzXs]="24" [nzErrorTip]="'PASSENGER_INFORMATION.EMAIL_ERROR' | translate">
             <input nz-input formControlName="email" id="email" />
           </nz-form-control>
         </nz-form-item>
            <!--phone-->
            <nz-form-item>
-            <nz-form-label [nzSm]="6" [nzXs]="24" nzFor="phoneNumber" nzRequired>Phone Number</nz-form-label>
+            <nz-form-label [nzSm]="6" [nzXs]="24" nzFor="phoneNumber" nzRequired>{{ 'PASSENGER_INFORMATION.PHONE_NUMBER' | translate }}</nz-form-label>
             <nz-form-control
               [nzSm]="14"
               [nzXs]="24"
               [nzValidateStatus]="validateForm.controls['phoneNumber']"
-              nzErrorTip="Please input your phone number!"
+              [nzErrorTip]="'PASSENGER_INFORMATION.PHONE_NUMBER_ERROR' | translate"
             >
               <nz-input-group [nzAddOnBefore]="addOnBeforeTemplate">
                 <ng-template #addOnBeforeTemplate>
@@ -105,23 +105,23 @@ nzNotFoundImage="https://gw.alipayobjects.com/zos/antfincdn/ZHrcdLPrvN/empty.svg
           </nz-form-item>
           <!--birth-->
           <nz-form-item>
-            <nz-form-label [nzSm]="6" [nzXs]="24" nzRequired nzFor="birth">Doğum Tarihi</nz-form-label>
-            <nz-form-control [nzSm]="14" [nzXs]="24" nzErrorTip="Doğum tarihi alanı zorunlu!">
+            <nz-form-label [nzSm]="6" [nzXs]="24" nzRequired nzFor="birth">{{ 'PASSENGER_INFORMATION.BIRTH' | translate }}</nz-form-label>
+            <nz-form-control [nzSm]="14" [nzXs]="24" [nzErrorTip]="'PASSENGER_INFORMATION.BIRTH_ERROR' | translate">
               <nz-date-picker formControlName="birth"></nz-date-picker>
             </nz-form-control>
           </nz-form-item>
         <!--nationality-->
         <nz-form-item>
-          <nz-form-label [nzSm]="6" [nzXs]="24" nzFor="nationality" nzRequired>Uyruk</nz-form-label>
-          <nz-form-control [nzSm]="14" [nzXs]="24" nzErrorTip="Uyruk alanı zorunlu!">
-            <input nz-input id="nationality" formControlName="nationality" placeholder="ör: Türkiye" />
+          <nz-form-label [nzSm]="6" [nzXs]="24" nzFor="nationality" nzRequired>{{ 'PASSENGER_INFORMATION.NATIONALITY' | translate }}</nz-form-label>
+          <nz-form-control [nzSm]="14" [nzXs]="24" [nzErrorTip]="'PASSENGER_INFORMATION.NATIONALITY_ERROR' | translate">
+            <input nz-input id="nationality" formControlName="nationality" [placeholder]="'PASSENGER_INFORMATION.NATIONALITY_PLACEHOLDER' | translate" />
           </nz-form-control>
         </nz-form-item>
         <!--tc-->
         <nz-form-item>
-            <nz-form-label [nzSm]="6" [nzXs]="24" nzFor="tc">TC Kimlik No</nz-form-label>
-            <nz-form-control [nzSm]="14" [nzXs]="24" nzErrorTip="TC Kimlik No 11 haneli olmalı!">
-              <input maxlength="11" minlength="11" nz-input id="tc" formControlName="tc" placeholder="Türk vatandaşı değilseniz boş bırakınız" />
+            <nz-form-label [nzSm]="6" [nzXs]="24" nzFor="tc">{{ 'PASSENGER_INFORMATION.TCID' | translate }}</nz-form-label>
+            <nz-form-control [nzSm]="14" [nzXs]="24" [nzErrorTip]="'PASSENGER_INFORMATION.TCID_ERROR' | translate">
+              <input maxlength="11" minlength="11" nz-input id="tc" formControlName="tc" [placeholder]="'PASSENGER_INFORMATION.TCID_PLACEHOLDER' | translate" />
             </nz-form-control>
           </nz-form-item>
         <!--agreement-->
@@ -129,8 +129,8 @@ nzNotFoundImage="https://gw.alipayobjects.com/zos/antfincdn/ZHrcdLPrvN/empty.svg
           <nz-form-control [nzSpan]="14" [nzOffset]="6">
             <label nz-checkbox formControlName="agree">
               <span style="color: var(--title-text-color);">
-                Uçuş kurallarını okudum,
-                <a>onaylıyorum</a>
+                {{ 'PASSENGER_INFORMATION.AGREE1' | translate }}
+                <a>{{ 'PASSENGER_INFORMATION.AGREE2' | translate }}</a>
               </span>
             </label>
           </nz-form-control>
@@ -138,7 +138,7 @@ nzNotFoundImage="https://gw.alipayobjects.com/zos/antfincdn/ZHrcdLPrvN/empty.svg
         <!--button-->
         <nz-form-item nz-row class="register-area">
           <nz-form-control [nzSpan]="14" [nzOffset]="6">
-            <button [disabled]="validateForm.invalid" nz-button nzType="primary">Devam</button>
+            <button [disabled]="validateForm.invalid" nz-button nzType="primary">{{ 'PASSENGER_INFORMATION.CONTINUE' | translate }}</button>
           </nz-form-control>
         </nz-form-item>
       </form>

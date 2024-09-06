@@ -32,6 +32,7 @@ import { NzDatePickerModule } from 'ng-zorro-antd/date-picker';
 import { NzTypographyModule } from 'ng-zorro-antd/typography';
 import { Auth } from '@angular/fire/auth';
 import { CommonModule } from '@angular/common';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-passenger-informations',
@@ -54,7 +55,8 @@ import { CommonModule } from '@angular/common';
     NzCheckboxModule,
     NzDatePickerModule,
     NzTypographyModule,
-    CommonModule
+    CommonModule,
+    TranslateModule
   ],
   templateUrl: './passenger-informations.component.html',
   styleUrl: './passenger-informations.component.less',

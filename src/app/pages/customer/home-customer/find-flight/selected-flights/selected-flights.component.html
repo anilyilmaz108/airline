@@ -15,7 +15,7 @@
 <br />
 <!-- Kalkış için bilgiler-->
 <h5 style="color: var(--title-text-color); display: flex" nz-typography>
-  Kalkış
+  {{ 'SELECTED_FLIGHTS.DEPARTURE' | translate }}
 </h5>
 <h4 style="color: var(--tips-text-color); display: flex" nz-typography>
   {{ title }}
@@ -40,17 +40,17 @@
 
     <!-- Orta kısım: Uçuş bilgileri -->
     <div class="flight-details">
-      <p style="color: var(--title-text-color)">Direkt</p>
-      <p>{{ card.duration }}</p>
+      <p style="color: var(--title-text-color)">{{ 'SELECTED_FLIGHTS.DIRECT' | translate }}</p>
+      <p>{{ card.duration | translate }}</p>
       <p>{{ card.destination }}</p>
     </div>
 
     <!-- Sağ kısım: Fiyat ve buton -->
     <div class="flight-price">
       <p style="color: #888">
-        İtibaren <strong>{{ card.price }}TL</strong>
+        {{ 'SELECTED_FLIGHTS.FROM' | translate }} <strong>{{ card.price }}TL</strong>
       </p>
-      <button class="price-button">En İyi Fiyat</button>
+      <button class="price-button">{{ 'SELECTED_FLIGHTS.BEST_PRICE' | translate }}</button>
     </div>
   </div>
 
@@ -66,7 +66,7 @@
 <!-- Dönüş için bilgiler -->
 <div *ngIf="flightSignalVal?.dateLast">
   <h5 style="color: var(--title-text-color); display: flex" nz-typography>
-    Dönüş
+    {{ 'SELECTED_FLIGHTS.RETURN' | translate }}
   </h5>
   <h4 style="color: var(--tips-text-color); display: flex" nz-typography>
     {{ titleReverse }}
@@ -90,17 +90,17 @@
 
     <!-- Orta kısım: Uçuş bilgileri -->
     <div class="flight-details">
-      <p style="color: var(--title-text-color)">Direkt</p>
-      <p>{{ card.duration }}</p>
+      <p style="color: var(--title-text-color)">{{ 'SELECTED_FLIGHTS.DIRECT' | translate }}</p>
+      <p>{{ card.duration | translate }}</p>
       <p>{{ card.destination }}</p>
     </div>
 
     <!-- Sağ kısım: Fiyat ve buton -->
     <div class="flight-price">
       <p style="color: #888">
-        İtibaren <strong>{{ card.price }}TL</strong>
+        {{ 'SELECTED_FLIGHTS.FROM' | translate }} <strong>{{ card.price }}TL</strong>
       </p>
-      <button class="price-button">En İyi Fiyat</button>
+      <button class="price-button">{{ 'SELECTED_FLIGHTS.BEST_PRICE' | translate }}</button>
     </div>
   </div>
 
@@ -116,6 +116,6 @@
 
 <!-- Devam Butonu -->
 <div class="continue-button">
-  <button nz-button (click)="onContinue()">Devam</button>
+  <button nz-button (click)="onContinue()">{{ 'SELECTED_FLIGHTS.CONTINUE' | translate }}</button>
 </div>
 <br />

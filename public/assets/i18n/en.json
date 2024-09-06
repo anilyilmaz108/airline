@@ -1,455 +1,605 @@
 {
-    "APP_NAME": "Airport Test App",
-    "BAGGAGE_ALLOWANCE": {
-      "BAGGAGE_RULES": [
-        "Each passenger can bring one free carry-on baggage during the flight. Maximum size and weight limits may vary depending on your flight class. In general, the maximum weight of your carry-on baggage should be 8 kg and its dimensions should be 55 x 40 x 20 cm.",
-        "In addition to your carry-on baggage, you can carry one personal item (e.g., handbag, laptop bag, or camera bag). These personal items must also comply with specific size and weight limits.",
-        "Depending on your flight, you may have free baggage allowance. Typically, Economy Class offers a baggage allowance of 20 kg, and Business Class offers 30 kg. Baggage allowance details may vary according to your ticket class and destination.",
-        "If you exceed your free baggage allowance, excess baggage fees may apply. You can purchase additional baggage allowance in advance by making a reservation or during check-in at the airport.",
-        "Additional baggage allowance may be required for sports equipment, musical instruments, or other special items. You can provide prior notice for such items and get information on appropriate handling and fees.",
-        "We use modern systems to ensure the safety and tracking of your baggage. Each of your bags has a tag, allowing you to track your baggage during the flight.",
-        "If your baggage is lost or damaged, you should contact airport authorities immediately. You can get support for baggage issues from our customer service team."
-      ],
-      "LUGGAGE_RIGHTS": "Baggage Rights",
-      "LUGGAGE_INFO": "It is important to know your baggage allowance to ensure comfort during your trip. Your free hand luggage allowance is provided with specific size and weight limits based on your flight class, and you can also carry personal items. Your checked baggage allowance usually ranges between 20 kg and 30 kg; extra baggage may incur additional charges. For special items and sports equipment, you can make appropriate arrangements by informing us in advance. In case of loss or damage to your baggage, airport authorities and our customer service will assist you. For more information about your baggage allowance, you can visit our Baggage Policy page.",
-      "BAGGAGE_OPTIONS_DOMESTIC": "Baggage Options - Domestic",
-      "BAGGAGE_OPTIONS_INTERNATIONAL": "Baggage Options - International",
-      "LIGHT_PACKAGE": "LIGHT PACKAGE",
-      "SUPER_ECO_PACKAGE": "SUPER ECO PACKAGE",
-      "ADVANTAGE_PACKAGE": "ADVANTAGE PACKAGE",
-      "COMFORT_FLEX_PACKAGE": "COMFORT FLEX PACKAGE",
-      "PRICE_STARTING_FROM": "starting from 229.99 ₺",
-      "WEIGHT_0KG": "0 KG",
-      "WEIGHT_20KG": "20 KG",
-      "BAGGAGE_RIGHTS_RULES": "Baggage Rights & Rules",
-      "BAGGAGE_RIGHTS_INFO": "Knowing your baggage rights during your journey is important to ensure a more comfortable and smooth trip.",
-      "BAGGAGE_POLICY_DETAILS": "Details about our baggage allowance policy:"
-    },
-    "FLEX_RESERVATION": {
-      "TITLE": "Flexible Reservation",
-      "DESCRIPTION": "When planning your trip, flexibility and convenience are our priority. Our flexible reservation policy allows you to adapt to your changing plans and make your travel experience more flexible.",
-      "ADVANTAGES_TITLE": "Here are the benefits of our flexible reservation policy:",
-      "ADVANTAGES": [
-        "If you need to make changes to your reservation, you can do so for free under certain conditions. Contact our customer service to change your travel dates or flight times.",
-        "When you need to change your plans, you can cancel your ticket with our flexible cancellation options and receive a refund. For more detailed information about our cancellation terms and conditions, please visit our Cancellation Policy page.",
-        "When you want to change your reservation, we offer a fast and easy process to find the best alternatives for you. You can make changes through our online portal or customer service.",
-        "Our professional customer service is here to assist you with any issues you may encounter under our flexible reservation policy. We are here to answer your questions and offer solutions that suit your needs."
-      ]
-    },
-    "INFLIGHT_SERVICES": {
-      "TITLE": "Inflight Services",
-      "DESCRIPTION": "Experience our wide range of inflight services designed with your comfort and satisfaction in mind during your flights.",
-      "SERVICES_TITLE": "We provide the following services to offer you the best experience during your journeys:",
-      "SERVICES": [
-        "We offer delicious meals and a wide selection of beverages to cater to your taste during the flight. We can adjust our menu options to accommodate your special dietary requests.",
-        "We provide a wide range of entertainment options with movies, series, and music to make your journey enjoyable. You can watch or listen to your preferred content on your personal screens.",
-        "Our comfortable and ergonomic seats make long flights more pleasant. With extra legroom and adjustable reclining features, we offer you the opportunity to rest.",
-        "We offer Wi-Fi services and power outlets for charging your devices, allowing you to stay connected and manage your work during the flight.",
-        "Our professional cabin crew is ready to assist you with any need, providing you with an exceptional service experience. Feel free to reach out to our crew for any questions or special requests.",
-        "We prioritize inflight hygiene standards. Our cleaning and disinfection processes ensure a safe and clean environment for you."
-      ]
-    },
-    "SEAT_SELECTION": {
-      "TITLE": "Seat Selection",
-      "DESCRIPTION": "Before your flight, you can take advantage of our seat selection service to increase your comfort. You can easily select your desired seats via our website or mobile app and secure your spot on the day of the flight. Make your journey more enjoyable with preferences such as window seats, extra legroom, or sitting side by side. Some special areas may require an additional fee for seat selection. Our customer service will be happy to assist you if you need any changes or help. Don't forget to choose your seat for a comfortable journey!",
-      "ABROAD": "Abroad",
-      "DOMESTIC": "Domestic",
-      "SEE_SEATS": "See seats",
-      "SEATS": {
-        "EXTRA_LEGROOM": {
-          "TITLE": "Extra Legroom",
-          "SUBTITLE": "People who want extra comfort",
-          "DOMESTIC_PRICE": "Starting from 499.99 TL",
-          "ABROAD_PRICE": "Starting from 999.99 TL"
-        },
-        "FRONT_SEATS": {
-          "TITLE": "Front Seats",
-          "SUBTITLE": "Easily board and disembark",
-          "DOMESTIC_PRICE": "Starting from 499.99 TL",
-          "ABROAD_PRICE": "Starting from 999.99 TL"
-        },
-        "WINDOW_SEATS": {
-          "TITLE": "Window Seats",
-          "SUBTITLE": "For those who do not want to be disturbed",
-          "DOMESTIC_PRICE": "Starting from 499.99 TL",
-          "ABROAD_PRICE": "Starting from 999.99 TL"
-        },
-        "AISLE_SEATS": {
-          "TITLE": "Aisle Seats",
-          "SUBTITLE": "For those who get up frequently",
-          "DOMESTIC_PRICE": "Starting from 499.99 TL",
-          "ABROAD_PRICE": "Starting from 999.99 TL"
-        },
-        "OTHER_SEATS": {
-          "TITLE": "Other Seats",
-          "SUBTITLE": "For those who want to sit together",
-          "DOMESTIC_PRICE": "Starting from 499.99 TL",
-          "ABROAD_PRICE": "Starting from 999.99 TL"
-        },
-        "RANDOM_SEAT": {
-          "TITLE": "Random Seat",
-          "SUBTITLE": "Don't want to pay extra for a seat",
-          "DOMESTIC_PRICE": "0 TL (random seat)",
-          "ABROAD_PRICE": "0 TL (random seat)"
-        }
-      }
-    },
-    "VIP_SELECTION": {
-      "TITLE": "VIP Service",
-      "DESCRIPTION": "We are here to provide you with the highest comfort and exclusivity through our special VIP services.",
-      "ADVANTAGES_TITLE": "Our VIP services to ensure you have a luxurious and comfortable travel experience:",
-      "ADVANTAGES": [
-        "Priority check-in and boarding services that allow you to complete your procedures quickly and effortlessly upon arrival at the airport, enabling you to use your time efficiently.",
-        "Special lounge access that allows you to wait in a relaxing environment. Enjoy complimentary food and beverages, comfortable seating areas, and internet access for a pleasant time before or after your trip.",
-        "Our dedicated assistants will take care of all your needs throughout your journey. They provide support for everything from ticket arrangements to baggage management.",
-        "Airport transfers are provided with the most comfortable vehicles in the city. Experience a fast, secure, and comfortable journey with our VIP vehicles.",
-        "We offer gourmet meals and beverage options prepared exclusively for you during your flight, ensuring you experience the highest quality and taste.",
-        "Your safety and privacy are our priorities. With our special security measures and privacy standards, you can travel worry-free."
-      ]
-    },
-    "DISCOVER": {
-      "ANKARA": {
-        "CITY_INFO": "City Information for Your Trip to Ankara (ESB)",
-        "CULTURE_TITLE": "Experience Art, Culture, and Concerts",
-        "STATISTICS": {
-          "AREA": "Area",
-          "POPULATION": "Population",
-          "PHONE_CODE": "Phone Code",
-          "REGION": "Region"
-        },
-        "STATISTICS_VALUES": {
-          "AREA": "24,521 km²",
-          "POPULATION": "5,803,482",
-          "PHONE_CODE": "(+90) 312",
-          "REGION": "Central Anatolia"
-        },
-        "DATAS": {
-          "FIRST_DATA": {
-            "TITLE": "Anıtkabir",
-            "SUBTITLE": "Anıtkabir, the mausoleum of Mustafa Kemal Atatürk, the founder of the Republic of Turkey, is one of those places you must see at least once in your lifetime. The park is filled with trees from various countries and Turkey. The Anıtkabir consists of the Monument Block, the Lion Road, the Ceremony Square, and the Mausoleum. Additionally, Anıtkabir has 10 towers. These towers represent important concepts and events in the formation of the state and nation, such as Freedom, Independence, Mehmetçik, Victory, Peace, April 23, National Pact, Revolution, Republic, and Defense of Law."
-          },
-          "SECOND_DATA": {
-            "TITLE": "Augustus Temple",
-            "SUBTITLE": "The temple dedicated to Emperor Augustus and the goddess of the city, built in Rome, is a significant structure not only for Ankara but for the entire world. The inscription ‘Achievements of the Deified Augustus’ is written on the walls of the temple. This bilingual inscription, describing Augustus' accomplishments, is of great historical value as it is the only preserved complete copy of the lost original and one of the most valuable documents from the Roman era."
-          },
-          "THIRD_DATA": {
-            "TITLE": "Haci Bayram Mosque",
-            "SUBTITLE": "Adjacent to the Augustus Temple, this mosque was built in honor of Hacı Bayram Veli, the founder of the Bayrami sect. The mosque, reflecting the characteristics of 17th-18th century mosques, is decorated with floral patterns and Kütahya tiles. Verses from the Quran are featured on the mihrab arch. The Hacı Bayram Tomb, one of the most beautiful examples of 15th-century tombs in Ankara, is adjacent to the mihrab wall of the mosque. The wooden doors of the tomb are exhibited at the Ankara Ethnography Museum."
-          }
-        },
-        "TITLE1": "Historical and Cultural Heritage of Ankara",
-        "TITLE2": "Modern Life and Social Life of Ankara",
-        "PARAGRAPH1": "Ankara, as the capital of Turkey, is a dynamic city that combines modern and historical elements. It hosts significant political and historical landmarks such as Anıtkabir, the mausoleum of Atatürk, the founder of the Republic, and the impressive Grand National Assembly of Turkey building...",
-        "PARAGRAPH2": "Ankara has a rich historical and cultural heritage. The city is associated with Anıtkabir, the mausoleum of Mustafa Kemal Atatürk, the founder of the Republic...",
-        "PARAGRAPH3": "In addition to its historical roots, Ankara offers a modern lifestyle. The city center, Kızılay, is filled with shopping malls, cafes, and restaurants, serving as the heart of social life."
+  "APP_NAME": "Airport Test App",
+  "BAGGAGE_ALLOWANCE": {
+    "BAGGAGE_RULES": [
+      "Each passenger can bring one free carry-on baggage during the flight. Maximum size and weight limits may vary depending on your flight class. In general, the maximum weight of your carry-on baggage should be 8 kg and its dimensions should be 55 x 40 x 20 cm.",
+      "In addition to your carry-on baggage, you can carry one personal item (e.g., handbag, laptop bag, or camera bag). These personal items must also comply with specific size and weight limits.",
+      "Depending on your flight, you may have free baggage allowance. Typically, Economy Class offers a baggage allowance of 20 kg, and Business Class offers 30 kg. Baggage allowance details may vary according to your ticket class and destination.",
+      "If you exceed your free baggage allowance, excess baggage fees may apply. You can purchase additional baggage allowance in advance by making a reservation or during check-in at the airport.",
+      "Additional baggage allowance may be required for sports equipment, musical instruments, or other special items. You can provide prior notice for such items and get information on appropriate handling and fees.",
+      "We use modern systems to ensure the safety and tracking of your baggage. Each of your bags has a tag, allowing you to track your baggage during the flight.",
+      "If your baggage is lost or damaged, you should contact airport authorities immediately. You can get support for baggage issues from our customer service team."
+    ],
+    "LUGGAGE_RIGHTS": "Baggage Rights",
+    "LUGGAGE_INFO": "It is important to know your baggage allowance to ensure comfort during your trip. Your free hand luggage allowance is provided with specific size and weight limits based on your flight class, and you can also carry personal items. Your checked baggage allowance usually ranges between 20 kg and 30 kg; extra baggage may incur additional charges. For special items and sports equipment, you can make appropriate arrangements by informing us in advance. In case of loss or damage to your baggage, airport authorities and our customer service will assist you. For more information about your baggage allowance, you can visit our Baggage Policy page.",
+    "BAGGAGE_OPTIONS_DOMESTIC": "Baggage Options - Domestic",
+    "BAGGAGE_OPTIONS_INTERNATIONAL": "Baggage Options - International",
+    "LIGHT_PACKAGE": "LIGHT PACKAGE",
+    "SUPER_ECO_PACKAGE": "SUPER ECO PACKAGE",
+    "ADVANTAGE_PACKAGE": "ADVANTAGE PACKAGE",
+    "COMFORT_FLEX_PACKAGE": "COMFORT FLEX PACKAGE",
+    "PRICE_STARTING_FROM": "starting from 229.99 ₺",
+    "WEIGHT_0KG": "0 KG",
+    "WEIGHT_20KG": "20 KG",
+    "BAGGAGE_RIGHTS_RULES": "Baggage Rights & Rules",
+    "BAGGAGE_RIGHTS_INFO": "Knowing your baggage rights during your journey is important to ensure a more comfortable and smooth trip.",
+    "BAGGAGE_POLICY_DETAILS": "Details about our baggage allowance policy:"
+  },
+  "FLEX_RESERVATION": {
+    "TITLE": "Flexible Reservation",
+    "DESCRIPTION": "When planning your trip, flexibility and convenience are our priority. Our flexible reservation policy allows you to adapt to your changing plans and make your travel experience more flexible.",
+    "ADVANTAGES_TITLE": "Here are the benefits of our flexible reservation policy:",
+    "ADVANTAGES": [
+      "If you need to make changes to your reservation, you can do so for free under certain conditions. Contact our customer service to change your travel dates or flight times.",
+      "When you need to change your plans, you can cancel your ticket with our flexible cancellation options and receive a refund. For more detailed information about our cancellation terms and conditions, please visit our Cancellation Policy page.",
+      "When you want to change your reservation, we offer a fast and easy process to find the best alternatives for you. You can make changes through our online portal or customer service.",
+      "Our professional customer service is here to assist you with any issues you may encounter under our flexible reservation policy. We are here to answer your questions and offer solutions that suit your needs."
+    ]
+  },
+  "INFLIGHT_SERVICES": {
+    "TITLE": "Inflight Services",
+    "DESCRIPTION": "Experience our wide range of inflight services designed with your comfort and satisfaction in mind during your flights.",
+    "SERVICES_TITLE": "We provide the following services to offer you the best experience during your journeys:",
+    "SERVICES": [
+      "We offer delicious meals and a wide selection of beverages to cater to your taste during the flight. We can adjust our menu options to accommodate your special dietary requests.",
+      "We provide a wide range of entertainment options with movies, series, and music to make your journey enjoyable. You can watch or listen to your preferred content on your personal screens.",
+      "Our comfortable and ergonomic seats make long flights more pleasant. With extra legroom and adjustable reclining features, we offer you the opportunity to rest.",
+      "We offer Wi-Fi services and power outlets for charging your devices, allowing you to stay connected and manage your work during the flight.",
+      "Our professional cabin crew is ready to assist you with any need, providing you with an exceptional service experience. Feel free to reach out to our crew for any questions or special requests.",
+      "We prioritize inflight hygiene standards. Our cleaning and disinfection processes ensure a safe and clean environment for you."
+    ]
+  },
+  "SEAT_SELECTION": {
+    "TITLE": "Seat Selection",
+    "DESCRIPTION": "Before your flight, you can take advantage of our seat selection service to increase your comfort. You can easily select your desired seats via our website or mobile app and secure your spot on the day of the flight. Make your journey more enjoyable with preferences such as window seats, extra legroom, or sitting side by side. Some special areas may require an additional fee for seat selection. Our customer service will be happy to assist you if you need any changes or help. Don't forget to choose your seat for a comfortable journey!",
+    "ABROAD": "Abroad",
+    "DOMESTIC": "Domestic",
+    "SEE_SEATS": "See seats",
+    "SEATS": {
+      "EXTRA_LEGROOM": {
+        "TITLE": "Extra Legroom",
+        "SUBTITLE": "People who want extra comfort",
+        "DOMESTIC_PRICE": "Starting from 499.99 TL",
+        "ABROAD_PRICE": "Starting from 999.99 TL"
       },
-      "ANTALYA": {
-        "CITY_INFO": "City Information for Your Antalya (AYT) Trip",
-        "CULTURE_TITLE": "Summer, sun, beach. Only vacation!",
-        "STATISTICS": {
-          "AREA": "Area",
-          "POPULATION": "Population",
-          "PHONE_CODE": "Phone Code",
-          "REGION": "Region"
-        },
-        "STATISTICS_VALUES": {
-          "AREA": "20,909 km²",
-          "POPULATION": "2,288,456",
-          "PHONE_CODE": "(+90) 242",
-          "REGION": "Mediterranean"
-        },
-        "DATAS": {
-          "FIRST_DATA": {
-            "TITLE": "Düden Waterfall",
-            "SUBTITLE": "Among the must-see places in Antalya is Düden Waterfall, which is very easy to reach from the city center. Located in the Kepez district, Düden Waterfall is one of the most popular spots, especially in summer. The waterfall splits into two branches and flows into the Mediterranean Sea from a height of 40 km, creating a breathtaking view. You can simply be mesmerized by the sound of the water without doing anything. Of course, there are many other enjoyable activities; the area has observation terraces, walking paths, cafes, restaurants, and souvenir shops. After taking in the view, you can go for a peaceful nature walk and then enjoy a fresh cup of coffee. We should also mention that the cool breeze here will be a refreshing relief in Antalya's summer climate."
-          },
-          "SECOND_DATA": {
-            "TITLE": "Olympos Ancient City",
-            "SUBTITLE": "Olympos Ancient City, one of the largest port cities in the region, is located on the southern coast of Antalya and is one of the must-see places in Antalya. The ancient city, which attracts great interest from history and culture enthusiasts, was first built in 160 BC and later rebuilt by the Knights of Rhodes and Venetians during the 11th and 12th centuries. While exploring Olympos Ancient City, you will see many historical structures such as Roman temples, a still-standing medieval castle, an agora, and an ancient harbor. Olympos Ancient City welcomes local and foreign tourists every day from 08:00 to 21:00."
-          },
-          "THIRD_DATA": {
-            "TITLE": "Side Ancient City",
-            "SUBTITLE": "Side Ancient City is located within the borders of Selimiye neighborhood in the Manavgat district of Antalya. To visit Side Ancient City, you can follow the Mersin – Antalya road to Manavgat and continue towards Selimiye by private car. You can also reach the city by taxi or Side minibuses. Side, one of the popular holiday resorts in Manavgat, is home to the historical structures of Side Ancient City, which was built in the 1st century BC. As a port city used for a long time, Side Ancient City is known for its city walls and columned street. Among the must-see structures in Side Ancient City is the Side Ancient Theater, with a capacity of 17,000 people, which offers an impressive view. The Side Museum, located within the ancient city, is also among the places to visit in the region. Side Ancient City can be visited every day from 08:30 to 19:30."
-          }
-        },
-        "TITLE1": "Antalya's Historical and Cultural Heritage",
-        "TITLE2": "Antalya's Natural Beauty and Vacation Opportunities",
-        "PARAGRAPH1": "Antalya, a magnificent vacation paradise located on the southern coast of Turkey, is famous for its white beaches and turquoise sea, and offers a rich cultural heritage ranging from the historic streets of Kaleiçi to the ancient ruins of Perge and Aspendos. Known for its excellent weather conditions and natural beauty provided by the Mediterranean climate, Antalya is also a favorite for vacationers due to its vibrant nightlife, stylish restaurants, and shopping opportunities. For nature lovers, natural wonders like Düden and Manavgat Waterfalls, along with various outdoor activities, make this beautiful city an unforgettable destination.",
-        "PARAGRAPH2": "Antalya stands out as a city known for its historical and cultural richness on Turkey's southern coast. Walking through the narrow streets of Kaleiçi, you can discover Ottoman-era buildings and traces of the city's history. Additionally, ancient cities like Perge and Aspendos, which house Roman-era ruins, reveal the region's historical heritage. Antalya Museum is also an important cultural venue showcasing the archaeological finds and history of the area. The city offers an atmosphere that blends historical texture with modern life.",
-        "PARAGRAPH3": "Antalya attracts attention with its stunning natural beauty and vacation opportunities. Lara Beach and Konyaaltı Beach, famous for their white sands and turquoise waters, are perfect spots for sunbathing and enjoying the sea. Natural wonders like Düden and Manavgat Waterfalls offer peaceful moments to visitors. Additionally, holiday resorts around Antalya such as Çıralı and Olympos are known for their natural beauty and relaxing atmospheres. The city provides an unforgettable experience for vacationers with its combination of both historical and natural beauty."
+      "FRONT_SEATS": {
+        "TITLE": "Front Seats",
+        "SUBTITLE": "Easily board and disembark",
+        "DOMESTIC_PRICE": "Starting from 499.99 TL",
+        "ABROAD_PRICE": "Starting from 999.99 TL"
       },
-      "ISTANBUL": {
-        "CITY_INFO": "City Information for Your Istanbul (IST) Trip",
-        "CULTURE_TITLE": "Art, culture, history, and more...",
-        "STATISTICS": {
-          "AREA": "Area",
-          "POPULATION": "Population",
-          "PHONE_CODE": "Phone Code",
-          "REGION": "Region"
-        },
-        "STATISTICS_VALUES": {
-          "AREA": "5,461 km²",
-          "POPULATION": "15,655,924",
-          "PHONE_CODE": "(+90) 212",
-          "REGION": "Marmara"
-        },
-        "DATAS": {
-          "FIRST_DATA": {
-            "TITLE": "Hagia Sophia Mosque",
-            "SUBTITLE": "The first historical structure that comes to mind when thinking of Istanbul is, of course, Hagia Sophia Mosque, which was previously used as a church and a museum. Opened in 537 and built by Byzantine architects Isidoros and Anthemios, one of the most notable features of the mosque is that it has been built three times on the same site. Originally serving as a church and converted into a mosque after the conquest of Istanbul, the structure served as a museum between 1935-2020 by a decision of the Council of Ministers. Hagia Sophia, which started serving as a mosque again in 2020, is now considered one of the most important historical symbols not only of Istanbul but also of the world."
-          },
-          "SECOND_DATA": {
-            "TITLE": "Maiden's Tower",
-            "SUBTITLE": "Located off the coast of Salacak, many legends have been told about Maiden’s Tower, and the structure has been the subject of numerous myths. The tower, the only remaining Byzantine-era structure in Üsküdar, dates back to 24 BC. While it served as a tomb during the Greek period, over the years it has been used for various purposes such as a customs station and quarantine room, but its primary role has always been to guide ships. Restored in 2000, the tower now includes a restaurant, adding to its tourist appeal."
-          },
-          "THIRD_DATA": {
-            "TITLE": "Grand Bazaar",
-            "SUBTITLE": "One of the world's first shopping centers, the Grand Bazaar is one of the most iconic structures in Istanbul. Located at the intersection of Beyazıt, Nuruosmaniye, and Mercan districts, the Grand Bazaar is practically a world of its own with 4,000 shops and around 25,000 employees. While visiting the Grand Bazaar, you can simply experience the spirit of the city by walking through, or you can choose to shop for food, clothing, or jewelry from the stores here. This way, you can take home a few souvenirs from your Istanbul trip. The bazaar also provides insight into the city's merchant culture."
-          }
-        },
-        "TITLE1": "Istanbul's Historical and Cultural Heritage",
-        "TITLE2": "Istanbul's Modern Life and Social Scene",
-        "PARAGRAPH1": "Istanbul, a historic and cultural capital located on both the European and Asian continents, offers visitors a unique experience. Historic Istanbul, blending Byzantine and Ottoman heritage with modern life, dazzles with its impressive structures; historical sites like Hagia Sophia, Topkapi Palace, and the Blue Mosque showcase its rich cultural past. A boat tour along the Bosphorus, with its stunning views, is a great way to discover the enchanting beauty of Istanbul. Moreover, lively markets such as the Grand Bazaar and the Spice Bazaar reflect the city's energy and diversity. With its dynamic lifestyle, gourmet restaurants, and cultural events, Istanbul is a city worth exploring for both its historical and modern aspects.",
-        "PARAGRAPH2": "Istanbul is one of Turkey's most historically and culturally rich cities. As the capital of both the Byzantine and Ottoman empires, the city hosts many significant structures. Hagia Sophia, with its impressive architecture and historical significance, reflects this heritage, while Topkapi Palace and the Blue Mosque showcase the splendor of the Ottoman Empire. As you stroll through the narrow streets of Istanbul's historic districts, you can experience the vibrant atmosphere of traditional markets like the Grand Bazaar and the Spice Bazaar. These areas not only connect you to the city's past but also reflect its rich cultural diversity.",
-        "PARAGRAPH3": "In addition to its historical richness, Istanbul offers a dynamic and modern lifestyle. The city is a social hub, with spectacular views of the Bosphorus that connect two continents. Shopping malls, restaurants, and cafes in areas like Şişli and Beşiktaş reflect the city's modern face. Istanbul's energetic nightlife is filled with famous bars, clubs, and live music venues. Additionally, the city's cultural calendar is packed with art and cultural events, concerts, and exhibitions. Istanbul provides a rich experience for those looking to explore both its historical texture and contemporary life."
+      "WINDOW_SEATS": {
+        "TITLE": "Window Seats",
+        "SUBTITLE": "For those who do not want to be disturbed",
+        "DOMESTIC_PRICE": "Starting from 499.99 TL",
+        "ABROAD_PRICE": "Starting from 999.99 TL"
       },
-      "IZMIR": {
-        "CITY_INFO": "City Information for Your Izmir (ADB) Trip",
-        "CULTURE_TITLE": "Sun, Sea & Exploration",
-        "STATISTICS": {
-          "AREA": "Area",
-          "POPULATION": "Population",
-          "PHONE_CODE": "Phone Code",
-          "REGION": "Region"
-        },
-        "STATISTICS_VALUES": {
-          "AREA": "12,012 km²",
-          "POPULATION": "4,479,525",
-          "PHONE_CODE": "(+90) 232",
-          "REGION": "Aegean"
-        },
-        "DATAS": {
-          "FIRST_DATA": {
-            "TITLE": "Izmir Clock Tower",
-            "SUBTITLE": "The most famous landmark of Izmir, the Izmir Clock Tower, was built in 1901 to celebrate the 25th anniversary of Sultan Abdulhamid II's ascension to the throne. Located at the entrance of Kemeralti Bazaar and next to Konak Yalı Mosque, this 25-meter-high, 4-story clock tower stands out with its distinctive architecture, setting it apart from other Ottoman clock towers. Designed by a renowned French architect, the Izmir Clock Tower is constructed from cut stones and adorned with impressive stone reliefs. The four fountains surrounding the tower and the columns symbolizing North Africa are also worth seeing. Don't leave the city without taking a photo at the 81 m² base of the Izmir Clock Tower, where Sultan Abdulhamid II's monogram is engraved as a relief."
-          },
-          "SECOND_DATA": {
-            "TITLE": "Izmir Historical Elevator",
-            "SUBTITLE": "One of Izmir's symbolic structures, the Historical Elevator, built by a businessman in 1907, will immediately catch your attention with its 58-meter height. Located between Mithatpaşa Street and Şehit Nihatbey Street, the Historical Elevator is famous for its panoramic views of Izmir and consists of 155 steps. At the top of the elevator, there is a café and an observation terrace. You can enjoy tea with panoramic views of Izmir at the terrace of the Historical Elevator, which is notable for its impressive classical stone architecture, and take stunning photos."
-          },
-          "THIRD_DATA": {
-            "TITLE": "Konak Square",
-            "SUBTITLE": "Officially known as Atatürk Square, Konak Square is one of the most vibrant squares in Izmir, hosting several iconic structures such as the First Bullet Monument, Izmir Clock Tower, and Konak Yalı Mosque. Always bustling, Konak Square is one of Izmir's important meeting points, and its parks with views of the Aegean Sea, walking paths, numerous shops, cafes, and quality restaurants make it an ideal starting point for exploring Izmir. In the evenings, you can listen to street musicians at Konak Square, which is also very close to popular places like Kıbrıs Şehitler Avenue and Alsancak Sevgi Yolu."
-          }
-        },
-        "TITLE1": "Izmir's Historical and Cultural Richness",
-        "TITLE2": "Izmir's Modern Life and Entertainment World",
-        "PARAGRAPH1": "Izmir, located in the western part of Turkey and one of the most popular cities in the Aegean region, stands out as a prime destination for vacations and exploration. Known as the modern face of ancient Smyrna, Izmir is famous for its impressive coastline, lively café culture, and historical wealth. You can enjoy pleasant walks along the Kordon promenade, shop in the famous Kemeralti Bazaar, or explore historical and cultural sites such as Ephesus and Şirince. Izmir's warm climate, delicious Aegean cuisine, and dynamic lifestyle offer an unforgettable experience to every visitor.",
-        "PARAGRAPH2": "Izmir stands out as a city where history and culture intertwine in the Aegean region of Turkey. As the modern reflection of ancient Smyrna, Izmir is home to many remnants from ancient times. The ancient city of Ephesus offers a fascinating experience with its impressive structures from the Roman and Byzantine periods, while the ruins of Pergamon and Asklepion in Bergama captivate history enthusiasts. The Kemeralti Bazaar in the city center is a historic market dating back to the Ottoman era, allowing you to enjoy the historical atmosphere while shopping. Additionally, the authentic atmosphere and traditional structures of Şirince Village make it an ideal stop for those wishing to discover Izmir's rich cultural heritage.",
-        "PARAGRAPH3": "In addition to its historical richness, Izmir is a dynamic representation of modern life. The Kordon promenade in the city center is famous for its seaside cafes and restaurants, making it a perfect spot for a leisurely walk or to watch the sunset. The districts of Alsancak and Bornova, with their shopping centers, boutique stores, and vibrant nightlife, reflect the energy of modern Izmir. Surrounding holiday resorts such as Çeşme and Alaçatı offer attractive options for vacationers with their beaches, vineyards, and charming stone houses. Izmir offers a variety of activities and experiences for those who want to enjoy both history and modern life."
-      }
-    },
-    "AIR_POINTS": {
-      "TITLE1": "What is Air Points?",
-      "DESCRIPTION1": "Air Points is a reward points system that you earn with your flights and other services. You can use the points you earn on each flight or specific transactions for ticket purchases, additional services, seat selection, and package benefits. To track and use your Air Points, you can check your point balance in the My Account section, view your earnings, and perform transactions related to point usage.",
-      "TITLE2": "How to Earn Air Points?",
-      "TIMELINE": {
-        "STEP1": "Create an Account",
-        "STEP2": "Purchase a Flight Ticket",
-        "STEP3": "Earn Air Points After Your Flight",
-        "STEP4": "Benefit from Opportunities with Air Points on Your Next Flights"
+      "AISLE_SEATS": {
+        "TITLE": "Aisle Seats",
+        "SUBTITLE": "For those who get up frequently",
+        "DOMESTIC_PRICE": "Starting from 499.99 TL",
+        "ABROAD_PRICE": "Starting from 999.99 TL"
       },
-      "TITLE3": "What Can Be Done with Air Points?",
-      "OPTIONS": {
-        "TICKET": "Free Flight Ticket",
-        "BAGGAGE": "Extra Baggage Opportunity",
-        "SEAT": "Seat Selection",
-        "SERVICE": "In-flight Services"
+      "OTHER_SEATS": {
+        "TITLE": "Other Seats",
+        "SUBTITLE": "For those who want to sit together",
+        "DOMESTIC_PRICE": "Starting from 499.99 TL",
+        "ABROAD_PRICE": "Starting from 999.99 TL"
       },
-      "OPTIONS_DESC": {
-        "TICKET": "Get a free flight ticket with the Air Points you earn from your trips.",
-        "BAGGAGE": "Take advantage of the extra baggage opportunity for your trips.",
-        "SEAT": "Choose your desired seat for your journey.",
-        "SERVICE": "Enjoy services like food, beverages, and entertainment during your flight."
+      "RANDOM_SEAT": {
+        "TITLE": "Random Seat",
+        "SUBTITLE": "Don't want to pay extra for a seat",
+        "DOMESTIC_PRICE": "0 TL (random seat)",
+        "ABROAD_PRICE": "0 TL (random seat)"
       }
-    },
-    "AIRPORT_INFO": {
-      "TITLE": "Airport Information",
-      "DESCRIPTION": "We recommend always checking the official website of the respective airport for the most up-to-date information.",
-      "TIPS1": "* A representative amount of data has been entered.",
-      "TIPS2": "* Terminal information may not reflect actual data.",
-      "TIPS3": "* As this is a test application, please check the official airport website for real information.",
-      "AIRPORT_NAME": "AIRPORT NAME",
-      "AIRPORT_CODE": "AIRPORT CODE",
-      "AIRPORT_CITY": "CITY",
-      "AIRPORT_TERMINAL": "TERMINAL",
-      "SEARCH": "Search",
-      "RESET": "Reset",
-      "PLACEHOLDER": "Search by name",
-      "AIRPORTS": {
-        "ADANA_AIRPORT": "Adana-Şakirpaşa Airport",
-        "ISTANBUL_AIRPORT": "Sabiha Gökçen Airport",
-        "ANKARA_AIRPORT": "Ankara Esenboğa Airport",
-        "IZMIR_AIRPORT": "Izmir Adnan Menderes Airport",
-        "ANTALYA_AIRPORT": "Antalya Airport",
-        "TRABZON_AIRPORT": "Trabzon Airport",
-        "KONYA_AIRPORT": "Konya Airport"
-      }
-    },
-    "FAQ": {
-      "TITLE": "Frequently Asked Questions",
-      "DESCRIPTION": "Welcome! Here you can find answers to frequently asked questions about our airline. We have compiled common issues and their answers to provide you with better service. If you can't find the answer to your question here, please feel free to contact us.",
-      "DATAS": {
-        "DATA1": {
-          "QUESTION": "How can I make a flight reservation?",
-          "ANSWER": "You can easily make a flight reservation through our website. Click on the 'My Reservations' button on the homepage, enter your flight details, and search. After selecting the flight of your choice, enter your passenger information and complete the payment process to finalize your reservation."
-        },
-        "DATA2": {
-          "QUESTION": "How can I change my reservation?",
-          "ANSWER": "To change your reservation, go to the 'My Reservations' section, log in, and select the reservation you wish to modify. Follow the instructions to update the reservation details. Once your changes are confirmed, your new flight information will be sent to you via email. Reservation changes may incur additional fees depending on certain conditions."
-        },
-        "DATA3": {
-          "QUESTION": "How can I cancel my ticket?",
-          "ANSWER": "To cancel your ticket, log in to the 'My Reservations' page, select the relevant reservation, and initiate the cancellation process. Once the cancellation is completed, a refund will be issued according to our cancellation policy. For more information on the rules and fees associated with cancellations, please visit our Cancellation Policy page."
-        },
-        "DATA4": {
-          "QUESTION": "What is my baggage allowance?",
-          "ANSWER": "Your standard baggage allowance includes 1 piece of hand luggage and 1 piece of cabin baggage in economy class. Business and first-class passengers may have different baggage allowances. For detailed information on your baggage allowance, please refer to our Baggage Policy page. Additionally, if you wish to purchase extra baggage allowance, you can do so during booking or at the airport for an additional fee."
-        },
-        "DATA5": {
-          "QUESTION": "What are my payment options?",
-          "ANSWER": "When purchasing tickets through our website, you can use credit cards, debit cards, and various other payment methods. For more information on our payment options, please visit our Payment Options page."
-        },
-        "DATA6": {
-          "QUESTION": "What should I do if my flight is delayed or cancelled?",
-          "ANSWER": "In case of flight delays or cancellations, you can contact our customer service or seek assistance at the airport's customer service desk. For detailed information on policies and your rights in case of delays or cancellations, please refer to our Delay and Cancellation Policy page."
-        },
-        "DATA7": {
-          "QUESTION": "What are my passenger rights?",
-          "ANSWER": "Your passenger rights provide information on how we can assist you in case of any issues with your flight. For detailed information on your rights and how to exercise them, please visit our Passenger Rights page."
-        },
-        "DATA8": {
-          "QUESTION": "What documents do I need to carry with me?",
-          "ANSWER": "Before boarding, you need to carry an identification document (passport, ID card, or driver's license) and a copy of your ticket. For international flights, ensure your passport is valid for at least 6 months from the flight date. For more information, please check our Documents page."
-        },
-        "DATA9": {
-          "QUESTION": "What services are available at the airport?",
-          "ANSWER": "For information on services available at the airport, please visit our Airport Services page. These services include lounges, restaurants, shopping points, and other passenger comfort services."
-        },
-        "DATA10": {
-          "QUESTION": "I want to make a complaint or provide feedback. What should I do?",
-          "ANSWER": "Your complaints and feedback are important to us. You can submit your complaints or feedback through our Feedback Form. You can also contact our customer service via email or phone to report any issues."
-        }
-      }
-    },
-    "GENERAL_INFO": {
-      "TITLE": "General Rules",
-      "DESCRIPTION": "Welcome! On this page, you can find information about the general rules and policies you need to follow while using our services. These rules are important for your safety, comfort, and a fair experience. Please review the rules below carefully.",
-      "DATAS": {
-        "DATA1": {
-          "QUESTION": "Reservations",
-          "ANSWER": "You can make your flight reservations through our website or via our customer service. It is your responsibility to verify the accuracy of your reservations."
-        },
-        "DATA2": {
-          "QUESTION": "Tickets",
-          "ANSWER": "You should purchase your tickets in accordance with the rules specified during the reservation and complete the payment process. Check the accuracy of the information on your tickets and make changes if necessary."
-        },
-        "DATA3": {
-          "QUESTION": "Check-in",
-          "ANSWER": "You should complete your check-in process at the airport at least 2 hours before your flight. You can also take advantage of our online check-in service."
-        },
-        "DATA4": {
-          "QUESTION": "Baggage",
-          "ANSWER": "Additional baggage fees may apply beyond your standard baggage allowance. You must prepare your baggage according to the rules before bringing it to the airport. In case of lost or damaged baggage, report it immediately."
-        },
-        "DATA5": {
-          "QUESTION": "Prohibited Items",
-          "ANSWER": "For information on prohibited items, liquids, and sharp objects during security checks, please visit our security rules page. These items cannot be brought into the airport and may cause security issues."
-        },
-        "DATA6": {
-          "QUESTION": "Personal Security",
-          "ANSWER": "You must comply with the instructions of security personnel. Any suspicious activity or security breaches should be reported immediately, and cooperation is required."
-        },
-        "DATA7": {
-          "QUESTION": "General Behavior",
-          "ANSWER": "To ensure the comfort of other passengers, you should behave respectfully and considerately. Avoid making noise and engaging in disruptive behavior."
-        },
-        "DATA8": {
-          "QUESTION": "Smoking",
-          "ANSWER": "Smoking is prohibited inside the aircraft and within the airport. You should use designated smoking areas."
-        },
-        "DATA9": {
-          "QUESTION": "Health Information",
-          "ANSWER": "If you have health issues, especially contagious diseases, consult your doctor before your flight. You may need to inform the airline about your health condition."
-        },
-        "DATA10": {
-          "QUESTION": "Emergency Procedures",
-          "ANSWER": "You should familiarize yourself with emergency procedures and learn how to use emergency equipment."
-        }
-      }
-    },
-    "CONTACT": {
-      "TITLE": "Help & Contact",
-      "INTRO": "We are delighted to assist you. However, we recommend that you first visit the",
-      "FAQ_LINK": "Frequently Asked Questions",
-      "PHONE": "Phone",
-      "FAX": "Fax",
-      "ADDRESS": "Address",
-      "EMAIL": "Email",
-      "P1": "You can send your questions or issues to us via email. Our email address is: yardim@air.com. Depending on the content of your message, expect a response within 24-48 hours.",
-      "P2": "For instant support, you can take advantage of our live support service. Our live support team is here to help with your inquiries. Our working hours are Monday-Friday, 09:00 - 18:00.",
-      "P3": "Your feedback is valuable to us. To improve our services, please share your suggestions and comments by filling out our feedback form.",
-      "WRITE_TO_US": "Write to Us",
-      "SUBMIT_BUTTON": "Submit",
-      "RESET_BUTTON": "Reset",
-      "FORM": {
-        "NAME_LABEL": "Your Name",
-        "EMAIL_LABEL": "E-mail",
-        "COMMENT_LABEL": "Comment",
-        "NAME_PLACEHOLDER": "Enter as first and last name",
-        "EMAIL_PLACEHOLDER": "email",
-        "COMMENT_PLACEHOLDER": "Write anything"
-      },
-      "ERRORS": {
-        "REQUIRED": "This field is required!",
-        "EMAIL_FORMAT": "Must be in email format!",
-        "COMMENT_REQUIRED": "Please write something here!"
-      }
-    },
-    "PASSENGER_RIGHTS": {
-      "TITLE": "Passenger Rights Information",
-      "WELCOME_MESSAGE": "Welcome! As an airline, our primary goal is to protect the rights of our valued passengers and provide the best service. On this page, you will find important information about your rights as a passenger and how to exercise them.",
-      "SPECIFIC_RULES_TITLE": "Rules that may Vary in Specific Situations",
-      "CONTACT_INFO": {
-        "PHONE": "* Phone Number: 444 4 444",
-        "FAX": "* Fax Number: +90 (555) 555 55 55",
-        "HELP_PAGE": "* For more detailed information, please visit the Help & Contact page."
-      },
-      "RIGHTS": [
-        {
-          "TITLE": "Flight Delays and Cancellations",
-          "DESCRIPTION": "If your flight is delayed by more than 2 hours from the scheduled departure time, food, beverages, and, if necessary, accommodation services will be provided. Additionally, you may be entitled to compensation depending on the length of the delay. If your flight is canceled, alternative flight options will be offered, or a refund of your ticket price will be provided. For more detailed information and compensation rights regarding flight cancellations, please visit our cancellation policy page."
-        },
-        {
-          "TITLE": "Lost and Delayed Baggage",
-          "DESCRIPTION": "If your baggage is lost or delayed, you must report it to the airport authorities immediately. You can receive assistance during the process of locating and delivering your baggage. You may also file a claim for compensation for lost baggage, and we can cover damages based on the delay."
-        },
-        {
-          "TITLE": "Insufficient Service and Complaints",
-          "DESCRIPTION": "If you experience any issues with service quality, you can contact our customer service. If you report your complaints, we will work to resolve your issues as soon as possible and take your feedback into account."
-        },
-        {
-          "TITLE": "Rights of Disabled Passengers",
-          "DESCRIPTION": "Special services and assistive devices are available for disabled passengers. By notifying us of your requests before the flight, you can ensure that appropriate services are prepared for your needs. For more information on services for disabled passengers, please click here."
-        },
-        {
-          "TITLE": "Refunds and Compensation",
-          "DESCRIPTION": "In the event of ticket cancellation, changes, or flight issues, you are entitled to a refund and compensation. You can access detailed information and the application form for refunds and compensation on the refund and compensation page."
-        },
-        {
-          "TITLE": "Help Regarding Your Rights",
-          "DESCRIPTION": "For more information or assistance regarding your passenger rights, you can contact us via the help center or contact form. Our goal is to provide you with the best experience and support you in the event of any issues."
-        }
-      ]
     }
+  },
+  "VIP_SELECTION": {
+    "TITLE": "VIP Service",
+    "DESCRIPTION": "We are here to provide you with the highest comfort and exclusivity through our special VIP services.",
+    "ADVANTAGES_TITLE": "Our VIP services to ensure you have a luxurious and comfortable travel experience:",
+    "ADVANTAGES": [
+      "Priority check-in and boarding services that allow you to complete your procedures quickly and effortlessly upon arrival at the airport, enabling you to use your time efficiently.",
+      "Special lounge access that allows you to wait in a relaxing environment. Enjoy complimentary food and beverages, comfortable seating areas, and internet access for a pleasant time before or after your trip.",
+      "Our dedicated assistants will take care of all your needs throughout your journey. They provide support for everything from ticket arrangements to baggage management.",
+      "Airport transfers are provided with the most comfortable vehicles in the city. Experience a fast, secure, and comfortable journey with our VIP vehicles.",
+      "We offer gourmet meals and beverage options prepared exclusively for you during your flight, ensuring you experience the highest quality and taste.",
+      "Your safety and privacy are our priorities. With our special security measures and privacy standards, you can travel worry-free."
+    ]
+  },
+  "DISCOVER": {
+    "ANKARA": {
+      "CITY_INFO": "City Information for Your Trip to Ankara (ESB)",
+      "CULTURE_TITLE": "Experience Art, Culture, and Concerts",
+      "STATISTICS": {
+        "AREA": "Area",
+        "POPULATION": "Population",
+        "PHONE_CODE": "Phone Code",
+        "REGION": "Region"
+      },
+      "STATISTICS_VALUES": {
+        "AREA": "24,521 km²",
+        "POPULATION": "5,803,482",
+        "PHONE_CODE": "(+90) 312",
+        "REGION": "Central Anatolia"
+      },
+      "DATAS": {
+        "FIRST_DATA": {
+          "TITLE": "Anıtkabir",
+          "SUBTITLE": "Anıtkabir, the mausoleum of Mustafa Kemal Atatürk, the founder of the Republic of Turkey, is one of those places you must see at least once in your lifetime. The park is filled with trees from various countries and Turkey. The Anıtkabir consists of the Monument Block, the Lion Road, the Ceremony Square, and the Mausoleum. Additionally, Anıtkabir has 10 towers. These towers represent important concepts and events in the formation of the state and nation, such as Freedom, Independence, Mehmetçik, Victory, Peace, April 23, National Pact, Revolution, Republic, and Defense of Law."
+        },
+        "SECOND_DATA": {
+          "TITLE": "Augustus Temple",
+          "SUBTITLE": "The temple dedicated to Emperor Augustus and the goddess of the city, built in Rome, is a significant structure not only for Ankara but for the entire world. The inscription ‘Achievements of the Deified Augustus’ is written on the walls of the temple. This bilingual inscription, describing Augustus' accomplishments, is of great historical value as it is the only preserved complete copy of the lost original and one of the most valuable documents from the Roman era."
+        },
+        "THIRD_DATA": {
+          "TITLE": "Haci Bayram Mosque",
+          "SUBTITLE": "Adjacent to the Augustus Temple, this mosque was built in honor of Hacı Bayram Veli, the founder of the Bayrami sect. The mosque, reflecting the characteristics of 17th-18th century mosques, is decorated with floral patterns and Kütahya tiles. Verses from the Quran are featured on the mihrab arch. The Hacı Bayram Tomb, one of the most beautiful examples of 15th-century tombs in Ankara, is adjacent to the mihrab wall of the mosque. The wooden doors of the tomb are exhibited at the Ankara Ethnography Museum."
+        }
+      },
+      "TITLE1": "Historical and Cultural Heritage of Ankara",
+      "TITLE2": "Modern Life and Social Life of Ankara",
+      "PARAGRAPH1": "Ankara, as the capital of Turkey, is a dynamic city that combines modern and historical elements. It hosts significant political and historical landmarks such as Anıtkabir, the mausoleum of Atatürk, the founder of the Republic, and the impressive Grand National Assembly of Turkey building...",
+      "PARAGRAPH2": "Ankara has a rich historical and cultural heritage. The city is associated with Anıtkabir, the mausoleum of Mustafa Kemal Atatürk, the founder of the Republic...",
+      "PARAGRAPH3": "In addition to its historical roots, Ankara offers a modern lifestyle. The city center, Kızılay, is filled with shopping malls, cafes, and restaurants, serving as the heart of social life."
+    },
+    "ANTALYA": {
+      "CITY_INFO": "City Information for Your Antalya (AYT) Trip",
+      "CULTURE_TITLE": "Summer, sun, beach. Only vacation!",
+      "STATISTICS": {
+        "AREA": "Area",
+        "POPULATION": "Population",
+        "PHONE_CODE": "Phone Code",
+        "REGION": "Region"
+      },
+      "STATISTICS_VALUES": {
+        "AREA": "20,909 km²",
+        "POPULATION": "2,288,456",
+        "PHONE_CODE": "(+90) 242",
+        "REGION": "Mediterranean"
+      },
+      "DATAS": {
+        "FIRST_DATA": {
+          "TITLE": "Düden Waterfall",
+          "SUBTITLE": "Among the must-see places in Antalya is Düden Waterfall, which is very easy to reach from the city center. Located in the Kepez district, Düden Waterfall is one of the most popular spots, especially in summer. The waterfall splits into two branches and flows into the Mediterranean Sea from a height of 40 km, creating a breathtaking view. You can simply be mesmerized by the sound of the water without doing anything. Of course, there are many other enjoyable activities; the area has observation terraces, walking paths, cafes, restaurants, and souvenir shops. After taking in the view, you can go for a peaceful nature walk and then enjoy a fresh cup of coffee. We should also mention that the cool breeze here will be a refreshing relief in Antalya's summer climate."
+        },
+        "SECOND_DATA": {
+          "TITLE": "Olympos Ancient City",
+          "SUBTITLE": "Olympos Ancient City, one of the largest port cities in the region, is located on the southern coast of Antalya and is one of the must-see places in Antalya. The ancient city, which attracts great interest from history and culture enthusiasts, was first built in 160 BC and later rebuilt by the Knights of Rhodes and Venetians during the 11th and 12th centuries. While exploring Olympos Ancient City, you will see many historical structures such as Roman temples, a still-standing medieval castle, an agora, and an ancient harbor. Olympos Ancient City welcomes local and foreign tourists every day from 08:00 to 21:00."
+        },
+        "THIRD_DATA": {
+          "TITLE": "Side Ancient City",
+          "SUBTITLE": "Side Ancient City is located within the borders of Selimiye neighborhood in the Manavgat district of Antalya. To visit Side Ancient City, you can follow the Mersin – Antalya road to Manavgat and continue towards Selimiye by private car. You can also reach the city by taxi or Side minibuses. Side, one of the popular holiday resorts in Manavgat, is home to the historical structures of Side Ancient City, which was built in the 1st century BC. As a port city used for a long time, Side Ancient City is known for its city walls and columned street. Among the must-see structures in Side Ancient City is the Side Ancient Theater, with a capacity of 17,000 people, which offers an impressive view. The Side Museum, located within the ancient city, is also among the places to visit in the region. Side Ancient City can be visited every day from 08:30 to 19:30."
+        }
+      },
+      "TITLE1": "Antalya's Historical and Cultural Heritage",
+      "TITLE2": "Antalya's Natural Beauty and Vacation Opportunities",
+      "PARAGRAPH1": "Antalya, a magnificent vacation paradise located on the southern coast of Turkey, is famous for its white beaches and turquoise sea, and offers a rich cultural heritage ranging from the historic streets of Kaleiçi to the ancient ruins of Perge and Aspendos. Known for its excellent weather conditions and natural beauty provided by the Mediterranean climate, Antalya is also a favorite for vacationers due to its vibrant nightlife, stylish restaurants, and shopping opportunities. For nature lovers, natural wonders like Düden and Manavgat Waterfalls, along with various outdoor activities, make this beautiful city an unforgettable destination.",
+      "PARAGRAPH2": "Antalya stands out as a city known for its historical and cultural richness on Turkey's southern coast. Walking through the narrow streets of Kaleiçi, you can discover Ottoman-era buildings and traces of the city's history. Additionally, ancient cities like Perge and Aspendos, which house Roman-era ruins, reveal the region's historical heritage. Antalya Museum is also an important cultural venue showcasing the archaeological finds and history of the area. The city offers an atmosphere that blends historical texture with modern life.",
+      "PARAGRAPH3": "Antalya attracts attention with its stunning natural beauty and vacation opportunities. Lara Beach and Konyaaltı Beach, famous for their white sands and turquoise waters, are perfect spots for sunbathing and enjoying the sea. Natural wonders like Düden and Manavgat Waterfalls offer peaceful moments to visitors. Additionally, holiday resorts around Antalya such as Çıralı and Olympos are known for their natural beauty and relaxing atmospheres. The city provides an unforgettable experience for vacationers with its combination of both historical and natural beauty."
+    },
+    "ISTANBUL": {
+      "CITY_INFO": "City Information for Your Istanbul (IST) Trip",
+      "CULTURE_TITLE": "Art, culture, history, and more...",
+      "STATISTICS": {
+        "AREA": "Area",
+        "POPULATION": "Population",
+        "PHONE_CODE": "Phone Code",
+        "REGION": "Region"
+      },
+      "STATISTICS_VALUES": {
+        "AREA": "5,461 km²",
+        "POPULATION": "15,655,924",
+        "PHONE_CODE": "(+90) 212",
+        "REGION": "Marmara"
+      },
+      "DATAS": {
+        "FIRST_DATA": {
+          "TITLE": "Hagia Sophia Mosque",
+          "SUBTITLE": "The first historical structure that comes to mind when thinking of Istanbul is, of course, Hagia Sophia Mosque, which was previously used as a church and a museum. Opened in 537 and built by Byzantine architects Isidoros and Anthemios, one of the most notable features of the mosque is that it has been built three times on the same site. Originally serving as a church and converted into a mosque after the conquest of Istanbul, the structure served as a museum between 1935-2020 by a decision of the Council of Ministers. Hagia Sophia, which started serving as a mosque again in 2020, is now considered one of the most important historical symbols not only of Istanbul but also of the world."
+        },
+        "SECOND_DATA": {
+          "TITLE": "Maiden's Tower",
+          "SUBTITLE": "Located off the coast of Salacak, many legends have been told about Maiden’s Tower, and the structure has been the subject of numerous myths. The tower, the only remaining Byzantine-era structure in Üsküdar, dates back to 24 BC. While it served as a tomb during the Greek period, over the years it has been used for various purposes such as a customs station and quarantine room, but its primary role has always been to guide ships. Restored in 2000, the tower now includes a restaurant, adding to its tourist appeal."
+        },
+        "THIRD_DATA": {
+          "TITLE": "Grand Bazaar",
+          "SUBTITLE": "One of the world's first shopping centers, the Grand Bazaar is one of the most iconic structures in Istanbul. Located at the intersection of Beyazıt, Nuruosmaniye, and Mercan districts, the Grand Bazaar is practically a world of its own with 4,000 shops and around 25,000 employees. While visiting the Grand Bazaar, you can simply experience the spirit of the city by walking through, or you can choose to shop for food, clothing, or jewelry from the stores here. This way, you can take home a few souvenirs from your Istanbul trip. The bazaar also provides insight into the city's merchant culture."
+        }
+      },
+      "TITLE1": "Istanbul's Historical and Cultural Heritage",
+      "TITLE2": "Istanbul's Modern Life and Social Scene",
+      "PARAGRAPH1": "Istanbul, a historic and cultural capital located on both the European and Asian continents, offers visitors a unique experience. Historic Istanbul, blending Byzantine and Ottoman heritage with modern life, dazzles with its impressive structures; historical sites like Hagia Sophia, Topkapi Palace, and the Blue Mosque showcase its rich cultural past. A boat tour along the Bosphorus, with its stunning views, is a great way to discover the enchanting beauty of Istanbul. Moreover, lively markets such as the Grand Bazaar and the Spice Bazaar reflect the city's energy and diversity. With its dynamic lifestyle, gourmet restaurants, and cultural events, Istanbul is a city worth exploring for both its historical and modern aspects.",
+      "PARAGRAPH2": "Istanbul is one of Turkey's most historically and culturally rich cities. As the capital of both the Byzantine and Ottoman empires, the city hosts many significant structures. Hagia Sophia, with its impressive architecture and historical significance, reflects this heritage, while Topkapi Palace and the Blue Mosque showcase the splendor of the Ottoman Empire. As you stroll through the narrow streets of Istanbul's historic districts, you can experience the vibrant atmosphere of traditional markets like the Grand Bazaar and the Spice Bazaar. These areas not only connect you to the city's past but also reflect its rich cultural diversity.",
+      "PARAGRAPH3": "In addition to its historical richness, Istanbul offers a dynamic and modern lifestyle. The city is a social hub, with spectacular views of the Bosphorus that connect two continents. Shopping malls, restaurants, and cafes in areas like Şişli and Beşiktaş reflect the city's modern face. Istanbul's energetic nightlife is filled with famous bars, clubs, and live music venues. Additionally, the city's cultural calendar is packed with art and cultural events, concerts, and exhibitions. Istanbul provides a rich experience for those looking to explore both its historical texture and contemporary life."
+    },
+    "IZMIR": {
+      "CITY_INFO": "City Information for Your Izmir (ADB) Trip",
+      "CULTURE_TITLE": "Sun, Sea & Exploration",
+      "STATISTICS": {
+        "AREA": "Area",
+        "POPULATION": "Population",
+        "PHONE_CODE": "Phone Code",
+        "REGION": "Region"
+      },
+      "STATISTICS_VALUES": {
+        "AREA": "12,012 km²",
+        "POPULATION": "4,479,525",
+        "PHONE_CODE": "(+90) 232",
+        "REGION": "Aegean"
+      },
+      "DATAS": {
+        "FIRST_DATA": {
+          "TITLE": "Izmir Clock Tower",
+          "SUBTITLE": "The most famous landmark of Izmir, the Izmir Clock Tower, was built in 1901 to celebrate the 25th anniversary of Sultan Abdulhamid II's ascension to the throne. Located at the entrance of Kemeralti Bazaar and next to Konak Yalı Mosque, this 25-meter-high, 4-story clock tower stands out with its distinctive architecture, setting it apart from other Ottoman clock towers. Designed by a renowned French architect, the Izmir Clock Tower is constructed from cut stones and adorned with impressive stone reliefs. The four fountains surrounding the tower and the columns symbolizing North Africa are also worth seeing. Don't leave the city without taking a photo at the 81 m² base of the Izmir Clock Tower, where Sultan Abdulhamid II's monogram is engraved as a relief."
+        },
+        "SECOND_DATA": {
+          "TITLE": "Izmir Historical Elevator",
+          "SUBTITLE": "One of Izmir's symbolic structures, the Historical Elevator, built by a businessman in 1907, will immediately catch your attention with its 58-meter height. Located between Mithatpaşa Street and Şehit Nihatbey Street, the Historical Elevator is famous for its panoramic views of Izmir and consists of 155 steps. At the top of the elevator, there is a café and an observation terrace. You can enjoy tea with panoramic views of Izmir at the terrace of the Historical Elevator, which is notable for its impressive classical stone architecture, and take stunning photos."
+        },
+        "THIRD_DATA": {
+          "TITLE": "Konak Square",
+          "SUBTITLE": "Officially known as Atatürk Square, Konak Square is one of the most vibrant squares in Izmir, hosting several iconic structures such as the First Bullet Monument, Izmir Clock Tower, and Konak Yalı Mosque. Always bustling, Konak Square is one of Izmir's important meeting points, and its parks with views of the Aegean Sea, walking paths, numerous shops, cafes, and quality restaurants make it an ideal starting point for exploring Izmir. In the evenings, you can listen to street musicians at Konak Square, which is also very close to popular places like Kıbrıs Şehitler Avenue and Alsancak Sevgi Yolu."
+        }
+      },
+      "TITLE1": "Izmir's Historical and Cultural Richness",
+      "TITLE2": "Izmir's Modern Life and Entertainment World",
+      "PARAGRAPH1": "Izmir, located in the western part of Turkey and one of the most popular cities in the Aegean region, stands out as a prime destination for vacations and exploration. Known as the modern face of ancient Smyrna, Izmir is famous for its impressive coastline, lively café culture, and historical wealth. You can enjoy pleasant walks along the Kordon promenade, shop in the famous Kemeralti Bazaar, or explore historical and cultural sites such as Ephesus and Şirince. Izmir's warm climate, delicious Aegean cuisine, and dynamic lifestyle offer an unforgettable experience to every visitor.",
+      "PARAGRAPH2": "Izmir stands out as a city where history and culture intertwine in the Aegean region of Turkey. As the modern reflection of ancient Smyrna, Izmir is home to many remnants from ancient times. The ancient city of Ephesus offers a fascinating experience with its impressive structures from the Roman and Byzantine periods, while the ruins of Pergamon and Asklepion in Bergama captivate history enthusiasts. The Kemeralti Bazaar in the city center is a historic market dating back to the Ottoman era, allowing you to enjoy the historical atmosphere while shopping. Additionally, the authentic atmosphere and traditional structures of Şirince Village make it an ideal stop for those wishing to discover Izmir's rich cultural heritage.",
+      "PARAGRAPH3": "In addition to its historical richness, Izmir is a dynamic representation of modern life. The Kordon promenade in the city center is famous for its seaside cafes and restaurants, making it a perfect spot for a leisurely walk or to watch the sunset. The districts of Alsancak and Bornova, with their shopping centers, boutique stores, and vibrant nightlife, reflect the energy of modern Izmir. Surrounding holiday resorts such as Çeşme and Alaçatı offer attractive options for vacationers with their beaches, vineyards, and charming stone houses. Izmir offers a variety of activities and experiences for those who want to enjoy both history and modern life."
+    }
+  },
+  "AIR_POINTS": {
+    "TITLE1": "What is Air Points?",
+    "DESCRIPTION1": "Air Points is a reward points system that you earn with your flights and other services. You can use the points you earn on each flight or specific transactions for ticket purchases, additional services, seat selection, and package benefits. To track and use your Air Points, you can check your point balance in the My Account section, view your earnings, and perform transactions related to point usage.",
+    "TITLE2": "How to Earn Air Points?",
+    "TIMELINE": {
+      "STEP1": "Create an Account",
+      "STEP2": "Purchase a Flight Ticket",
+      "STEP3": "Earn Air Points After Your Flight",
+      "STEP4": "Benefit from Opportunities with Air Points on Your Next Flights"
+    },
+    "TITLE3": "What Can Be Done with Air Points?",
+    "OPTIONS": {
+      "TICKET": "Free Flight Ticket",
+      "BAGGAGE": "Extra Baggage Opportunity",
+      "SEAT": "Seat Selection",
+      "SERVICE": "In-flight Services"
+    },
+    "OPTIONS_DESC": {
+      "TICKET": "Get a free flight ticket with the Air Points you earn from your trips.",
+      "BAGGAGE": "Take advantage of the extra baggage opportunity for your trips.",
+      "SEAT": "Choose your desired seat for your journey.",
+      "SERVICE": "Enjoy services like food, beverages, and entertainment during your flight."
+    }
+  },
+  "AIRPORT_INFO": {
+    "TITLE": "Airport Information",
+    "DESCRIPTION": "We recommend always checking the official website of the respective airport for the most up-to-date information.",
+    "TIPS1": "* A representative amount of data has been entered.",
+    "TIPS2": "* Terminal information may not reflect actual data.",
+    "TIPS3": "* As this is a test application, please check the official airport website for real information.",
+    "AIRPORT_NAME": "AIRPORT NAME",
+    "AIRPORT_CODE": "AIRPORT CODE",
+    "AIRPORT_CITY": "CITY",
+    "AIRPORT_TERMINAL": "TERMINAL",
+    "SEARCH": "Search",
+    "RESET": "Reset",
+    "PLACEHOLDER": "Search by name",
+    "AIRPORTS": {
+      "ADANA_AIRPORT": "Adana-Şakirpaşa Airport",
+      "ISTANBUL_AIRPORT": "Sabiha Gökçen Airport",
+      "ANKARA_AIRPORT": "Ankara Esenboğa Airport",
+      "IZMIR_AIRPORT": "Izmir Adnan Menderes Airport",
+      "ANTALYA_AIRPORT": "Antalya Airport",
+      "TRABZON_AIRPORT": "Trabzon Airport",
+      "KONYA_AIRPORT": "Konya Airport"
+    }
+  },
+  "FAQ": {
+    "TITLE": "Frequently Asked Questions",
+    "DESCRIPTION": "Welcome! Here you can find answers to frequently asked questions about our airline. We have compiled common issues and their answers to provide you with better service. If you can't find the answer to your question here, please feel free to contact us.",
+    "DATAS": {
+      "DATA1": {
+        "QUESTION": "How can I make a flight reservation?",
+        "ANSWER": "You can easily make a flight reservation through our website. Click on the 'My Reservations' button on the homepage, enter your flight details, and search. After selecting the flight of your choice, enter your passenger information and complete the payment process to finalize your reservation."
+      },
+      "DATA2": {
+        "QUESTION": "How can I change my reservation?",
+        "ANSWER": "To change your reservation, go to the 'My Reservations' section, log in, and select the reservation you wish to modify. Follow the instructions to update the reservation details. Once your changes are confirmed, your new flight information will be sent to you via email. Reservation changes may incur additional fees depending on certain conditions."
+      },
+      "DATA3": {
+        "QUESTION": "How can I cancel my ticket?",
+        "ANSWER": "To cancel your ticket, log in to the 'My Reservations' page, select the relevant reservation, and initiate the cancellation process. Once the cancellation is completed, a refund will be issued according to our cancellation policy. For more information on the rules and fees associated with cancellations, please visit our Cancellation Policy page."
+      },
+      "DATA4": {
+        "QUESTION": "What is my baggage allowance?",
+        "ANSWER": "Your standard baggage allowance includes 1 piece of hand luggage and 1 piece of cabin baggage in economy class. Business and first-class passengers may have different baggage allowances. For detailed information on your baggage allowance, please refer to our Baggage Policy page. Additionally, if you wish to purchase extra baggage allowance, you can do so during booking or at the airport for an additional fee."
+      },
+      "DATA5": {
+        "QUESTION": "What are my payment options?",
+        "ANSWER": "When purchasing tickets through our website, you can use credit cards, debit cards, and various other payment methods. For more information on our payment options, please visit our Payment Options page."
+      },
+      "DATA6": {
+        "QUESTION": "What should I do if my flight is delayed or cancelled?",
+        "ANSWER": "In case of flight delays or cancellations, you can contact our customer service or seek assistance at the airport's customer service desk. For detailed information on policies and your rights in case of delays or cancellations, please refer to our Delay and Cancellation Policy page."
+      },
+      "DATA7": {
+        "QUESTION": "What are my passenger rights?",
+        "ANSWER": "Your passenger rights provide information on how we can assist you in case of any issues with your flight. For detailed information on your rights and how to exercise them, please visit our Passenger Rights page."
+      },
+      "DATA8": {
+        "QUESTION": "What documents do I need to carry with me?",
+        "ANSWER": "Before boarding, you need to carry an identification document (passport, ID card, or driver's license) and a copy of your ticket. For international flights, ensure your passport is valid for at least 6 months from the flight date. For more information, please check our Documents page."
+      },
+      "DATA9": {
+        "QUESTION": "What services are available at the airport?",
+        "ANSWER": "For information on services available at the airport, please visit our Airport Services page. These services include lounges, restaurants, shopping points, and other passenger comfort services."
+      },
+      "DATA10": {
+        "QUESTION": "I want to make a complaint or provide feedback. What should I do?",
+        "ANSWER": "Your complaints and feedback are important to us. You can submit your complaints or feedback through our Feedback Form. You can also contact our customer service via email or phone to report any issues."
+      }
+    }
+  },
+  "GENERAL_INFO": {
+    "TITLE": "General Rules",
+    "DESCRIPTION": "Welcome! On this page, you can find information about the general rules and policies you need to follow while using our services. These rules are important for your safety, comfort, and a fair experience. Please review the rules below carefully.",
+    "DATAS": {
+      "DATA1": {
+        "QUESTION": "Reservations",
+        "ANSWER": "You can make your flight reservations through our website or via our customer service. It is your responsibility to verify the accuracy of your reservations."
+      },
+      "DATA2": {
+        "QUESTION": "Tickets",
+        "ANSWER": "You should purchase your tickets in accordance with the rules specified during the reservation and complete the payment process. Check the accuracy of the information on your tickets and make changes if necessary."
+      },
+      "DATA3": {
+        "QUESTION": "Check-in",
+        "ANSWER": "You should complete your check-in process at the airport at least 2 hours before your flight. You can also take advantage of our online check-in service."
+      },
+      "DATA4": {
+        "QUESTION": "Baggage",
+        "ANSWER": "Additional baggage fees may apply beyond your standard baggage allowance. You must prepare your baggage according to the rules before bringing it to the airport. In case of lost or damaged baggage, report it immediately."
+      },
+      "DATA5": {
+        "QUESTION": "Prohibited Items",
+        "ANSWER": "For information on prohibited items, liquids, and sharp objects during security checks, please visit our security rules page. These items cannot be brought into the airport and may cause security issues."
+      },
+      "DATA6": {
+        "QUESTION": "Personal Security",
+        "ANSWER": "You must comply with the instructions of security personnel. Any suspicious activity or security breaches should be reported immediately, and cooperation is required."
+      },
+      "DATA7": {
+        "QUESTION": "General Behavior",
+        "ANSWER": "To ensure the comfort of other passengers, you should behave respectfully and considerately. Avoid making noise and engaging in disruptive behavior."
+      },
+      "DATA8": {
+        "QUESTION": "Smoking",
+        "ANSWER": "Smoking is prohibited inside the aircraft and within the airport. You should use designated smoking areas."
+      },
+      "DATA9": {
+        "QUESTION": "Health Information",
+        "ANSWER": "If you have health issues, especially contagious diseases, consult your doctor before your flight. You may need to inform the airline about your health condition."
+      },
+      "DATA10": {
+        "QUESTION": "Emergency Procedures",
+        "ANSWER": "You should familiarize yourself with emergency procedures and learn how to use emergency equipment."
+      }
+    }
+  },
+  "CONTACT": {
+    "TITLE": "Help & Contact",
+    "INTRO": "We are delighted to assist you. However, we recommend that you first visit the",
+    "FAQ_LINK": "Frequently Asked Questions",
+    "PHONE": "Phone",
+    "FAX": "Fax",
+    "ADDRESS": "Address",
+    "EMAIL": "Email",
+    "P1": "You can send your questions or issues to us via email. Our email address is: yardim@air.com. Depending on the content of your message, expect a response within 24-48 hours.",
+    "P2": "For instant support, you can take advantage of our live support service. Our live support team is here to help with your inquiries. Our working hours are Monday-Friday, 09:00 - 18:00.",
+    "P3": "Your feedback is valuable to us. To improve our services, please share your suggestions and comments by filling out our feedback form.",
+    "WRITE_TO_US": "Write to Us",
+    "SUBMIT_BUTTON": "Submit",
+    "RESET_BUTTON": "Reset",
+    "FORM": {
+      "NAME_LABEL": "Your Name",
+      "EMAIL_LABEL": "E-mail",
+      "COMMENT_LABEL": "Comment",
+      "NAME_PLACEHOLDER": "Enter as first and last name",
+      "EMAIL_PLACEHOLDER": "email",
+      "COMMENT_PLACEHOLDER": "Write anything"
+    },
+    "ERRORS": {
+      "REQUIRED": "This field is required!",
+      "EMAIL_FORMAT": "Must be in email format!",
+      "COMMENT_REQUIRED": "Please write something here!"
+    }
+  },
+  "PASSENGER_RIGHTS": {
+    "TITLE": "Passenger Rights Information",
+    "WELCOME_MESSAGE": "Welcome! As an airline, our primary goal is to protect the rights of our valued passengers and provide the best service. On this page, you will find important information about your rights as a passenger and how to exercise them.",
+    "SPECIFIC_RULES_TITLE": "Rules that may Vary in Specific Situations",
+    "CONTACT_INFO": {
+      "PHONE": "* Phone Number: 444 4 444",
+      "FAX": "* Fax Number: +90 (555) 555 55 55",
+      "HELP_PAGE": "* For more detailed information, please visit the Help & Contact page."
+    },
+    "RIGHTS": [
+      {
+        "TITLE": "Flight Delays and Cancellations",
+        "DESCRIPTION": "If your flight is delayed by more than 2 hours from the scheduled departure time, food, beverages, and, if necessary, accommodation services will be provided. Additionally, you may be entitled to compensation depending on the length of the delay. If your flight is canceled, alternative flight options will be offered, or a refund of your ticket price will be provided. For more detailed information and compensation rights regarding flight cancellations, please visit our cancellation policy page."
+      },
+      {
+        "TITLE": "Lost and Delayed Baggage",
+        "DESCRIPTION": "If your baggage is lost or delayed, you must report it to the airport authorities immediately. You can receive assistance during the process of locating and delivering your baggage. You may also file a claim for compensation for lost baggage, and we can cover damages based on the delay."
+      },
+      {
+        "TITLE": "Insufficient Service and Complaints",
+        "DESCRIPTION": "If you experience any issues with service quality, you can contact our customer service. If you report your complaints, we will work to resolve your issues as soon as possible and take your feedback into account."
+      },
+      {
+        "TITLE": "Rights of Disabled Passengers",
+        "DESCRIPTION": "Special services and assistive devices are available for disabled passengers. By notifying us of your requests before the flight, you can ensure that appropriate services are prepared for your needs. For more information on services for disabled passengers, please click here."
+      },
+      {
+        "TITLE": "Refunds and Compensation",
+        "DESCRIPTION": "In the event of ticket cancellation, changes, or flight issues, you are entitled to a refund and compensation. You can access detailed information and the application form for refunds and compensation on the refund and compensation page."
+      },
+      {
+        "TITLE": "Help Regarding Your Rights",
+        "DESCRIPTION": "For more information or assistance regarding your passenger rights, you can contact us via the help center or contact form. Our goal is to provide you with the best experience and support you in the event of any issues."
+      }
+    ]
+  },
+  "HOME_CUSTOMER": {
+    "DATAS": {
+      "DATA1": {
+        "TITLE": "Plan your winter getaway early and explore Antalya for less!",
+        "DESCRIPTION": "Starting at €59.99"
+      },
+      "DATA2": {
+        "TITLE": "Air: Limited seats available!",
+        "DESCRIPTION": "Izmir and Anatolia, including luggage, for €79.99."
+      },
+      "DATA3": {
+        "TITLE": "Don't miss the train to your flight!",
+        "DESCRIPTION": "Starting at €39.99"
+      },
+      "DATA4": {
+        "TITLE": "Travel Planner",
+        "DESCRIPTION": "Starting at €19.99"
+      }
+    }
+  },
+  "FIND_FLIGHT": {
+    "ADULT": "Adult",
+    "CHILD": "Child",
+    "BABY": "Baby",
+    "SAVE": "Save",
+    "CANCEL": "Cancel",
+    "TYPE2": "Child (2-12 age)",
+    "TYPE3": "Baby (0-2 age)",
+    "SEARCH_FLIGHT": {
+      "TITLE": "Find Flight",
+      "FROM": "From",
+      "TO": "To",
+      "DATE": "Date",
+      "TWO_WAYS": "Round Trip",
+      "PASSENGER": "Passenger",
+      "FIND_FLIGHT_BUTTON": "Search Flight"
+    },
+    "CHECK_IN": {
+      "TITLE": "Check-In",
+      "ONLINE_CHECK_IN": {
+        "TITLE": "Do Online Check In",
+        "DESCRIPTION": "Skip queues at the airport, save time."
+      },
+      "LAST_NAME": {
+        "PLACEHOLDER": "Passenger's Last Name",
+        "TOOLTIP": "Eg: YILMAZ"
+      },
+      "PNR": {
+        "PLACEHOLDER": "Reservation Code (PNR)",
+        "TOOLTIP": "Eg: A1N2L3"
+      },
+      "CONFIRM_BUTTON": "Confirm"
+    }
+  },
+  "SELECTED_FLIGHTS": {
+    "DEPARTURE": "Departure",
+    "DIRECT": "Direct",
+    "FROM": "From",
+    "BEST_PRICE": "Best Price",
+    "RETURN": "Return",
+    "CONTINUE": "Continue",
+    "DURATION": "1S 5DK",
+    "CARD_DETAIL": {
+      "DATA1": {
+        "DETAILS": "15 kg baggage, online check-in"
+      },
+      "DATA2": {
+        "DETAILS": "20 kg baggage, flexible change"
+      },
+      "DATA3": {
+        "DETAILS": "25 kg baggage, flexible change"
+      }
+    }
+  },
+  "PASSENGER_INFORMATION": {
+    "LOGIN_TIPS": "You can speed up the process by logging in.",
+    "LOGIN": "Log In",
+    "PERSONAL_INFO": "Personal Information",
+    "NAME": "First Name",
+    "NAME_ERROR": "First name is required!",
+    "LASTNAME": "Last Name",
+    "LASTNAME_ERROR": "Last name is required!",
+    "GENDER": "Gender",
+    "GENDER_ERROR": "Gender is required!",
+    "GENDER_PLACEHOLDER": "Select your gender",
+    "MALE": "Male",
+    "FEMALE": "Female",
+    "EMAIL": "E-mail",
+    "EMAIL_ERROR": "This email is invalid!",
+    "PHONE_NUMBER": "Phone Number",
+    "PHONE_NUMBER_ERROR": "This number is invalid!",
+    "PHONE_INPUT": "Please enter your phone number",
+    "BIRTH": "Date of Birth",
+    "BIRTH_ERROR": "Date of birth is required!",
+    "NATIONALITY": "Nationality",
+    "NATIONALITY_ERROR": "Nationality is required!",
+    "NATIONALITY_PLACEHOLDER": "e.g., Turkey",
+    "TCID": "TC Identity No",
+    "TCID_ERROR": "TC Identity No must be 11 digits!",
+    "TCID_PLACEHOLDER": "Leave blank if not a Turkish citizen",
+    "AGREE1": "I have read the flight rules,",
+    "AGREE2": "I agree",
+    "CONTINUE": "Continue"
+  },
+  "FLIGHT_PAYMENT": {
+    "SKT": "Expiration Date",
+    "CARD_NUMBER": "Card Number",
+    "CARD_HOLDER": "Card Holder",
+    "PAYMENT": "Make Payment"
+  },
+  "FLIGHT_DONE": {
+    "SUCCESS_ALERT": "Payment successful. Have a nice trip.",
+    "PNR_INF0": "Booking (PNR) No:",
+    "PASSENGER_INFORMATION": "Passenger Information",
+    "DOWNLOAD1": "To download your flight information",
+    "DOWNLOAD2": "click here",
+    "TRIP_DETAILS": "Trip Details",
+    "FROM": "From",
+    "DEPARTURE_TIME": "Departure Time",
+    "TO": "To",
+    "ARRIVAL_TIME": "Arrival Time",
+    "FLIGHT_NO": "Flight No",
+    "TICKET_NO": "Ticket No",
+    "VALIDITY_DATE": "Validity Date",
+    "PACKAGE_TYPE": "Package Type",
+    "PACKAGE_DESC": "model flight package has been selected.",
+    "TYPE1": "Total Baggage Allowance: 15 Kg",
+    "TYPE2": "Total Baggage Allowance: 20 Kg",
+    "TYPE3": "Total Baggage Allowance: 25 Kg",
+    "CABIN_BAGGAGE": "Cabin Baggage Allowance: 55x40x20 cm",
+    "TIPS1": "HOW - REF/RES CHG RESTRICTED - YOU CAN REQUEST A REFUND/CHANGE UNTIL 24 HOURS BEFORE YOUR FLIGHT.",
+    "TIPS2": "HOW - REF/RES CHG RESTRICTED - REFUNDS/CHANGES ARE SUBJECT TO FEES."
+  },
+  "FLIGHT_STEPS": {
+    "FLIGHTS": "Flights",
+    "PASSENGERS": "Passengers",
+    "SEATS": "Seats",
+    "PAYMENT": "Payment",
+    "DONE": "Done"
+  },
+  "CUSTOMER_STATS": {
+    "PASSENGER_COUNT": "Passenger Count",
+    "PASSENGER_DETAIL": "800,000 Local 700,000 Foreign",
+    "STAFF_COUNT": "Staff Count",
+    "STAFF_DETAIL": "300,000 Local 135,500 Foreign",
+    "SATISFACTION_RATE": "Customer Satisfaction",
+    "SATISFACTION_DETAIL": "4.6 Local 4.8 Foreign",
+    "OCCUPANCY_RATE": "Occupancy Rate",
+    "OCCUPANCY_DETAIL": "55% Local 45% Foreign"
   }
+}

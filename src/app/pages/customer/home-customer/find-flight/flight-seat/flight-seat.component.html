@@ -15,271 +15,271 @@
 <br>
 <!-- Koltuk seçimi -->
 <div class="flex-container">
-    <!-- Sol Kısım -->
-    <nz-list style="width: fit-content" class="nz-list-container">
-      <div nz-row [nzGutter]="16">
-        <div *ngFor="let item of data; track item; trackBy: trackByItem" class="nz-col">
-          <nz-list-item>
-            <nz-card
-              [ngStyle]="{
-                'background-color': selectedCardId === item.id
-                  ? 'var(--light-color)'
-                  : 'var(--card-color)'
-              }"
-              [nzTitle]="item.title"
-            >
-              <h4 style="color: var(--subtitle-text-color)">
-                {{ item.subtitle }}
-              </h4>
-              <br />
-              <div style="display: flex">
-                <div
-                  style="
-                    display: flex;
-                    flex-direction: column;
-                    padding-right: 4px;
-                  "
-                >
-                  <h3 style="color: var(--title-text-color)">Yurtiçi</h3>
-                  <h5 style="color: var(--subtitle-text-color)">
-                    {{ item.domestic_price }}
-                  </h5>
-                </div>
-                <div style="display: flex; flex-direction: column">
-                  <h3 style="color: var(--title-text-color)">Yurtdışı</h3>
-                  <h5 style="color: var(--subtitle-text-color)">
-                    {{ item.abroad_price }}
-                  </h5>
-                </div>
+  <!-- Sol Kısım -->
+  <nz-list style="width: fit-content" class="nz-list-container">
+    <div nz-row [nzGutter]="16">
+      <div *ngFor="let item of data; track item; trackBy: trackByItem" class="nz-col" nz-col nzXs="16" nzSm="24" nzMd="12" nzLg="8" nzXl="6">
+        <nz-list-item>
+          <nz-card
+            [ngStyle]="{
+              'background-color': selectedCardId === item.id
+                ? 'var(--light-color)'
+                : 'var(--card-color)'
+            }"
+            [nzTitle]="item.title | translate"
+          >
+            <h4 style="color: var(--subtitle-text-color)">
+              {{ item.subtitle | translate }}
+            </h4>
+            <br />
+            <div style="display: flex">
+              <div
+                style="
+                  display: flex;
+                  flex-direction: column;
+                  padding-right: 4px;
+                "
+              >
+                <h3 style="color: var(--title-text-color)">{{ 'SEAT_SELECTION.DOMESTIC' | translate }}</h3>
+                <h5 style="color: var(--subtitle-text-color)">
+                  {{ item.domestic_price | translate }}
+                </h5>
               </div>
-              <button
-                *ngIf="item.id === 1"
-                class="button-container"
-                (click)="extraSeatSelection()"
-                nz-button
-                nzType="primary"
-              >
-                <span style="color: #fff">Koltukları Gör</span>
-              </button>
-              <button
-                *ngIf="item.id === 2"
-                class="button-container"
-                (click)="frontSeatSelection()"
-                nz-button
-                nzType="primary"
-              >
-                <span style="color: #fff">Koltukları Gör</span>
-              </button>
-              <button
-                *ngIf="item.id === 3"
-                class="button-container"
-                (click)="windowSeatSelection()"
-                nz-button
-                nzType="primary"
-              >
-                <span style="color: #fff">Koltukları Gör</span>
-              </button>
-              <button
-                *ngIf="item.id === 4"
-                class="button-container"
-                (click)="sideSeatSelection()"
-                nz-button
-                nzType="primary"
-              >
-                <span style="color: #fff">Koltukları Gör</span>
-              </button>
-              <button
-                *ngIf="item.id === 5"
-                class="button-container"
-                (click)="otherSeatSelection()"
-                nz-button
-                nzType="primary"
-              >
-                <span style="color: #fff">Koltukları Gör</span>
-              </button>
-              <button
-                *ngIf="item.id === 6"
-                class="button-container"
-                (click)="randomSeatSelection()"
-                nz-button
-                nzType="primary"
-              >
-                <span style="color: #fff">Koltukları Gör</span>
-              </button>
-            </nz-card>
-          </nz-list-item>
-        </div>
-        
+              <div style="display: flex; flex-direction: column">
+                <h3 style="color: var(--title-text-color)">{{ 'SEAT_SELECTION.ABROAD' | translate }}</h3>
+                <h5 style="color: var(--subtitle-text-color)">
+                  {{ item.abroad_price | translate }}
+                </h5>
+              </div>
+            </div>
+            <button
+              *ngIf="item.id === 1"
+              class="button-container"
+              (click)="extraSeatSelection()"
+              nz-button
+              nzType="primary"
+            >
+              <span style="color: #fff">{{ 'SEAT_SELECTION.SEE_SEATS' | translate }}</span>
+            </button>
+            <button
+              *ngIf="item.id === 2"
+              class="button-container"
+              (click)="frontSeatSelection()"
+              nz-button
+              nzType="primary"
+            >
+              <span style="color: #fff">{{ 'SEAT_SELECTION.SEE_SEATS' | translate }}</span>
+            </button>
+            <button
+              *ngIf="item.id === 3"
+              class="button-container"
+              (click)="windowSeatSelection()"
+              nz-button
+              nzType="primary"
+            >
+              <span style="color: #fff">{{ 'SEAT_SELECTION.SEE_SEATS' | translate }}</span>
+            </button>
+            <button
+              *ngIf="item.id === 4"
+              class="button-container"
+              (click)="sideSeatSelection()"
+              nz-button
+              nzType="primary"
+            >
+              <span style="color: #fff">{{ 'SEAT_SELECTION.SEE_SEATS' | translate }}</span>
+            </button>
+            <button
+              *ngIf="item.id === 5"
+              class="button-container"
+              (click)="otherSeatSelection()"
+              nz-button
+              nzType="primary"
+            >
+              <span style="color: #fff">{{ 'SEAT_SELECTION.SEE_SEATS' | translate }}</span>
+            </button>
+            <button
+              *ngIf="item.id === 6"
+              class="button-container"
+              (click)="randomSeatSelection()"
+              nz-button
+              nzType="primary"
+            >
+              <span style="color: #fff">{{ 'SEAT_SELECTION.SEE_SEATS' | translate }}</span>
+            </button>
+          </nz-card>
+        </nz-list-item>
       </div>
-    </nz-list>
-    <!-- Sağ Kısım -->
-    <div nz-row style="padding-right: 20px" class="nz-row" [nzGutter]="16">
-      <div class="nz-col" style="display: flex">
-        <!-- Sol Taraf -->
-        <div class="seat-container">
-          <div class="seat-row">
-            <app-seat-icon [activeIcon]="extraLargeSeat"></app-seat-icon>
-            <app-seat-icon [activeIcon]="extraLargeSeat"></app-seat-icon>
-            <app-seat-icon [activeIcon]="extraLargeSeat"></app-seat-icon>
-          </div>
-          <div class="seat-row">
-            <app-seat-icon [activeIcon]="frontSeat"></app-seat-icon>
-            <app-seat-icon [activeIcon]="frontSeat"></app-seat-icon>
-            <app-seat-icon [activeIcon]="frontSeat"></app-seat-icon>
-          </div>
-          <div class="seat-row">
-            <app-seat-icon [activeIcon]="frontSeat"></app-seat-icon>
-            <app-seat-icon [activeIcon]="frontSeat"></app-seat-icon>
-            <app-seat-icon [activeIcon]="frontSeat"></app-seat-icon>
-          </div>
-          <div class="seat-row">
-            <app-seat-icon [activeIcon]="frontSeat"></app-seat-icon>
-            <app-seat-icon [activeIcon]="frontSeat"></app-seat-icon>
-            <app-seat-icon [activeIcon]="frontSeat"></app-seat-icon>
-          </div>
-          <div class="seat-row">
-            <app-seat-icon [activeIcon]="frontSeat"></app-seat-icon>
-            <app-seat-icon [activeIcon]="frontSeat"></app-seat-icon>
-            <app-seat-icon [activeIcon]="frontSeat"></app-seat-icon>
-          </div>
-          <div class="seat-row">
-            <app-seat-icon [activeIcon]="frontSeat"></app-seat-icon>
-            <app-seat-icon [activeIcon]="frontSeat"></app-seat-icon>
-            <app-seat-icon [activeIcon]="frontSeat"></app-seat-icon>
-          </div>
-          <div class="seat-row">
-            <app-seat-icon [activeIcon]="windowSeat"></app-seat-icon>
-            <app-seat-icon [activeIcon]="otherSeat"></app-seat-icon>
-            <app-seat-icon [activeIcon]="sideSeat"></app-seat-icon>
-          </div>
-          <div class="seat-row">
-            <app-seat-icon [activeIcon]="windowSeat"></app-seat-icon>
-            <app-seat-icon [activeIcon]="otherSeat"></app-seat-icon>
-            <app-seat-icon [activeIcon]="sideSeat"></app-seat-icon>
-          </div>
-          <div class="seat-row">
-            <app-seat-icon [activeIcon]="windowSeat"></app-seat-icon>
-            <app-seat-icon [activeIcon]="otherSeat"></app-seat-icon>
-            <app-seat-icon [activeIcon]="sideSeat"></app-seat-icon>
-          </div>
-          <div class="seat-row">
-            <app-seat-icon [activeIcon]="windowSeat"></app-seat-icon>
-            <app-seat-icon [activeIcon]="otherSeat"></app-seat-icon>
-            <app-seat-icon [activeIcon]="sideSeat"></app-seat-icon>
-          </div>
-          <div class="seat-row">
-            <app-seat-icon [activeIcon]="windowSeat"></app-seat-icon>
-            <app-seat-icon [activeIcon]="otherSeat"></app-seat-icon>
-            <app-seat-icon [activeIcon]="sideSeat"></app-seat-icon>
-          </div>
-          <div class="seat-row">
-            <app-seat-icon [activeIcon]="windowSeat"></app-seat-icon>
-            <app-seat-icon [activeIcon]="otherSeat"></app-seat-icon>
-            <app-seat-icon [activeIcon]="sideSeat"></app-seat-icon>
-          </div>
-          <div class="seat-row">
-            <app-seat-icon [activeIcon]="windowSeat"></app-seat-icon>
-            <app-seat-icon [activeIcon]="otherSeat"></app-seat-icon>
-            <app-seat-icon [activeIcon]="sideSeat"></app-seat-icon>
-          </div>
-          <div class="seat-row">
-            <app-seat-icon [activeIcon]="windowSeat"></app-seat-icon>
-            <app-seat-icon [activeIcon]="otherSeat"></app-seat-icon>
-            <app-seat-icon [activeIcon]="sideSeat"></app-seat-icon>
-          </div>
-          <div class="seat-row">
-            <app-seat-icon [activeIcon]="windowSeat"></app-seat-icon>
-            <app-seat-icon [activeIcon]="otherSeat"></app-seat-icon>
-            <app-seat-icon [activeIcon]="sideSeat"></app-seat-icon>
-          </div>
-          <!-- Add more rows as needed -->
+      
+    </div>
+  </nz-list>
+  <!-- Sağ Kısım -->
+  <div nz-row style="padding-right: 20px" class="nz-row" [nzGutter]="16">
+    <div class="nz-col" style="display: flex" nz-col nzSm="16" nzMd="12" nzLg="8" nzXl="6">
+      <!-- Sol Taraf -->
+      <div class="seat-container">
+        <div class="seat-row">
+          <app-seat-icon [activeIcon]="extraLargeSeat"></app-seat-icon>
+          <app-seat-icon [activeIcon]="extraLargeSeat"></app-seat-icon>
+          <app-seat-icon [activeIcon]="extraLargeSeat"></app-seat-icon>
         </div>
-        <div style="padding-right: 24px"></div>
-        <!-- Sağ Taraf -->
-        <div class="seat-container">
-          <div class="seat-row">
-            <app-seat-icon [activeIcon]="extraLargeSeat"></app-seat-icon>
-            <app-seat-icon [activeIcon]="extraLargeSeat"></app-seat-icon>
-            <app-seat-icon [activeIcon]="extraLargeSeat"></app-seat-icon>
-          </div>
-          <div class="seat-row">
-            <app-seat-icon [activeIcon]="frontSeat"></app-seat-icon>
-            <app-seat-icon [activeIcon]="frontSeat"></app-seat-icon>
-            <app-seat-icon [activeIcon]="frontSeat"></app-seat-icon>
-          </div>
-          <div class="seat-row">
-            <app-seat-icon [activeIcon]="frontSeat"></app-seat-icon>
-            <app-seat-icon [activeIcon]="frontSeat"></app-seat-icon>
-            <app-seat-icon [activeIcon]="frontSeat"></app-seat-icon>
-          </div>
-          <div class="seat-row">
-            <app-seat-icon [activeIcon]="frontSeat"></app-seat-icon>
-            <app-seat-icon [activeIcon]="frontSeat"></app-seat-icon>
-            <app-seat-icon [activeIcon]="frontSeat"></app-seat-icon>
-          </div>
-          <div class="seat-row">
-            <app-seat-icon [activeIcon]="frontSeat"></app-seat-icon>
-            <app-seat-icon [activeIcon]="frontSeat"></app-seat-icon>
-            <app-seat-icon [activeIcon]="frontSeat"></app-seat-icon>
-          </div>
-          <div class="seat-row">
-            <app-seat-icon [activeIcon]="frontSeat"></app-seat-icon>
-            <app-seat-icon [activeIcon]="frontSeat"></app-seat-icon>
-            <app-seat-icon [activeIcon]="frontSeat"></app-seat-icon>
-          </div>
-          <div class="seat-row">
-            <app-seat-icon [activeIcon]="sideSeat"></app-seat-icon>
-            <app-seat-icon [activeIcon]="otherSeat"></app-seat-icon>
-            <app-seat-icon [activeIcon]="windowSeat"></app-seat-icon>
-          </div>
-          <div class="seat-row">
-            <app-seat-icon [activeIcon]="sideSeat"></app-seat-icon>
-            <app-seat-icon [activeIcon]="otherSeat"></app-seat-icon>
-            <app-seat-icon [activeIcon]="windowSeat"></app-seat-icon>
-          </div>
-          <div class="seat-row">
-            <app-seat-icon [activeIcon]="sideSeat"></app-seat-icon>
-            <app-seat-icon [activeIcon]="otherSeat"></app-seat-icon>
-            <app-seat-icon [activeIcon]="windowSeat"></app-seat-icon>
-          </div>
-          <div class="seat-row">
-            <app-seat-icon [activeIcon]="sideSeat"></app-seat-icon>
-            <app-seat-icon [activeIcon]="otherSeat"></app-seat-icon>
-            <app-seat-icon [activeIcon]="windowSeat"></app-seat-icon>
-          </div>
-          <div class="seat-row">
-            <app-seat-icon [activeIcon]="sideSeat"></app-seat-icon>
-            <app-seat-icon [activeIcon]="otherSeat"></app-seat-icon>
-            <app-seat-icon [activeIcon]="windowSeat"></app-seat-icon>
-          </div>
-          <div class="seat-row">
-            <app-seat-icon [activeIcon]="sideSeat"></app-seat-icon>
-            <app-seat-icon [activeIcon]="otherSeat"></app-seat-icon>
-            <app-seat-icon [activeIcon]="windowSeat"></app-seat-icon>
-          </div>
-          <div class="seat-row">
-            <app-seat-icon [activeIcon]="sideSeat"></app-seat-icon>
-            <app-seat-icon [activeIcon]="otherSeat"></app-seat-icon>
-            <app-seat-icon [activeIcon]="windowSeat"></app-seat-icon>
-          </div>
-          <div class="seat-row">
-            <app-seat-icon [activeIcon]="sideSeat"></app-seat-icon>
-            <app-seat-icon [activeIcon]="otherSeat"></app-seat-icon>
-            <app-seat-icon [activeIcon]="windowSeat"></app-seat-icon>
-          </div>
-          <div class="seat-row">
-            <app-seat-icon [activeIcon]="sideSeat"></app-seat-icon>
-            <app-seat-icon [activeIcon]="otherSeat"></app-seat-icon>
-            <app-seat-icon [activeIcon]="windowSeat"></app-seat-icon>
-          </div>
-          <!-- Add more rows as needed -->
+        <div class="seat-row">
+          <app-seat-icon [activeIcon]="frontSeat"></app-seat-icon>
+          <app-seat-icon [activeIcon]="frontSeat"></app-seat-icon>
+          <app-seat-icon [activeIcon]="frontSeat"></app-seat-icon>
         </div>
+        <div class="seat-row">
+          <app-seat-icon [activeIcon]="frontSeat"></app-seat-icon>
+          <app-seat-icon [activeIcon]="frontSeat"></app-seat-icon>
+          <app-seat-icon [activeIcon]="frontSeat"></app-seat-icon>
+        </div>
+        <div class="seat-row">
+          <app-seat-icon [activeIcon]="frontSeat"></app-seat-icon>
+          <app-seat-icon [activeIcon]="frontSeat"></app-seat-icon>
+          <app-seat-icon [activeIcon]="frontSeat"></app-seat-icon>
+        </div>
+        <div class="seat-row">
+          <app-seat-icon [activeIcon]="frontSeat"></app-seat-icon>
+          <app-seat-icon [activeIcon]="frontSeat"></app-seat-icon>
+          <app-seat-icon [activeIcon]="frontSeat"></app-seat-icon>
+        </div>
+        <div class="seat-row">
+          <app-seat-icon [activeIcon]="frontSeat"></app-seat-icon>
+          <app-seat-icon [activeIcon]="frontSeat"></app-seat-icon>
+          <app-seat-icon [activeIcon]="frontSeat"></app-seat-icon>
+        </div>
+        <div class="seat-row">
+          <app-seat-icon [activeIcon]="windowSeat"></app-seat-icon>
+          <app-seat-icon [activeIcon]="otherSeat"></app-seat-icon>
+          <app-seat-icon [activeIcon]="sideSeat"></app-seat-icon>
+        </div>
+        <div class="seat-row">
+          <app-seat-icon [activeIcon]="windowSeat"></app-seat-icon>
+          <app-seat-icon [activeIcon]="otherSeat"></app-seat-icon>
+          <app-seat-icon [activeIcon]="sideSeat"></app-seat-icon>
+        </div>
+        <div class="seat-row">
+          <app-seat-icon [activeIcon]="windowSeat"></app-seat-icon>
+          <app-seat-icon [activeIcon]="otherSeat"></app-seat-icon>
+          <app-seat-icon [activeIcon]="sideSeat"></app-seat-icon>
+        </div>
+        <div class="seat-row">
+          <app-seat-icon [activeIcon]="windowSeat"></app-seat-icon>
+          <app-seat-icon [activeIcon]="otherSeat"></app-seat-icon>
+          <app-seat-icon [activeIcon]="sideSeat"></app-seat-icon>
+        </div>
+        <div class="seat-row">
+          <app-seat-icon [activeIcon]="windowSeat"></app-seat-icon>
+          <app-seat-icon [activeIcon]="otherSeat"></app-seat-icon>
+          <app-seat-icon [activeIcon]="sideSeat"></app-seat-icon>
+        </div>
+        <div class="seat-row">
+          <app-seat-icon [activeIcon]="windowSeat"></app-seat-icon>
+          <app-seat-icon [activeIcon]="otherSeat"></app-seat-icon>
+          <app-seat-icon [activeIcon]="sideSeat"></app-seat-icon>
+        </div>
+        <div class="seat-row">
+          <app-seat-icon [activeIcon]="windowSeat"></app-seat-icon>
+          <app-seat-icon [activeIcon]="otherSeat"></app-seat-icon>
+          <app-seat-icon [activeIcon]="sideSeat"></app-seat-icon>
+        </div>
+        <div class="seat-row">
+          <app-seat-icon [activeIcon]="windowSeat"></app-seat-icon>
+          <app-seat-icon [activeIcon]="otherSeat"></app-seat-icon>
+          <app-seat-icon [activeIcon]="sideSeat"></app-seat-icon>
+        </div>
+        <div class="seat-row">
+          <app-seat-icon [activeIcon]="windowSeat"></app-seat-icon>
+          <app-seat-icon [activeIcon]="otherSeat"></app-seat-icon>
+          <app-seat-icon [activeIcon]="sideSeat"></app-seat-icon>
+        </div>
+        <!-- Add more rows as needed -->
+      </div>
+      <div style="padding-right: 24px"></div>
+      <!-- Sağ Taraf -->
+      <div class="seat-container">
+        <div class="seat-row">
+          <app-seat-icon [activeIcon]="extraLargeSeat"></app-seat-icon>
+          <app-seat-icon [activeIcon]="extraLargeSeat"></app-seat-icon>
+          <app-seat-icon [activeIcon]="extraLargeSeat"></app-seat-icon>
+        </div>
+        <div class="seat-row">
+          <app-seat-icon [activeIcon]="frontSeat"></app-seat-icon>
+          <app-seat-icon [activeIcon]="frontSeat"></app-seat-icon>
+          <app-seat-icon [activeIcon]="frontSeat"></app-seat-icon>
+        </div>
+        <div class="seat-row">
+          <app-seat-icon [activeIcon]="frontSeat"></app-seat-icon>
+          <app-seat-icon [activeIcon]="frontSeat"></app-seat-icon>
+          <app-seat-icon [activeIcon]="frontSeat"></app-seat-icon>
+        </div>
+        <div class="seat-row">
+          <app-seat-icon [activeIcon]="frontSeat"></app-seat-icon>
+          <app-seat-icon [activeIcon]="frontSeat"></app-seat-icon>
+          <app-seat-icon [activeIcon]="frontSeat"></app-seat-icon>
+        </div>
+        <div class="seat-row">
+          <app-seat-icon [activeIcon]="frontSeat"></app-seat-icon>
+          <app-seat-icon [activeIcon]="frontSeat"></app-seat-icon>
+          <app-seat-icon [activeIcon]="frontSeat"></app-seat-icon>
+        </div>
+        <div class="seat-row">
+          <app-seat-icon [activeIcon]="frontSeat"></app-seat-icon>
+          <app-seat-icon [activeIcon]="frontSeat"></app-seat-icon>
+          <app-seat-icon [activeIcon]="frontSeat"></app-seat-icon>
+        </div>
+        <div class="seat-row">
+          <app-seat-icon [activeIcon]="sideSeat"></app-seat-icon>
+          <app-seat-icon [activeIcon]="otherSeat"></app-seat-icon>
+          <app-seat-icon [activeIcon]="windowSeat"></app-seat-icon>
+        </div>
+        <div class="seat-row">
+          <app-seat-icon [activeIcon]="sideSeat"></app-seat-icon>
+          <app-seat-icon [activeIcon]="otherSeat"></app-seat-icon>
+          <app-seat-icon [activeIcon]="windowSeat"></app-seat-icon>
+        </div>
+        <div class="seat-row">
+          <app-seat-icon [activeIcon]="sideSeat"></app-seat-icon>
+          <app-seat-icon [activeIcon]="otherSeat"></app-seat-icon>
+          <app-seat-icon [activeIcon]="windowSeat"></app-seat-icon>
+        </div>
+        <div class="seat-row">
+          <app-seat-icon [activeIcon]="sideSeat"></app-seat-icon>
+          <app-seat-icon [activeIcon]="otherSeat"></app-seat-icon>
+          <app-seat-icon [activeIcon]="windowSeat"></app-seat-icon>
+        </div>
+        <div class="seat-row">
+          <app-seat-icon [activeIcon]="sideSeat"></app-seat-icon>
+          <app-seat-icon [activeIcon]="otherSeat"></app-seat-icon>
+          <app-seat-icon [activeIcon]="windowSeat"></app-seat-icon>
+        </div>
+        <div class="seat-row">
+          <app-seat-icon [activeIcon]="sideSeat"></app-seat-icon>
+          <app-seat-icon [activeIcon]="otherSeat"></app-seat-icon>
+          <app-seat-icon [activeIcon]="windowSeat"></app-seat-icon>
+        </div>
+        <div class="seat-row">
+          <app-seat-icon [activeIcon]="sideSeat"></app-seat-icon>
+          <app-seat-icon [activeIcon]="otherSeat"></app-seat-icon>
+          <app-seat-icon [activeIcon]="windowSeat"></app-seat-icon>
+        </div>
+        <div class="seat-row">
+          <app-seat-icon [activeIcon]="sideSeat"></app-seat-icon>
+          <app-seat-icon [activeIcon]="otherSeat"></app-seat-icon>
+          <app-seat-icon [activeIcon]="windowSeat"></app-seat-icon>
+        </div>
+        <div class="seat-row">
+          <app-seat-icon [activeIcon]="sideSeat"></app-seat-icon>
+          <app-seat-icon [activeIcon]="otherSeat"></app-seat-icon>
+          <app-seat-icon [activeIcon]="windowSeat"></app-seat-icon>
+        </div>
+        <!-- Add more rows as needed -->
       </div>
     </div>
   </div>
+</div>
 <br>
 <!-- Devam Butonu -->
 <div class="continue-button">
-    <button nz-button (click)="onContinue()">Devam</button>
+    <button nz-button (click)="onContinue()">{{ 'PASSENGER_INFORMATION.CONTINUE' | translate}}</button>
   </div>
   <br />

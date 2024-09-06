@@ -15,6 +15,7 @@ import { Auth } from '@angular/fire/auth';
 import { FlightModel } from '../../../../../models/flight';
 import { ErrorService } from '../../../../../services';
 import { Router } from '@angular/router';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-selected-flights',
@@ -30,7 +31,8 @@ import { Router } from '@angular/router';
     DateScrollComponent,
     NzTypographyModule,
     CardDetailComponent,
-    NzButtonModule
+    NzButtonModule,
+    TranslateModule
   ],
   templateUrl: './selected-flights.component.html',
   styleUrl: './selected-flights.component.less',
@@ -95,7 +97,7 @@ export class SelectedFlightsComponent {
       origin: flightSignal()?.fromCity, 
       destination: flightSignal()?.toCity, 
       price: 1499.99, 
-      duration: '1S 5DK' 
+      duration: 'SELECTED_FLIGHTS.DURATION' 
     },
     { 
       id: 2, 
@@ -104,7 +106,7 @@ export class SelectedFlightsComponent {
       origin: flightSignal()?.fromCity, 
       destination: flightSignal()?.toCity, 
       price: 1499.99, 
-      duration: '1S 5DK' 
+      duration: 'SELECTED_FLIGHTS.DURATION' 
     },
     { 
       id: 3, 
@@ -113,7 +115,7 @@ export class SelectedFlightsComponent {
       origin: flightSignal()?.fromCity, 
       destination: flightSignal()?.toCity, 
       price: 1499.99, 
-      duration: '1S 5DK' 
+      duration: 'SELECTED_FLIGHTS.DURATION' 
     },
     { 
       id: 4, 
@@ -122,7 +124,7 @@ export class SelectedFlightsComponent {
       origin: flightSignal()?.fromCity, 
       destination: flightSignal()?.toCity, 
       price: 1499.99, 
-      duration: '1S 5DK' 
+      duration: 'SELECTED_FLIGHTS.DURATION' 
     },
     { 
       id: 5, 
@@ -131,7 +133,7 @@ export class SelectedFlightsComponent {
       origin: flightSignal()?.fromCity, 
       destination: flightSignal()?.toCity, 
       price: 1499.99, 
-      duration: '1S 5DK' 
+      duration: 'SELECTED_FLIGHTS.DURATION' 
     },
   ];
 
@@ -143,7 +145,7 @@ export class SelectedFlightsComponent {
       origin: flightSignal()?.toCity, 
       destination: flightSignal()?.fromCity, 
       price: 1499.99, 
-      duration: '1S 5DK' 
+      duration: 'SELECTED_FLIGHTS.DURATION' 
     },
     { 
       id: 2, 
@@ -152,7 +154,7 @@ export class SelectedFlightsComponent {
       origin: flightSignal()?.toCity, 
       destination: flightSignal()?.fromCity, 
       price: 1499.99, 
-      duration: '1S 5DK' 
+      duration: 'SELECTED_FLIGHTS.DURATION' 
     },
     { 
       id: 3, 
@@ -161,7 +163,7 @@ export class SelectedFlightsComponent {
       origin: flightSignal()?.toCity, 
       destination: flightSignal()?.fromCity, 
       price: 1499.99, 
-      duration: '1S 5DK' 
+      duration: 'SELECTED_FLIGHTS.DURATION' 
     },
     { 
       id: 4, 
@@ -170,7 +172,7 @@ export class SelectedFlightsComponent {
       origin: flightSignal()?.toCity, 
       destination: flightSignal()?.fromCity, 
       price: 1499.99, 
-      duration: '1S 5DK' 
+      duration: 'SELECTED_FLIGHTS.DURATION' 
     },
     { 
       id: 5, 
@@ -179,7 +181,7 @@ export class SelectedFlightsComponent {
       origin: flightSignal()?.toCity, 
       destination: flightSignal()?.fromCity, 
       price: 1499.99, 
-      duration: '1S 5DK' 
+      duration: 'SELECTED_FLIGHTS.DURATION' 
     },
   ];
 
@@ -259,10 +261,10 @@ export class SelectedFlightsComponent {
       "operationDate": Date.now()
     }
     flightSignal.set(body);
-    console.log('new Flight Signal:', flightSignal());
+    // console.log('new Flight Signal:', flightSignal());
     this.router.navigateByUrl('/find-flight/passenger-informations');
    } catch (e) {
-    console.log(e);
+    // console.log(e);
     this.errorService.errorHandler(5);
    }
   }

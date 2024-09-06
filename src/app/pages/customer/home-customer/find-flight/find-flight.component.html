@@ -3,97 +3,108 @@
     <div>
       <nz-tabset nzCentered [nzSelectedIndex]="1">
         <nz-tab class="removed"></nz-tab>
-        <nz-tab nzTitle="Uçuş Ara">
-            <div style="display: flex">
-              <!-- Nereden -->
-              <div class="flight-operations-item">
-                <h4 nz-typography nzType="secondary"><span>Nereden</span></h4>
-                <nz-cascader
-                  [nzOptions]="nzOptions"
-                  [(ngModel)]="values"
-                  (ngModelChange)="onChanges($event)"
-                ></nz-cascader>
-              </div>
-              <!-- Swap İcon -->
-              <span (click)="swapValues()"
-                style="padding: 32px 24px 0 0px"
-                nz-icon
-                nzType="swap"
-                nzTheme="outline"
-              ></span>
-  
-              <!-- Nereye -->
-              <div class="flight-operations-item">
-                <h4 nz-typography nzType="secondary"><span>Nereye</span></h4>
-                <nz-cascader
-                  [nzOptions]="nzOptions2"
-                  [(ngModel)]="values2"
-                  (ngModelChange)="onChanges2($event)"
-                ></nz-cascader>
-              </div>
-  
-              <div style="padding-left: 16px"></div>
-  
-              <!-- Tarih Seçimi -->
-              <div class="flight-operations-item">
-                <h4 nz-typography nzType="secondary"><span>Tarih</span></h4>
-                @if(twoWays) {
+        <nz-tab [nzTitle]="'FIND_FLIGHT.SEARCH_FLIGHT.TITLE' | translate">
+          <div style="display: flex">
+            <!-- Nereden -->
+            <div class="flight-operations-item">
+              <h4 nz-typography nzType="secondary">
+                <span>{{ 'FIND_FLIGHT.SEARCH_FLIGHT.FROM' | translate }}</span>
+              </h4>
+              <nz-cascader
+                [nzOptions]="nzOptions"
+                [(ngModel)]="values"
+                (ngModelChange)="onChanges($event)"
+              ></nz-cascader>
+            </div>
+            <!-- Swap İcon -->
+            <span (click)="swapValues()"
+              style="padding: 32px 24px 0 0px"
+              nz-icon
+              nzType="swap"
+              nzTheme="outline"
+            ></span>
+
+            <!-- Nereye -->
+            <div class="flight-operations-item">
+              <h4 nz-typography nzType="secondary">
+                <span>{{ 'FIND_FLIGHT.SEARCH_FLIGHT.TO' | translate }}</span>
+              </h4>
+              <nz-cascader
+                [nzOptions]="nzOptions2"
+                [(ngModel)]="values2"
+                (ngModelChange)="onChanges2($event)"
+              ></nz-cascader>
+            </div>
+
+            <div style="padding-left: 16px"></div>
+
+            <!-- Tarih Seçimi -->
+            <div class="flight-operations-item">
+              <h4 nz-typography nzType="secondary">
+                <span>{{ 'FIND_FLIGHT.SEARCH_FLIGHT.DATE' | translate }}</span>
+              </h4>
+              <ng-container *ngIf="twoWays; else singleDate">
                 <nz-range-picker
                   [(ngModel)]="date"
                   (ngModelChange)="onChange($event)"
                 ></nz-range-picker>
-                } @else {
+              </ng-container>
+              <ng-template #singleDate>
                 <nz-date-picker
                   [(ngModel)]="date"
                   (ngModelChange)="onChange($event)"
                 ></nz-date-picker>
-                }
-              </div>
-  
-              <div style="padding-left: 16px"></div>
-  
-              <label style="padding-top: 40px" nz-checkbox [(ngModel)]="twoWays"
-                ><span>Çift Yön</span></label
-              >
-  
-              <div style="padding-left: 16px"></div>
-  
-              <!-- Yolcu Seçimi -->
-              <div class="flight-operations-item">
-                <h4 nz-typography nzType="secondary"><span>Yolcu</span></h4>
-                <button nz-button nzType="default" (click)="showModal2()">
-                  <span *ngIf="adultNumberGlobal !== '0'"
-                    >{{ adultNumberGlobal }} Yetişkin </span
-                  >&nbsp;
-                  <span *ngIf="childNumberGlobal !== '0'">
-                    {{ childNumberGlobal }} Çocuk </span
-                  >&nbsp;
-                  <span *ngIf="babyNumberGlobal !== '0'">
-                    {{ babyNumberGlobal }} Bebek</span
-                  >
-                </button>
-              </div>
-  
-              <div style="padding-left: 16px"></div>
-  
-              <!-- Uçuş Ara -->
-              <div style="padding-top: 30px">
-                <button (click)="findFlight()" nz-button nzType="primary">
-                  <span style="color: white" nz-icon nzType="search"></span>
-                  Uçuş Ara
-                </button>
-              </div>
+              </ng-template>
             </div>
+
+            <div style="padding-left: 16px"></div>
+
+            <label style="padding-top: 40px" nz-checkbox [(ngModel)]="twoWays">
+              <span>{{ 'FIND_FLIGHT.SEARCH_FLIGHT.TWO_WAYS' | translate }}</span>
+            </label>
+
+            <div style="padding-left: 16px"></div>
+
+            <!-- Yolcu Seçimi -->
+            <div class="flight-operations-item">
+              <h4 nz-typography nzType="secondary">
+                <span>{{ 'FIND_FLIGHT.SEARCH_FLIGHT.PASSENGER' | translate }}</span>
+              </h4>
+              <button nz-button nzType="default" (click)="showModal2()">
+                <span *ngIf="adultNumberGlobal !== '0'">
+                  {{ adultNumberGlobal }} {{ 'FIND_FLIGHT.ADULT' | translate }}
+                </span>
+                &nbsp;
+                <span *ngIf="childNumberGlobal !== '0'">
+                  {{ childNumberGlobal }} {{ 'FIND_FLIGHT.CHILD' | translate }}
+                </span>
+                &nbsp;
+                <span *ngIf="babyNumberGlobal !== '0'">
+                  {{ babyNumberGlobal }} {{ 'FIND_FLIGHT.BABY' | translate }}
+                </span>
+              </button>
+            </div>
+
+            <div style="padding-left: 16px"></div>
+
+            <!-- Uçuş Ara -->
+            <div style="padding-top: 30px">
+              <button (click)="findFlight()" nz-button nzType="primary">
+                <span style="color: white" nz-icon nzType="search"></span>
+                {{ 'FIND_FLIGHT.SEARCH_FLIGHT.FIND_FLIGHT_BUTTON' | translate }}
+              </button>
+            </div>
+          </div>
         </nz-tab>
-        <nz-tab nzTitle="Check-In">
+        <nz-tab [nzTitle]="'FIND_FLIGHT.CHECK_IN.TITLE' | translate">
           <form [formGroup]="form" (ngSubmit)="checkIn()" style="display: flex">
             <!-- Info Part -->
             <div class="flight-operations-item">
               <h3 nz-typography nzType="secondary">
-                <span>Online Check In Yap</span>
+                <span>{{ 'FIND_FLIGHT.CHECK_IN.ONLINE_CHECK_IN.TITLE' | translate }}</span>
               </h3>
               <h5 nz-typography nzType="secondary">
-                <span>Havalimanında sıra bekleme, zaman kazan.</span>
+                <span>{{ 'FIND_FLIGHT.CHECK_IN.ONLINE_CHECK_IN.DESCRIPTION' | translate }}</span>
               </h5>
             </div>
             <div style="padding-left: 16px"></div>
@@ -103,16 +114,17 @@
                 [nzSuffix]="suffixTemplateInfo"
                 [nzPrefix]="prefixTemplateUser"
               >
-                <input type="text" formControlName="lastName" nz-input placeholder="Yolcunun Soyadı" />
+                <input type="text" formControlName="lastName" nz-input 
+                  [placeholder]="'FIND_FLIGHT.CHECK_IN.LAST_NAME.PLACEHOLDER' | translate" />
               </nz-input-group>
-              <ng-template #prefixTemplateUser
-                ><span nz-icon nzType="user"></span
-              ></ng-template>
+              <ng-template #prefixTemplateUser>
+                <span nz-icon nzType="user"></span>
+              </ng-template>
               <ng-template #suffixTemplateInfo>
                 <span
                   nz-icon
                   nz-tooltip
-                  nzTooltipTitle="Ör: YILMAZ"
+                  [nzTooltipTitle]="'FIND_FLIGHT.CHECK_IN.LAST_NAME.TOOLTIP' | translate"
                   nzType="info-circle"
                 ></span>
               </ng-template>
@@ -128,17 +140,17 @@
                   type="text"
                   nz-input
                   formControlName="pnrNo"
-                  placeholder="Rezervasyon Kodu (PNR)"
+                  [placeholder]="'FIND_FLIGHT.CHECK_IN.PNR.PLACEHOLDER' | translate" 
                 />
               </nz-input-group>
-              <ng-template #prefixTemplateUser
-                ><span nz-icon nzType="user"></span
-              ></ng-template>
+              <ng-template #prefixTemplateUser>
+                <span nz-icon nzType="user"></span>
+              </ng-template>
               <ng-template #suffixTemplateInfo2>
                 <span
                   nz-icon
                   nz-tooltip
-                  nzTooltipTitle="Ör: A1N2L3"
+                  [nzTooltipTitle]="'FIND_FLIGHT.CHECK_IN.PNR.TOOLTIP' | translate"
                   nzType="info-circle"
                 ></span>
               </ng-template>
@@ -147,13 +159,8 @@
             <!-- Check-In Ara -->
             <div style="padding-top: 16px">
               <button nz-button nzType="primary">
-                <span
-                  style="color: white"
-                  nz-icon
-                  nzType="arrow-right"
-                  nzTheme="outline"
-                ></span>
-                Onayla
+                <span style="color: white" nz-icon nzType="arrow-right" nzTheme="outline"></span>
+                {{ 'FIND_FLIGHT.CHECK_IN.CONFIRM_BUTTON' | translate }}
               </button>
             </div>
           </form>
@@ -162,74 +169,3 @@
     </div>
   </nz-card>
 </div>
-
-
-<!-- Rezervasyonlarım Kısmı için oluşturuldu. Duruma göre eklenebilir -->
-<!--    <nz-tab nzTitle="Rezervasyonlarım"> 
-            <div style="display: flex">
-                <div class="flight-operations-item">
-                  <h3 nz-typography nzType="secondary">
-                    <span>Rezervasyon Öğren</span>
-                  </h3>
-                  <h5 nz-typography nzType="secondary">
-                    <span>Online olarak uçuş rezervasyonunu öğren.</span>
-                  </h5>
-                </div>
-                <div style="padding-left: 16px"></div>
-                <div style="padding-top: 16px">
-                  <nz-input-group
-                    [nzSuffix]="suffixTemplateInfo"
-                    [nzPrefix]="prefixTemplateUser"
-                  >
-                    <input type="text" nz-input placeholder="Yolcunun Soyadı" />
-                  </nz-input-group>
-                  <ng-template #prefixTemplateUser
-                    ><span nz-icon nzType="user"></span
-                  ></ng-template>
-                  <ng-template #suffixTemplateInfo>
-                    <span
-                      nz-icon
-                      nz-tooltip
-                      nzTooltipTitle="Ör: YILMAZ"
-                      nzType="info-circle"
-                    ></span>
-                  </ng-template>
-                </div>
-                <div style="padding-left: 16px"></div>
-                <div style="padding-top: 16px">
-                  <nz-input-group
-                    [nzSuffix]="suffixTemplateInfo2"
-                    [nzPrefix]="prefixTemplateUser"
-                  >
-                    <input
-                      type="text"
-                      nz-input
-                      placeholder="Rezervasyon Kodu (PNR)"
-                    />
-                  </nz-input-group>
-                  <ng-template #prefixTemplateUser
-                    ><span nz-icon nzType="user"></span
-                  ></ng-template>
-                  <ng-template #suffixTemplateInfo2>
-                    <span
-                      nz-icon
-                      nz-tooltip
-                      nzTooltipTitle="Ör: A1N2L3"
-                      nzType="info-circle"
-                    ></span>
-                  </ng-template>
-                </div>
-                <div style="padding-left: 16px"></div>
-                <div style="padding-top: 16px">
-                  <button (click)="findFlight()" nz-button nzType="primary">
-                    <span
-                      style="color: white"
-                      nz-icon
-                      nzType="arrow-right"
-                      nzTheme="outline"
-                    ></span>
-                    Onayla
-                  </button>
-                </div>
-              </div>
-             </nz-tab>-->

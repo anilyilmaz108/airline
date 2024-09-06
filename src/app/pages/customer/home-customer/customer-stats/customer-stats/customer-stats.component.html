@@ -1,41 +1,57 @@
-<!-- Old (nz-statistic) -->
 <div nz-row [nzGutter]="[16,16]">
-    <div nz-col class="gutter-row "  nzXs="24" nzSm="24" nzMd="16" nzLg="8" nzXl="6">
-      <nz-card>
-        <div style="display: flex; flex-direction: column;">
-          <span style="color: var(--subtitle-text-color); font-weight: 400; padding-bottom: 4px; font-size: medium;">Yolcu Sayısı</span>
-          <span style="color: var(--title-text-color); font-weight: 500; font-size: x-large;" [countUp]="1500000" [duration]="1000"></span>
-          <span style="color: var(--subtitle-text-color); font-size: x-small">800.000 Yerli 700.000 Yabancı</span>
-        </div>
-      </nz-card>
-    </div>
-    <div nz-col class="gutter-row" nzXs="24" nzSm="24" nzMd="16" nzLg="8" nzXl="6">
-      <nz-card class="stat-card">
-        <div style="display: flex; flex-direction: column;">
-          <span style="color: var(--subtitle-text-color); font-weight: 400; padding-bottom: 4px; font-size: medium;">Personel Sayısı</span>
-          <span style="color: var(--title-text-color); font-weight: 500; font-size: x-large;" [countUp]="435500" [duration]="1000"></span>
-          <span style="color: var(--subtitle-text-color); font-size: x-small">300.000 Yerli 135.500 Yabancı</span>
-        </div>
-      </nz-card>
-    </div>
-    <div nz-col class="gutter-row" nzXs="24" nzSm="24" nzMd="16" nzLg="8" nzXl="6">
-      <nz-card class="stat-card">
-        <div style="display: flex; flex-direction: column;">
-          <span style="color: var(--subtitle-text-color); font-weight: 400; padding-bottom: 4px; font-size: medium;">Müşteri Memnuniyeti</span>
-          <span style="color: var(--title-text-color); font-weight: 500; font-size: x-large;" [countUp]="4.7" [duration]="1000"></span>
-          <span style="color: var(--subtitle-text-color); font-size: x-small">4.6 Yerli 4.8 Yabancı</span>
-        </div>
-      </nz-card>
-    </div>
-    <div nz-col class="gutter-row" nzXs="24" nzSm="24" nzMd="16" nzLg="8" nzXl="6">
-      <nz-card class="stat-card">
-        <div style="display: flex; flex-direction: column;">
-          <span style="color: var(--subtitle-text-color); font-weight: 400; padding-bottom: 4px; font-size: medium;">Doluluk Oranı</span>
-          <span>% <span style="color: var(--title-text-color); font-weight: 500; font-size: x-large;" [countUp]="85" [duration]="1000"></span>        </span>
-          <span style="color: var(--subtitle-text-color); font-size: x-small">%55 Yerli %45 Yabancı</span>
-        </div>
-      </nz-card>
-    </div>
+  <div nz-col class="gutter-row" nzXs="24" nzSm="24" nzMd="16" nzLg="8" nzXl="6">
+    <nz-card>
+      <div style="display: flex; flex-direction: column;">
+        <span style="color: var(--subtitle-text-color); font-weight: 400; padding-bottom: 4px; font-size: medium;">
+          {{ 'CUSTOMER_STATS.PASSENGER_COUNT' | translate }}
+        </span>
+        <span style="color: var(--title-text-color); font-weight: 500; font-size: x-large;" [countUp]="1500000" [duration]="1000"></span>
+        <span style="color: var(--subtitle-text-color); font-size: x-small">
+          {{ 'CUSTOMER_STATS.PASSENGER_DETAIL' | translate }}
+        </span>
+      </div>
+    </nz-card>
   </div>
-  
-  
+
+  <div nz-col class="gutter-row" nzXs="24" nzSm="24" nzMd="16" nzLg="8" nzXl="6">
+    <nz-card>
+      <div style="display: flex; flex-direction: column;">
+        <span style="color: var(--subtitle-text-color); font-weight: 400; padding-bottom: 4px; font-size: medium;">
+          {{ 'CUSTOMER_STATS.STAFF_COUNT' | translate }}
+        </span>
+        <span style="color: var(--title-text-color); font-weight: 500; font-size: x-large;" [countUp]="435500" [duration]="1000"></span>
+        <span style="color: var(--subtitle-text-color); font-size: x-small">
+          {{ 'CUSTOMER_STATS.STAFF_DETAIL' | translate }}
+        </span>
+      </div>
+    </nz-card>
+  </div>
+
+  <div nz-col class="gutter-row" nzXs="24" nzSm="24" nzMd="16" nzLg="8" nzXl="6">
+    <nz-card>
+      <div style="display: flex; flex-direction: column;">
+        <span style="color: var(--subtitle-text-color); font-weight: 400; padding-bottom: 4px; font-size: medium;">
+          {{ 'CUSTOMER_STATS.SATISFACTION_RATE' | translate }}
+        </span>
+        <span style="color: var(--title-text-color); font-weight: 500; font-size: x-large;" [countUp]="4.7" [duration]="1000"></span>
+        <span style="color: var(--subtitle-text-color); font-size: x-small">
+          {{ 'CUSTOMER_STATS.SATISFACTION_DETAIL' | translate }}
+        </span>
+      </div>
+    </nz-card>
+  </div>
+
+  <div nz-col class="gutter-row" nzXs="24" nzSm="24" nzMd="16" nzLg="8" nzXl="6">
+    <nz-card>
+      <div style="display: flex; flex-direction: column;">
+        <span style="color: var(--subtitle-text-color); font-weight: 400; padding-bottom: 4px; font-size: medium;">
+          {{ 'CUSTOMER_STATS.OCCUPANCY_RATE' | translate }}
+        </span>
+        <span>% <span style="color: var(--title-text-color); font-weight: 500; font-size: x-large;" [countUp]="85" [duration]="1000"></span> </span>
+        <span style="color: var(--subtitle-text-color); font-size: x-small">
+          {{ 'CUSTOMER_STATS.OCCUPANCY_DETAIL' | translate }}
+        </span>
+      </div>
+    </nz-card>
+  </div>
+</div>

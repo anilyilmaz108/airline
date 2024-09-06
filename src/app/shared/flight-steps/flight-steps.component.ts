@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { TranslateModule } from '@ngx-translate/core';
 import { NzCardModule } from 'ng-zorro-antd/card';
 import { NzIconModule } from 'ng-zorro-antd/icon';
 import { NzStepsModule } from 'ng-zorro-antd/steps';
@@ -6,7 +7,7 @@ import { NzStepsModule } from 'ng-zorro-antd/steps';
 @Component({
   selector: 'app-flight-steps',
   standalone: true,
-  imports: [NzCardModule, NzStepsModule, NzIconModule],
+  imports: [NzCardModule, NzStepsModule, NzIconModule, TranslateModule],
   templateUrl: './flight-steps.component.html',
   styleUrl: './flight-steps.component.less'
 })

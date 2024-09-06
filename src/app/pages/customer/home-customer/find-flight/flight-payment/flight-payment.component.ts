@@ -29,6 +29,7 @@ import { UserModel } from '../../../../../models/user';
 import { generateId } from '../../../../../helpers/generate-id';
 import { FlightModel } from '../../../../../models/flight';
 import { Auth } from '@angular/fire/auth';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-flight-payment',
@@ -43,6 +44,7 @@ import { Auth } from '@angular/fire/auth';
     NzInputModule,
     NzCardModule,
     CreditCardNumberPipe,
+    TranslateModule
   ],
   templateUrl: './flight-payment.component.html',
   styleUrl: './flight-payment.component.less',
@@ -105,10 +107,7 @@ export class FlightPaymentComponent {
   async submitPayment() {
     // Bilet aldıktan sonra Check-in ve Uçuş sorgulama için gerekli
     if(this.auth.currentUser?.uid === undefined || this.auth.currentUser?.uid === null) {
-      await this.authService.fbRegister(
-        flightUserSignal()?.email!,
-        flightUserSignal()?.pass!
-      );
+      
       const userData = {
         id: flightUserSignal()?.id,
         role: 'user',

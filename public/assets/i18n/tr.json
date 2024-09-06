@@ -451,5 +451,155 @@
         "DESCRIPTION": "Yolcu haklarınızla ilgili daha fazla bilgi almak veya yardım talep etmek için yardım merkezi veya iletişim formu üzerinden bizimle iletişime geçebilirsiniz. Amacımız, size en iyi deneyimi sunmak ve herhangi bir sorun yaşamanız durumunda yanınızda olmaktır."
       }
     ]
+  },
+  "HOME_CUSTOMER": {
+    "DATAS": {
+      "DATA1": {
+        "TITLE": "Kış kaçamağınızı erkenden planlayın ve Antalya'yı daha ucuza keşfedin!",
+        "DESCRIPTION": "59,99€‘dan başlayan fiyatlarla"
+      },
+      "DATA2": {
+        "TITLE": "Air: sınırlı sayıda yerimiz var!",
+        "DESCRIPTION": "İzmir ve Anadolu bagaj dahil 79,99€."
+      },
+      "DATA3": {
+        "TITLE": "Uçağınıza giden treni kaçırmayın!",
+        "DESCRIPTION": "39,99€‘dan başlayan fiyatlarla"
+      },
+      "DATA4": {
+        "TITLE": "Seyahat Planlayıcısı",
+        "DESCRIPTION": "19,99€‘dan başlayan fiyatlarla"
+      }
+    }
+  },
+  "FIND_FLIGHT": {
+    "ADULT": "Yetişkin",
+    "CHILD": "Çocuk",
+    "BABY": "Bebek",
+    "SAVE": "Kaydet",
+    "CANCEL": "İptal",
+    "TYPE2": "Çocuk (2-12 yaş)",
+    "TYPE3": "Bebek (0-2 yaş)",
+    "SEARCH_FLIGHT": {
+      "TITLE": "Uçuş Ara",
+      "FROM": "Nereden",
+      "TO": "Nereye",
+      "DATE": "Tarih",
+      "TWO_WAYS": "Çift Yön",
+      "PASSENGER": "Yolcu",
+      "FIND_FLIGHT_BUTTON": "Uçuş Ara"
+    },
+    "CHECK_IN": {
+      "TITLE": "Check-In",
+      "ONLINE_CHECK_IN": {
+        "TITLE": "Online Check In Yap",
+        "DESCRIPTION": "Havalimanında sıra bekleme, zaman kazan."
+      },
+      "LAST_NAME": {
+        "PLACEHOLDER": "Yolcunun Soyadı",
+        "TOOLTIP": "Ör: YILMAZ"
+      },
+      "PNR": {
+        "PLACEHOLDER": "Rezervasyon Kodu (PNR)",
+        "TOOLTIP": "Ör: A1N2L3"
+      },
+      "CONFIRM_BUTTON": "Onayla"
+    }
+  },
+  "SELECTED_FLIGHTS": {
+    "DEPARTURE": "Kalkış",
+    "DIRECT": "Direkt",
+    "FROM": "İtibaren",
+    "BEST_PRICE": "En İyi Fiyat",
+    "RETURN": "Dönüş",
+    "CONTINUE": "Devam",
+    "DURATION": "1S 5DK",
+    "CARD_DETAIL": {
+      "DATA1": {
+        "DETAILS": "15 kg bagaj, online check-in"
+      },
+      "DATA2": {
+        "DETAILS": "20 kg bagaj, esnek değişiklik"
+      },
+      "DATA3": {
+        "DETAILS": "25 kg bagaj, esnek değişiklik"
+      }
+    }
+  },
+  "PASSENGER_INFORMATION": {
+    "LOGIN_TIPS": "Giriş yaparak işlemlerinizi hızlandırabilirsiniz.",
+    "LOGIN": "Giriş Yap",
+    "PERSONAL_INFO": "Kişisel Bilgiler",
+    "NAME": "İsim",
+    "NAME_ERROR": "İsim alanı zorunlu!",
+    "LASTNAME": "Soyisim",
+    "LASTNAME_ERROR": "Soyisim alanı zorunlu!",
+    "GENDER": "Cinsiyet",
+    "GENDER_ERROR": "Cinsiyet alanı zorunlu!",
+    "GENDER_PLACEHOLDER": "Cinsiyetinizi seçiniz",
+    "MALE": "Erkek",
+    "FEMALE": "Kadın",
+    "EMAIL": "E-mail",
+    "EMAIL_ERROR": "Bu email geçersizdir!",
+    "PHONE_NUMBER": "Telefon Numarası",
+    "PHONE_NUMBER_ERROR": "Bu numara geçersizdir!",
+    "PHONE_INPUT": "Lütfen numaranızı giriniz",
+    "BIRTH": "Doğum Tarihi",
+    "BIRTH_ERROR": "Doğum tarihi alanı zorunlu!",
+    "NATIONALITY": "Uyruk",
+    "NATIONALITY_ERROR": "Uyruk alanı zorunlu!",
+    "NATIONALITY_PLACEHOLDER": "ör: Türkiye",
+    "TCID": "TC Kimlik No",
+    "TCID_ERROR": "TC Kimlik No 11 haneli olmalı!",
+    "TCID_PLACEHOLDER": "Türk vatandaşı değilseniz boş bırakınız",
+    "AGREE1": "Uçuş kurallarını okudum,",
+    "AGREE2": "onaylıyorum",
+    "CONTINUE": "Devam"
+  },
+  "FLIGHT_PAYMENT": {
+    "SKT": "Son Kullanma Tarihi",
+    "CARD_NUMBER": "Kart Numarası",
+    "CARD_HOLDER": "Kart Sahibi",
+    "PAYMENT": "Ödeme Yap"
+  },
+  "FLIGHT_DONE": {
+    "SUCCESS_ALERT": "Ödeme başarılı. İyi seyahatler dileriz.",
+    "PNR_INF0": "Rezervasyon (PNR) No:",
+    "PASSENGER_INFORMATION": "Yolcu Bilgileri",
+    "DOWNLOAD1": "Uçuş bilgilerinizi indirmek için",
+    "DOWNLOAD2": "tıklayınız",
+    "TRIP_DETAILS": "Seyahat Detayları",
+    "FROM": "Nereden",
+    "DEPARTURE_TIME": "Kalkış Zamanı",
+    "TO": "Nereye",
+    "ARRIVAL_TIME": "Varış Zamanı",
+    "FLIGHT_NO": "Uçuş No",
+    "TICKET_NO": "Bilet No",
+    "VALIDITY_DATE": "Geçerlilik Tarihi",
+    "PACKAGE_TYPE": "Paket Türü",
+    "PACKAGE_DESC": "model uçuş paketi seçilmiştir.",
+    "TYPE1": "Toplam Bagaj Hakkı: 15 Kg",
+    "TYPE2": "Toplam Bagaj Hakkı: 20 Kg",
+    "TYPE3": "Toplam Bagaj Hakkı: 25 Kg",
+    "CABIN_BAGGAGE": "Kabin Bagaj Hakkı: 55x40x20 cm",
+    "TIPS1": "HOW - REF/RES CHG RESTRICTED - UÇUŞUNUZDAN 24 SAAT ÖNCESİNE KADAR İADE/DEĞİŞİKLİK YAPABİLİRSİNİZ.",
+    "TIPS2": "HOW - REF/RES CHG RESTRICTED - İADE/DEĞİŞİKLİK ÜCRETLİDİR."
+  },
+  "FLIGHT_STEPS": {
+    "FLIGHTS": "Uçuşlar",
+    "PASSENGERS": "Yolcular",
+    "SEATS": "Koltuklar",
+    "PAYMENT": "Ödeme",
+    "DONE": "Onay"
+  },
+  "CUSTOMER_STATS": {
+    "PASSENGER_COUNT": "Yolcu Sayısı",
+    "PASSENGER_DETAIL": "800.000 Yerli 700.000 Yabancı",
+    "STAFF_COUNT": "Personel Sayısı",
+    "STAFF_DETAIL": "300.000 Yerli 135.500 Yabancı",
+    "SATISFACTION_RATE": "Müşteri Memnuniyeti",
+    "SATISFACTION_DETAIL": "4.6 Yerli 4.8 Yabancı",
+    "OCCUPANCY_RATE": "Doluluk Oranı",
+    "OCCUPANCY_DETAIL": "%55 Yerli %45 Yabancı"
   }
 }

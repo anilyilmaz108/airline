@@ -1,6 +1,12 @@
 import { CommonModule } from '@angular/common';
 import { Component, SimpleChanges, inject, signal } from '@angular/core';
-import { FormGroup, FormsModule, NonNullableFormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
+import {
+  FormGroup,
+  FormsModule,
+  NonNullableFormBuilder,
+  ReactiveFormsModule,
+  Validators,
+} from '@angular/forms';
 import { NzCardModule } from 'ng-zorro-antd/card';
 import { NzCascaderModule } from 'ng-zorro-antd/cascader';
 import { NzDividerModule } from 'ng-zorro-antd/divider';
@@ -11,7 +17,12 @@ import { NzTabsModule } from 'ng-zorro-antd/tabs';
 import { NzDatePickerModule } from 'ng-zorro-antd/date-picker';
 import { NzInputModule } from 'ng-zorro-antd/input';
 import { NzOptionComponent } from 'ng-zorro-antd/select';
-import { NZ_MODAL_DATA, NzModalModule, NzModalRef, NzModalService } from 'ng-zorro-antd/modal';
+import {
+  NZ_MODAL_DATA,
+  NzModalModule,
+  NzModalRef,
+  NzModalService,
+} from 'ng-zorro-antd/modal';
 import { NzButtonModule } from 'ng-zorro-antd/button';
 import { NzFormModule } from 'ng-zorro-antd/form';
 import { NzInputNumberModule } from 'ng-zorro-antd/input-number';
@@ -25,6 +36,7 @@ import { flightSignal, flightUserSignal } from '../../../../core/data-values';
 import { FlightModel } from '../../../../models/flight';
 import { Router } from '@angular/router';
 import { environment } from '../../../../../environments/environment';
+import { TranslateModule } from '@ngx-translate/core';
 
 // Ülke & Şehir Bilgileri
 const options = [
@@ -263,10 +275,9 @@ const options2 = [
   },
 ];
 
-var adultNumberGlobal = signal("1");
-var childNumberGlobal = signal("0");
-var babyNumberGlobal = signal("0");
-
+var adultNumberGlobal = signal('1');
+var childNumberGlobal = signal('0');
+var babyNumberGlobal = signal('0');
 
 @Component({
   selector: 'app-find-flight',
@@ -289,10 +300,11 @@ var babyNumberGlobal = signal("0");
     NzButtonModule,
     NzCheckboxModule,
     NzToolTipModule,
+    TranslateModule,
   ],
   templateUrl: './find-flight.component.html',
   styleUrl: './find-flight.component.less',
-  host: {ngSkipHydration: 'true'},
+  host: { ngSkipHydration: 'true' },
 })
 export class FindFlightComponent {
   auth = inject(Auth);
@@ -323,7 +335,7 @@ export class FindFlightComponent {
     // console.log(values, this.values2);
   }
 
-  swapValues(){
+  swapValues() {
     const tempVal1 = this.values;
     const tempVal2 = this.values2;
     this.values = tempVal2;
@@ -334,51 +346,52 @@ export class FindFlightComponent {
   twoWays = true;
   inputValue: string | null = null;
 
-
   adultNumberGlobal = adultNumberGlobal();
   childNumberGlobal = childNumberGlobal();
   babyNumberGlobal = babyNumberGlobal();
-  
+
   list: any = [];
   loading = false;
 
-  async findFlight(){
-    try{
-      const userPath = this.auth.currentUser ? this.auth.currentUser?.uid : generateId.generateUniqueId(10);
+  async findFlight() {
+    try {
+      const userPath = this.auth.currentUser
+        ? this.auth.currentUser?.uid
+        : generateId.generateUniqueId(10);
       // console.log('Uçuş aranıyor..');
       // console.log('FindFlight: ', this.values, this.values2, this.date, this.twoWays, adultNumberGlobal(), childNumberGlobal(), babyNumberGlobal());
       const data: FlightModel = {
-        "id": generateId.generateUniqueId(8),
-        "userId": userPath,
-        "PNRNO": "",
-        "earningAirScore": 0,
-        "fromCity": this.values,
-        "toCity": this.values2,
-        "dateFirst": this.date!.length == 2 ? this.date![0] : this.date,
-        "dateLast": this.date!.length == 2 ? this.date![1] : undefined,
-        "hourFirst": "0",
-        "hourLast": "0",
-        "priceFirst": 0,
-        "priceLast": 0,
-        "adultNumber": adultNumberGlobal(),
-        "childNumber": childNumberGlobal(),
-        "babyNumber": babyNumberGlobal(),
-        "flightTimeFirst": "",
-        "flightTimeLast": "",
-        "packageFirst": "",
-        "packageLast": "",
-        "flexFirst": false,
-        "flexLast": false,
-        "seatFirst": "",
-        "seatLast": "",
-        "totalPrice": 0,
-        "operationDate": Date.now()
-      }
+        id: generateId.generateUniqueId(8),
+        userId: userPath,
+        PNRNO: '',
+        earningAirScore: 0,
+        fromCity: this.values,
+        toCity: this.values2,
+        dateFirst: this.date!.length == 2 ? this.date![0] : this.date,
+        dateLast: this.date!.length == 2 ? this.date![1] : undefined,
+        hourFirst: '0',
+        hourLast: '0',
+        priceFirst: 0,
+        priceLast: 0,
+        adultNumber: adultNumberGlobal(),
+        childNumber: childNumberGlobal(),
+        babyNumber: babyNumberGlobal(),
+        flightTimeFirst: '',
+        flightTimeLast: '',
+        packageFirst: '',
+        packageLast: '',
+        flexFirst: false,
+        flexLast: false,
+        seatFirst: '',
+        seatLast: '',
+        totalPrice: 0,
+        operationDate: Date.now(),
+      };
 
       flightSignal.set(data);
       console.log('find flight', flightSignal());
       this.router.navigateByUrl('/find-flight/selected-flights');
-    } catch(err){
+    } catch (err) {
       console.log(err);
       this.errorService.errorHandler(4);
     }
@@ -389,16 +402,21 @@ export class FindFlightComponent {
      * flightId
      */
   }
- 
+
   async checkIn() {
     try {
       this.list.map((data: FlightModel) => {
         //console.log(data);
-        if(this.form.value['pnrNo'] === data.PNRNO){ //ULSFC9
+        if (this.form.value['pnrNo'] === data.PNRNO) {
+          //ULSFC9
           // console.log('==>', data);
-          this.userService.getAll().subscribe((matchData) => { //YILMAZ
+          this.userService.getAll().subscribe((matchData) => {
+            //YILMAZ
             matchData.map((user) => {
-              if(user.lastName?.toUpperCase() === this.form.value['lastName'].toUpperCase()){
+              if (
+                user.lastName?.toUpperCase() ===
+                this.form.value['lastName'].toUpperCase()
+              ) {
                 // console.log('==>', user);
                 // console.log('-->', data);
                 const userData = {
@@ -415,10 +433,10 @@ export class FindFlightComponent {
                   active: true,
                   email: user.email,
                   pass: user.pass,
-                  airScore: user.airScore
+                  airScore: user.airScore,
                 };
                 flightUserSignal.set(userData);
-  
+
                 const flightData: FlightModel = {
                   id: data.id,
                   userId: data.userId,
@@ -450,18 +468,16 @@ export class FindFlightComponent {
                 this.form.reset();
                 this.router.navigateByUrl('/check-in/select-check-in');
               }
-            })
-          })
+            });
+          });
         }
-  
       });
-     
     } catch (err) {
       this.errorService.errorHandler(5);
-    }  
+    }
   }
 
-  getAllFlight(){
+  getAllFlight() {
     this.loading = true;
     this.flightService.getAll().subscribe((data) => {
       this.list = data;
@@ -485,16 +501,19 @@ export class FindFlightComponent {
     this.nzModalService.create({
       nzTitle: 'Yolcu Seçiniz',
       nzContent: PassengerSelectComponent,
-      nzData: {adultNumber: this.adultNumberGlobal, childNumber: this.childNumberGlobal, babyNumber: this.babyNumberGlobal},
+      nzData: {
+        adultNumber: this.adultNumberGlobal,
+        childNumber: this.childNumberGlobal,
+        babyNumber: this.babyNumberGlobal,
+      },
     });
-   this.nzModalService.afterAllClose.subscribe(result => {
+    this.nzModalService.afterAllClose.subscribe((result) => {
       this.adultNumberGlobal = adultNumberGlobal();
       this.childNumberGlobal = childNumberGlobal();
       this.babyNumberGlobal = babyNumberGlobal();
       //console.log(babyNumberGlobal());
-    }); 
+    });
   }
- 
 }
 
 @Component({
@@ -509,60 +528,67 @@ export class FindFlightComponent {
     CommonModule,
     NzInputNumberModule,
     NzModalModule,
-    NzButtonModule
+    NzButtonModule,
+    TranslateModule,
   ],
   template: `
-  <form [formGroup]="form" (ngSubmit)="save()">
-  <!-- Yetişkin -->
-  <nz-input-group nzCompact style="padding-bottom: 8px">
-    <input
-    formControlName="adultText"
-      type="text"
-      nz-input
-      [ngModel]="'Yetişkin'"
-      readonly
-      style="width: 50%"
-    />
-    <nz-input-number formControlName="adult" nzMin="0"></nz-input-number>
-  </nz-input-group>
-  <!-- Çocuk -->
-  <nz-input-group nzCompact style="padding-bottom: 8px">
-    <input
-      formControlName="childText"
-      type="text"
-      nz-input
-      [ngModel]="'Çocuk (2-12 yaş)'"
-      readonly
-      style="width: 50%"
-    />
-    <nz-input-number formControlName="child" nzMin="0"></nz-input-number>
-  </nz-input-group>
-  <!-- Bebek -->
-  <nz-input-group nzCompact style="padding-bottom: 8px">
-    <input
-    formControlName="babyText"
-      type="text"
-      nz-input
-      [ngModel]="'Bebek (0-2 yaş)'"
-      readonly
-      style="width: 50%"
-    />
-    <nz-input-number formControlName="baby" nzMin="0"></nz-input-number>
-  </nz-input-group>
+    <form [formGroup]="form" (ngSubmit)="save()">
+      <!-- Yetişkin -->
+      <nz-input-group nzCompact style="padding-bottom: 8px">
+        <input
+          formControlName="adultText"
+          type="text"
+          nz-input
+          [ngModel]="'FIND_FLIGHT.ADULT' | translate"
+          readonly
+          style="width: 50%"
+        />
+        <nz-input-number formControlName="adult" nzMin="0"></nz-input-number>
+      </nz-input-group>
+      <!-- Çocuk -->
+      <nz-input-group nzCompact style="padding-bottom: 8px">
+        <input
+          formControlName="childText"
+          type="text"
+          nz-input
+          [ngModel]="'FIND_FLIGHT.TYPE2' | translate"
+          readonly
+          style="width: 50%"
+        />
+        <nz-input-number formControlName="child" nzMin="0"></nz-input-number>
+      </nz-input-group>
+      <!-- Bebek -->
+      <nz-input-group nzCompact style="padding-bottom: 8px">
+        <input
+          formControlName="babyText"
+          type="text"
+          nz-input
+          [ngModel]="'FIND_FLIGHT.TYPE3' | translate"
+          readonly
+          style="width: 50%"
+        />
+        <nz-input-number formControlName="baby" nzMin="0"></nz-input-number>
+      </nz-input-group>
 
-  <div *nzModalFooter>
-    <button nz-button nzType="default" (click)="destroyModal()">
-      İptal
-    </button>
-    <button nz-button nzType="primary" (click)="save()" [disabled]="(adultNumber === '0' && childNumber === '0' && babyNumber === '0')">
-      Onayla
-    </button>
-  </div>
-</form>
-`,
+      <div *nzModalFooter>
+        <button nz-button nzType="default" (click)="destroyModal()">
+          {{ 'FIND_FLIGHT.CANCEL' | translate }}
+        </button>
+        <button
+          nz-button
+          nzType="primary"
+          (click)="save()"
+          [disabled]="
+            adultNumber === '0' && childNumber === '0' && babyNumber === '0'
+          "
+        >
+          {{ 'FIND_FLIGHT.SAVE' | translate }}
+        </button>
+      </div>
+    </form>
+  `,
   styles: ``,
-  host: {ngSkipHydration: 'true'},
-
+  host: { ngSkipHydration: 'true' },
 })
 export class PassengerSelectComponent {
   nzModalData = inject(NZ_MODAL_DATA);
@@ -594,12 +620,12 @@ export class PassengerSelectComponent {
     this.nzModalRef.destroy();
   }
 
-  save(){
+  save() {
     // console.log('Tıklandı..');
     adultNumberGlobal.set(this.form.controls['adult'].value);
     childNumberGlobal.set(this.form.controls['child'].value);
     babyNumberGlobal.set(this.form.controls['baby'].value);
-    console.log('Değerler', adultNumberGlobal(), childNumberGlobal(), babyNumberGlobal());
+    // console.log('Değerler', adultNumberGlobal(), childNumberGlobal(), babyNumberGlobal());
     this.nzModalRef.destroy();
   }
 }
