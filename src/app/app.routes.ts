@@ -16,7 +16,4 @@ export const routes: Routes = [
       { path: 'check-in', loadChildren: () => import('./pages/customer/home-customer/check-in/check-in.routes').then(m => m.CHECK_IN_ROUTES) },
     ]
   }
-
-
-
 ];
