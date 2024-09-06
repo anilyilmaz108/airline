@@ -54,7 +54,7 @@ export class PrivateLayoutComponent {
   isDarkMode: boolean;
   isEnglish = false;
   user!: UserModel;
-  profilePhoto!: string;
+  profilePhoto: string = "https://cdn-icons-png.freepik.com/512/6915/6915987.png";
   lang: string = "TR";
 
 
@@ -81,10 +81,9 @@ export class PrivateLayoutComponent {
       // currentUser bilgisini yeniden yükleyip photoURL'yi güncelle
 
       if(this.fbAuth.currentUser !== null && localStorage.getItem('user') !== null){
-        const userObject = JSON.parse(localStorage.getItem('user')!); {
+        const userObject = JSON.parse(localStorage.getItem('user')!); 
           this.authService.userSignal.set(userObject);
-          console.log('storageJson', this.authService.userSignal());
-        }
+          // console.log('storageJson', this.authService.userSignal());
       }
 
       if(this.fbAuth.currentUser) {
@@ -95,9 +94,9 @@ export class PrivateLayoutComponent {
         this.profilePhoto = "https://cdn-icons-png.freepik.com/512/6915/6915987.png";
       }
     
-    console.log('layout-profile', this.profilePhoto);
+    // console.log('layout-profile', this.profilePhoto);
     this.user = this.authService.userSignal()!;
-    console.log('layout-user', this.authService.userSignal(), 'fb', this.fbAuth.currentUser);
+    // console.log('layout-user', this.authService.userSignal(), 'fb', this.fbAuth.currentUser);
     });
     // console.log('FbUserSignal: ', this.user);
     // this.user = this.authService.userSignal()!;

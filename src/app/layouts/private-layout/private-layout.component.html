@@ -202,11 +202,11 @@
           <span *ngIf="user" class="header-icons">{{airScore}} Air</span>
           <span *ngIf="user" (click)="logout()" class="header-icons">
             <i class="trigger" nz-tooltip
-            [nzTooltipTitle]="'PRIVATE_LAYOUT.SIGN_IN' | translate "
+            [nzTooltipTitle]="'PRIVATE_LAYOUT.SIGN_OUT' | translate "
             nzTooltipPlacement="bottomRight" nz-icon [nzType]="'logout'"></i>
           </span>
           <span *ngIf="!user" routerLink="/user/login" class="header-icons" nz-icon  nz-tooltip
-          [nzTooltipTitle]="'PRIVATE_LAYOUT.SIGN_OUT' | translate "
+          [nzTooltipTitle]="'PRIVATE_LAYOUT.SIGN_IN' | translate "
           nzTooltipPlacement="bottomRight" nzType="login" nzTheme="outline"></span>
         </div>
       </div>

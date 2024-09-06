@@ -65,7 +65,7 @@ export class ProfileComponent {
     this.profilePhoto = this.auth.currentUser?.photoURL ? this.auth.currentUser.photoURL : "https://cdn-icons-png.freepik.com/512/6915/6915987.png";
     this.userPhotos = this.auth.currentUser?.photoURL ? true : false;
     this.user = this.authService.userSignal()!;
-    console.log('PROFILE', this.user);
+    // console.log('PROFILE', this.user);
   }
 
   ngOnInit(): void {
