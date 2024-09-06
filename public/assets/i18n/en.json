@@ -601,5 +601,24 @@
     "SATISFACTION_DETAIL": "4.6 Local 4.8 Foreign",
     "OCCUPANCY_RATE": "Occupancy Rate",
     "OCCUPANCY_DETAIL": "55% Local 45% Foreign"
+  },
+  "CHECK_IN": {
+    "TITLE": "Online Check-In",
+    "INSTRUCTIONS": "* Please use UPPERCASE letters when entering your first and last name.\n* Ensure that you enter your name as it appears on your ticket. If your name includes German punctuation marks (ä, ü, ö) or Turkish characters (ç, ı, ğ, ö, ş, ü), please do not use these characters. We kindly ask you to replace them as follows: ä = ae, ü = ue, ö = oe or ç=c, ı=i, ğ=g, ö=o, ş=s, ü=u",
+    "BOOKING_CODE_LABEL": "Booking Code",
+    "LAST_NAME_LABEL": "Last Name",
+    "SUBMIT_BUTTON": "Submit",
+    "TIP_1": "* Check-in opens one day before your flight.",
+    "TIP_2": "* Ensure that you have entered the information on the screen correctly. If there is any issue, please contact us.",
+    "TIP_3": "* This is a test application.",
+    "TIP_4": "* Your information is protected and will not be shared with third parties.",
+    "TIP_5": "* This is a sample screen."
+  },
+  "SELECT_CHECK_IN": {
+    "CONTINUE": "Continue",
+    "TIPS1": "* Check-in opens one day before your flight."
+  },
+  "CHECK_IN_DONE": {
+    "SUCCESS_ALERT": "Check-In successful. Have a nice trip."
   }
 }

@@ -9,6 +9,7 @@ import { NzSpinModule } from 'ng-zorro-antd/spin';
 import { Router } from '@angular/router';
 import { flightSignal, flightUserSignal } from '../../../../core/data-values';
 import { FlightModel } from '../../../../models/flight';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-check-in',
@@ -20,7 +21,8 @@ import { FlightModel } from '../../../../models/flight';
     NzTypographyModule,
     NzButtonModule,
     NzCardModule,
-    NzSpinModule
+    NzSpinModule,
+    TranslateModule
   ],
   templateUrl: './check-in.component.html',
   styleUrl: './check-in.component.less',

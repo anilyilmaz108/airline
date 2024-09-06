@@ -601,5 +601,24 @@
     "SATISFACTION_DETAIL": "4.6 Yerli 4.8 Yabancı",
     "OCCUPANCY_RATE": "Doluluk Oranı",
     "OCCUPANCY_DETAIL": "%55 Yerli %45 Yabancı"
+  },
+  "CHECK_IN": {
+    "TITLE": "Online Check-In",
+    "INSTRUCTIONS": "* Lütfen adınızı ve soyadınızı girerken BÜYÜK HARF kullanınız.\n* Lütfen adınızı ve soyadınızı biletinizde yazdığı şekilde girdiğinizden emin olunuz. Eğer isminizde Almanca noktalama işaretleri (ä, ü, ö) veya Türkçe karakter (ç, ı, ğ, ö, ş, ü) varsa bu karakterleri kullanmayınız. Çift nokta işaretlerini ve Türkçe karakterleri belirtilen şekilde değiştirmenizi rica ederiz: ä = ae, ü = ue, ö = oe veya ç=c, ı=i, ğ=g, ö=o, ş=s, ü=u",
+    "BOOKING_CODE_LABEL": "Rezervasyon kodu",
+    "LAST_NAME_LABEL": "Soyadı",
+    "SUBMIT_BUTTON": "Onayla",
+    "TIP_1": "* Uçuşunuzdan bir gün öncesinde check-in işlemleri açılmaktadır.",
+    "TIP_2": "* Lütfen ekrandaki bilgileri doğru girdiğinizden emin olunuz. Olası bir sorun dahilinde iletişime geçiniz.",
+    "TIP_3": "* Test amaçlı bir uygulamadır.",
+    "TIP_4": "* Bilgileriniz tarafımızca korunur ve hiç bir şekilde üçüncü şahıs kişilerle paylaşılmaz.",
+    "TIP_5": "* Temsili bir ekrandır."
+  },
+  "SELECT_CHECK_IN": {
+    "CONTINUE": "Devam",
+    "TIPS1": "* Uçuşunuzdan bir gün öncesinde check-in işlemleri açılmaktadır."
+  },
+  "CHECK_IN_DONE": {
+    "SUCCESS_ALERT": "Check-In başarılı. İyi seyahatler dileriz."
   }
 }

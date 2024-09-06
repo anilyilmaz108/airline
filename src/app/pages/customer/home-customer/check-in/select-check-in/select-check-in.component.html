@@ -43,12 +43,12 @@
     </div>
 </div>
 <br>
-<button *ngIf="onSelect" nz-button (click)="onContinue()" style="background-color: var(--primary-color); color: white;">Devam</button>
+<button *ngIf="onSelect" nz-button (click)="onContinue()" style="background-color: var(--primary-color); color: white;">{{ 'SELECT_CHECK_IN.CONTINUE' | translate}}</button>
 <br>
 <!-- Tips -->
 <div *ngIf="!isCheckIn" style="display: flex; justify-content: center;">
     <span nz-typography nzType="secondary"
-      >* Uçuşunuzdan bir gün öncesinde check-in işlemleri açılmaktadır.</span
+      >{{ 'SELECT_CHECK_IN.TIPS1' | translate}}</span
     >
   </div>
   <br>

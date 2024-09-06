@@ -4,9 +4,9 @@
     <div class="payment-success-container">
         <nz-avatar [nzSize]="64" nzIcon="check-circle"></nz-avatar>
         <div class="text-container">
-            <span nz-typography class="payment-message">Check-In başarılı. İyi seyahatler dileriz.</span>
+            <span nz-typography class="payment-message">{{ 'CHECK_IN_DONE.SUCCESS_ALERT' | translate }}</span>
             <span nz-typography class="pnr-message">
-                Rezervasyon (PNR) No: <span class="pnr-code">{{flight?.PNRNO}}</span>
+              {{ 'FLIGHT_DONE.PNR_INFO' | translate }} <span class="pnr-code">{{flight?.PNRNO}}</span>
             </span>
         </div>
     </div>
@@ -58,7 +58,7 @@
 <nz-card class="payment-success-card">
     <div class="payment-success-container">
         <div class="text-container">
-            <span nz-typography class="payment-message">Yolcu Bilgileri</span>
+            <span nz-typography class="payment-message">{{ 'FLIGHT_DONE.PASSENGER_INFORMATION' | translate }}</span>
             <span nz-typography class="pnr-message">
                 {{user?.firstName?.toUpperCase()}}&nbsp; {{user?.lastName?.toUpperCase()}}
             </span>
@@ -71,7 +71,7 @@
             <br>
             <div style="display: flex;">
                 <span style="padding-right: 4px;" nz-icon nzType="file-pdf" nzTheme="outline"></span>
-                <span nz-typography>Uçuş bilgilerinizi indirmek için <a (click)="downloadPDF()">tıklayınız</a></span>
+                <span nz-typography>{{ 'FLIGHT_DONE.DOWNLOAD1' | translate }} <a (click)="downloadPDF()">{{ 'FLIGHT_DONE.DOWNLOAD2' | translate }}</a></span>
             </div>
         </div>
     </div>
@@ -80,62 +80,57 @@
 <!-- Uçuş Bilgileri Genel -->
     <div class="flight-card">
         <span nz-typography class="info-title-label">
-                    Seyahat Detayları
+          {{ 'FLIGHT_DONE.TRIP_DETAILS' | translate }}
                 </span>
                 <br>
         <div class="flight-info">
           <div class="flight-row">
-            <div class="info-label">Nereden</div>
+            <div class="info-label">{{ 'FLIGHT_DONE.FROM' | translate }}</div>
             <div class="info-value">{{flight?.fromCity}}</div>
           </div>
           <div class="flight-row">
-            <div class="info-label">Kalkış Zamanı</div>
+            <div class="info-label">{{ 'FLIGHT_DONE.DEPARTURE_TIME' | translate }}</div>
             <div class="info-value">{{formattedDate}} - {{flightHour}}</div>
           </div>
           <div class="flight-row">
-            <div class="info-label">Nereye</div>
+            <div class="info-label">{{ 'FLIGHT_DONE.TO' | translate }}</div>
             <div class="info-value">{{flight?.toCity}}</div>
           </div>
           <div class="flight-row">
-            <div class="info-label">Varış Zamanı</div>
+            <div class="info-label">{{ 'FLIGHT_DONE.ARRIVAL_TIME' | translate }}</div>
             <div class="info-value">{{formattedDate}} - {{flightHourTime}}</div>
           </div>
           <div class="flight-row">
-            <div class="info-label">Uçuş No</div>
+            <div class="info-label">{{ 'FLIGHT_DONE.FLIGHT_NO' | translate }}</div>
             <div class="info-value">PC2024</div>
           </div>
           <div class="flight-row">
-            <div class="info-label">Bilet No</div>
+            <div class="info-label">{{ 'FLIGHT_DONE.TICKET_NO' | translate }}</div>
             <div class="info-value">{{ticketNo}}</div>
           </div>
           <div class="flight-row">
-            <div class="info-label">Geçerlilik Tarihi</div>
+            <div class="info-label">{{ 'FLIGHT_DONE.VALIDITY_DATE' | translate }}</div>
             <div class="info-value">05/04/2025</div>
           </div>
         </div>
       
         <div class="extra-services">
-          <h3 class="info-value">Paket Türü</h3>
-          <p class="info-value">{{flight?.packageFirst}} model uçuş paketi seçilmiştir.</p>
+          <h3 class="info-value">{{ 'FLIGHT_DONE.PACKAGE_TYPE' | translate }}</h3>
+          <p class="info-value">{{flight?.packageFirst}} {{ 'FLIGHT_DONE.PACKAGE_DESC' | translate }}</p>
           <div class="baggage-info">
-            <div *ngIf="flight?.packageFirst === 'Eco'">Toplam Bagaj Hakkı: 15 Kg</div>
-            <div *ngIf="flight?.packageFirst === 'Classic'">Toplam Bagaj Hakkı: 20 Kg</div>
-            <div *ngIf="flight?.packageFirst === 'Premium'">Toplam Bagaj Hakkı: 25 Kg</div>
-            <div>Kabin Bagaj Hakkı: 55x40x20 cm</div>
+            <div *ngIf="flight?.packageFirst === 'Eco'">{{ 'FLIGHT_DONE.TYPE1' | translate }}</div>
+            <div *ngIf="flight?.packageFirst === 'Classic'">{{ 'FLIGHT_DONE.TYPE2' | translate }}</div>
+            <div *ngIf="flight?.packageFirst === 'Premium'">{{ 'FLIGHT_DONE.TYPE3' | translate }}</div>
+            <div>{{ 'FLIGHT_DONE.CABIN_BAGGAGE' | translate }}</div>
           </div>
         </div>
       
         <div *ngIf="flight?.flexFirst" class="warning">
-          HOW - REF/RES CHG RESTRICTED - UÇUŞUNUZDAN 24 SAAT ÖNCESİNE KADAR İADE/DEĞİŞİKLİK YAPABİLİRSİNİZ.
+          {{ 'FLIGHT_DONE.TIPS1' | translate }}
         </div>
         <div *ngIf="!flight?.flexFirst" class="warning">
-            HOW - REF/RES CHG RESTRICTED - İADE/DEĞİŞİKLİK ÜCRETLİDİR.
+          {{ 'FLIGHT_DONE.TIPS2' | translate }}
           </div>
       </div>
 </div>
-
 <br>
-  
-
-
-  
