@@ -17,7 +17,7 @@
     </h4>
     <div
       [ngClass]="isCollapsed ? 'profile-small' : 'profile'" routerLink="/user/profile"> <!--profile-->
-      <img src="{{profilePhoto}}" /> 
+      <img [src]="profilePhoto" /> 
     </div>
   </div>
   <br>
@@ -39,7 +39,7 @@
           <span><a style="color: white" routerLink="/">{{ 'PRIVATE_LAYOUT.HOME' | translate }}</a></span>
         </li>
       </ul>
-      <li nz-submenu nzOpen [nzTitle]="'PRIVATE_LAYOUT.MENU1' | translate" nzIcon="dashboard">
+      <li nz-submenu nzOpen [nzTitle]="'PRIVATE_LAYOUT.MENU1' | translate" nzIcon="reconciliation">
         <ul>
           <li nz-menu-item nzMatchRouter>
             <a routerLink="/check-in">{{ 'PRIVATE_LAYOUT.CHECK_IN' | translate }}</a>
@@ -52,7 +52,7 @@
           </li>-->
         </ul>
       </li>
-      <li nz-submenu nzOpen [nzTitle]="'PRIVATE_LAYOUT.MENU2' | translate" nzIcon="form">
+      <li nz-submenu nzOpen [nzTitle]="'PRIVATE_LAYOUT.MENU2' | translate" nzIcon="medicine-box">
         <ul>
           <li nz-menu-item nzMatchRouter>
             <a routerLink="/additional-services/seat-selection">{{ 'PRIVATE_LAYOUT.SEAT_SELECTION' | translate }}</a>
@@ -71,7 +71,7 @@
           </li>
         </ul>
       </li>
-      <li nz-submenu [nzTitle]="'PRIVATE_LAYOUT.MENU3' | translate" nzIcon="form">
+      <li nz-submenu [nzTitle]="'PRIVATE_LAYOUT.MENU3' | translate" nzIcon="read">
         <ul>
           <li nz-menu-item nzMatchRouter>
             <a routerLink="/discover/istanbul">İstanbul</a>
@@ -87,7 +87,7 @@
           </li>
         </ul>
       </li>
-      <li nz-submenu [nzTitle]="'PRIVATE_LAYOUT.MENU4' | translate" nzIcon="form">
+      <li nz-submenu [nzTitle]="'PRIVATE_LAYOUT.MENU4' | translate" nzIcon="info-circle">
         <ul>
           <li nz-menu-item nzMatchRouter>
             <a routerLink="/info/air-info">{{ 'PRIVATE_LAYOUT.AIR_POINTS' | translate }}</a>
@@ -127,7 +127,7 @@
           *ngIf="isEnglish"
           class="header-icons"
           nz-icon
-          (click)="toggleLanguage('en')"
+          (click)="toggleLanguage('tr')"
           nz-tooltip
           nzTooltipTitle="English"
           nzTooltipPlacement="bottomRight"
@@ -139,7 +139,7 @@
           *ngIf="!isEnglish"
           class="header-icons"
           nz-icon
-          (click)="toggleLanguage('tr')"
+          (click)="toggleLanguage('en')"
           nz-tooltip
           nzTooltipTitle="Türkçe"
           nzTooltipPlacement="bottomRight"

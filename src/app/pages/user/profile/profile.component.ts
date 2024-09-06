@@ -57,13 +57,15 @@ export class ProfileComponent {
   errorService = inject(ErrorService);
   successService = inject(SuccessService);
   user!: UserModel;
-  profilePhoto = "";
+  profilePhoto!: string;
 
   data: any;
 
   constructor(private cdr: ChangeDetectorRef) {
     this.profilePhoto = this.auth.currentUser?.photoURL ? this.auth.currentUser.photoURL : "https://cdn-icons-png.freepik.com/512/6915/6915987.png";
     this.userPhotos = this.auth.currentUser?.photoURL ? true : false;
+    this.user = this.authService.userSignal()!;
+    console.log('PROFILE', this.user);
   }
 
   ngOnInit(): void {

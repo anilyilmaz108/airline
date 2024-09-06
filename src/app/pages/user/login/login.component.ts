@@ -74,7 +74,10 @@ export class LoginComponent {
     await this.authService.fbLogin(this.form.controls['email'].value,this.form.controls['pass'].value);
     await this.getUserData(this.fbAuth.currentUser?.uid!).then(() => {
     // console.log('Get User:', this.authService.userSignal());
-    console.log('FB login işlemi yapıldı');
+    if(this.form.controls['rememberMe'].value){
+      localStorage.setItem('user', JSON.stringify(this.authService.userSignal()));
+    }
+    // console.log('FB login işlemi yapıldı');
     this.successService.successHandler(202);
     this.resetForm();
     }).catch(() => {

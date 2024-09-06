@@ -54,7 +54,7 @@ export class PrivateLayoutComponent {
   isDarkMode: boolean;
   isEnglish = false;
   user!: UserModel;
-  profilePhoto = "";
+  profilePhoto!: string;
   lang: string = "TR";
 
 
@@ -63,16 +63,30 @@ export class PrivateLayoutComponent {
   }
 
   ngOnInit(): void {
- 
+    
   }
 
   constructor() {
     this.tranlationService.initTranslate();
     this.isDarkMode = this.themeService.isDarkMode();
+    effect(() => {
+      if (this.authService.userSignal()) {
+        this.user = this.authService.userSignal()!;
+      } 
+    });
     user(this.fbAuth).subscribe((fbuser: any) => {
       this.getUserData(this.fbAuth.currentUser?.uid!);
-    
+      // console.log('==>', this.authService.userSignal());
+      // console.log('localStoreage', localStorage.getItem('user'));
       // currentUser bilgisini yeniden yükleyip photoURL'yi güncelle
+
+      if(this.fbAuth.currentUser !== null && localStorage.getItem('user') !== null){
+        const userObject = JSON.parse(localStorage.getItem('user')!); {
+          this.authService.userSignal.set(userObject);
+          console.log('storageJson', this.authService.userSignal());
+        }
+      }
+
       if(this.fbAuth.currentUser) {
         this.profilePhoto = this.fbAuth.currentUser?.photoURL
       ? this.fbAuth.currentUser?.photoURL
@@ -81,8 +95,9 @@ export class PrivateLayoutComponent {
         this.profilePhoto = "https://cdn-icons-png.freepik.com/512/6915/6915987.png";
       }
     
-    console.log(this.profilePhoto);
+    console.log('layout-profile', this.profilePhoto);
     this.user = this.authService.userSignal()!;
+    console.log('layout-user', this.authService.userSignal(), 'fb', this.fbAuth.currentUser);
     });
     // console.log('FbUserSignal: ', this.user);
     // this.user = this.authService.userSignal()!;
@@ -116,7 +131,7 @@ export class PrivateLayoutComponent {
 
   logout() {
     this.authService.logout();
-    this.authService.userSignal.set(null);
+    //this.authService.userSignal.set(null);
     this.profilePhoto = "https://cdn-icons-png.freepik.com/512/6915/6915987.png";
   }
 }

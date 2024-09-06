@@ -54,10 +54,11 @@ export class AuthService {
   });
   }
 
-  logout() {
-    signOut(this.fbAuth);
-    this.router.navigateByUrl('/');
+  async logout() {
+    await signOut(this.fbAuth);
     this.userSignal.set(null);
+    localStorage.removeItem('user');
+    this.router.navigateByUrl('/');
   }
 
   fbOnStatusChange() {
@@ -66,11 +67,13 @@ export class AuthService {
         // User is signed in, see docs for a list of available properties
         // https://firebase.google.com/docs/reference/js/auth.user
         const uid = user.uid;
+        
         // console.log('User Status ID:', uid);
         // console.log('User:', user);
         // ...
       } else {
         this.logout();
+        this.userSignal.set(null);
       }
     });
   }
