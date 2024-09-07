@@ -1,1 +1,21 @@
-<p>user-comment works!</p>
+<nz-spin *ngIf="loading" nzSimple></nz-spin>
+<nz-card *ngIf="!loading" class="list-card">
+  <h5 nz-typography style="color: var(--title-text-color)">
+    Kullanıcı Mesajları
+  </h5>
+  <nz-list
+    [nzDataSource]="commentList"
+    [nzRenderItem]="item"
+    [nzItemLayout]="'horizontal'"
+  >
+    <ng-template #item let-item>
+      <nz-comment [nzAuthor]="item.fullName" [nzDatetime]="item.email">
+        <nz-comment-content>
+          <p style="color: var(--title-text-color)">{{ item.comment }}</p>
+        </nz-comment-content>
+      </nz-comment>
+      <nz-divider></nz-divider>
+    </ng-template>
+  </nz-list>
+</nz-card>
+<br />

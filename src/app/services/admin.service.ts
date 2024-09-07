@@ -1,6 +1,6 @@
 import { Injectable, inject } from '@angular/core';
 import { FirestoreService } from './firestore.service';
-import { orderBy } from 'firebase/firestore';
+import { limit, orderBy } from 'firebase/firestore';
 
 @Injectable({
   providedIn: 'root'
@@ -11,8 +11,20 @@ export class AdminService {
 
   getStats() {
     return this.fsService.list<any>('DailyStats',
-    //where('endDate', '>=', this.now),
     orderBy('date')
+    );
+  }
+
+  getTwoComments() {
+    return this.fsService.list<any>('Contact',
+    orderBy('operationDate', 'desc'),
+    limit(2)
+    );
+  }
+
+  getAllComments() {
+    return this.fsService.list<any>('Contact',
+    orderBy('operationDate', 'desc'),
     );
   }
 }
