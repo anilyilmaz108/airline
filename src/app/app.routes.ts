@@ -14,6 +14,7 @@ export const routes: Routes = [
       { path: 'user', loadChildren: () => import('./pages/user/user.routes').then(m => m.USER_ROUTES) },
       { path: 'find-flight', loadChildren: () => import('./pages/customer/home-customer/find-flight/find-flight.routes').then(m => m.FIND_FLIGHT_ROUTES) },
       { path: 'check-in', loadChildren: () => import('./pages/customer/home-customer/check-in/check-in.routes').then(m => m.CHECK_IN_ROUTES) },
+      { path: 'admin', loadChildren: () => import('./pages/admin/admin.routes').then(m => m.ADMIN_ROUTES) },
     ]
   }
 ];

@@ -34,6 +34,21 @@
           <span><a style="color: white" routerLink="/">{{ 'PRIVATE_LAYOUT.HOME' | translate }}</a></span>
         </li>
       </ul>
+      <!--ADMIN-->
+      <li nz-submenu nzOpen [nzTitle]="'ADMIN.ADMIN_LAYOUT' | translate" nzIcon="reconciliation">
+        <ul>
+          <li nz-menu-item nzMatchRouter>
+            <a routerLink="/admin">{{ 'ADMIN.ADMIN_HOME' | translate }}</a>
+          </li>
+          <!--<li nz-menu-item nzMatchRouter>
+            <a>Bilet işlemleri</a>
+          </li>-->
+          <!--<li nz-menu-item nzMatchRouter>
+            <a>Fırsat Uçuşlar</a>
+          </li>-->
+        </ul>
+      </li>
+      <!---->
       <li nz-submenu nzOpen [nzTitle]="'PRIVATE_LAYOUT.MENU1' | translate" nzIcon="reconciliation">
         <ul>
           <li nz-menu-item nzMatchRouter>

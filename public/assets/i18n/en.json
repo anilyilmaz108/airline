@@ -681,5 +681,9 @@
     "DARK_MODE": "Dark Mode",
     "SIGN_IN": "Sign In",
     "SIGN_OUT": "Sign Out"
+  },
+  "ADMIN": {
+    "ADMIN_LAYOUT": "Admin Operations",
+    "ADMIN_HOME": "Admin Home"
   }
 }

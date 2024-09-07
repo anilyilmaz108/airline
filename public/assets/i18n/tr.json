@@ -681,5 +681,9 @@
     "DARK_MODE": "Gece Modu",
     "SIGN_IN": "Giriş Yap",
     "SIGN_OUT": "Çıkış Yap" 
+  },
+  "ADMIN": {
+    "ADMIN_LAYOUT": "Admin İşlemleri",
+    "ADMIN_HOME": "Admin Anasayfa"
   }
 }
