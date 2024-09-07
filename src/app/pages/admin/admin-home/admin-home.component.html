@@ -1,2 +1,34 @@
 <app-customer-stats></app-customer-stats>
-<div style="padding-bottom: 16px;"></div>
+<br>
+<!-- Chart -->
+<div class="container">
+    <nz-card class="chart-card">
+      <apx-chart *ngIf="!chartLoading"
+        [series]="chartOptions.series!"
+        [chart]="chartOptions.chart"
+        [title]="chartOptions.title!"
+        [xaxis]="chartOptions.xaxis!"
+        [stroke]="chartOptions.stroke"
+        [tooltip]="chartOptions.tooltip!"
+        [dataLabels]="chartOptions.dataLabels!"
+      ></apx-chart>
+    </nz-card>
+    <nz-card class="list-card">
+      <h5 nz-typography style="color: var(--title-text-color);">Kullanıcı Mesajları</h5>
+      <nz-list [nzDataSource]="data" [nzRenderItem]="item" [nzItemLayout]="'horizontal'">
+        <ng-template #item let-item>
+          <nz-comment [nzAuthor]="item.author" [nzDatetime]="item.datetime">
+            <nz-comment-content>
+              <p style="color: var(--title-text-color);">{{ item.content }}</p>
+            </nz-comment-content>
+          </nz-comment>
+          <nz-divider></nz-divider>
+        </ng-template>
+      </nz-list>
+      <div class="button-container">
+        <button (click)="seeAll()" nz-button>Tümünü Gör</button>
+      </div>
+    </nz-card>
+  </div>
+  
+<br>

@@ -1,0 +1,48 @@
+nz-card {
+    border-radius: 10px;
+    background-color: var(--card-color);
+}
+
+.container {
+    display: flex;
+    gap: 16px; /* Kartlar arasındaki boşluk */
+    padding: 16px; /* Konteyner etrafında padding */
+    box-sizing: border-box; /* Padding ve border'ı toplam genişliğe dahil et */
+  }
+  
+  .chart-card {
+    flex: 7; /* Grafiğin genişliği toplam genişliğin %70'i kadar */
+  }
+  
+  .list-card {
+    flex: 3; /* Listenin genişliği toplam genişliğin %30'u kadar */
+  }
+  
+  /* Responsive tasarım için */
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column;
+    }
+  
+    .chart-card, .list-card {
+      flex: none;
+      width: 100%;
+    }
+  }
+
+  ::ng-deep span.ant-comment-content-author-name {
+    color: var(--title-text-color);
+}
+
+::ng-deep button.ant-btn {
+    color: white;
+    background-color: var(--primary-color);
+    border-radius: 25px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  

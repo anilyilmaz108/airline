@@ -10,3 +10,4 @@ export * from './storage.service';
 export * from './flight.service';
 export * from './help-contact.service';
 export * from './translate.service';
+export * from './admin.service';

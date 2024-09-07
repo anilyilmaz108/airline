@@ -684,6 +684,7 @@
   },
   "ADMIN": {
     "ADMIN_LAYOUT": "Admin İşlemleri",
-    "ADMIN_HOME": "Admin Anasayfa"
+    "ADMIN_HOME": "Admin Anasayfa",
+    "USER_COMMENT": "Kullanıcı Yorumları"
   }
 }
