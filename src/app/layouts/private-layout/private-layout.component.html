@@ -35,7 +35,7 @@
         </li>
       </ul>
       <!--ADMIN-->
-      <li nz-submenu nzOpen [nzTitle]="'ADMIN.ADMIN_LAYOUT' | translate" nzIcon="user">
+      <li *ngIf="user && user.role === 'admin'" nz-submenu nzOpen [nzTitle]="'ADMIN.ADMIN_LAYOUT' | translate" nzIcon="user">
         <ul>
           <li nz-menu-item nzMatchRouter>
             <a routerLink="/admin/admin-home">{{ 'ADMIN.ADMIN_HOME' | translate }}</a>
