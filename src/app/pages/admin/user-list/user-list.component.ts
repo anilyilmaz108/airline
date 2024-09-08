@@ -3,7 +3,7 @@ import { Component, inject, ChangeDetectorRef } from '@angular/core';
 import { NzLayoutModule } from 'ng-zorro-antd/layout';
 import { NzPageHeaderModule } from 'ng-zorro-antd/page-header';
 import { AgGridModule } from 'ag-grid-angular';
-import { UserService } from '../../../services';
+import { ErrorService, SuccessService, UserService } from '../../../services';
 import { NzModalService } from 'ng-zorro-antd/modal';
 import { NzModalModule } from 'ng-zorro-antd/modal';
 import { NzButtonModule } from 'ng-zorro-antd/button';
@@ -20,6 +20,7 @@ import { generateDate } from '../../../helpers';
 import { NzTagModule } from 'ng-zorro-antd/tag';
 import { NzPopconfirmModule } from 'ng-zorro-antd/popconfirm';
 import { NzCardModule } from 'ng-zorro-antd/card';
+import { NewUserComponent } from './new-user/new-user.component';
 
 
 
@@ -55,6 +56,9 @@ interface CustomColumn extends NzCustomColumn {
 })
 export class UserListComponent {
   list!: any[];
+  filteredList: any[] = [];
+  isActiveList = false;
+
   userLoading = false;
 
   checked = false;
@@ -64,6 +68,8 @@ export class UserListComponent {
 
   userService = inject(UserService);
   modalService = inject(NzModalService);
+  errorService = inject(ErrorService);
+  successService = inject(SuccessService);
 
   updateCheckedSet(id: number, checked: boolean): void {
     if (checked) {
@@ -90,6 +96,17 @@ export class UserListComponent {
     console.log(requestData);
   }
 
+  // Aktifleri göster-gizle
+  showActiveUser(){
+    this.isActiveList = !this.isActiveList;
+    if(this.isActiveList){
+      this.filteredList = this.list.filter(item => item.active === true);
+      this.list = this.filteredList;
+    } else {
+      this.getUsers();
+    }
+  }
+
   getUsers() {
     this.userLoading = true;
     let filterID = 1;
@@ -110,8 +127,11 @@ export class UserListComponent {
     console.log('canceled');
   }
 
-  confirm(): void {
+  confirm(id: string): void {
     console.log('deleted');
+    this.userService.delete(id).then(() => {
+      this.successService.successHandler(204);
+    });
   }
 
   listOfColumns = [
@@ -306,6 +326,90 @@ export class UserListComponent {
 
   showModal(): void {
     this.isVisible = true;
+  }
+
+  //Ekle-Güncelle Modal
+  addOrEditModal(data?: any) {
+    this.modalService.create({
+      nzTitle: 'Yeni Kullanıcı',
+      nzWidth: '900px',
+      nzData: {data: data},
+      nzContent: NewUserComponent
+    });
+  }
+
+  // Filteleri Kaldırma
+  removeAllFilter() {
+    var noFilterCustomColumn: CustomColumn[] = [
+      {
+        name: 'İsim',
+        value: 'firstName',
+        default: true,
+        required: true,
+        position: 'left',
+        width: 200,
+        fixWidth: true
+      },
+      {
+        name: 'Soyisim',
+        value: 'lastName',
+        default: true,
+        width: 200
+      },
+      {
+        name: 'Rol',
+        value: 'role',
+        default: true,
+        width: 200
+      },
+      {
+        name: 'Cinsiyet',
+        value: 'gender',
+        default: true,
+        width: 200
+      },
+      {
+        name: 'Email',
+        value: 'email',
+        default: true,
+        width: 200
+      },
+      {
+        name: 'Telefon',
+        value: 'phone',
+        default: true,
+        width: 200
+      },
+      {
+        name: 'Uyruk',
+        value: 'nationality',
+        default: true,
+        width: 200
+      },
+      {
+        name: 'Air Puan',
+        value: 'airScore',
+        default: true,
+        width: 200
+      },
+      {
+        name: 'Aktiflik',
+        value: 'active',
+        default: true,
+        width: 200
+      },
+  
+      {
+        name: 'Action',
+        value: 'action',
+        default: true,
+        required: true,
+        position: 'right',
+        width: 200
+      }
+    ];    
+    this.customColumn = noFilterCustomColumn;
+    this.cdr.markForCheck();
   }
 
   handleOk(): void {

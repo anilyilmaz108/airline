@@ -16,15 +16,15 @@
    >
      <span nz-icon nzType="download" nzTheme="outline"></span>
    </button>
-   <!--Filtrele-->
+   <!--Aktifleri Göster-->
    <button
    nz-button
-   (click)="showModal()"
+   (click)="showActiveUser()"
    nzType="default"
    nzShape="circle"
    nz-tooltip
    nzTooltipPlacement="bottom"
-   nzTooltipTitle="Aktifleri Göster"
+   [nzTooltipTitle]= "isActiveList ? 'Tümünü Göster' : 'Aktifleri Göster'"
    style="margin-bottom: 8px; margin-right: 8px"
  >
    <span nz-icon nzType="team" nzTheme="outline"></span>
@@ -45,7 +45,7 @@
   <!--Filtreleri Temizle-->
   <button
     nz-button
-    (click)="showModal()"
+    (click)="removeAllFilter()"
     nzType="default"
     nzShape="circle"
     nz-tooltip
@@ -58,7 +58,7 @@
   <!--Ekle-->
   <button
     nz-button
-    (click)="showModal()"
+    (click)="addOrEditModal()"
     nzType="default"
     nzShape="circle"
     nz-tooltip
@@ -151,14 +151,14 @@
           nz-icon
           nzType="edit"
           nzTheme="outline"
-          
+          (click)="addOrEditModal(data)"
         ></span>
         <nz-divider nzType="vertical"></nz-divider>
         <span
           nz-popconfirm
           nzPopconfirmTitle="Are you sure delete this task?"
           nzPopconfirmPlacement="bottom"
-          (nzOnConfirm)="confirm()"
+          (nzOnConfirm)="confirm(data.id)"
           (nzOnCancel)="cancel()"
           style="color: var(--delete-color); font-size: medium;"
           nz-icon

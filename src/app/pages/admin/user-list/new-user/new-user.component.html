@@ -1,0 +1,116 @@
+<form nz-form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
+    <nz-form-item>
+      <nz-form-label [nzSpan]="4" nzRequired>Name</nz-form-label>
+      <nz-form-control [nzSpan]="20">
+        <div nz-row [nzGutter]="8">
+          <div nz-col nzSpan="12">
+            <nz-form-control nzErrorTip="Please input your first name!">
+              <input nz-input formControlName="firstName" placeholder="First Name" />
+            </nz-form-control>
+          </div>
+          <div nz-col nzSpan="12">
+            <nz-form-control nzErrorTip="Please input your last name!">
+              <input nz-input formControlName="lastName" placeholder="Last Name" />
+            </nz-form-control>
+          </div>
+        </div>
+      </nz-form-control>
+    </nz-form-item>
+  
+    <nz-form-item>
+      <nz-form-label [nzSpan]="4" nzRequired>Gender & Birth</nz-form-label>
+      <nz-form-control [nzSpan]="20">
+        <div nz-row [nzGutter]="8">
+          <div nz-col nzSpan="12">
+            <nz-form-control nzErrorTip="Please select your gender!">
+              <nz-select formControlName="gender" placeholder="Select Gender">
+                <nz-option nzValue="Erkek" nzLabel="Erkek"></nz-option>
+                <nz-option nzValue="Kadın" nzLabel="Kadın"></nz-option>
+              </nz-select>
+            </nz-form-control>
+          </div>
+          <div nz-col nzSpan="12">
+            <nz-form-control nzErrorTip="Please select your birth date!">
+              <nz-date-picker formControlName="birth"></nz-date-picker>
+            </nz-form-control>
+          </div>
+        </div>
+      </nz-form-control>
+    </nz-form-item>
+  
+    <nz-form-item>
+      <nz-form-label [nzSpan]="4" nzRequired>Role & Air Score</nz-form-label>
+      <nz-form-control [nzSpan]="20">
+        <div nz-row [nzGutter]="8">
+          <div nz-col nzSpan="12">
+            <nz-form-control nzErrorTip="Please input your role!">
+                <nz-select formControlName="role" placeholder="Select Role">
+                    <nz-option nzValue="admin" nzLabel="Admin"></nz-option>
+                    <nz-option nzValue="user" nzLabel="Kullanıcı"></nz-option>
+                  </nz-select>
+            </nz-form-control>
+          </div>
+          <div nz-col nzSpan="12">
+            <nz-form-control nzErrorTip="Please input a valid air score">
+              <nz-input-number formControlName="airScore" [nzMin]="0" [nzStep]="1" [nzPlaceHolder]="'Air Score'"></nz-input-number>
+            </nz-form-control>
+          </div>
+        </div>
+      </nz-form-control>
+    </nz-form-item>
+  
+    <nz-form-item>
+      <nz-form-label [nzSpan]="4" nzRequired>Email & Password</nz-form-label>
+      <nz-form-control [nzSpan]="20">
+        <div nz-row [nzGutter]="8">
+          <div nz-col nzSpan="12">
+            <nz-form-control nzErrorTip="Please input a valid email address!">
+              <input nz-input formControlName="email" type="email" placeholder="Email" />
+            </nz-form-control>
+          </div>
+          <div nz-col nzSpan="12">
+            <nz-form-control nzErrorTip="Please input your password!">
+              <input nz-input formControlName="password" type="password" placeholder="Password" />
+            </nz-form-control>
+          </div>
+        </div>
+      </nz-form-control>
+    </nz-form-item>
+  
+    <nz-form-item>
+      <nz-form-label [nzSpan]="4" nzRequired>Nationality & TC ID</nz-form-label>
+      <nz-form-control [nzSpan]="20">
+        <div nz-row [nzGutter]="8">
+          <div nz-col nzSpan="12">
+            <nz-form-control nzErrorTip="Please input your nationality!">
+              <input nz-input formControlName="nationality" placeholder="Nationality" />
+            </nz-form-control>
+          </div>
+          <div nz-col nzSpan="12">
+            <nz-form-control nzErrorTip="Please input your TC ID!">
+              <input nz-input formControlName="TCID" placeholder="TC ID" />
+            </nz-form-control>
+          </div>
+        </div>
+      </nz-form-control>
+    </nz-form-item>
+  
+    <nz-form-item>
+      <nz-form-label [nzSpan]="4" nzRequired>Phone</nz-form-label>
+      <nz-form-control [nzSpan]="20" nzErrorTip="Please input your phone number!">
+        <input nz-input formControlName="phone" placeholder="Phone" />
+      </nz-form-control>
+    </nz-form-item>
+  
+    <nz-form-item>
+      <nz-form-label [nzSpan]="4">Active</nz-form-label>
+      <nz-form-control [nzSpan]="20">
+        <label nz-checkbox formControlName="active">Active</label>
+      </nz-form-control>
+    </nz-form-item>
+  
+  </form>
+
+  <div *nzModalFooter>
+    <button (click)="onSubmit()" nz-button nzType="primary" >Submit</button>
+</div>
