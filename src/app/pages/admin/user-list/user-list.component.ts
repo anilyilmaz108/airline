@@ -90,10 +90,18 @@ export class UserListComponent {
   }
 
   // Çoklu sil
-  sendRequest(): void {
+  async sendRequest(): Promise<void> {
     const requestData = this.list.filter(data => this.setOfCheckedId.has(data.id));
+    for (const arr of requestData) {
+      try {
+        // console.log(arr.id);
+        await this.userService.delete(arr.id);
+      } catch (error) {
+        // console.error("Error deleting data:", error);
+      }
+    }
     this.setOfCheckedId.clear();
-    console.log(requestData);
+    this.successService.successHandler(207);
   }
 
   // Aktifleri göster-gizle
@@ -124,11 +132,11 @@ export class UserListComponent {
   }
 
   cancel(): void {
-    console.log('canceled');
+    // console.log('canceled');
   }
 
   confirm(id: string): void {
-    console.log('deleted');
+    // console.log('deleted');
     this.userService.delete(id).then(() => {
       this.successService.successHandler(204);
     });

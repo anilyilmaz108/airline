@@ -12,7 +12,7 @@ import { NzLayoutModule } from 'ng-zorro-antd/layout';
 import { NZ_MODAL_DATA, NzModalModule, NzModalRef } from 'ng-zorro-antd/modal';
 import { NzSelectModule } from 'ng-zorro-antd/select';
 import { AuthService, ErrorService, SuccessService, UserService } from '../../../../services';
-import { generateDate } from '../../../../helpers';
+import { generateDate, generateId } from '../../../../helpers';
 import { Auth } from '@angular/fire/auth';
 
 @Component({
@@ -84,9 +84,10 @@ export class NewUserComponent {
   async onSubmit() {
     if (this.registrationForm.valid) {
       if(this.nzModalData.data == null) {
+        const randomID = generateId.generateUniqueId(10);
         await this.authService.fbRegister(this.registrationForm.value.email, this.registrationForm.value.password)
         const userData = {
-          id: this.auth.currentUser?.uid,
+          id: randomID,
           role: this.registrationForm.value.role,
           firstName: this.registrationForm.value.firstName, 
           lastName: this.registrationForm.value.lastName,  
@@ -101,7 +102,7 @@ export class NewUserComponent {
           pass: this.registrationForm.value.password, 
           airScore: this.registrationForm.value.airScore
         }
-        await this.userService.addDataWithCustomDocId(userData, this.auth.currentUser?.uid!).then(() => {
+        await this.userService.addDataWithCustomDocId(userData, randomID).then(() => {
           this.successService.successHandler(205);
           this.nzModalRef.destroy();
         }).catch((err) => {

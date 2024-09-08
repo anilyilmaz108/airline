@@ -33,6 +33,9 @@ export class SuccessService {
       case 206:
         this.swal.callToast('Kullanıcı güncellendi', 'success');
         break;
+      case 207:
+        this.swal.callToast('Seçili kullanıcılar silindi', 'success');
+        break;
     }
   }
 }
