@@ -1,0 +1,134 @@
+nz-content {
+    margin: 16px 16px 0px 16px;
+    @media only screen and (max-width: 768px) {
+      margin: 8px 8px 0px 8px;
+    }
+  }
+
+  .example-container {
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .example-list {
+    min-height: 60px;
+    border-radius: 4px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    display: block;
+    border: 1px dashed #ccc;
+    flex: 1 1 auto;
+  }
+
+  .example-list > .example-box {
+    cursor: move;
+  }
+
+  .cdk-drag-preview {
+    box-sizing: border-box;
+    border-radius: 4px;
+    box-shadow:
+      0 5px 5px -3px rgba(0, 0, 0, 0.2),
+      0 8px 10px 1px rgba(0, 0, 0, 0.14),
+      0 3px 14px 2px rgba(0, 0, 0, 0.12);
+  }
+
+  .cdk-drag-placeholder {
+    opacity: 0;
+  }
+
+  .cdk-drag-animating {
+    transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+  }
+
+  .example-list.cdk-drop-list-dragging .example-box:not(.cdk-drag-placeholder) {
+    transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+  }
+
+  .example-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    margin: 4px;
+    padding: 4px 8px;
+    background-color: rgb(0 112 204 / 15%);
+  }
+
+  .example-box span {
+    cursor: pointer;
+  }
+  
+
+// başlangıç
+::ng-deep button.ant-btn.ant-btn-icon-only {
+  border-radius: 30px;
+  color: white;
+  background-color: var(--primary-color);
+}
+
+h3.ant-typography {
+  display: flex;
+  justify-content: center;
+  color: var(--title-text-color);
+}
+
+.table-container {
+  overflow-x: auto; /* Yatay kaydırma barı ekler */
+}
+
+::ng-deep th.ant-table-selection-column.ant-table-cell {
+  background: var(--tr-color);
+}
+
+::ng-deep th.ant-table-column-has-sorters.ant-table-cell {
+  background: var(--tr-color);
+}
+
+.even-row {
+  background-color: var(--tr-color);
+}
+
+.odd-row {
+  background-color: var(--td-color);
+}
+
+::ng-deep span.ant-table-column-title {
+  color: var(--title-text-color);
+  font-size: small;
+}
+
+::ng-deep td.ant-table-cell {
+  color: var(--title-text-color);
+  font-size: smaller;
+}
+
+::ng-deep th.ant-table-selection-column.ant-table-cell {
+  flex: 1 0 30px;
+}
+
+::ng-deep td.ant-table-selection-column.ant-table-cell {
+  flex: 1 0 30px;
+}
+
+::ng-deep th.ant-table-column-has-sorters.ant-table-cell {
+  flex: 1 1 100px;
+}
+
+::ng-deep .ng-tns-c2183474983-12 {
+  background: var(--card-sub-color);
+}
+
+::ng-deep button.ant-btn.ng-tns-c2183474983-12.ant-btn-primary.ant-btn-sm {
+  background: var(--primary-color);
+}
+
+::ng-deep .ant-popover-message-title.ng-tns-c2183474983-12.ng-star-inserted {
+  color: var(--title-text-color);
+}
+
+::ng-deep button.ant-btn.ng-tns-c2183474983-12.ant-btn-sm {
+  color: var(--subtitle-text-color)
+}

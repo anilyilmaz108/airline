@@ -685,6 +685,8 @@
   "ADMIN": {
     "ADMIN_LAYOUT": "Admin Operations",
     "ADMIN_HOME": "Admin Home",
-    "USER_COMMENT": "User Comment"
+    "USER_COMMENT": "User Comment",
+    "USER_LIST": "Users",
+    "FLIGHT_LIST": "Flights"
   }
 }

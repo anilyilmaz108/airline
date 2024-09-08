@@ -685,6 +685,8 @@
   "ADMIN": {
     "ADMIN_LAYOUT": "Admin İşlemleri",
     "ADMIN_HOME": "Admin Anasayfa",
-    "USER_COMMENT": "Kullanıcı Yorumları"
+    "USER_COMMENT": "Kullanıcı Yorumları",
+    "USER_LIST": "Kullanıcılar",
+    "FLIGHT_LIST": "Uçuşlar"
   }
 }

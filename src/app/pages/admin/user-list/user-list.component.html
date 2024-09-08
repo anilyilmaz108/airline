@@ -1,0 +1,245 @@
+<!--Header-->
+<h3 nz-typography>Kullanıcılar</h3>
+<br />
+<!--Table-->
+<div style="display: flex; justify-content: end">
+     <!--İndir-->
+     <button
+     nz-button
+     (click)="showModal()"
+     nzType="default"
+     nzShape="circle"
+     nz-tooltip
+     nzTooltipPlacement="bottom"
+     nzTooltipTitle="İndir"
+     style="margin-bottom: 8px; margin-right: 8px"
+   >
+     <span nz-icon nzType="download" nzTheme="outline"></span>
+   </button>
+   <!--Filtrele-->
+   <button
+   nz-button
+   (click)="showModal()"
+   nzType="default"
+   nzShape="circle"
+   nz-tooltip
+   nzTooltipPlacement="bottom"
+   nzTooltipTitle="Aktifleri Göster"
+   style="margin-bottom: 8px; margin-right: 8px"
+ >
+   <span nz-icon nzType="team" nzTheme="outline"></span>
+ </button>
+  <!--Filtrele-->
+  <button
+    nz-button
+    (click)="showModal()"
+    nzType="default"
+    nzShape="circle"
+    nz-tooltip
+    nzTooltipPlacement="bottom"
+    nzTooltipTitle="Filtrele"
+    style="margin-bottom: 8px; margin-right: 8px"
+  >
+    <span nz-icon nzType="filter" nzTheme="outline"></span>
+  </button>
+  <!--Filtreleri Temizle-->
+  <button
+    nz-button
+    (click)="showModal()"
+    nzType="default"
+    nzShape="circle"
+    nz-tooltip
+    nzTooltipPlacement="bottom"
+    nzTooltipTitle="Filtreleri Temizle"
+    style="margin-bottom: 8px; margin-right: 8px"
+  >
+    <span nz-icon nzType="clear" nzTheme="outline"></span>
+  </button>
+  <!--Ekle-->
+  <button
+    nz-button
+    (click)="showModal()"
+    nzType="default"
+    nzShape="circle"
+    nz-tooltip
+    nzTooltipPlacement="bottom"
+    nzTooltipTitle="Ekle"
+    style="margin-bottom: 8px; margin-right: 8px"
+  >
+    <span nz-icon nzType="plus-circle" nzTheme="outline"></span>
+  </button>
+  <!--Çoklu Sil-->
+  <button
+    [disabled]="setOfCheckedId.size === 0"
+    [nzLoading]="loading"
+    nz-button
+    (click)="sendRequest()"
+    nzType="default"
+    nzShape="circle"
+    nz-tooltip
+    nzTooltipPlacement="bottom"
+    nzTooltipTitle="Kaldır"
+    style="margin-bottom: 8px; margin-right: 8px"
+  >
+    <span nz-icon nzType="delete" nzTheme="outline"></span>
+  </button>
+</div>
+<br />
+<nz-table #basicTable [nzData]="list" [nzCustomColumn]="customColumn">
+  <thead>
+    <tr>
+      <th
+        [nzChecked]="checked"
+        [nzIndeterminate]="indeterminate"
+        nzLabel="Select all"
+        (nzCheckedChange)="onAllChecked($event)"
+      ></th>
+      @for (column of listOfColumns; track column.name) {
+      <th
+        [(nzSortOrder)]="column.sortOrder"
+        [nzSortFn]="column.sortFn"
+        [nzCellControl]="column.cellControll"
+        [nzFilterFn]="column.filterFn"
+      >
+        {{ column.name }}
+      </th>
+      }
+    </tr>
+  </thead>
+  <tbody>
+    @for (data of basicTable.data; track data) {
+    <tr
+    [ngClass]="{'even-row': data.filterID % 2 == 0, 'odd-row': data.filterID % 2 != 0}"
+    >
+      <td
+        [nzChecked]="setOfCheckedId.has(data.id)"
+        [nzLabel]="data.firstName"
+        (nzCheckedChange)="onItemChecked(data.id, $event)"
+      ></td>
+      <td nzCellControl="firstName">
+        {{ data.firstName === "" ? "-" : data.firstName }}
+      </td>
+      <td nzCellControl="lastName">
+        {{ data.lastName === "" ? "-" : data.lastName }}
+      </td>
+      <td *ngIf="data.role === 'user'" nzCellControl="role">
+        <nz-tag [nzColor]="'green'">Kullanıcı</nz-tag>
+      </td>
+      <td *ngIf="data.role === 'admin'" nzCellControl="role">
+        <nz-tag [nzColor]="'blue'">Admin</nz-tag>
+      </td>
+      <td nzCellControl="gender">
+        {{ data.gender === "" ? "-" : data.gender }}
+      </td>
+      <td nzCellControl="email">{{ data.email === "" ? "-" : data.email }}</td>
+      <td nzCellControl="phone">
+        (+90) {{ data.phone === "" ? "-" : data.phone }}
+      </td>
+      <td nzCellControl="nationality">
+        {{ data.nationality === "" ? "-" : data.nationality }}
+      </td>
+      <td nzCellControl="airScore">{{ data.airScore }}</td>
+      <td *ngIf="data.active" nzCellControl="active">
+        <nz-tag [nzColor]="'green'">Aktif</nz-tag>
+      </td>
+      <td *ngIf="!data.active" nzCellControl="active">
+        <nz-tag [nzColor]="'red'">Pasif</nz-tag>
+      </td>
+      <td nzCellControl="action">
+        <span
+          style="color: var(--edit-color); font-size: medium;"
+          nz-icon
+          nzType="edit"
+          nzTheme="outline"
+          
+        ></span>
+        <nz-divider nzType="vertical"></nz-divider>
+        <span
+          nz-popconfirm
+          nzPopconfirmTitle="Are you sure delete this task?"
+          nzPopconfirmPlacement="bottom"
+          (nzOnConfirm)="confirm()"
+          (nzOnCancel)="cancel()"
+          style="color: var(--delete-color); font-size: medium;"
+          nz-icon
+          nzType="delete"
+          nzTheme="outline"
+        ></span>
+      </td>
+    </tr>
+    }
+  </tbody>
+</nz-table>
+
+<nz-modal
+  [(nzVisible)]="isVisible"
+  nzTitle="Custom Column"
+  (nzOnCancel)="handleCancel()"
+  (nzOnOk)="handleOk()"
+>
+  <ng-container *nzModalContent>
+    <div nz-row [nzGutter]="24">
+      <div nz-col class="gutter-row" [nzSpan]="12">
+        <div class="example-container">
+          <p>Displayed (drag and drop to sort)</p>
+          @for (item of title; track item) {
+          <div class="example-box">
+            {{ item.name }}
+          </div>
+          }
+          <div
+            cdkDropList
+            #todoList="cdkDropList"
+            [cdkDropListData]="fix"
+            [cdkDropListConnectedTo]="[doneList]"
+            class="example-list"
+            (cdkDropListDropped)="drop($event)"
+          >
+            @for (item of fix; track item; let i = $index) {
+            <div class="example-box" cdkDrag>
+              {{ item.name }}
+              <span
+                nz-icon
+                nzType="minus-circle"
+                nzTheme="outline"
+                (click)="deleteCustom(item, i)"
+              ></span>
+            </div>
+            }
+          </div>
+          @for (item of footer; track item) {
+          <div class="example-box">
+            {{ item.name }}
+          </div>
+          }
+        </div>
+      </div>
+      <div nz-col class="gutter-row" [nzSpan]="12">
+        <div class="example-container">
+          <p>Not Shown</p>
+          <div
+            cdkDropList
+            #doneList="cdkDropList"
+            [cdkDropListData]="notFix"
+            [cdkDropListConnectedTo]="[todoList]"
+            class="example-list"
+            (cdkDropListDropped)="drop($event)"
+          >
+            @for (item of notFix; track item; let i = $index) {
+            <div class="example-box" cdkDrag>
+              {{ item.name }}
+              <span
+                nz-icon
+                nzType="plus-circle"
+                nzTheme="outline"
+                (click)="addCustom(item, i)"
+              ></span>
+            </div>
+            }
+          </div>
+        </div>
+      </div>
+    </div>
+  </ng-container>
+</nz-modal>
+<br />

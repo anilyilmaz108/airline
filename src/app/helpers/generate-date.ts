@@ -168,4 +168,9 @@ export const generateDate = {
     // Eğer fark 1 günden azsa true döndür
     return diffInDays < 1 && diffInDays >= -1;
   },
+
+  // Timestamp -> Date tipine dönüştürür
+  convertTimestampToDate(timestamp: Timestamp): Date {
+    return new Date(timestamp.seconds * 1000 + timestamp.nanoseconds / 1000000);
+  }
 };
