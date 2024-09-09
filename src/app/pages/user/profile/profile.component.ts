@@ -19,6 +19,8 @@ import { RouterLink } from '@angular/router';
 import { Auth, user } from '@angular/fire/auth';
 import { updateProfile } from 'firebase/auth';
 import { TranslateModule } from '@ngx-translate/core';
+import { generateDate } from '../../../helpers';
+import { Timestamp } from 'firebase/firestore';
 
 @Component({
   selector: 'app-profile',
@@ -146,7 +148,7 @@ export class ProfileComponent {
           this.user &&
           (this.user.birth === undefined || this.user.birth === null)
             ? '-'
-            : this.user.birth,
+            : generateDate.generateFormattedDate(this.user.birth!),
       },
       {
         title: 'TC Kimlik No',
@@ -279,7 +281,7 @@ export class ProfileComponent {
               this.user &&
               (this.user.birth === undefined || this.user.birth === null)
                 ? '-'
-                : this.user.birth,
+                : generateDate.generateFormattedDate(this.user.birth!),
           },
           {
             title: 'TC Kimlik No',

@@ -67,7 +67,7 @@ export class PrivateLayoutComponent {
     const tempUser = adminSignal();
     this.authService.fbLogin(tempUser!.email!, tempUser!.pass!);
     this.authService.userSignal.set(tempUser);
-    console.log('simulatedUserDone:', this.fbAuth.currentUser?.uid!)
+    // console.log('simulatedUserDone:', this.fbAuth.currentUser?.uid!)
   }
 
 
@@ -99,7 +99,7 @@ export class PrivateLayoutComponent {
       if (this.authService.userSignal()) {
         if(isSimulate()){
           this.isSimulateValue = true;
-          console.log('simulatedUser:', this.fbAuth.currentUser?.uid!)
+          // console.log('simulatedUser:', this.fbAuth.currentUser?.uid!)
         }
         this.user = this.authService.userSignal()!;
       } 
