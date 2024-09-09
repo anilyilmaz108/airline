@@ -2,7 +2,6 @@ import { CommonModule } from '@angular/common';
 import { Component, inject, ChangeDetectorRef } from '@angular/core';
 import { NzLayoutModule } from 'ng-zorro-antd/layout';
 import { NzPageHeaderModule } from 'ng-zorro-antd/page-header';
-import { AgGridModule } from 'ag-grid-angular';
 import { ErrorService, SuccessService, UserService } from '../../../services';
 import { NzModalService } from 'ng-zorro-antd/modal';
 import { NzModalModule } from 'ng-zorro-antd/modal';
@@ -21,7 +20,7 @@ import { NzTagModule } from 'ng-zorro-antd/tag';
 import { NzPopconfirmModule } from 'ng-zorro-antd/popconfirm';
 import { NzCardModule } from 'ng-zorro-antd/card';
 import { NewUserComponent } from './new-user/new-user.component';
-
+import * as XLSX from 'xlsx';
 
 
 interface CustomColumn extends NzCustomColumn {
@@ -37,7 +36,6 @@ interface CustomColumn extends NzCustomColumn {
     NzPageHeaderModule,
     CommonModule,
     NzLayoutModule,
-    AgGridModule,
     NzModalModule,
     NzButtonModule,
     NzTableModule,
@@ -102,6 +100,17 @@ export class UserListComponent {
     }
     this.setOfCheckedId.clear();
     this.successService.successHandler(207);
+  }
+
+  // Excel İndir
+  exportCSV() {
+    /* pass here the table id */
+    const ws: XLSX.WorkSheet = XLSX.utils.json_to_sheet(this.list);
+    /* generate workbook and add the worksheet */
+    const wb: XLSX.WorkBook = XLSX.utils.book_new();
+    XLSX.utils.book_append_sheet(wb, ws, 'Sheet1');
+    /* save to file */
+    XLSX.writeFile(wb, 'kullanici_listesi.xlsx');
   }
 
   // Aktifleri göster-gizle
