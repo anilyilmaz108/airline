@@ -168,12 +168,9 @@
           </svg>        
         </span>
           <!-- End Simulation -->
-          <!--<span *ngIf="
-              (user$?.mainRole === 'admin' || user$?.mainRole === 'ik_suser') &&
-              user$?.simulation === true
-            " class="header-trigger" style="color: red">
+          <span *ngIf="isSimulateValue" class="header-icons" style="color: red">
             <i class="trigger" nz-icon [nzType]="'stop'" (click)="endSimulation()"></i>
-          </span>-->
+          </span>
           <!-- Theme -->
           <span
             *ngIf="isDarkMode"

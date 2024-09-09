@@ -17,6 +17,7 @@ import { UserModel } from '../../models/user';
 import { UserService } from '../../services/user.service';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { TranslationService } from '../../services/translate.service';
+import { adminSignal, isSimulate } from '../../core/data-values';
 
 @Component({
   selector: 'app-private-layout',
@@ -57,6 +58,17 @@ export class PrivateLayoutComponent {
   user!: UserModel;
   profilePhoto: string = "https://cdn-icons-png.freepik.com/512/6915/6915987.png";
   lang: string = "TR";
+  isSimulateValue = isSimulate();
+
+  endSimulation() {
+    isSimulate.set(false);
+    this.isSimulateValue = false;
+    this.authService.logout();
+    const tempUser = adminSignal();
+    this.authService.fbLogin(tempUser!.email!, tempUser!.pass!);
+    this.authService.userSignal.set(tempUser);
+    console.log('simulatedUserDone:', this.fbAuth.currentUser?.uid!)
+  }
 
 
   toggleCollapsed(){
@@ -85,6 +97,10 @@ export class PrivateLayoutComponent {
     this.isDarkMode = this.themeService.isDarkMode();
     effect(() => {
       if (this.authService.userSignal()) {
+        if(isSimulate()){
+          this.isSimulateValue = true;
+          console.log('simulatedUser:', this.fbAuth.currentUser?.uid!)
+        }
         this.user = this.authService.userSignal()!;
       } 
     });
@@ -144,6 +160,7 @@ export class PrivateLayoutComponent {
 
   logout() {
     this.authService.logout();
+    localStorage.removeItem('user');
     //this.authService.userSignal.set(null);
     this.profilePhoto = "https://cdn-icons-png.freepik.com/512/6915/6915987.png";
   }

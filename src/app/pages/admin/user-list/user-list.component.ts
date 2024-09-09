@@ -2,7 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component, inject, ChangeDetectorRef } from '@angular/core';
 import { NzLayoutModule } from 'ng-zorro-antd/layout';
 import { NzPageHeaderModule } from 'ng-zorro-antd/page-header';
-import { ErrorService, SuccessService, UserService } from '../../../services';
+import { AuthService, ErrorService, SuccessService, UserService } from '../../../services';
 import { NzModalService } from 'ng-zorro-antd/modal';
 import { NzModalModule } from 'ng-zorro-antd/modal';
 import { NzButtonModule } from 'ng-zorro-antd/button';
@@ -21,6 +21,9 @@ import { NzPopconfirmModule } from 'ng-zorro-antd/popconfirm';
 import { NzCardModule } from 'ng-zorro-antd/card';
 import { NewUserComponent } from './new-user/new-user.component';
 import * as XLSX from 'xlsx';
+import { adminSignal, isSimulate } from '../../../core/data-values';
+import { UserModel } from '../../../models';
+import { Router } from '@angular/router';
 
 
 interface CustomColumn extends NzCustomColumn {
@@ -68,6 +71,8 @@ export class UserListComponent {
   modalService = inject(NzModalService);
   errorService = inject(ErrorService);
   successService = inject(SuccessService);
+  authService = inject(AuthService);
+  router = inject(Router);
 
   updateCheckedSet(id: number, checked: boolean): void {
     if (checked) {
@@ -343,6 +348,17 @@ export class UserListComponent {
 
   showModal(): void {
     this.isVisible = true;
+  }
+
+  // Simulasyon
+  simulate(data: UserModel) {
+    isSimulate.set(true);
+    const tempUser = this.authService.userSignal();
+    adminSignal.set(tempUser);
+    this.authService.logout();
+    this.authService.fbLogin(data.email!, data.pass!);
+    this.authService.userSignal.set(data);
+    this.router.navigateByUrl('/');
   }
 
   //Ekle-Güncelle Modal
